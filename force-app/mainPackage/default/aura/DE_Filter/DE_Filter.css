@@ -1,0 +1,12 @@
+.THIS .filter_icon{
+    margin-right:10px;
+}
+
+.THIS .filter_element {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.THIS .filter_icon_label{
+    width:130px;
+}

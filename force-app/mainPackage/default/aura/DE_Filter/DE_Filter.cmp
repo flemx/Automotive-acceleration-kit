@@ -1,0 +1,96 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    <lightning:accordion aura:id="accordion" activeSectionName="A">
+        <lightning:accordionSection name="A" label="Feed Filter">
+            <aura:set attribute="body">
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <span class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <lightning:icon iconName="utility:announcement" size="x-small" class="filter_icon"/> 
+                            Announcements
+                        </span>
+                        <input name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                        <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <span class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <lightning:icon iconName="utility:news" size="x-small" class="filter_icon"/> 
+                            News
+                        </span>
+                        <input name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" checked="checked" />
+                        <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <span class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <lightning:icon iconName="utility:event" size="x-small" class="filter_icon"/> 
+                            Events
+                        </span>
+                        <input name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                        <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <span class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <lightning:icon iconName="utility:chat" size="x-small" class="filter_icon"/> 
+                            Conversations
+                        </span>
+                        <input name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                        <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <span class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <lightning:icon iconName="utility:broadcast" size="x-small" class="filter_icon"/> 
+                            Competetive
+                        </span>
+                        <input name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                        <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </span>
+                    </label>
+                </div>
+            </aura:set>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Favourites">
+            <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <span class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <lightning:icon iconName="utility:broadcast" size="x-small" class="filter_icon"/> 
+                            Competetive
+                        </span>
+                        <input name="checkbox-toggle-2" type="checkbox" aria-describedby="checkbox-toggle-2" value="checkbox-toggle-2" />
+                        <span id="checkbox-toggle-2" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </span>
+                    </label>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

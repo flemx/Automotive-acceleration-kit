@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>order__c</fullName>
+    <description>Sets display order for items where days ago is the same date, will display items in descending order i.e. 3,2,1</description>
+    <externalId>false</externalId>
+    <label>Order</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

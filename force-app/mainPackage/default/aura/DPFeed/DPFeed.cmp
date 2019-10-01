@@ -1,0 +1,328 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="PortalFeedController" access="global" >
+    <aura:handler name="init" action="{!c.init}" value="{!this}" />
+    
+    
+    <aura:attribute name="greeting" type="String" default="Good Day" />
+    <aura:attribute name="username" type="String" default="" />
+    <aura:attribute name="fil" type="Object" />
+    <aura:attribute name="announcement" type="Boolean" default="true" />
+    <aura:attribute name="news" type="Boolean" default="true" />
+    <aura:attribute name="competitive" type="Boolean" default="true" />
+    <aura:attribute name="action_required" type="Boolean" default="true" />
+    <aura:attribute name="event" type="Boolean" default="true" />
+    <aura:attribute name="conversation" type="Boolean" default="true" />
+    <aura:attribute name="filter_list" type="Boolean" default="false" />
+    <aura:attribute name="showModal" type="Boolean" default="false" />
+    <aura:attribute name="modalContent" type="String" />
+    <aura:attribute name="modalRecord" type="String" />
+    <aura:attribute name="modalHeader" type="String" />
+    <aura:attribute name="modalYesLiteral" type="String" />
+	<aura:attribute name="modalNoLiteral" type="String" />
+    <aura:attribute name="modalFiid" type="String" />
+    
+	<!-- generic modal - will show upon event //-->
+        <aura:if isTrue="{!v.showModal}">
+        <aura:if isTrue="{!v.modalContent == 'John Fisher'}">
+           <c:TestDriveContract />
+        </aura:if>
+        <aura:if isTrue="{!v.modalContent == 'Testdrive'}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_large slds-fade-in-open">
+            <div class="slds-modal__container modal960">
+              <header class="slds-modal__header">
+                  <a onclick="{!c.closeModal}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                      <lightning:icon iconName="utility:close" size="medium" />
+                  </a>
+                <h2 id="modal-heading-01" class="slds-text-heading_small slds-hyphenate">{!v.modalHeader}</h2>
+              </header>
+              <div class="slds-modal__content" id="modal-content-id-1">
+                
+                    <c:TestdriveModalContent tdid="{!v.modalRecord}" />
+                  
+              </div>
+              <footer class="slds-modal__footer">
+                <aura:if isTrue="{!v.modalNoLiteral}">
+                  <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
+                </aura:if>
+                <aura:if isTrue="{!v.modalYesLiteral}">
+                  <lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>
+                </aura:if>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open"></div>
+          </aura:if>
+        </aura:if>
+    
+    <!-- Main Section //-->
+    <div class="slds-grid text-size-adjust contain">
+    	<div class="slds-col slds-size_1-of-4">
+            <div class="submenuitem" onclick="{!c.setFilterList}">
+                <lightning:icon iconName="utility:filterList" size="x-small" class="slds-m-right_medium" />
+                Feed Filter
+                <aura:if isTrue="{!v.filter_list}">
+                	<lightning:icon iconName="utility:down" size="x-small" class="slds-m-left_medium" />
+                <aura:set attribute="else">
+                    <lightning:icon iconName="utility:right" size="x-small" class="slds-m-left_medium" />
+                </aura:set>
+                </aura:if>
+                
+            </div>
+            <div class="{!'submenucontent' + (v.filter_list ? '' : ' slds-hide')}">
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid slds-grid_vertical-align-center filter_label">
+                        <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-action-color"/>
+                        <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <span class="filter-icon-text">Action Required</span> 
+                            
+                        </div>
+                        <input name="action_required" type="checkbox" aria-describedby="action_required" value="action_required" checked="checked" onchange="{!c.filter}"  />
+                        <div id="action_required" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <lightning:icon iconName="utility:announcement" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-announcement-color"/> 
+                        <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                            <span class="filter-icon-text">Announcements</span>
+                        </div>
+                        <input name="announcement" type="checkbox" aria-describedby="announcement" value="announcement" checked="checked" onchange="{!c.filter}"  />
+                        <div id="announcement" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <lightning:icon iconName="utility:news" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-news-color"/> 
+                            <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                                <span class="filter-icon-text">News</span>
+                        </div>
+                        <input name="news" type="checkbox" aria-describedby="news" value="news" checked="checked" onchange="{!c.filter}"  />
+                        <div id="news" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <lightning:icon iconName="utility:event" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-event-color"/> 
+                            <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                                <span class="filter-icon-text">Events</span>
+                        </div>
+                        <input name="events" type="checkbox" aria-describedby="events" value="events" checked="checked" onchange="{!c.filter}" />
+                        <div id="events" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <lightning:icon iconName="utility:chat" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-conversation-color"/> 
+                            <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                                <span class="filter-icon-text">Conversations</span>
+                        </div>
+                        <input name="conversation" type="checkbox" aria-describedby="conversation" value="conversation" checked="checked" onchange="{!c.filter}" />
+                        <div id="conversation" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="slds-form-element filter_element">
+                    <label class="slds-checkbox_toggle slds-grid filter_label">
+                        <lightning:icon iconName="utility:broadcast" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-competitive-color"/> 
+                            <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
+                                <span class="filter-icon-text">Competetive</span>
+                        </div>
+                        <input name="competitive" type="checkbox" aria-describedby="competitive" value="competitive" checked="checked" onchange="{!c.filter}" />
+                        <div id="competitive" class="slds-checkbox_faux_container" aria-live="assertive">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-checkbox_on"></span>
+                            <span class="slds-checkbox_off"></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="submenuitem">
+                <lightning:icon iconName="utility:favorite" size="x-small" class="slds-m-right_medium" />
+                Favourites
+            </div>
+            
+        </div>
+        <div class="slds-col slds-size_3-of-4 slds-p-around_medium">
+            <div class="container" id="spinner">
+                <lightning:spinner alternativeText="Loading" size="medium" color="brand" />
+            </div>
+            <div id="content" class="slds-hide">
+            <div class="slds-text-heading_medium slds-p-vertical_medium">{!v.greeting + ', ' + v.username + ', here are your latest updates'}</div>
+            <aura:iteration items="{!v.fil}" var="fi">
+                <!-- render feed item types of announcement, news, competitive //-->
+                <aura:if isTrue="{!or(or(and(fi.type__c == 'announcement',v.announcement),and(fi.type__c == 'news',v.news)),and(fi.type__c == 'competitive',v.competitive))}">
+                    <div class="feeditem regular">
+                        <div class="feeditem-background">
+                            <div class="feeditem-icon-container">
+                                <div class="{!'feeditem-icon-box' +
+                                            (fi.type__c eq 'announcement' ? ' announcement-color' : 
+                                            fi.type__c eq 'news' ? ' news-color' :
+                                            fi.type__c eq 'competitive' ? ' competitive-color' :'')}">
+                                    <lightning:icon iconName="{!fi.type__c eq 'announcement' ? 'utility:announcement' : 
+                                            fi.type__c eq 'news' ? 'utility:news' :
+                                            fi.type__c eq 'competitive' ? 'utility:broadcast' :''}" size="xx-small" variant="inverse"></lightning:icon>
+                                </div>
+                            </div>
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box regular-color">
+                                    <lightning:icon iconName="utility:down" size="xx-small" class="regular-icon-color"></lightning:icon>
+                                </div>
+                            </div>
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box regular-color">
+                                    <lightning:icon iconName="utility:favorite" size="xx-small" class="regular-icon-color"></lightning:icon>
+                                </div>
+                            </div>
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box regular-color">
+                                    <lightning:icon iconName="utility:socialshare" size="xx-small" class="regular-icon-color"></lightning:icon>
+                                </div>
+                            </div>
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box regular-color">
+                                    <lightning:icon iconName="utility:share_post" size="xx-small" class="regular-icon-color"></lightning:icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feeditem-main">
+                            <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
+                            <div class="feed-text-container">
+                                <div class="slds-text-heading_small">{!fi.title__c}</div>
+                                <div class="source-date-container">
+                                    <div class="slds-text-color_weak">{!fi.source__c}</div>
+                                    <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
+                                </div>
+                                <p class="block-with-text">{!fi.text__c}</p>
+                            </div>
+                        </div>
+                </div>
+                </aura:if>
+                <!-- render feed item type of action required //-->
+                <aura:if isTrue="{!and(fi.type__c == 'action required',v.action_required)}">
+                    
+                    <div class="{!'feeditem ' + (fi.SLA_active__c ? 'action' : 'regular')}">
+                        <aura:if isTrue="{!fi.SLA_active__c}">
+                            <div class="feeditem-action-background">
+                                    <lightning:button
+                                        variant="neutral"
+                                        label="{!fi.action_no__c }"
+                                                      onclick="{!c.handleClick}" 
+                                                      class="slds-m-right_x-small slds-m-bottom_small" />
+                                    
+                                    <lightning:button
+                                        variant="brand"
+                                        label="{!fi.action_yes__c }"
+                                        onclick="{!c.accept}" 
+                                        class="slds-m-left_x-small slds-m-bottom_small"
+                                        value="{!fi.Id}"
+                                    />
+                                </div>
+                    </aura:if>
+                        
+                        <div class="feeditem-background">
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box action-color">
+                                    <lightning:icon iconName="utility:warning" size="xx-small" variant="inverse"></lightning:icon>
+                                </div>
+                            </div>
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box regular-color">
+                                    <lightning:icon iconName="utility:down" size="xx-small" class="regular-icon-color"></lightning:icon>
+                                </div>
+                            </div>
+                            <div class="feeditem-icon-container">
+                                <div class="feeditem-icon-box regular-color">
+                                    <lightning:icon iconName="utility:share_post" size="xx-small" class="regular-icon-color"></lightning:icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feeditem-main">
+                            <div class="feed-action-container">
+                                <div class="slds-text-heading_small">{!fi.title__c}</div>
+                                <div class="source-date-container">
+                                    <div class="slds-text-color_weak"><lightning:relativeDateTime value="{! fi.jsdate }"/></div>
+                                </div>
+                                <div class="action-text-container" >
+                                    <span class="inlineitem">{!fi.category_1__c}</span>
+                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_1__c}" size="xx-small" /></span>
+                                    <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_1__c}" data-record="{!fi.record_name_1__c}" data-fiid="{!fi.Id}" >{!fi.record_name_1__c}</a></span>
+                                    <span class="inlineitem">{!fi.message_1__c}</span>
+                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_2__c}" size="xx-small" /></span>
+                                    <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_2__c}" data-record="{!fi.record_name_2__c}" data-fiid="{!fi.Id}" >{!fi.record_name_2__c}</a></span>
+                                    <span class="inlineitem">{!fi.message_2__c}</span>
+                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_3__c}" size="xx-small" /></span>
+                                    <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_3__c}" data-record="{!fi.record_name_3__c}" data-fiid="{!fi.Id}" >{!fi.record_name_3__c}</a></span>
+                                    <span class="inlineitem">.</span>
+                                </div>
+                                <div class="action-sla-container">
+                                    <aura:if isTrue="{!fi.SLA_active__c}">
+                                        <aura:if isTrue="{!fi.sla_display_percentage == 360}">
+                                        <lightning:icon iconName="utility:warning" size="x-small" variant="error" class="slds-m-right_x-small" /> 
+                                        <a onclick="{!c.viewDetails}">You have exceeded the SLA for this item.</a>
+                                        <aura:set attribute="else">
+                                            <div class="progress-circle">
+                                              <div class="left-half-clipper" style="{!fi.sla_display_percentage > 180 ? 'clip: rect(auto,auto,auto,auto)' : ''}">
+                                                <aura:if isTrue="{!fi.sla_display_percentage > 180}"><div class="first50-bar"></div></aura:if>
+                                                <div class="value-bar" style="{!'transform: rotate(' + fi.sla_display_percentage + 'deg)'}"></div>
+                                              </div>
+                                            </div>
+                                            <a onclick="{!c.viewDetails}">
+	                                            <div class="action-sla-assistive-text">{! fi.sla_assistive_text }</div>
+                                            </a>
+                                            
+                                        </aura:set>
+                                    </aura:if>
+                                        
+                                        <aura:set attribute="else">
+                                            <lightning:icon iconName="utility:check" size="x-small" variant="success" class="slds-m-right_x-small" /> 
+                                        	You have accepted this&nbsp;<lightning:relativeDateTime value="{!fi.SLA_achieved_since}"/>.
+                                        </aura:set>
+                                    </aura:if>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </aura:if>
+                <!-- render feed item type of event //-->
+                <aura:if isTrue="{!and(fi.type__c == 'event',v.event)}">
+                
+                </aura:if>
+                <!-- render feed item type of conversation //-->
+                <aura:if isTrue="{!and(fi.type__c == 'conversation',v.conversation)}">
+                
+                </aura:if>
+                
+                
+            </aura:iteration>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</aura:component>

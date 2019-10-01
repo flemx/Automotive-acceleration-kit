@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URLsrc__c</fullName>
+    <description>This field is to ensure that icons show up properly in Communities.</description>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS($Api.Enterprise_Server_URL_290,&quot;.force.com&quot;),
+MID( $Api.Enterprise_Server_URL_290, FIND(&quot;/&quot;, $Api.Enterprise_Server_URL_290, FIND(&quot;.force.com/&quot;, $Api.Enterprise_Server_URL_290, 0)),
+FIND(&quot;/&quot;, $Api.Enterprise_Server_URL_290, FIND(&quot;/&quot;, $Api.Enterprise_Server_URL_290, FIND(&quot;.force.com/&quot;, $Api.Enterprise_Server_URL_290, 0))+1) - FIND(&quot;/&quot;, $Api.Enterprise_Server_URL_290, FIND(&quot;.force.com/&quot;, $Api.Enterprise_Server_URL_290, 0))
+) , &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>URLsrc</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

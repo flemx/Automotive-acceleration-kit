@@ -1,0 +1,92 @@
+<aura:component implements="forceCommunity:themeLayout,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" description="Sample Custom Theme Layout">
+   	<aura:handler name="init" action="{!c.init}" value="{!this}" />
+    <aura:handler name="modalEvent" event="c:openModal"
+    action="{!c.openModalAction}"/>
+    
+    <aura:attribute name="blueBackground" type="Boolean" default="false"/> 
+    <aura:attribute name="smallLogo" type="Boolean" default="false" />
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="showModal" type="Boolean" default="false" />
+    
+    <aura:attribute name="currentSection" type="String" default="/" />
+    
+    <aura:html tag="style">
+        .uiModal {
+            z-index:10000 !important;
+        }
+    </aura:html>
+    <div>
+        
+        
+        
+        <div class="slds-grid slds-nowrap slds-grid_vertical-align-center menu_item_container">
+            <div class="slds-col slds-size_1-of-12 menu_item">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Volkswagen_logo.png/183px-Volkswagen_logo.png" width="60"></img>
+            </div>
+            <div class="slds-col slds-size_1-of-12 menu_item">
+                <div class="dealerportal">
+                    Dealer<br/>
+                	Portal
+                </div>
+                
+            </div>
+            <div class="slds-col slds-size_1-of-12 menu_item">
+                <a onclick="{!c.clickMenuItem}" class="{! v.currentSection == '/' ? 'menu-link-active' : 'menu-link'}" data-item="/">
+                    <div class="menu_image">
+                        <lightning:icon iconName="utility:news" size="small" class="icon_menu" />    
+                    </div>     
+                    <div class="menu_text">
+                        Feed
+                    </div>
+                </a>
+            </div>
+            <div class="slds-col slds-size_1-of-12 menu_item">
+                <a onclick="{!c.clickMenuItem}" class="{! v.currentSection == '/today' ? 'menu-link-active' : 'menu-link'}" data-item="/today">
+                    <div class="menu_image">
+                        <lightning:icon iconName="utility:event" size="small" class="icon_menu" />    
+                    </div>     
+                    <div class="menu_text">
+                        Today
+                    </div>
+                </a>
+            </div>
+            <div class="slds-col slds-size_1-of-12 menu_item">
+                <a onclick="{!c.clickMenuItem}" class="{! v.currentSection == '/salesdesk' ? 'menu-link-active' : 'menu-link'}" data-item="/salesdesk">
+                    <div class="menu_image">
+                        <lightning:icon iconName="utility:screen" size="small" class="icon_menu" />    
+                    </div>     
+                    <div class="menu_text">
+                        Sales Desk
+                    </div>
+                </a>
+            </div>
+            <div class="slds-col slds-size_5-of-12 menu_item_search">
+                {!v.search}
+            </div>
+            <div class="slds-col slds-size_1-of-12 menu_item">
+                <a href="https://www.google.com/">
+                    <div class="menu_image">
+                        <lightning:icon iconName="utility:settings" size="medium" class="icon_menu"/>    
+                    </div>     
+                </a>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+                {!v.profileMenu}
+            </div>
+        </div>
+        <div class="mainContentArea slds-grid">
+            <aura:if isTrue="{!v.currentSection == '/salesdesk'}">
+                <div class="slds-col slds-size_1-of-6">
+                    <c:salesdeskMenu />
+                </div>
+            </aura:if>
+            <div class="{!v.currentSection == '/salesdesk' ? 'slds-col slds-size_5-of-6' : 'slds-col slds-size_1-of-1'}">
+	            {!v.body}
+            </div>
+            
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>smiley_and_people</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="smiley_and_people">
+            <rect id="Rectangle" fill="#FF3366" x="0" y="0" width="60" height="60" rx="4"></rect>
+            <path d="M54,30.1 C54,43.4 43.2,54.2 30,54.2 C16.8,54.2 6,43.4 6,30.1 C6,16.8 16.8,6 30,6 C43.2,6 54,16.8 54,30.1 Z M21,19 C19.3,19 18,20.8 18,23 C18,25.2 19.3,27 21,27 C22.7,27 24,25.2 24,23 C24,20.8 22.7,19 21,19 Z M39,19 C37.3,19 36,20.8 36,23 C36,25.2 37.3,27 39,27 C40.7,27 42,25.2 42,23 C42,20.8 40.7,19 39,19 Z M15,33 C15.6,40.6 21.2,47 29.9,47 C38.7,47 44.4,40.6 45,33 L15,33 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

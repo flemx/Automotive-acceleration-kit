@@ -1,0 +1,89 @@
+.THIS {
+    margin-top: 90px;
+    position: relative;
+    
+}
+
+.THIS .menu_item_container {
+    z-index: 4;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    -webkit-box-shadow: -1px 3px 5px 1px rgba(209,209,209,1);
+    -moz-box-shadow: -1px 3px 5px 1px rgba(209,209,209,1);
+    box-shadow: -1px 3px 5px 1px rgba(209,209,209,1);
+    background-color: #fff;
+}
+
+.THIS .menu_item {
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #DEE1E3;
+    height: 90px;
+    padding-top: 15px;
+}
+
+.THIS .menu_item_search {
+    border-right: 1px solid #DEE1E3;
+   	padding: 1rem;
+    height: 90px;
+    padding-top: 1.6rem;
+}
+
+.THIS .dealerportal {
+    display: inline-block;
+    text-align: center;
+    height: 90px;
+    padding-top: 10px;
+}
+
+.THIS .icon_menu svg{
+    fill:#8A8A8A ;    
+}
+
+
+
+.THIS .slds-icon-action-user {
+    background-color: #8A8A8A ;
+}
+
+.THIS .menu_image {
+    padding: 6px;
+}
+
+.THIS .menu_image_active {
+    padding: 6px;
+}
+
+.THIS .mainContentArea{
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.THIS .menu-link {
+    color: #8a8a8a;
+}
+
+.THIS a:hover{
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.THIS a:hover svg{
+    fill:#4A90E2;    
+}
+
+.THIS .selfServiceProfileMenuTrigger a {
+    color:#8A8A8A;
+}
+
+.THIS .menu-link-active {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.THIS .menu-link-active svg{
+    fill:#4A90E2;
+}

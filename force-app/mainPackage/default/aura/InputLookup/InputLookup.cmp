@@ -1,0 +1,31 @@
+<aura:component controller="InputLookupAuraController" implements="force:appHostable,forceCommunity:availableForAllPageTypes,force:LightningQuickAction">
+    <ltng:require scripts="/resource/Lgt_InputLookup/js/jquery-2.2.4.min.js,
+                           /resource/Lgt_InputLookup/js/bootstrap.min.js,
+                           /resource/typeahead" 
+                  styles="
+                          /resource/SLDS0120/assets/styles/salesforce-lightning-design-system-ltng.css"
+                  afterScriptsLoaded="{!c.initTypeahead}" />
+    
+    <aura:registerEvent name="inputLookupEvent" type="c:InputLookupEvt" />
+    <aura:handler name="inputLookupEvent" action="{!c.handleInputLookupEvt}"/>
+    
+    
+    <aura:attribute name="type" type="String" description="Sobject Type" />
+    <aura:attribute name="value" type="String" description="Source / Destination value" />
+    <aura:attribute name="className" type="String" description="class name of the input object" />
+    <!-- PRIVATE ATTRS -->
+    <aura:attribute name="nameValue" type="String" description="Name of the current lookup 'name' field: loaded by controller" 
+                    access="PUBLIC"/>
+    <aura:attribute name="isLoading" type="Boolean" description="Loading component" default="true"
+                    access="PUBLIC"/>
+    <div class="slds">
+        <div class="has-feedback">
+            
+            <input id="{!globalId+'_typeahead'}" type="text" class="{!v.className}" 
+                   readonly="{!v.isLoading}" placeholder="{!'Search '+v.type}"/>
+            
+            
+            <!--	<span class="glyphicon glyphicon-search form-control-feedback"></span> -->
+        </div>
+    </div>
+</aura:component>

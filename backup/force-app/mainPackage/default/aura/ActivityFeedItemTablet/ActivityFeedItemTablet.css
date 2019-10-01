@@ -1,0 +1,9 @@
+.THIS .no-decoration{
+    text-decoration: none;
+    color: rgb(62, 62, 60);
+    
+}
+
+.THIS .slds-media--timeline {
+    padding-bottom: 0.5em;
+}

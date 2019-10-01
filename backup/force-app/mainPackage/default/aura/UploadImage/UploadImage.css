@@ -1,0 +1,14 @@
+/* remove the "or drop files" label from the right of the lightning:input type file */
+.THIS .slds-file-selector__dropzone .slds-file-selector__text{
+    
+}
+
+/* remove the "Upload Files" text from the button of the lightning:input type file */
+.THIS .slds-file-selector__dropzone .slds-file-selector__button{
+    
+}
+
+/* insert the text "Scan" into the button of the lightning:input type file */
+.THIS .slds-file-selector__dropzone .slds-file-selector__button:after{
+    
+}

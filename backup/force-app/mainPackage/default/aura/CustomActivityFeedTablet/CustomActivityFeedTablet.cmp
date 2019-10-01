@@ -1,0 +1,47 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"  controller="CustomActivityController" access="global" >
+    <aura:attribute name="heightPixels" type="Integer"/>    
+    <aura:attribute name="activities" type="Custom_Activity__c[]"/>
+    <aura:attribute name="recordId" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.recordId}" action="{!c.doInit}"/>
+    
+    <lightning:quickActionAPI aura:id="quickActionAPI"/>
+    
+   
+    <lightning:card class="pull-margin x-small">
+   		<aura:set attribute="title">
+            <lightning:icon iconName="standard:feed" size="small" class="activity-icon"></lightning:icon>
+            <span class="slds-text-heading_small slds-m-left_small small" >Activity Timeline</span>
+        </aura:set>
+        
+        <aura:set attribute="actions">
+            <lightning:buttonGroup>
+                <lightning:buttonIcon onclick="{!c.newActivity}" title="New custom activity quick action must be on the current for this button to work." iconName="utility:add" size="small"/>
+                <lightning:buttonIcon onclick="{!c.doInit}" iconName="utility:refresh" size="small"/>
+            </lightning:buttonGroup>          
+        </aura:set>
+        
+        <div class="feed slds-p-top_medium pull-margin-top" style="{! 'height: ' + v.heightPixels + 'px ;'}">            
+            <ul>
+                
+                <aura:iteration items="{!v.activities}" var="a">
+                	<c:ActivityFeedItemTablet icon="{!a.icon__c}" 
+                                    title="{!a.Name}" 
+                                    message="{!a.message__c}"  
+                                    numDaysAgo="{!a.days_ago__c}" 
+                                    time="{!a.time__c}"
+                                    id="{!a.Id}"    />
+                </aura:iteration>
+               
+
+            </ul>            
+        </div>
+        
+        <aura:set attribute="footer">
+        	<lightning:button label="View All" variant="bare" onclick="{!c.gotoActivityList}"></lightning:button>
+        </aura:set>
+    </lightning:card>    
+    
+         
+</aura:component>

@@ -1,0 +1,74 @@
+<aura:component controller="AnyEventCalCtrl" implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    <ltng:require styles="{!$Resource.AnyEventCal + '/fullcalendar.min.css'}"/>
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="selectedLookUpRecord" type="sObject" default="{}"/>
+    <aura:attribute name="zoomLevel" type="Integer" />
+    <aura:attribute name="con"  type="sObject" />
+    <aura:attribute name="currentdiv"  type="Integer" default="1"/>
+    <aura:attribute name="events" type="Map"/>
+    <aura:attribute name="body2" type="String"/>
+    <aura:attribute name="objectLabel" type="String"/>
+    <aura:attribute name="conId" type="String" default="0031t00000AEpK0AAL"/>
+    <aura:attribute name="sObjectName" type="String"/>
+    <aura:attribute name="titleField" type="String"/>
+    <aura:attribute name="startDateTimeField" type="String"/>
+    <aura:attribute name="endDateTimeField" type="String"/>
+    <aura:attribute name="descriptionField" type="String"/>
+    <aura:attribute name="userField" type="String"/>
+    <aura:attribute name="calendarButtons" type="String"/>
+    <aura:attribute name="weekends" type="Boolean"/>
+    <aura:attribute name="eventBackgroundColor" type="String"/>
+    <aura:attribute name="eventBorderColor" type="String"/>
+    <aura:attribute name="eventTextColor" type="String"/>
+    <aura:attribute name="idVal" type="String"/>
+    <aura:attribute name="titleVal" type="String"/>
+    <aura:attribute name="descriptionVal" type="String"/>
+    <aura:attribute name="startDateTimeVal" type="DateTime"/>
+    <aura:attribute name="endDateTimeVal" type="DateTime"/>
+    <aura:attribute name="acc" type="String"/>
+    <aura:attribute name="newOrEdit" type="String" default="New"/>
+    <!-- new tb //-->
+    
+    <aura:attribute name="showModal" type="Boolean" default="false" />
+    <aura:attribute name="modalContent" type="String" />
+    <aura:attribute name="modalRecord" type="String" />
+    <aura:attribute name="modalHeader" type="String" />
+    <aura:attribute name="modalYesLiteral" type="String" />
+	<aura:attribute name="modalNoLiteral" type="String" />
+    
+    <!-- END //-->
+    <aura:handler name="change" value="{!v.events}" action="{!c.renderCalendar}"/>
+    <aura:handler name="updateLookupIdEvent" event="c:UpdateLookupId" action="{!c.handleAccountIdUpdate}"/>
+    <aura:handler name="clearLookupIdEvent" event="c:ClearLookupId" action="{!c.handleAccountIdClear}"/>
+    
+    <div id="calendar"></div>
+    <!-- NEW MODAL TOM //-->
+    <!-- generic modal - will show upon event //--> 
+        <aura:if isTrue="{!v.showModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_large slds-fade-in-open">
+            <div class="slds-modal__container modal960">
+              <header class="slds-modal__header">
+                  <a onclick="{!c.closeModal}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                      <lightning:icon iconName="utility:close" size="medium" />
+                  </a>
+                <h2 id="modal-heading-01" class="slds-text-heading_small slds-hyphenate">{!v.modalHeader}</h2>
+              </header>
+              <div class="slds-modal__content" id="modal-content-id-1">
+                <aura:if isTrue="{!v.modalContent == 'Testdrive'}">
+                    <c:TestdriveModalContent tdid="{!v.modalRecord}" />
+                  </aura:if>
+              </div>
+              <footer class="slds-modal__footer">
+                <aura:if isTrue="{!v.modalNoLiteral}">
+                  <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
+                </aura:if>
+                <aura:if isTrue="{!v.modalYesLiteral}">
+                  <lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>
+                </aura:if>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+
+</aura:component>

@@ -1,0 +1,52 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="TestDriveModalController" access="global" >
+    <aura:attribute name="tdid" type="String" />
+    <aura:attribute name="tddate" type="DateTime" />
+    <aura:attribute name="tdenddate" type="DateTime" />
+    
+    <div class="slds-p-around_medium">
+    	<div class="section-heading">Appointment Details</div>
+        <div class="subtitle">time and date</div>
+        <div class="infoblock">
+            <div class="icon">
+                <lightning:icon iconName="utility:dayview" size="xx-small" />
+            </div>
+            <div class="icon-text">
+                <lightning:formattedDateTime value="{!v.tddate}" year="numeric" month="2-digit" day="2-digit" weekday="long" />
+            </div>
+        </div>
+        <div class="infoblock">
+            <div class="icon">
+                <lightning:icon iconName="utility:clock" size="xx-small" />
+            </div>
+            <div class="icon-text">
+                <lightning:formattedDateTime value="{!v.tddate}" hour="2-digit" minute="2-digit" />&nbsp;-&nbsp;<lightning:formattedDateTime value="{!v.tdenddate}" hour="2-digit" minute="2-digit" />
+            </div>
+        </div>
+        <div class="subtitle">Available vehicles of type <a>I.D. Crozz</a></div>
+        
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorRed + ')'}" 
+    licensePlate="B VW 990E"
+    motor="225 kW (302 PS)"
+    battery="101kWh"
+    edition="Executive"
+    color="Crimson Metallic"
+    id="02i1t00000061AbAAI" />
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorYellow + ')'}" 
+    licensePlate="B VW 991E"
+    motor="225 kW (302 PS)"
+    battery="83kWh"
+    edition="Eco"
+    color="Curcumin Yellow"
+    id="02i1t00000061AbAAI" />
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorSilver + ')'}" 
+    licensePlate="B VW 992E"
+    motor="225 kW (302 PS)"
+    battery="101kWh"
+    edition="Eco"
+    color="Super Silver"
+    id="02i1t00000061AbAAI" />
+
+        
+        
+    </div>
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Update Lookup Id" >
+    <aura:attribute name="sObjectId" type="Id" required="true" description="The Id of the selected SObject." />
+</aura:event>

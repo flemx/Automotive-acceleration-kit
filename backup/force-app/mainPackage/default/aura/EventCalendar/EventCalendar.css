@@ -1,0 +1,53 @@
+.THIS .EventClass 
+{
+    background:#56458c;
+    border-color:#56458c;
+}
+.THIS .WOClass {
+    background:#cc9933;
+    border-color:#cc9933;
+}
+.THIS .WOClassNew {
+    background:red;
+    border-color:red;
+}
+.THIS .WOClassDone {
+    background:green;
+    border-color:green;
+}
+.THIS .slds-modal__container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 73rem;
+    min-width: 20rem;
+}
+
+.THIS .highlight_panel{
+	padding:15px;   
+}
+
+.THIS .bottom_content{
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
+}
+
+.THIS#calendar {
+    padding: 30px !important;
+    border-left: 1px solid #ccc;
+}
+
+.THIS .fc-unthemed td.fc-today{
+    background: #fff;
+}
+
+.THIS .modal960 {
+    padding: 0px;
+    width: 960px;
+    height: 704px;
+    margin-top: 32px;
+}
+
+.THIS .slds-modal__footer {
+    display: flex;
+    justify-content: center;
+}

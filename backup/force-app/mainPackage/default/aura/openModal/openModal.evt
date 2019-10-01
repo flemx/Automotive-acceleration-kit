@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT">
+    <aura:attribute name="content" type="String"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="width_in_percent" type="Integer" />
+</aura:event>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>icon__c</fullName>
+    <description>The Lightning Design System name of the icon. Names are written in the format &#39;utility:down&#39; where &#39;utility&#39; is the category, and &#39;down&#39; is the specific icon to be displayed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Lightning Design System name of the icon. Names are written in the format &#39;utility:down&#39; where &#39;utility&#39; is the category, and &#39;down&#39; is the specific icon to be displayed.</inlineHelpText>
+    <label>Icon</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<design:component label="AnyCalendar">
+    <design:attribute name="sObjectLabel" label="sObject Label" description="Label for Displaying the sObject, e.g. Event"/>
+	<design:attribute name="sObjectName" label="sObject API Name" description="API Name of the sObject"/>
+    <design:attribute name="titleField" label="Title Field API Name" description="API Name of the Title Field"/>
+    <design:attribute name="startDateTimeField" label="Start DateTime Field API Name" description="API Name of the Start DateTime Field"/>
+    <design:attribute name="endDateTimeField" label="End DateTime Field API Name" description="API Name of the End DateTime Field"/>
+    <design:attribute name="descriptionField" label="Description Field API Name" description="API Name of the Description Field"/>
+    <design:attribute name="userField" label="User Id Field API Name" description="API Name of the User Id Field"/>
+    <design:attribute name="filterByUserField" label="Filter by Logged in User?" description="Only display records that match the logged in User"/>
+    <design:attribute name="calendarButtons" label="Buttons shown on Calendar" datasource="apex://MyCalendarButtonsPicklist"/>
+    <design:attribute name="weekends" label="Display Weekends" description="Whether to include Saturday/Sunday columns in any of the calendar views"/>
+    <design:attribute name="eventBackgroundColor" label="Background Color of Event" description="Background Color of Event displayed on Calendar"/>
+    <design:attribute name="eventBorderColor" label="Border Color of Event" description="Border Color of Event displayed on Calendar"/>
+    <design:attribute name="eventTextColor" default="white" label="Text Color of Event" description="Text Color of Event displayed on Calendar"/>
+</design:component>

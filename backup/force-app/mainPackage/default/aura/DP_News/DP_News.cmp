@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+	<div class="slds-grid">
+    	<div class="slds-col slds-size_1-of-4">
+            <c:DE_Filter/>
+        </div>
+        <div class="slds-col slds-size_3-of-4 slds-p-around_medium">
+            <c:DPFeed/>
+        </div>
+    </div>
+</aura:component>

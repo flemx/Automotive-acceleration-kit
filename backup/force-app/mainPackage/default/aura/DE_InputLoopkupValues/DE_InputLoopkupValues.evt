@@ -1,0 +1,5 @@
+<aura:event type="APPLICATION" description="Event template" >
+	<aura:attribute name="input_type" type="String" />
+    <aura:attribute name="input_val" type="String" />
+    <aura:attribute name="input_result" type="String" />
+</aura:event>

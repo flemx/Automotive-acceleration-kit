@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Color__c</fullName>
+    <externalId>false</externalId>
+    <label>Color</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Silk Blue Metallic</fullName>
+                <default>false</default>
+                <label>Silk Blue Metallic</label>
+            </value>
+            <value>
+                <fullName>Night Blue Metallic</fullName>
+                <default>false</default>
+                <label>Night Blue Metallic</label>
+            </value>
+            <value>
+                <fullName>Black</fullName>
+                <default>false</default>
+                <label>Black</label>
+            </value>
+            <value>
+                <fullName>Tungsten Silver Metallic</fullName>
+                <default>false</default>
+                <label>Tungsten Silver Metallic</label>
+            </value>
+            <value>
+                <fullName>Platinum Gray Metallic</fullName>
+                <default>false</default>
+                <label>Platinum Gray Metallic</label>
+            </value>
+            <value>
+                <fullName>Tornado Red</fullName>
+                <default>false</default>
+                <label>Tornado Red</label>
+            </value>
+            <value>
+                <fullName>Crimson Metallic Flow</fullName>
+                <default>false</default>
+                <label>Crimson Metallic Flow</label>
+            </value>
+            <value>
+                <fullName>Pure White</fullName>
+                <default>false</default>
+                <label>Pure White</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

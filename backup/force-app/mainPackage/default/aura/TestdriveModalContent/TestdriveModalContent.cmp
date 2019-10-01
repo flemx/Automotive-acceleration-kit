@@ -1,0 +1,182 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="TestDriveModalController" access="global" >
+    
+    
+    
+    <aura:attribute name="tdid" type="String" />
+    <aura:attribute name="testdrive" type="Object" />
+    
+    <aura:attribute name="showModal" type="Boolean" default="false" />
+    <aura:attribute name="modalHeader" type="String" />
+    <aura:attribute name="modalYesLiteral" type="String" />
+	<aura:attribute name="modalNoLiteral" type="String" />
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="change" value="{!v.tdid}" action="{!c.init}"/>
+    <!-- generic modal - will show upon event //--> 
+        <aura:if isTrue="{!v.showModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_large slds-fade-in-open">
+            <div class="slds-modal__container modal960">
+              <header class="slds-modal__header">
+                  <a onclick="{!c.closeModal}" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse">
+                      <lightning:icon iconName="utility:close" size="medium" />
+                  </a>
+                <h2 id="modal-heading-01" class="slds-text-heading_small slds-hyphenate">{!v.modalHeader}</h2>
+              </header>
+              <div class="slds-modal__content fillHeight" id="modal-content-id-2">
+                <aura:if isTrue="{!v.modalHeader == 'Assign Vehicle'}">
+                    <c:assignVehicleModalContent tdid="{!v.tdid}" tddate="{!v.testdrive.Date}" tdenddate="{!v.testdrive.EndDate}" />
+                  </aura:if>
+              </div>
+              <footer class="slds-modal__footer">
+                <aura:if isTrue="{!v.modalNoLiteral}">
+                  <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
+                </aura:if>
+                <aura:if isTrue="{!v.modalYesLiteral}">
+                  <lightning:button label="{!v.modalYesLiteral}" onclick="{!c.assign}" ></lightning:button>
+                </aura:if>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+    <aura:if isTrue="{!v.tdid}">
+        <div class="slds-grid">
+            <!-- Appointment Details //-->
+        	<div class="slds-row slds-size_1-of-3 slds-p-around_medium border-right">
+                <div class="section-heading">Appointment Details</div>
+                <div class="subtitle">time and date</div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:dayview" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        <lightning:formattedDateTime value="{!v.testdrive.Date}" year="numeric" month="2-digit" day="2-digit" weekday="long" />
+                    </div>
+                </div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:clock" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        <lightning:formattedDateTime value="{!v.testdrive.Date}" hour="2-digit" minute="2-digit" />&nbsp;-&nbsp;<lightning:formattedDateTime value="{!v.testdrive.EndDate}" hour="2-digit" minute="2-digit" />
+                    </div>
+                </div>
+                <div class="subtitle">Your adjacent agenda</div>
+                <div class="infoblock-calendar">
+                	<div class="icon">
+                        12:00
+                    </div>
+                    <div class="icon-text">
+                        Lunch
+                    </div>
+                </div>
+                <div class="infoblock-calendar">
+                	<div class="icon">
+                        16:00
+                    </div>
+                    <div class="icon-text">
+                        Don Arne sales conversation
+                    </div>
+                </div>
+                <div class="continuous-block">
+                	no later events
+                </div>
+                <div class="subtitle">Location and routing</div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:checkin" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        Pickup at customer's home
+                    </div>
+                </div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:location" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        <a> {!v.testdrive.Driver__r.MailingStreet}<br />
+                            {!v.testdrive.Driver__r.MailingPostalCode}&nbsp;{!v.testdrive.Driver__r.MailingCity}<br />
+                            {!v.testdrive.Driver__r.MailingCountry}
+                        </a>
+                    </div>
+                </div>
+                <div class="map">
+                    <img src="{!$Resource.wayToJohn}" />
+                </div>
+            </div>
+            <!-- Test Drive Details //-->
+            <div class="slds-row slds-size_1-of-3 slds-p-around_medium border-right">
+            <div class="section-heading">Test Drive Details</div>
+                <div class="subtitle">Customer selected vehicle</div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:travel_and_places" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        <a>{!v.testdrive.Configuration__r.model__c}</a>
+                    </div>
+                </div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:palette" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        {!v.testdrive.Configuration__r.edition__c}
+                    </div>
+                </div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:settings" size="xx-small" />
+                    </div>
+                    <div class="icon-text">
+                        {!v.testdrive.Configuration__r.motor__c}
+                    </div>
+                </div>
+                <div class="image-block">
+                    <img src="{!$Resource.idCrozzRed}" />
+                </div>
+                 <div class="subtitle">Assigned vehicle</div>
+                <div class="infoblock">
+                	<div class="icon">
+                        <lightning:icon iconName="utility:logout" size="xx-small" />
+                    </div>
+                    <aura:if isTrue="{!v.testdrive.assigned_Vehicle__r.License_Plate__c}">
+                    <div class="icon-text">
+                        {!v.testdrive.assigned_Vehicle__r.License_Plate__c}&nbsp;&nbsp;&nbsp;<a>change</a>
+                    </div>  
+                    <aura:set attribute="else">
+                    <div class="icon-text-placeholder">
+                        none
+                    </div>    
+                    </aura:set>
+                    </aura:if> 
+                </div>
+                <aura:if isTrue="{!not(v.testdrive.assigned_Vehicle__r)}">
+                <div class="button-block">
+                    <lightning:button label="Assign Vehicle" title="Assign Vehicle" onclick="{! c.callAssignVehicle }"/>
+                </div>
+                </aura:if>
+            </div>
+            
+            <!-- Contact Details //-->
+            <div class="slds-row slds-size_1-of-3 slds-p-around_medium">
+                <div class="section-heading">Contact details</div>
+                <aura:if isTrue="{!v.testdrive}">
+                <c:Customer360HighlightCardTablet recordId="{!v.testdrive.Driver__c}" backgroundImageUrl="{!$Resource.GolfBanner}" />
+                
+                    <c:CustomActivityFeedTablet recordId="{!v.testdrive.Driver__c}" />
+                </aura:if>
+            </div>
+        </div>
+        
+        
+        
+    <aura:set attribute="else">
+        no test drive found
+        
+   	</aura:set> 
+    </aura:if>
+	
+</aura:component>

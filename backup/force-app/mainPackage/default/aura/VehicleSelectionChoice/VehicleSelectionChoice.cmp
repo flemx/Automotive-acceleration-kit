@@ -1,0 +1,56 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="colorURL" type="String" />
+    <aura:attribute name="licensePlate" type="String" />
+    <aura:attribute name="motor" type="String" />
+    <aura:attribute name="battery" type="String" />
+    <aura:attribute name="edition" type="String" />
+    <aura:attribute name="color" type="String" />
+    <aura:attribute name="id" type="String" />
+    
+    
+	<div class="slds-box slds-p-around_medium slds-grid slds-grid_vertical-align-center slds-m-top_medium">
+	        <lightning:input type="radio" label="" name="options" value="{!v.id}" variant="label-hidden" />
+
+        <lightning:layout class="wide">
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 1">License Plate</p>
+                    <p class="slds-text-heading_medium smaller slds-m-top_x-small">{!v.licensePlate}</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field2">Motor</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">{!v.motor}</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 3">Battery</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">{!v.battery}</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 4">Edition</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">
+                        <span title="">{!v.edition}</span>
+                    </p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 5">Color</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">
+                        <span title="">{!v.color}</span>
+                    </p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="colorcircle" style="{!v.colorURL}"></div>
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+    </div>
+
+</aura:component>
