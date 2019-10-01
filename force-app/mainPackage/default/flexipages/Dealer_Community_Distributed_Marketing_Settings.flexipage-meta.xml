@@ -9,16 +9,6 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <appendable>enabled</appendable>
-        <componentInstances>
-            <componentName>mcdm_15:UserPersonalizationSettings</componentName>
-        </componentInstances>
-        <name>content</name>
-        <prependable>enabled</prependable>
-        <replaceable>enabled</replaceable>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <appendable>enabled</appendable>
         <name>footer</name>
         <prependable>enabled</prependable>
         <replaceable>enabled</replaceable>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>CustomField</name>
+    <members>Asset.Test_Drive__c</members>  
+    <members>Asset.VIN__c</members>
+     <members>Asset.License_Plate__c</members> 
+     <members>Activity.Test_Drive__c</members>
+  </types>
+  <version>46.0</version>
+</Package>

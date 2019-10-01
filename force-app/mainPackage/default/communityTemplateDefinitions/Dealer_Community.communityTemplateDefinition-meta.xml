@@ -195,20 +195,12 @@
         <themeLayout>Dealer_Community_themeLayout_Login</themeLayout>
     </pageSetting>
     <pageSetting>
-        <page>Dealer_Community_Linked_Journey_Detail</page>
-        <themeLayout>Dealer_Community_themeLayout_Default</themeLayout>
-    </pageSetting>
-    <pageSetting>
         <page>Dealer_Community_Sfdc_Page</page>
         <themeLayout>Dealer_Community_themeLayout_Default</themeLayout>
     </pageSetting>
     <pageSetting>
         <page>Dealer_Community_Register</page>
         <themeLayout>Dealer_Community_themeLayout_Login</themeLayout>
-    </pageSetting>
-    <pageSetting>
-        <page>Dealer_Community_Linked_Journey_List</page>
-        <themeLayout>Dealer_Community_themeLayout_Default</themeLayout>
     </pageSetting>
     <pageSetting>
         <page>Dealer_Community_Campaign_Detail</page>
@@ -224,10 +216,6 @@
     </pageSetting>
     <pageSetting>
         <page>Dealer_Community_Campaign_Marketplace</page>
-        <themeLayout>Dealer_Community_themeLayout_Default</themeLayout>
-    </pageSetting>
-    <pageSetting>
-        <page>Dealer_Community_Linked_Journey_Related_List</page>
         <themeLayout>Dealer_Community_themeLayout_Default</themeLayout>
     </pageSetting>
     <pageSetting>

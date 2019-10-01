@@ -9,57 +9,6 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <appendable>enabled</appendable>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>bodyField</name>
-                <value>Description</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>categoryField</name>
-                <value>Type</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>dataFieldsConfig</name>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>highlight</name>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>highlightColor</name>
-                <value>#007DB8</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>listLabel</name>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>listViewName</name>
-                <value>All_Campaigns</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showImage</name>
-                <value>true</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>sortBy</name>
-                <value>Name</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>sortOrder</name>
-                <value>Ascending</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>titleField</name>
-                <value>Name</value>
-            </componentInstanceProperties>
-            <componentName>forceCommunity:campaignTileList</componentName>
-        </componentInstances>
-        <name>content</name>
-        <prependable>enabled</prependable>
-        <replaceable>enabled</replaceable>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <appendable>enabled</appendable>
         <name>footer</name>
         <prependable>enabled</prependable>
         <replaceable>enabled</replaceable>

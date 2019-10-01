@@ -5,7 +5,6 @@
     <fields>AccountId</fields>
     <fields>Amount</fields>
     <fields>CloseDate</fields>
-    <fields>IqScore</fields>
     <fields>Probability</fields>
     <fields>OwnerId</fields>
     <label>Opportunity Layout</label>

@@ -6,7 +6,6 @@
     <fields>Phone</fields>
     <fields>Email</fields>
     <fields>Source__c</fields>
-    <fields>IqScore</fields>
     <fields>Days_Since_Last_Activity__c</fields>
     <label>Lead Layout</label>
 </CompactLayout>
