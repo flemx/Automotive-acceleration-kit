@@ -1,0 +1,40 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="weDemoController" access="global">
+   <aura:handler name="init" value="{!this}" action="{!c.init}" />
+   <aura:attribute name="today" type="Date" />
+    <lightning:notificationsLibrary aura:id="notification"/>
+    <lightning:card class="slds-p-around_medium" title="we demo management">
+    <div class="slds-grid">
+    	<div class="slds-m-around_medium slds-m-around_medium slds-col slds-size_1-of-3">
+            <div class="slds-p-around_medium slds-box box ">
+            <div class="slds-text-heading_medium slds-m-bottom_large">Demo Assets</div>
+            <div class="slds-text-heading_small slds-m-bottom_small">Demo Script</div>
+            <p><lightning:icon iconName="doctype:quip_doc" size="x-small"></lightning:icon><lightning:formattedUrl value="https://salesforce.quip.com/o71HAEplgR1z" tooltip="Go to https://salesforce.quip.com/o71HAEplgR1z" label="Quip Document" target="_blank" /></p>
+        </div>
+        </div>
+        <div class="slds-m-around_medium slds-m-around_medium slds-col slds-size_1-of-3">
+            
+        <div class="slds-p-around_medium slds-box box">
+            <div class="slds-text-heading_medium slds-m-bottom_large">Reset Demo</div>
+        <ul class="slds-list_dotted">
+ 			<li>delete all leads related to John</li>
+            <li>delete all test drives where John is the driver</li>
+            <li>delete all orders from John</li>
+            <li>delete all portal feed item actions from Daniel</li>
+            <li>delete all cases from John</li>
+            <li>set John Customer Lifetimevalue to <lightning:input type="number" aura:id="CLV" name="CLV" label="CLV" value="42142" formatter="currency" step="0.01" variant="label-inline" class="inputLengthDelimeter" /></li>
+            <li>reschedule events to 1 day from demo date <lightning:input type="date" aura:id="demo_date" name="demo_date" label="date" value="{!v.today}" variant="label-inline" class="inputLengthDelimeter" /></li>
+            <li>Adjust article days</li>
+        </ul>
+            <div class="slds-align_absolute-center" ><lightning:button label="reset demo" variant="destructive" onclick="{! c.resetDemoButtonClick }" class="slds-m-top_medium" /></div>
+    	
+        </div>
+        
+    </div>
+    </div>
+	
+        
+    </lightning:card>
+
+
+
+</aura:component>

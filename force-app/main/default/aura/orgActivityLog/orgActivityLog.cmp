@@ -1,0 +1,150 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="orgActivityLogController" access="global">
+    <aura:attribute name="events" type="Object" />
+    <aura:attribute name="eventType" type="String" />
+
+    <lightning:empApi aura:id="empApi" />
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+
+    <aura:attribute name="subscription" type="Map" />
+
+
+    <lightning:card class="slds-p-around_medium" title="Org Activity Log">
+        <lightning:input aura:id="channel" label="channel" name="channel" type="text" value="/event/general_message__e" />
+        <div class="slds-p-vertical_medium">
+            <lightning:button label="Subscribe" onclick="{! c.subscribe }" />
+            <lightning:button label="Unsubscribe" onclick="{! c.unsubscribe }" disabled="{!empty(v.subscription)}" />
+            <lightning:button label="fire test event" variant="success" onclick="{! c.firetestevent }" />
+		</div>
+        <aura:iteration items="{!v.events}" var="event">
+            <aura:if isTrue="{!v.eventType == '/event/general_message__e'}">
+            
+            
+            <div class="message-box">
+
+                <div class="slds-grid">
+                    <div class="slds-row slds-p-around_small border-right">
+                        <div class="slds-grid">
+                            <div class="slds-row">
+                                <lightning:icon class="slds-m-right_medium" iconName="{!event.data.payload.main_icon__c}" size="large" />
+                            </div>
+                            <div class="slds-row">
+                                <div class="slds-grid_vertical">
+                                    <div class="slds-row slds-p-top_xxx-small">
+                                        <span class="slds-text-heading_small">{!event.data.payload.headline__c}</span>
+                                    </div>
+                                    <div class="slds-row">
+                                        <div class="date slds-text-body_small">
+                                            <lightning:formattedDateTime value="{!event.data.payload.CreatedDate}" year="numeric"
+                                                month="numeric" day="numeric" hour="2-digit" minute="2-digit" second="2-digit" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-row slds-p-around_small">
+                        <div class="slds-grid_vertical">
+                            <div class="slds-row">
+                                <aura:if isTrue="{!event.data.payload.category_1__c}">
+                                	<span class="slds-m-right_xx-small">{!event.data.payload.category_1__c}</span>
+                                </aura:if>
+                                <aura:if isTrue="{!event.data.payload.record_id_1__c}">
+                                    <a onclick="{!c.linkToRecordHome}" data-value="{!event.data.payload.record_id_1__c}" class="slds-m-right_xx-small">
+                                    	<aura:if isTrue="{!event.data.payload.icon_1__c}">
+                                        <lightning:icon class="slds-m-right_xx-small" iconName="{!event.data.payload.icon_1__c}" size="xx-small" />
+                                    	</aura:if>
+                                    	<aura:if isTrue="{!event.data.payload.record_name_1__c}">
+                                    	{!event.data.payload.record_name_1__c}
+                                        </aura:if>
+                                    </a>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!event.data.payload.icon_1__c}">
+                                        <lightning:icon class="slds-m-right_xx-small" iconName="{!event.data.payload.icon_1__c}" size="xx-small" />
+                                    </aura:if>
+                                    <aura:if isTrue="{!event.data.payload.record_name_1__c}">
+                                    	{!event.data.payload.record_name_1__c}
+                                    </aura:if>
+                                </aura:set>
+                                </aura:if>
+                                <aura:if isTrue="{!event.data.payload.message_1__c}">
+                                {!event.data.payload.message_1__c}
+                                 </aura:if>
+                            </div>
+                            
+                            <div class="slds-row">
+                                <aura:if isTrue="{!event.data.payload.category_2__c}">
+                                	<span class="slds-m-right_xx-small">{!event.data.payload.category_2__c}</span>
+                                </aura:if>
+                                <aura:if isTrue="{!event.data.payload.record_id_2__c}">
+                                    <a onclick="{!c.linkToRecordHome}" data-value="{!event.data.payload.record_id_2__c}" class="slds-m-right_xx-small">
+                                    	<aura:if isTrue="{!event.data.payload.icon_2__c}">
+                                        <lightning:icon class="slds-m-right_xx-small" iconName="{!event.data.payload.icon_2__c}" size="xx-small" />
+                                    	</aura:if>
+                                    	<aura:if isTrue="{!event.data.payload.record_name_2__c}">
+                                    	{!event.data.payload.record_name_2__c}
+                                        </aura:if>
+                                    </a>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!event.data.payload.icon_2__c}">
+                                        <lightning:icon class="slds-m-right_xx-small" iconName="{!event.data.payload.icon_2__c}" size="xx-small" />
+                                    </aura:if>
+                                    <aura:if isTrue="{!event.data.payload.record_name_2__c}">
+                                    	{!event.data.payload.record_name_2__c}
+                                    </aura:if>
+                                </aura:set>
+                                </aura:if>
+                                <aura:if isTrue="{!event.data.payload.message_2__c}">
+                                {!event.data.payload.message_2__c}
+                                 </aura:if>
+                            </div>
+                            <div class="slds-row">
+                                <aura:if isTrue="{!event.data.payload.category_3__c}">
+                                    <span class="slds-m-right_xx-small">{!event.data.payload.category_3__c}</span>
+                                </aura:if>
+                                <aura:if isTrue="{!event.data.payload.record_id_3__c}">
+                                    <a onclick="{!c.linkToRecordHome}" data-value="{!event.data.payload.record_id_3__c}" class="slds-m-right_xx-small">
+                                    	<aura:if isTrue="{!event.data.payload.icon_3__c}">
+                                        <lightning:icon class="slds-m-right_xx-small" iconName="{!event.data.payload.icon_3__c}" size="xx-small" />
+                                    	</aura:if>
+                                    	<aura:if isTrue="{!event.data.payload.record_name_3__c}">
+                                    	{!event.data.payload.record_name_3__c}
+                                        </aura:if>
+                                    </a>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!event.data.payload.icon_3__c}">
+                                        <lightning:icon class="slds-m-right_xx-small" iconName="{!event.data.payload.icon_3__c}" size="xx-small" />
+                                    </aura:if>
+                                    <aura:if isTrue="{!event.data.payload.record_name_3__c}">
+                                    	{!event.data.payload.record_name_3__c}
+                                    </aura:if>
+                                </aura:set>
+                                </aura:if>
+                                <aura:if isTrue="{!event.data.payload.message_3__c}">
+                                {!event.data.payload.message_3__c}
+                                 </aura:if>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           	</aura:if>
+            <aura:if isTrue="{!v.eventType == '/event/Smart_Vehicle_Reading__e'}">
+                <div class="slds-box slds-m-bottom_medium">
+                	Device: {!event.data.payload.deviceId__c} - Temperature: {!event.data.payload.temperature__c} - Humidity: {!event.data.payload.humidity__c} - Lightlevel: {!event.data.payload.lightlevel__c} - Tire Pressure: {!event.data.payload.tire_pressure__c}
+                </div>
+            </aura:if>
+        </aura:iteration>
+
+
+
+
+
+
+    </lightning:card>
+
+
+</aura:component>

@@ -5,7 +5,8 @@
     <members>Asset.Test_Drive__c</members>  
     <members>Asset.VIN__c</members>
      <members>Asset.License_Plate__c</members> 
-     <members>Activity.Test_Drive__c</members>
+     <members>Activity.Test_Drive__c</members> 
+     <members>Order.Contact__c</members> 
   </types>
   <version>46.0</version>
 </Package>

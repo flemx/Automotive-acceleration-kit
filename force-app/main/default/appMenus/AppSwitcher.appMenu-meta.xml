@@ -73,7 +73,7 @@
         <type>Network</type>
     </appMenuItems>
     <appMenuItems>
-        <name>global_monitoring</name>
+        <name>Global_Monitoring</name>
         <type>CustomApplication</type>
     </appMenuItems>
 </AppMenu>
