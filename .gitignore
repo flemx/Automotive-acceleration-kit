@@ -34,7 +34,7 @@ $RECYCLE.BIN/
 # Ignore below project files
 #force-app/main/default/networkBranding/
 #$force-app/main/default/networks/
-force-app/main/default/profiles/
+force-app/main/default/profiles
 force-app/main/default/settings/
 #force-app/main/default/siteDotComSites/
 #force-app/main/default/sites/

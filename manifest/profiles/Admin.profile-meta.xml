@@ -3,7 +3,7 @@
     <applicationVisibilities>
         <application>Global_Monitoring</application>
         <default>false</default>
-        <visible>false</visible>
+        <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
         <apexClass>AnyEventCalCtrl</apexClass>
