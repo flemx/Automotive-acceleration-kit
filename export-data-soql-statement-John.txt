@@ -1,0 +1,8 @@
+sfdx force:data:soql:query --query \
+      "SELECT Id, Name, Title__c, Phone__c, Mobile_Phone__c, \
+              Email__c, Picture__c, \
+       (SELECT Name, Address__c, City__c, State__c, Zip__c, \
+               Price__c, Title__c, Beds__c, Baths__c, Picture__c,  \
+               Thumbnail__c, Description__c \
+        FROM Properties__r) \
+       FROM Broker__c" 

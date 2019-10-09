@@ -35,6 +35,5 @@
     </quickActionLayout>
     <standardLabel>New</standardLabel>
     <targetObject>Account</targetObject>
-    <targetRecordType>Account.Simple</targetRecordType>
     <type>Create</type>
 </QuickAction>

@@ -765,10 +765,6 @@
         <object>portal_feed_item__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <recordType>Account.Simple</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <tabSettings>
         <tab>Navi</tab>
         <visibility>Visible</visibility>
