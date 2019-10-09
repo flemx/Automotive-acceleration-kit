@@ -1,11 +1,11 @@
 trigger handleLeadAutomation on Lead (after insert) {
-	
-	for(Lead l : Trigger.new) {
+    
+    for(Lead l : Trigger.new) {
             if (l.test_drive__c) {
                 //create test drive record if campaign is linked
                 Test_Drive__c td = new Test_Drive__c(
-                	Date__c = l.td_date_requested__c,
-                	Dealer__c = '0031t0000025d6KAAQ',
+                    Date__c = l.td_date_requested__c,
+                    Dealer__c = '0031t0000025d6KAAQ',
                     Driver__c = '0031t00000AEpK0AAL',
                     Configuration__c = 'a751t000000GpK4AAK',
                     Status__c = 'Requested',
@@ -53,7 +53,7 @@ trigger handleLeadAutomation on Lead (after insert) {
                 Datetime d = l.td_date_requested__c;
                 //create dealer message (portal feed item)
                 portal_feed_item__c pfi = new portal_feed_item__c(
-                	action_no__c = 'Reject',
+                    action_no__c = 'Reject',
                     action_yes__c = 'Accept',
                     category_1__c = 'Contact',
                     Contact__c = '0031t0000025d6KAAQ',
@@ -81,5 +81,5 @@ trigger handleLeadAutomation on Lead (after insert) {
                 SetLeadScore.setScore('84', ''+l.Id);
             }
     }
-	
+    
 }
