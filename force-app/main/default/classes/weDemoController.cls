@@ -4,7 +4,7 @@ public class weDemoController {
 public static Boolean resetDemo(String demoDate, Decimal CLV) {
     Boolean success = true;
     
-    //Find contact john.fisher-demo@gmail.com
+    //Find contact  john.fisher-demo@gmail.com
     Contact john = [SELECT Id, Name FROM Contact WHERE Email = 'john.fisher-demo@gmail.com' LIMIT 1];
     
     try{
