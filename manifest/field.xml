@@ -11,9 +11,7 @@ N/A           An object '' of type  was named in package.xml, but was not found 
 N/A           An object '' of type CompactLayout was named in package.xml, but was not found in zipped directory
 N/A           An object '' of type RecordType was named in package.xml, but was not found in zipped directory
 N/A           An object '' of type  was named in package.xml, but was not found in zipped directory
-     
-     //-->
-    <members>Contact.Cust360_CSAT__c</members>
+     <members>Contact.Cust360_CSAT__c</members>
     <members>Contact.Cust360_ChurnRisk__c</members>
     <members>Contact.Cust360_LTV__c</members>
     <members>Contact.Cust360_Loyalty__c</members>
@@ -24,7 +22,21 @@ N/A           An object '' of type  was named in package.xml, but was not found 
     <members>Lead.URLsrc__c</members>
     <members>Lead.td_date_requested__c</members>
     <members>Lead.test_drive__c</members>
+    <members>Contact.Cust360_Contact_Picture_URL__c</members>
+    <members>Contact.SocialMediaTwitterHandle__c</members>
+    <members>Contact.SocialMediaInstagramHandle__c</members>
+    <members>Appointment__c.Appointment_Time__c</members>
+    <members>Appointment__c.Contact__c</members>
+    <members>Appointment__c.Status__c</members> 
+     //-->
+    <members>Asset.Model__c</members>
   </types>
+  <!--
+  <types>
+    <name>CustomObject</name>
+    <members>Appointment__c</members>
+  </types>
+  
   <types>
     <name>CompactLayout</name>
     <members>Account.Account_Layout</members>
@@ -37,6 +49,6 @@ N/A           An object '' of type  was named in package.xml, but was not found 
   <types>
     <name>ListView</name>
     <members>Campaign.All_Campaigns</members>
-  </types>
+  </types>//-->
   <version>46.0</version>
 </Package>
