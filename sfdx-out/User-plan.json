@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "User",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Users.json"
+        ]
+    }
+]
