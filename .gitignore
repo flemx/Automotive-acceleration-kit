@@ -14,7 +14,10 @@ yarn-error.log*
 
 
 
-.vscode
+.vscode/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
 
 # Dependency directories
 node_modules/

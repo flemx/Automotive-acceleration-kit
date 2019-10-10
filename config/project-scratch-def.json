@@ -1,10 +1,11 @@
 {
-  "orgName": "dfleminks Company",
+  "orgName": "VW Developer ",
   "edition": "Developer",
-  "features": [],
+  "features": ["Communities"],
   "language": "en_US",
   "settings": {
     "orgPreferenceSettings": {
+      "networksEnabled": true,
       "s1DesktopEnabled": true
     }
   }
