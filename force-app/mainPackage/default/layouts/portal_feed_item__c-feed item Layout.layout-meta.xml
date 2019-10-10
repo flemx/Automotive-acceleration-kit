@@ -110,6 +110,10 @@
                 <behavior>Edit</behavior>
                 <field>SLA_achieved_since__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>News_List_Index__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

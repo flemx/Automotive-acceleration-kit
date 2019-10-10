@@ -1,0 +1,38 @@
+{
+    "records": [
+    {
+      "attributes" : {
+        "type" : "Asset",
+        "referenceId" : "ref8"
+      },
+      "Name" : "VW Golf VII Trendline 1.6 TDI SCR 115PS 7-Gear-DSG",
+      "SerialNumber" : "WVWZZZ1JZ3W386752",
+      "InstallDate" : "2017-07-21",
+      "PurchaseDate" : "2017-07-21",
+      "Status" : "Registered",
+      "Price" : "37890",
+      "Quantity" : "1",
+      "VIN__c" : "WVWZZZ1JZ3W386752",
+      "License_Plate__c" : null,
+      "AccountId" : "@AccountRef1",
+      "ContactId" : "@ContactRef1"
+    },
+    {
+      "attributes" : {
+        "type" : "Asset",
+        "referenceId" : "ref9"
+      },
+      "Name" : "VW I.D. Crozz",
+      "SerialNumber" : "WVWZZZ1JZ3W44000",
+      "InstallDate" : "2019-03-31",
+      "PurchaseDate" : "2019-03-31",
+      "Status" : "Registered",
+      "Price" : "42000",
+      "Quantity" : "1",
+      "VIN__c" : "WVWZZZ1JZ3W44000",
+      "License_Plate__c" : null,
+      "AccountId" : "@AccountRef1",
+      "ContactId" : "@ContactRef1"
+    }
+  ]
+}

@@ -40,6 +40,11 @@
                 <default>false</default>
                 <label>competitive</label>
             </value>
+            <value>
+                <fullName>googlenews</fullName>
+                <default>false</default>
+                <label>googlenews</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

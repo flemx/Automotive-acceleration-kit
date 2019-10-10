@@ -86,8 +86,7 @@
             },
             "Name" : "Inspection (Ignition check)",
             "Appointment_Time__c" : "2018-11-19T13:30:00.000+0000",
-            "Status__c" : "done",
-            "Contact__c" : "ref2"
+            "Status__c" : "done"
             }
           ]
         }
@@ -100,7 +99,7 @@
           "type" : "Asset",
           "referenceId" : "ref8"
         },
-        "ContactId" : "ref2",
+        "ContactId" : "@ref2",
         "Name" : "VW Golf VII Trendline 1.6 TDI SCR 115PS 7-Gear-DSG",
         "SerialNumber" : "WVWZZZ1JZ3W386752",
         "InstallDate" : "2017-07-21",
@@ -108,19 +107,14 @@
         "Status" : "Registered",
         "Price" : "37890",
         "Quantity" : "1",
-        "AssetLevel" : 1,
-        "VIN__c" : "WVWZZZ1JZ3W386752",
-        "Model__c" : "VW Golf VII Trendline 1.6 TDI SCR 115PS 7-Gear-DSG",
-        "Test_Drive__c" : null,
-        "License_Plate__c" : null,
-        "Configuration__c" : null
+        "VIN__c" : "WVWZZZ1JZ3W386752"
       },
       {
         "attributes" : {
           "type" : "Asset",
           "referenceId" : "ref9"
         },
-        "ContactId" : "ref2",
+        "ContactId" : "@ref2",
         "Name" : "VW I.D. Crozz",
         "SerialNumber" : "WVWZZZ1JZ3W44000",
         "InstallDate" : "2019-03-31",
@@ -128,12 +122,8 @@
         "Status" : "Registered",
         "Price" : "42000",
         "Quantity" : "1",
-        "AssetLevel" : 1,
         "VIN__c" : "WVWZZZ1JZ3W44000",
-        "Model__c" : "VW I.D. Crozz",
-        "Test_Drive__c" : null,
-        "License_Plate__c" : null,
-        "Configuration__c" : null
+        "License_Plate__c" : null
       }
     ]
   }
