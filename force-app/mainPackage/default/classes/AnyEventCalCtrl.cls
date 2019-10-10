@@ -18,7 +18,7 @@ public class AnyEventCalCtrl {
         System.debug('hello');
         List<EventObj> eventRecords = new List<EventObj>();
         List<Event> events=[SELECT Id, Subject,StartDateTime,EndDateTime,Description,OwnerId,AccountId,WhoId from Event  WHERE   AccountId =:a];
-        List<WorkOrder> woList=[Select Id, EndDate , StartDate , OwnerId, Status ,Subject , Description ,AccountId from WorkOrder where  AccountId =:a];
+        //List<WorkOrder> woList=[Select Id, EndDate , StartDate , OwnerId, Status ,Subject , Description ,AccountId from WorkOrder where  AccountId =:a];
         for (Event e : events) {
             EventObj newEv = new EventObj(e.Id,e.Subject,e.StartDateTime,e.EndDateTime,
                                           e.Description,
@@ -28,7 +28,7 @@ public class AnyEventCalCtrl {
                                          );
             eventRecords.add(newEv);
         }
-        for (WorkOrder wo : woList){
+        /*for (WorkOrder wo : woList){
             if(wo.Status=='New'){
                 EventObj newEv = new EventObj(wo.Id,
                                               String.valueOf(wo.Subject),
@@ -65,7 +65,7 @@ public class AnyEventCalCtrl {
                                              );
                 eventRecords.add(newEv);
             }
-    }
+    }*/
         System.debug('accs::'+eventRecords);
         return eventRecords; 
     }
