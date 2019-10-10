@@ -178,6 +178,7 @@
         </navigationMenuItem>
     </navigationLinkSet>
     <networkMemberGroups>
+        <permissionSet>VW_demo_pack</permissionSet>
         <profile>Admin</profile>
     </networkMemberGroups>
     <networkPageOverrides>
@@ -191,7 +192,7 @@
     <selfRegistration>false</selfRegistration>
     <sendWelcomeEmail>true</sendWelcomeEmail>
     <site>dealer</site>
-    <status>UnderConstruction</status>
+    <status>Live</status>
     <tabs>
         <defaultTab>home</defaultTab>
         <standardTab>Chatter</standardTab>

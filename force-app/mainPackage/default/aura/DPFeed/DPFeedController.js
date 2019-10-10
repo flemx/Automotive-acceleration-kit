@@ -1,14 +1,48 @@
 ({
 	"init" : function(component, e, h) {
         
+
+
         //get username
         var action = component.get('c.getUserData');
+        
+        // Variables for google news api
+        let googleList = [];
+        const gToken = component.get('v.googleNewsToken');
+        const gSearch = component.get('v.googleNewSearchKey');
+        //Fetch the google news data (Max 10)
+        fetch('https://gnews.io/api/v3/search?q='+gSearch+'&token='+gToken)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                component.set('v.googleNewsList', data);
+                googleList = data;
+                console.log(data);
+            });
+
+
+        /*
+        let gToken = component.get('v.googleNewsToken');
+        let gSearch = component.get('v.googleNewSearchKey');
+        fetch('https://gnews.io/api/v3/search?q='+gSearch+'&token='+gToken)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (newsdata) {
+                component.set('v.googleNewsList', newsdata);
+                console.log(newsdata);
+            });
+            */
+        //slet googleList = component.get('googleNewsList');
+        
         
         action.setParams({"userid": $A.get('$SObjectType.CurrentUser.Id')});
         console.log("id",$A.get('$SObjectType.CurrentUser.Id'))
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                
                 var data = response.getReturnValue();
                 console.log("data = ", data);
                 component.set("v.username",data.FirstName);
@@ -45,11 +79,23 @@
                                 
                                 
                             }
+
+                            /* Assign Google news data to googlenews feeditems */
+                            let tempIndex = 0;
+                            if(d.type__c === 'googlenews'){
+                                d.title__c = googleList.articles[tempIndex].title;
+                                d.text__c = googleList.articles[tempIndex].description;
+                                d.source__c = googleList.articles[tempIndex].source.url;
+                                d.image__c = googleList.articles[tempIndex].image;
+                                d.date__c = googleList.articles[tempIndex].publishedAt;
+                            }
+                            
                             
                         }
                         document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
                         document.getElementById("content").classList.remove("slds-hide");
                         console.log("data = ", data);
+
                         component.set("v.fil",data);
                         
                     }

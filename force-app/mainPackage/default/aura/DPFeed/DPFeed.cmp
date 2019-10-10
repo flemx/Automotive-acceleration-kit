@@ -1,6 +1,6 @@
 <aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="PortalFeedController" access="global" >
     <aura:handler name="init" action="{!c.init}" value="{!this}" />
-    
+
     
     <aura:attribute name="greeting" type="String" default="Good Day" />
     <aura:attribute name="username" type="String" default="" />
@@ -19,6 +19,10 @@
     <aura:attribute name="modalYesLiteral" type="String" />
 	<aura:attribute name="modalNoLiteral" type="String" />
     <aura:attribute name="modalFiid" type="String" />
+
+    <!-- Google news feeds  -->
+    <aura:attribute name="googleNewsToken" type="String" />
+    <aura:attribute name="googleNewSearchKey" type="String" />
     
 	<!-- generic modal - will show upon event //-->
         <aura:if isTrue="{!v.showModal}">
@@ -172,7 +176,7 @@
             <div class="slds-text-heading_medium slds-p-vertical_medium">{!v.greeting + ', ' + v.username + ', here are your latest updates'}</div>
             <aura:iteration items="{!v.fil}" var="fi">
                 <!-- render feed item types of announcement, news, competitive //-->
-                <aura:if isTrue="{!or(or(and(fi.type__c == 'announcement',v.announcement),and(fi.type__c == 'news',v.news)),and(fi.type__c == 'competitive',v.competitive))}">
+                <aura:if isTrue="{!or(or(and(fi.type__c == 'announcement',v.announcement),and(fi.type__c == 'news' || fi.type__c == 'googlenews',v.news)),and(fi.type__c == 'competitive',v.competitive))}">
                     <div class="feeditem regular">
                         <div class="feeditem-background">
                             <div class="feeditem-icon-container">
@@ -207,17 +211,45 @@
                             </div>
                         </div>
                         <div class="feeditem-main">
-                            <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
-                            <div class="feed-text-container">
-                                <div class="slds-text-heading_small">{!fi.title__c}</div>
-                                <div class="source-date-container">
-                                    <div class="slds-text-color_weak">{!fi.source__c}</div>
-                                    <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
+
+                                <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
+                                <div class="feed-text-container">
+                                    <div class="slds-text-heading_small">{!fi.title__c}</div>
+                                    <div class="source-date-container">
+                                        <div class="slds-text-color_weak">{!fi.source__c}</div>
+                                        <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
+                                    </div>
+                                    <p class="block-with-text">{!fi.text__c}</p>
                                 </div>
-                                <p class="block-with-text">{!fi.text__c}</p>
-                            </div>
+
+                                <!--
+                                <aura:if isTrue="{!fi.type__c eq 'news'}">
+
+                                        <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
+                                        <div class="feed-text-container">
+                                            <div class="slds-text-heading_small">{!v.googleNewsList.articles[fi.News_List_Index__c}].title}</div>
+                                            <div class="source-date-container">
+                                                <div class="slds-text-color_weak">{!v.googleNewsList.articles[fi.News_List_Index__c].source.url}</div>
+                                                <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
+                                            </div>
+                                            <p class="block-with-text">{!v.googleNewsList.articles[fi.News_List_Index__c].description}</p>
+                                        </div>
+    
+                                    <aura:set attribute="else">
+                                        <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
+                                        <div class="feed-text-container">
+                                            <div class="slds-text-heading_small">{!fi.title__c}</div>
+                                            <div class="source-date-container">
+                                                <div class="slds-text-color_weak">{!fi.source__c}</div>
+                                                <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
+                                            </div>
+                                            <p class="block-with-text">{!fi.text__c}</p>
+                                        </div>
+                                    </aura:set>
+                                </aura:if>
+                                -->
                         </div>
-                </div>
+                    </div>
                 </aura:if>
                 <!-- render feed item type of action required //-->
                 <aura:if isTrue="{!and(fi.type__c == 'action required',v.action_required)}">

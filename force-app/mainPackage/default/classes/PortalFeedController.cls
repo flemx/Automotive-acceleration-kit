@@ -59,6 +59,8 @@ public with sharing class PortalFeedController {
 			*/
         return pfil;
     }
+
+
     
     @AuraEnabled
     public static Boolean pushEventMessage(general_message__e msg){
