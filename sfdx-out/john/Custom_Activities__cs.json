@@ -1,0 +1,56 @@
+{
+    "records" : [
+      {
+        "attributes" : {
+          "type" : "Custom_Activity__c",
+          "referenceId" : "caRef1"
+        },
+        "Name" : "Car Purchase",
+        "days_ago__c" : 520.0,
+        "icon__c" : "utility:travel_and_places",
+        "message__c" : "Golf VII 2.0 7-DSG GTI",
+        "order__c" : 3.0,
+        "time__c" : "11:15",
+        "Contact__c" : "@ContactRef1"
+      },
+      {
+        "attributes" : {
+          "type" : "Custom_Activity__c",
+          "referenceId" : "caRef2"
+        },
+        "Name" : "Service Case",
+        "days_ago__c" : 1.0,
+        "icon__c" : "standard:case_email",
+        "message__c" : "I have a problem with my ignition",
+        "order__c" : 2.0,
+        "time__c" : "17:33",
+        "Contact__c" : "@ContactRef1"
+      },
+      {
+        "attributes" : {
+          "type" : "Custom_Activity__c",
+          "referenceId" : "caRef3"
+        },
+        "Name" : "Survey Response",
+        "days_ago__c" : 1.0,
+        "icon__c" : "standard:survey",
+        "message__c" : "Service Case Closed Response",
+        "order__c" : 1.0,
+        "time__c" : "8:40",
+        "Contact__c" : "@ContactRef1"
+      },
+      {
+        "attributes" : {
+          "type" : "Custom_Activity__c",
+          "referenceId" : "caRef4"
+        },
+        "Name" : "Test Drive Request",
+        "days_ago__c" : 1.0,
+        "icon__c" : "standard:lead",
+        "message__c" : "Customer requested ID Crozz test drive at home",
+        "order__c" : 0.0,
+        "time__c" : "19:21",
+        "Contact__c" : "@ContactRef1"
+      }
+    ]
+  }

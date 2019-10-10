@@ -1,0 +1,42 @@
+[
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Accounts.json"
+        ]
+    },
+    {
+        "sobject": "Contact",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Contacts.json"
+        ]
+    },
+    {
+        "sobject": "Custom_Activities__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Custom_Activities__cs.json"
+        ]
+    },
+    {
+        "sobject": "Appointment__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Appointment__cs.json"
+        ]
+    },
+    {
+        "sobject": "Asset",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Assets.json"
+        ]
+    }
+]
