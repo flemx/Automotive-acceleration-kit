@@ -1,0 +1,19 @@
+{
+    "allOrNone": true,
+    "compositeRequest": [
+        {
+            "url": "/services/data/v44.0/query?q=select+Id+from+recordtype+where+sobjecttype=%27account%27+and+name=%27household%27",
+            "method": "GET",
+            "referenceId": "recType"
+        },
+        {
+            "url": "/services/data/v44.0/sobjects/Account",
+            "method": "POST",
+            "referenceId": "householdAccount",
+            "body": {
+                "Name": "John Doe Family",
+                "RecordTypeId": "@{recType.records[0].Id}"
+            }
+        }
+    ]
+}

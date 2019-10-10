@@ -1,4 +1,4 @@
-<design:component label="Custom Activity Timeline">
+<design:component label="Custom Activity Timeline - Tablet">
     
     <design:attribute label="Height in Pixels" 
                       name="heightPixels" 

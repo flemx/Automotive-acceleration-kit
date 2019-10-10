@@ -25,8 +25,8 @@
       				  recordUpdated="{!c.handleRecordUpdated}" />
     
     
-    <div class="slds-card slds-m-top_medium card tiny" aura:id="card" >
-        <div class="header-image" style = "{! 'background-image:url(' + (v.backgroundImageUrl) + '); background-color:' + (v.backgroundHexColor) + ';'}">
+    <div class="slds-card card tiny" aura:id="card" >
+        <div class="header-image" style = "{! 'background-image:url(' + (v.backgroundImageUrl ? v.backgroundImageUrl : $Resource.GolfBanner) + '); background-color:' + (v.backgroundHexColor) + ';'}">
         	<div class="slds-grid slds-grid_align-end slds-p-around_medium">
               	<lightning:buttonMenu iconName="utility:down" alternativeText="More" variant="bare-inverse" menuAlignment="right" onselect="{! c.openmodal }">
                     <lightning:menuItem label="Update Card Info" value="update360" />                    
@@ -38,7 +38,7 @@
             <div class="slds-media_figure">
                 <div class="customer-image-container ">
                     <aura:if isTrue="{!empty(v.fields.Cust360_Contact_Picture_URL__c)}">
-                            <img src="/_slds/images/themes/lightning_lite/lightning_lite_profile_avatar_160.png" class="customer-avatar"/>
+                            <img src="{!$Resource.JohnFisher}" class="customer-avatar"/>
                         <aura:set attribute="else">
                             <img src="{!v.fields.Cust360_Contact_Picture_URL__c}" class="customer-avatar"/>
                         </aura:set>   
