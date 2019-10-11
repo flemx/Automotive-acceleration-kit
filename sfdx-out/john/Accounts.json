@@ -7,6 +7,35 @@
             },
             "Name" : "Fisher",
             "Type" : "Household"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "Name" : "VW Berlin",
+            "Type" : "Mid-Market",
+            "BillingStreet" : "Berliner Str. 100",
+            "BillingCity" : "Berlin",
+            "BillingState" : "",
+            "BillingPostalCode" : "13189",
+            "BillingCountry" : "Germany",
+            "ShippingStreet" : "Berliner Str. 100",
+            "ShippingCity" : "Berlin",
+            "ShippingState" : "",
+            "ShippingPostalCode" : "13189",
+            "ShippingCountry" : "Germany",
+            "Phone" : "(030) 479-950",
+            "Fax" : "",
+            "AccountNumber" : "A45475905",
+            "Website" : "www.vwberlin.com",
+            "AnnualRevenue" : 12000000,
+            "NumberOfEmployees" : 27,
+            "Ownership" : "Private",
+            "Description" : "Central Berlin Dealer",
+            "Site" : "Single Location",
+            "AccountSource" : "Marketing Event",
+            "Demo_Key__c" : "Account_01"
         }
     ]
 }
