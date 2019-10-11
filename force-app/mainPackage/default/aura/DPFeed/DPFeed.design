@@ -1,5 +1,6 @@
 <design:component>
     <design:attribute name="googleNewsToken" label="gnews.io Token" default="1fa2d344b4746199047b819729057105"/>
-	<design:attribute name="googleNewSearchKey" label="Google new Search key" default="volkswagen"/>
+    <design:attribute name="googleNewSearchKey" label="Google new Search key" default="volkswagen"/>
+    <design:attribute name="googleNewEnabled" label="Google news enabled" datasource="true,false" default="true"/>
 	
 </design:component>

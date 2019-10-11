@@ -22,19 +22,6 @@
             });
 
 
-        /*
-        let gToken = component.get('v.googleNewsToken');
-        let gSearch = component.get('v.googleNewSearchKey');
-        fetch('https://gnews.io/api/v3/search?q='+gSearch+'&token='+gToken)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (newsdata) {
-                component.set('v.googleNewsList', newsdata);
-                console.log(newsdata);
-            });
-            */
-        //slet googleList = component.get('googleNewsList');
         
         
         action.setParams({"userid": $A.get('$SObjectType.CurrentUser.Id')});
@@ -79,19 +66,23 @@
                                 
                                 
                             }
-
-                            /* Assign Google news data to googlenews feeditems */
-                            let tempIndex = 0;
-                            if(d.type__c === 'googlenews'){
-                                d.title__c = googleList.articles[tempIndex].title;
-                                d.text__c = googleList.articles[tempIndex].description;
-                                d.source__c = googleList.articles[tempIndex].source.url;
-                                d.image__c = googleList.articles[tempIndex].image;
-                                d.date__c = googleList.articles[tempIndex].publishedAt;
-                            }
-                            
                             
                         }
+                        
+                        // If Google news api is enabled add newsitems for all returnes articles
+                        if(component.get('v.googleNewEnabled') === 'true'){s
+                            for(let newsItem of googleList.articles){
+                                let newNewsItem = {};
+                                newNewsItem.title__c = newsItem.title;
+                                newNewsItem.text__c = newsItem.description;
+                                newNewsItem.source__c = newsItem.source.url;
+                                newNewsItem.image__c = newsItem.image;
+                                newNewsItem.date__c = newsItem.publishedAt;
+                                newNewsItem.type__c = 'googlenews';
+                                data.push(newNewsItem);
+                            }
+                        }
+                       
                         document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
                         document.getElementById("content").classList.remove("slds-hide");
                         console.log("data = ", data);
