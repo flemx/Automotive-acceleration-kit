@@ -11,7 +11,7 @@
         const gToken = component.get('v.googleNewsToken');
         const gSearch = component.get('v.googleNewSearchKey');
         //Fetch the google news data (Max 10)
-        fetch('https://gnews.io/api/v3/search?q='+gSearch+'&token='+gToken)
+        fetch('https://gnews.io/api/v3/search?q='+gSearch+'&image=required&token='+gToken)
             .then(function (response) {
                 return response.json();
             })
@@ -70,7 +70,7 @@
                         }
                         
                         // If Google news api is enabled add newsitems for all returnes articles
-                        if(component.get('v.googleNewEnabled') === 'true'){s
+                        if(component.get('v.googleNewEnabled') === 'true'){
                             for(let newsItem of googleList.articles){
                                 let newNewsItem = {};
                                 newNewsItem.title__c = newsItem.title;
