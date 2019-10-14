@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
-        <application>Global_Monitoring</application>
+        <application>global_monitoring</application>
         <visible>true</visible>
     </applicationVisibilities>
     <fieldPermissions>
@@ -561,6 +561,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>demo_setting__c.dealer_email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>demo_setting__c.dealer_name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>portal_feed_item__c.News_List_Index__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -774,6 +784,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>dealer_event__c</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>demo_setting__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>

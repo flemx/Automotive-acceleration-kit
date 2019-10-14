@@ -8,7 +8,7 @@ package.xml
 AppSwitcher.appMenu
 
 #ignore profiles
-**profiles
+#**profiles
 
 # LWC configuration files
 **/jsconfig.json

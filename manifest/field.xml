@@ -28,8 +28,9 @@ N/A           An object '' of type  was named in package.xml, but was not found 
     <members>Appointment__c.Appointment_Time__c</members>
     <members>Appointment__c.Contact__c</members>
     <members>Appointment__c.Status__c</members> 
-     //-->
     <members>Asset.Model__c</members>
+     //-->
+    
   </types>
   <!--
   <types>
@@ -49,6 +50,15 @@ N/A           An object '' of type  was named in package.xml, but was not found 
   <types>
     <name>ListView</name>
     <members>Campaign.All_Campaigns</members>
+  </types>
+  <types>
+    <name>Profile</name>
+    <members>*Partners</members>
   </types>//-->
+  
+  <types>
+    <name>Role</name>
+    <members>AcmeResellersPartnerExecutive</members>
+  </types>
   <version>46.0</version>
 </Package>
