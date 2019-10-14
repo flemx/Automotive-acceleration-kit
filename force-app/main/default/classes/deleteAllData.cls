@@ -7,6 +7,10 @@ public static Boolean go() {
         List<Custom_Activity__c> ca = [SELECT Id FROM Custom_Activity__c];
         List<Asset> ass = [SELECT Id FROM Asset];
         List<Appointment__c> app = [SELECT Id FROM Appointment__c];
+        List<Campaign> campaigns = [SELECT Id FROM Campaign ORDER BY CreatedDate DESC];
+        List<Configuration__c> configs = [SELECT Id FROM Configuration__c];
+        delete campaigns;
+        delete configs;
         delete ds;
         delete app;
         delete ass;

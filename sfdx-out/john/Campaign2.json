@@ -1,0 +1,19 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Campaign",
+                "referenceId": "CampaignRef2"
+            },
+            "Name" : "All Web Marketing",
+            "ParentId" : "@CampaignRef1",
+            "Type" : "Other",
+            "Status" : "In Progress",
+            "StartDate" : "2019-01-01",
+            "EndDate" : "2019-12-31",
+            "IsActive" : true,
+            "Description" : "Parent Campaign for Web Marketing"
+        }
+    ]
+}
+

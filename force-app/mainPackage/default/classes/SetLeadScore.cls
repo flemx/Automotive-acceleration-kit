@@ -2,8 +2,9 @@ public class SetLeadScore {
 
     @future(callout=true)
     public static void setScore(String score, String lid){
-        //create Score
-                //create Score
+        //check if Einstein Lead Scoring is enabled / enabling it will give access to 'ScoreIntelligence' Object
+        if(Schema.getGlobalDescribe().containsKey('ScoreIntelligence')){
+            //create Score
                 String leadScore = '{"BaseId" : "' + 
                     lid + 
                     '","LastModifiedTimeOnRecord" : "' + 
@@ -14,7 +15,7 @@ public class SetLeadScore {
         		System.debug('leadScore = ' + leadScore);
                 Http http = new Http();
                 HttpRequest request = new HttpRequest();
-                request.setEndpoint('https://ohana-cab.my.salesforce.com/services/data/v45.0/sobjects/ScoreIntelligence');
+                request.setEndpoint(Url.getOrgDomainUrl().toExternalForm() + '/services/data/v45.0/sobjects/ScoreIntelligence');
                 request.setHeader('Content-Type', 'application/json; charset=UTF-8' );
         		request.setHeader('Authorization', 'Bearer '+ UserInfo.getSessionId() );
                 request.setMethod('POST');
@@ -29,7 +30,9 @@ public class SetLeadScore {
                     System.debug('Error posting leadScore');
                     System.debug(response.getStatusCode()+'');
                 }
-        		setInsight(lid);
+        	setInsight(lid);
+        }
+        
     }
     
      public static void setReason(String lid, String FactorId){
@@ -39,7 +42,7 @@ public class SetLeadScore {
         		System.debug('ModelFactor = ' + ModelFactor);
                 Http http = new Http();
                 HttpRequest request = new HttpRequest();
-                request.setEndpoint('https://ohana-cab.my.salesforce.com/services/data/v45.0/sobjects/ModelFactor');
+                request.setEndpoint(Url.getOrgDomainUrl().toExternalForm() + '/services/data/v45.0/sobjects/ModelFactor');
                 request.setHeader('Content-Type', 'application/json' );
         		request.setHeader('Authorization', 'Bearer '+ UserInfo.getSessionId() );
                 request.setMethod('POST');
@@ -72,7 +75,7 @@ public class SetLeadScore {
         		System.debug('leadInsight = ' + leadInsight);
                 Http http = new Http();
                 HttpRequest request = new HttpRequest();
-                request.setEndpoint('https://ohana-cab.my.salesforce.com/services/data/v45.0/sobjects/LeadInsight');
+                request.setEndpoint(Url.getOrgDomainUrl().toExternalForm() + '/services/data/v45.0/sobjects/LeadInsight');
                 request.setHeader('Content-Type', 'application/json; charset=UTF-8' );
         		request.setHeader('Authorization', 'Bearer '+ UserInfo.getSessionId() );
                 request.setMethod('POST');
