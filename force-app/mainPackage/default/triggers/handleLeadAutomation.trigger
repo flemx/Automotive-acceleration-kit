@@ -1,15 +1,20 @@
-trigger handleLeadAutomation on Lead (after insert, before insert) {
+trigger handleLeadAutomation on Lead (after insert) {
     if(Trigger.isAfter){
         for(Lead l : Trigger.new) {
             if (l.test_drive__c) {
+                //add Campaign Member
+                //get Campaign
+                Id campaign_id = [SELECT Id FROM Campaign WHERE demo_key__c = 'Campaign_01' LIMIT 1].Id;
+                CampaignMember cm = new CampaignMember (campaignId=campaign_id, leadid=l.id);
+                insert cm;
                 //get Config
                 demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
                 //get Dealer Contact
-                Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_2' LIMIT 1];
+                Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
                 //get Dealer User
-                Id dealerUser_id = [SELECT Id FROM User WHERE Name = :demoSetting.dealer_name__c LIMIT 1].Id;
+                Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
                 //get Driver Contact
-                Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_1' LIMIT 1];
+                Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
                 //get Configuration
                 Id config_id = [SELECT Id FROM Configuration__c WHERE demo_key__c = 'Config_1' LIMIT 1].Id;
                 //create test drive record if testdrive date is set
@@ -66,7 +71,7 @@ trigger handleLeadAutomation on Lead (after insert, before insert) {
                     action_no__c = 'Reject',
                     action_yes__c = 'Accept',
                     category_1__c = 'Contact',
-                    Contact__c = driver.Id,
+                    Contact__c = dealer.Id,
                     date__c = Datetime.now(),
                     icon_1__c = 'standard:contact',
                     icon_2__c = 'custom:custom31',
@@ -92,17 +97,4 @@ trigger handleLeadAutomation on Lead (after insert, before insert) {
             }
         }
     }
-
-    if(Trigger.isBefore){
-        for(Lead l : Trigger.new) {
-            if (l.test_drive__c) {
-                //get Campaign
-                Id campaign_id = [SELECT Id FROM Campaign WHERE demo_key__c = 'Campaign_01' LIMIT 1].Id;
-                CampaignMember cm = new CampaignMember (campaignId=campaign_id, leadid=l.id);
-                insert cm;
-            }
-        }
-    }
-
-    
 }

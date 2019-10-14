@@ -9,9 +9,9 @@ public class naviController {
                 demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
                 
         //get Driver Contact
-                Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_1' LIMIT 1];
+                Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
                  //get Dealer Contact
-                Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_2' LIMIT 1];
+                Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
                 //get Dealer User
                 Id dealerUser_id = [SELECT Id FROM User WHERE Name = :demoSetting.dealer_name__c LIMIT 1].Id;
                 

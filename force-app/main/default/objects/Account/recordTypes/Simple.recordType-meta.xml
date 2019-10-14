@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Simple</fullName>
-    <active>false</active>
-    <compactLayoutAssignment>Account_Layout</compactLayoutAssignment>
-    <description>Primary Account record type used for most account records.</description>
-    <label>Account</label>
-</RecordType>
