@@ -17,7 +17,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
-    <label>Global Monitoring</label>
+    <label>global monitoring</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>we_demo_management</tabs>
@@ -28,5 +28,4 @@
     <tabs>dealer_event__c</tabs>
     <tabs>Navi</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Global_Monitoring_UtilityBar1</utilityBar>
 </CustomApplication>
