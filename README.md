@@ -1,6 +1,6 @@
 # Volkswagen Demo Pack
 
-## Add Basic Data
+## Setting up project with Basic Data
 
 1. push source
 ```
