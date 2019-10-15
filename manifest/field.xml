@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  
+<!--
   <types>
-    <name>CustomField</name>
-<!--    <members>Asset.Test_Drive__c</members>  
+    <name>CustomField</name><members>Asset.Test_Drive__c</members>  
     <members>Asset.VIN__c</members>
-     <members>Asset.License_Plate__c</members> 
-     <members>Activity.Test_Drive__c</members> 
-     <members>Order.Contact__c</members> 
-N/A           An object '' of type  was named in package.xml, but was not found in zipped directory
-N/A           An object '' of type CompactLayout was named in package.xml, but was not found in zipped directory
-N/A           An object '' of type RecordType was named in package.xml, but was not found in zipped directory
-N/A           An object '' of type  was named in package.xml, but was not found in zipped directory
-     <members>Contact.Cust360_CSAT__c</members>
+    <members>Asset.License_Plate__c</members> 
+    <members>Activity.Test_Drive__c</members> 
+    <members>Order.Contact__c</members>
+    <members>Contact.Cust360_CSAT__c</members>
     <members>Contact.Cust360_ChurnRisk__c</members>
     <members>Contact.Cust360_LTV__c</members>
     <members>Contact.Cust360_Loyalty__c</members>
@@ -29,10 +26,7 @@ N/A           An object '' of type  was named in package.xml, but was not found 
     <members>Appointment__c.Contact__c</members>
     <members>Appointment__c.Status__c</members> 
     <members>Asset.Model__c</members>
-     //-->
-    
   </types>
-  <!--
   <types>
     <name>CustomObject</name>
     <members>Appointment__c</members>
@@ -54,11 +48,13 @@ N/A           An object '' of type  was named in package.xml, but was not found 
   <types>
     <name>Profile</name>
     <members>*Partners</members>
-  </types>//-->
-  
-  <types>
+  </types>
+    <types>
     <name>Role</name>
     <members>AcmeResellersPartnerExecutive</members>
   </types>
+  //-->
+  
+
   <version>46.0</version>
 </Package>

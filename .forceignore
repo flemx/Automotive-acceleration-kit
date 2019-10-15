@@ -18,3 +18,5 @@ force-app/main/default/profiles/Admin.profile-meta.xml
 
 # LWC Jest
 **/__tests__/**
+
+CustomApplication.Contact
