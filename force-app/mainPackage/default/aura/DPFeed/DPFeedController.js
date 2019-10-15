@@ -20,7 +20,8 @@
             var state = response.getState();
             if (state === "SUCCESS") {
                 
-                var data = response.getReturnValue();
+                let data = [];
+                data = response.getReturnValue();
                 console.log("data = ", data);
                 component.set("v.username",data.FirstName);
                 
@@ -58,7 +59,6 @@
                             }
                             
                         }
-                        
                         // If Google news api is enabled add newsitems for all returnes articles
                         //Fetch the google news data (Max 10) -> set the data variable inside callout
                         fetch('https://gnews.io/api/v3/search?q='+gSearch+'&image=required&token='+gToken)
@@ -148,24 +148,31 @@
         
         //set interval to recalculate time remaining each minute
         setInterval(() => {
-            var data = component.get("v.fil");
+            try{
+            let data = [];
+            data = component.get("v.fil");
             for(var d of data){
-                            //add display percentage
-                            if(d.SLA_in_minutes__c){
-                                var elapsedTime = (new Date() - d.jsdate)/60000;
-                                var remainingTime = d.SLA_in_minutes__c - elapsedTime;
-                                if(elapsedTime < d.SLA_in_minutes__c){
-                                    d.sla_display_percentage = (elapsedTime/d.SLA_in_minutes__c)*360;
-                                    d.sla_assistive_text = "Please accept or reject this request within " + parseInt(remainingTime/60) + " hours and " + parseInt(remainingTime%60) + " minutes."; 
-                                } else {
-                                    d.sla_display_percentage = 360;
-                                }
-                                
-                                
-                            }
-                            
+                    //add display percentage
+                    if(d.SLA_in_minutes__c){
+                        var elapsedTime = (new Date() - d.jsdate)/60000;
+                        var remainingTime = d.SLA_in_minutes__c - elapsedTime;
+                        if(elapsedTime < d.SLA_in_minutes__c){
+                            d.sla_display_percentage = (elapsedTime/d.SLA_in_minutes__c)*360;
+                            d.sla_assistive_text = "Please accept or reject this request within " + parseInt(remainingTime/60) + " hours and " + parseInt(remainingTime%60) + " minutes."; 
+                        } else {
+                            d.sla_display_percentage = 360;
                         }
-                    component.set("v.fil",data);
+                        
+                        
+                    }
+                    
+                }
+                component.set("v.fil",data);
+            }catch(e){
+                console.error("Error logged: ");
+                console.error(e);
+            }
+            
             
         },5000);
     

@@ -2,7 +2,8 @@
 	accept: function(c,e,h){
         console.log("accept");
         //set modal information in case a modal needs to be opened
-        var data = c.get("v.fil");
+        let data = [];s
+        data = c.get("v.fil");
         var fi = null;
             for(var d of data){
                 if(d.Id == e.getSource().get("v.value")){
