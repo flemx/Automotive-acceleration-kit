@@ -23,6 +23,8 @@
         
         
         <div class="slds-grid slds-nowrap slds-grid_vertical-align-center menu_item_container">
+           
+            <!--
             <div class="slds-col slds-size_1-of-12 menu_item">
                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Volkswagen_logo.png/183px-Volkswagen_logo.png" width="60"></img>
             </div>
@@ -63,18 +65,28 @@
                     </div>
                 </a>
             </div>
+            -->
+
             <div class="slds-col slds-size_5-of-12 menu_item_search">
                 {!v.search}
             </div>
-            <div class="slds-col slds-size_1-of-12 menu_item">
-                <a href="https://www.google.com/">
-                    <div class="menu_image">
-                        <lightning:icon iconName="utility:settings" size="medium" class="icon_menu"/>    
-                    </div>     
-                </a>
-            </div>
             <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
                 {!v.profileMenu}
+            </div>
+        
+            <div class="imNMYb">
+                    <div class="imNMYb">
+                            <div class="bsIxH sc-hZSUBg eOckfd"></div>
+                            <div class="hokKXU">
+                               <a class="StyledPlainLink-fjvMhd bqxYDJ" href="">
+                                  <div class="dAiRow">
+                                        <c:vwSvgLogo />
+                                  </div>
+                               </a>
+                            </div>
+                            <h3 class="dealer-portal-text">Dealer Portal</h3>
+                            <div class="eOckfd"></div>
+                         </div>
             </div>
         </div>
         <div class="mainContentArea slds-grid">
