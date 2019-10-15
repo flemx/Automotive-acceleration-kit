@@ -143,12 +143,12 @@
     cursor: default;
 }
 
-.dAiRow{
+.THIS .dAiRow{
     width: 36px;
     margin-left: 9px;
     margin-top: 6px;
 }
 
-.dealer-portal-text{
+.THIS .dealer-portal-text{
     width: 360px;
 }
