@@ -66,13 +66,19 @@
                 </a>
             </div>
             -->
+            <div class="navMenuItems">
 
-            <div class="slds-col slds-size_5-of-12 menu_item_search">
-                {!v.search}
             </div>
-            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
-                {!v.profileMenu}
+
+            <div class="searchAndProfile">
+                    <div class="slds-col slds-size_3-of-4 searchComp">
+                            {!v.search}
+                        </div>
+                        <div class="slds-col slds-size_1-of-4">
+                            {!v.profileMenu}
+                    </div>
             </div>
+          
         
             <div class="imNMYb">
                     <div class="imNMYb">
