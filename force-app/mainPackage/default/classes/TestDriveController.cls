@@ -8,7 +8,9 @@ public class TestDriveController {
    
     @AuraEnabled
     public static Test_Drive__c getTestDrive() {
-        Test_Drive__c theTest =[SELECT Date__c,assigned_Vehicle__r.VIN__c,Vehicle__c FROM Test_Drive__c WHERE Driver__c = '0031t00000AEpK0AAL' LIMIT 1];
+        //get Test Drive Driver
+        Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_1' LIMIT 1];
+        Test_Drive__c theTest =[SELECT Date__c,assigned_Vehicle__r.VIN__c,Vehicle__c FROM Test_Drive__c WHERE Driver__c = :driver.Id LIMIT 1];
 
         return theTest;
     }

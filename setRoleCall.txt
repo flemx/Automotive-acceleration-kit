@@ -1,0 +1,3 @@
+DemoUtils.createRole();
+DemoUtils.assignRole();
+DemoUtils.createDealerPortalUser();

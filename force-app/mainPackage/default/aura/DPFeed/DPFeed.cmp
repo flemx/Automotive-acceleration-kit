@@ -23,6 +23,7 @@
     <!-- Google news feeds  -->
     <aura:attribute name="googleNewsToken" type="String" />
     <aura:attribute name="googleNewSearchKey" type="String" />
+    <aura:attribute name="googleNewEnabled" type="String" />
     
 	<!-- generic modal - will show upon event //-->
         <aura:if isTrue="{!v.showModal}">

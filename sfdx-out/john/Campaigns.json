@@ -1,0 +1,18 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Campaign",
+                "referenceId": "CampaignRef1"
+            },
+            "Name" : "Annual Marketing Plan",
+            "Type" : "Other",
+            "Status" : "In Progress",
+            "StartDate" : "2019-01-01",
+            "EndDate" : "2019-12-31",
+            "IsActive" : true,
+            "Description" : "Annual plan for all marketing campaigns at the company."
+        }
+    ]
+}
+

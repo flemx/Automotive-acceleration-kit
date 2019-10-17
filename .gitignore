@@ -41,3 +41,6 @@ force-app/main/default/profiles
 force-app/main/default/settings/
 #force-app/main/default/siteDotComSites/
 #force-app/main/default/sites/
+sfdx-out/john/test-plan.json
+#do not ignore the *Partners profile
+!force-app/main/default/profiles/*Partners.profile-meta.xml

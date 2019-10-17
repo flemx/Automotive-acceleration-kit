@@ -24,7 +24,29 @@
             "Cust360_Loyalty__c" : "Gold",
             "SocialMediaTwitterHandle__c" : "@google",
             "SocialMediaInstagramHandle__c" : "Bo9wnlNnb9D",
+            "Demo_Key__c" : "Contact_02",
             "AccountId": "@AccountRef1"
-        }
+        },
+            {"attributes": {
+                "type": "Contact",
+                "referenceId": "ContactRef2"
+            },
+            "LastName" : "Gutmann",
+            "FirstName" : "Daniel",
+            "Salutation" : "Mr.",
+            "MailingStreet" : "Berliner Str. 100",
+            "MailingCity" : "Berlin",
+            "MailingPostalCode" : "13189",
+            "MailingCountry" : "Germany",
+            "Phone" : "(030) 479-950",
+            "MobilePhone" : "(151) 555-0144",
+            "Email" : "tbirke@salesforce.com",
+            "Title" : "Account Executive",
+            "Department" : "Sales",
+            "Birthdate" : "1978-09-10",
+            "Description" : "Good car dealer",
+            "Demo_Key__c" : "Contact_01",
+            "AccountId": "@AccountRef2"
+          }
     ]
 }

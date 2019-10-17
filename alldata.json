@@ -2,158 +2,54 @@
     "allOrNone": true,
     "compositeRequest": [
         {
-            "url": "/services/data/v46.0/composite/tree/Account",
-            "method": "POST",
-            "referenceId": "John",
-            "body": {
-                    "records" :[{
-                      "attributes" : {"type" : "Account", "referenceId" : "ref1"},
-                      "Name" : "Fisher",
-                      "Type" : "Household",
-                      "Contacts" : {
-                        "records" : [{
-                          "attributes" : {"type" : "Contact", "referenceId" : "ref2"},
-                          "LastName" : "Fisher",
-                          "FirstName" : "John",
-                          "Salutation" : "Mr.",
-                          "MailingStreet" : "Zachertstraße 15",
-                          "MailingCity" : "Berlin",
-                          "MailingPostalCode" : "10315",
-                          "MailingCountry" : "Germany",
-                          "Phone" : "+491725484773",
-                          "MobilePhone" : "+491725484773",
-                          "Email" : "john.fisher-demo@gmail.com",
-                          "LeadSource" : "Website",
-                          "Birthdate" : "1981-07-12",
-                          "Cust360_CSAT__c" : 80.0,
-                          "Cust360_ChurnRisk__c" : 12.0,
-                          "Cust360_Contact_Picture_URL__c" : "/resource/1551102222000/john_fisher",
-                          "Cust360_LTV__c" : 128610.0,
-                          "Cust360_Loyalty__c" : "Gold",
-                          "SocialMediaTwitterHandle__c" : "@google",
-                          "SocialMediaInstagramHandle__c" : "Bo9wnlNnb9D",
-                          "Custom_Activities__r" : {
-                            "records" : [
-                              {
-                                "attributes" : {
-                                  "type" : "Custom_Activity__c",
-                                  "referenceId" : "ref4"
-                                },
-                                "Name" : "Car Purchase",
-                                "days_ago__c" : 520.0,
-                                "icon__c" : "utility:travel_and_places",
-                                "message__c" : "Golf VII 2.0 7-DSG GTI",
-                                "order__c" : 3.0,
-                                "time__c" : "11:15"
-                              },
-                              {
-                                "attributes" : {
-                                  "type" : "Custom_Activity__c",
-                                  "referenceId" : "ref5"
-                                },
-                                "Name" : "Service Case",
-                                "days_ago__c" : 1.0,
-                                "icon__c" : "standard:case_email",
-                                "message__c" : "I have a problem with my ignition",
-                                "order__c" : 2.0,
-                                "time__c" : "17:33"
-                              },
-                              {
-                                "attributes" : {
-                                  "type" : "Custom_Activity__c",
-                                  "referenceId" : "ref6"
-                                },
-                                "Name" : "Survey Response",
-                                "days_ago__c" : 1.0,
-                                "icon__c" : "standard:survey",
-                                "message__c" : "Service Case Closed Response",
-                                "order__c" : 1.0,
-                                "time__c" : "8:40"
-                              },
-                              {
-                                "attributes" : {
-                                  "type" : "Custom_Activity__c",
-                                  "referenceId" : "ref7"
-                                },
-                                "Name" : "Test Drive Request",
-                                "days_ago__c" : 1.0,
-                                "icon__c" : "standard:lead",
-                                "message__c" : "Customer requested ID Crozz test drive at home",
-                                "order__c" : 0.0,
-                                "time__c" : "19:21"
-                              }
-                            ]
-                          },
-                          "Appointments__r" : {
-                            "records" : [
-                              {
-                                "attributes" : {
-                                "type" : "Appointment__c",
-                                "referenceId" : "ref3"
-                              },
-                              "Name" : "Inspection (Ignition check)",
-                              "Appointment_Time__c" : "2018-11-19T13:30:00.000+0000",
-                              "Status__c" : "done",
-                              "Contact__c" : "ref2"
-                              }
-                            ]
-                          }
-                        }]
-                        }
-                    }]
-                  
-                }
+          "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+Profile+WHERE+Name='*Partners'",
+          "method": "GET",
+          "referenceId": "Profile"
         },
         {
-            "url": "/services/data/v46.0/composite/tree/Asset",
-            "method": "POST",
-            "referenceId": "Assets",
-            "body": {
-                "records" : [
-                        {
-                          "attributes" : {
-                            "type" : "Asset",
-                            "referenceId" : "ref8"
-                          },
-                          "ContactId" : "@{John.records[1].Id}",
-                          "AccountId" : "@{John.records[0].Id}",
-                          "Name" : "VW Golf VII Trendline 1.6 TDI SCR 115PS 7-Gear-DSG",
-                          "SerialNumber" : "WVWZZZ1JZ3W386752",
-                          "InstallDate" : "2017-07-21",
-                          "PurchaseDate" : "2017-07-21",
-                          "Status" : "Registered",
-                          "Price" : "37890",
-                          "Quantity" : "1",
-                          "AssetLevel" : 1,
-                          "VIN__c" : "WVWZZZ1JZ3W386752",
-                          "Model__c" : "VW Golf VII Trendline 1.6 TDI SCR 115PS 7-Gear-DSG",
-                          "Test_Drive__c" : null,
-                          "License_Plate__c" : null,
-                          "Configuration__c" : null
-                        },
-                        {
-                          "attributes" : {
-                            "type" : "Asset",
-                            "referenceId" : "ref9"
-                          },
-                          "ContactId" : "@{John.records[1].Id}",
-                          "AccountId" : "@{John.records[0].Id}",
-                          "Name" : "VW I.D. Crozz",
-                          "SerialNumber" : "WVWZZZ1JZ3W44000",
-                          "InstallDate" : "2019-03-31",
-                          "PurchaseDate" : "2019-03-31",
-                          "Status" : "Registered",
-                          "Price" : "42000",
-                          "Quantity" : "1",
-                          "AssetLevel" : 1,
-                          "VIN__c" : "WVWZZZ1JZ3W44000",
-                          "Model__c" : "VW I.D. Crozz",
-                          "Test_Drive__c" : null,
-                          "License_Plate__c" : null,
-                          "Configuration__c" : null
-                        }
-                      ]
-                    }
-                }  
+          "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+Contact+WHERE+Demo_key__c='Contact_01'",
+          "method": "GET",
+          "referenceId": "Contact"
+        },
+        {
+          "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+Account+WHERE+Demo_Key__c='Account_01'",
+          "method": "GET",
+          "referenceId": "Account"
+        },
+        {
+          "url": "/services/data/v46.0/query/?q=SELECT+Id+FROM+UserRole+WHERE+Name='Acme+Partners+Partner+Executive'",
+          "method": "GET",
+          "referenceId": "Role"
+        },
+        {
+          "method" : "POST",
+          "url" : "/services/data/v38.0/sobjects/User",
+          "referenceId" : "User",
+          "body" : {
+              "FirstName" : "Daniel",
+              "LastName" : "Gutmann",
+              "Username" : "dgutmann@vw.dealer2",
+              "Email" : "tbirke@salesforce.com",
+              "EmailPreferencesAutoBcc" : true,
+              "EmailPreferencesAutoBccStayInTouch" : false,
+              "EmailPreferencesStayInTouchReminder" : true,
+              "Alias" : "DGutmann",
+              "CommunityNickname" : "DanielGutmann",
+              "IsActive" : true,
+              "TimeZoneSidKey" : "Europe/Berlin",
+              "LocaleSidKey" : "de_DE_EURO",
+              "ReceivesInfoEmails" : false,
+              "ReceivesAdminInfoEmails" : false,
+              "EmailEncodingKey" : "ISO-8859-1",
+              "LanguageLocaleKey" : "en_US",
+              "ForecastEnabled" : true,
+              "UserPreferencesActivityRemindersPopup" : true,
+              "UserPreferencesEventRemindersCheckboxDefault" : true,
+              "UserPreferencesTaskRemindersCheckboxDefault" : true,
+              "UserPreferencesNewLightningReportRunPageEnabled" : true,
+              "ProfileId" : "@{Profile.records[0].Id}",
+              "ContactId" : "@{Contact.records[0].Id}"
+          }
+      }
     ]
 }

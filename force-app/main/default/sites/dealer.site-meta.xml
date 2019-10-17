@@ -23,8 +23,7 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-erhbgtg5fjma@example.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>energy-java-6345-16d8864ffe4</subdomain>
+    <subdomain>app-business-8395-dev-ed-16dbb07a7a2</subdomain>
     <urlPathPrefix>dealer</urlPathPrefix>
 </CustomSite>

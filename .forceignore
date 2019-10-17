@@ -8,7 +8,9 @@ package.xml
 AppSwitcher.appMenu
 
 #ignore profiles
-**profiles
+#**profiles
+force-app/main/default/roles/Demo.role-meta.xml
+force-app/main/default/profiles/Admin.profile-meta.xml
 
 # LWC configuration files
 **/jsconfig.json
@@ -16,3 +18,5 @@ AppSwitcher.appMenu
 
 # LWC Jest
 **/__tests__/**
+
+CustomApplication.Contact

@@ -1,0 +1,33 @@
+{
+    "records" : [
+      {
+
+
+
+
+
+
+
+
+
+
+        "dealer_name__c" : "dg7@vw.dealer",
+        "dealer_email__c" : "tbirke@salesforce.com",
+
+
+
+
+
+
+
+
+
+        "attributes" : {
+          "type" : "demo_setting__c",
+          "referenceId" : "demoSettingRef1"
+        },
+        "Name" : "Initial Demo Setting",
+        "demo_key__c" : "masterSetting"
+      }
+    ]
+  }

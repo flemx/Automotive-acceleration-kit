@@ -1,5 +1,13 @@
 [
     {
+        "sobject": "demo_setting__c",
+        "saveRefs": false,
+        "resolveRefs": false,
+        "files": [
+            "demo_setting__cs.json"
+        ]
+    },
+    {
         "sobject": "Account",
         "saveRefs": true,
         "resolveRefs": false,
@@ -37,6 +45,24 @@
         "resolveRefs": true,
         "files": [
             "Assets.json"
+        ]
+    },
+    {
+        "sobject": "Campaign",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": [
+            "Campaigns.json",
+            "Campaign2.json",
+            "Campaign3.json"
+        ]
+    },    
+    {
+        "sobject": "Configuration__c",
+        "saveRefs": false,
+        "resolveRefs": false,
+        "files": [
+            "Configuration__cs.json"
         ]
     }
 ]
