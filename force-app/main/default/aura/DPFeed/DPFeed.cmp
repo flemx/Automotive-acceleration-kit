@@ -24,6 +24,18 @@
     <aura:attribute name="googleNewsToken" type="String" />
     <aura:attribute name="googleNewSearchKey" type="String" />
     <aura:attribute name="googleNewEnabled" type="String" />
+
+
+    <!-- feed filter checkbox group -->
+    <aura:attribute name="feedOptions" type="List" default="[
+    {'label': 'Action Required', 'value': 'action_required'},
+    {'label': 'Announcements', 'value': 'announcement'},
+    {'label': 'News', 'value': 'news'},
+    {'label': 'Events', 'value': 'events'},
+    {'label': 'Conversations', 'value': 'conversation'},
+    {'label': 'Competetive', 'value': 'competitive'}
+    ]"/>
+    <aura:attribute name="feedFilterValue" type="List" default="action_required,announcement,news,events,conversation,competitive"/>
     
 	<!-- generic modal - will show upon event //-->
         <aura:if isTrue="{!v.showModal}">
@@ -66,6 +78,8 @@
         </div>
 
         <div class="feed-container">
+
+               <!-- Start of filter menu -->
                 <div class="slds-col slds-size_1-of-4">
                         <div class="submenuitem" onclick="{!c.setFilterList}">
                             <lightning:icon iconName="utility:filterList" size="x-small" class="slds-m-right_medium" />
@@ -79,6 +93,14 @@
                             
                         </div>
                         <div class="{!'submenucontent' + (v.filter_list ? '' : ' slds-hide')}">
+
+                                <lightning:checkboxGroup name="filter-group"
+                                    label=""
+                                    options="{! v.feedOptions }"
+                                    value="{! v.feedFilterValue }"
+                                    onchange="{! c.filter }"/>
+
+                            <!--
                             <div class="slds-form-element filter_element">
                                 <label class="slds-checkbox_toggle slds-grid slds-grid_vertical-align-center filter_label">
                                     <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-action-color"/>
@@ -168,13 +190,20 @@
                                     </div>
                                 </label>
                             </div>
+                          -->
                         </div>
+
+                      
+
                         <div class="submenuitem">
                             <lightning:icon iconName="utility:favorite" size="x-small" class="slds-m-right_medium" />
                             Favourites
                         </div>
                         
                     </div>
+                    <!-- End of filter menu -->
+
+
                     <div class="slds-col slds-size_3-of-4 slds-p-around_medium">
                             <div class="container" id="spinner">
                                 <lightning:spinner alternativeText="Loading" size="medium" color="brand" />

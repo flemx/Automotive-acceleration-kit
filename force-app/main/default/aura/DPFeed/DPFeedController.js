@@ -192,7 +192,17 @@
     },
     
     filter: function(c,e,h){
-        c.set("v."+e.target.value,e.target.checked)
+        let values = e.getParam('value');
+        let options = c.get('v.feedOptions');
+        
+        for(let option of options){
+            let isFound = false;
+            if(values.includes(option.value)){
+                c.set("v."+option.value,true);
+			}else{
+                c.set("v."+option.value,false);
+            }
+        }
     },
     
     setFilterList: function(c,e,h){
