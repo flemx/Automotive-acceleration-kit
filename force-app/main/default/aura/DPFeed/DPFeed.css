@@ -8,6 +8,8 @@
 .THIS.contain {
     width: 1024px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .THIS.text-size-adjust {
@@ -317,4 +319,22 @@
 .THIS .slds-modal__footer {
     display: flex;
     justify-content: center;
+}
+
+
+
+/* New addons */
+
+.THIS .feed-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.THIS .greeting-container h3{
+    font-size: 2rem;
+}
+.THIS .greeting-container p{
+    font-size: 1.1rem;
+    font-weight: 400;
 }

@@ -45,11 +45,11 @@
 }
 
 .THIS .navMenuItems{
-    margin-left: 70px;
+    margin-left: 10px;
 }
 
 .THIS .navbarContainer {
-    width: 1440px;
+    width: 1240px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,7 +90,7 @@
 }
 
 .THIS .bsIxH {
-    flex-basis: 270%;
+    flex-basis: 240%;
 }
 
 .THIS .StyledPlainLink-fjvMhd{
