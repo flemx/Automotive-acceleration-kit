@@ -1,0 +1,19 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Configuration__c",
+                "referenceId": "ConfigRef1"
+            },
+            "Name" : "Testdrive config web",
+            "Battery__c" : "100 KWh",
+            "Seats__c" : "Premium Seats",
+            "Option__c" : "Performance Package",
+            "Color__c" : "Crimson Metallic Flow",
+            "motor__c" : "225 kW (302 PS) - 83kWh",
+            "edition__c" : "Eco Edition",
+            "model__c" : "I.D. Crozz",
+            "demo_key__c" : "Config_1"
+        }
+    ]
+}

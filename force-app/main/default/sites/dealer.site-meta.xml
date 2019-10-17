@@ -23,7 +23,6 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-gz9ppg5ooiev@example.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>app-business-8395-dev-ed-16dbb07a7a2</subdomain>
     <urlPathPrefix>dealer</urlPathPrefix>

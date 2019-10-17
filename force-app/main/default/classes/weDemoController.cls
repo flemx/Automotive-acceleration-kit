@@ -4,12 +4,14 @@ public class weDemoController {
 public static Boolean resetDemo(String demoDate, Decimal CLV) {
     Boolean success = true;
     
-    //Find contact  john.fisher-demo@gmail.com
-    Contact john = [SELECT Id, Name FROM Contact WHERE Email = 'john.fisher-demo@gmail.com' LIMIT 1];
+    //Find demo contact
+    Contact john = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+    //Find demo dealer contact
+    Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
     
     try{
-        //delete all leads related to John
-        List<Lead> leads = [SELECT Id, Name FROM Lead WHERE Email = 'john.fisher-demo@gmail.com'];
+        //delete all leads related to a testdrive
+        List<Lead> leads = [SELECT Id, Name FROM Lead WHERE td_date_requested__c != Null];
         delete leads;
     } catch(DmlException e) {
         success = false;
@@ -50,7 +52,7 @@ public static Boolean resetDemo(String demoDate, Decimal CLV) {
     
     try{
         //delete all portal feed item actions from Daniel
-        List<portal_feed_item__c> pfis = [SELECT Id FROM portal_feed_item__c WHERE Contact__c = :john.Id AND type__c = 'action required']; 
+        List<portal_feed_item__c> pfis = [SELECT Id FROM portal_feed_item__c WHERE Contact__c = :dealer.Id AND type__c = 'action required']; 
         delete pfis;
     } catch(DmlException e) {
         success = false;

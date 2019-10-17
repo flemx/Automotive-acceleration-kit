@@ -24,6 +24,7 @@
             "Cust360_Loyalty__c" : "Gold",
             "SocialMediaTwitterHandle__c" : "@google",
             "SocialMediaInstagramHandle__c" : "Bo9wnlNnb9D",
+            "Demo_Key__c" : "Contact_02",
             "AccountId": "@AccountRef1"
         },
             {"attributes": {
