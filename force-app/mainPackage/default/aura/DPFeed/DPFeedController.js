@@ -10,17 +10,7 @@
         let googleList = [];
         const gToken = component.get('v.googleNewsToken');
         const gSearch = component.get('v.googleNewSearchKey');
-        //Fetch the google news data (Max 10)
-        fetch('https://gnews.io/api/v3/search?q='+gSearch+'&image=required&token='+gToken)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                component.set('v.googleNewsList', data);
-                googleList = data;
-                console.log(data);
-            });
-
+        
 
         
         
@@ -30,7 +20,8 @@
             var state = response.getState();
             if (state === "SUCCESS") {
                 
-                var data = response.getReturnValue();
+                let data = [];
+                data = response.getReturnValue();
                 console.log("data = ", data);
                 component.set("v.username",data.FirstName);
                 
@@ -68,27 +59,44 @@
                             }
                             
                         }
-                        
                         // If Google news api is enabled add newsitems for all returnes articles
-                        if(component.get('v.googleNewEnabled') === 'true'){
-                            for(let newsItem of googleList.articles){
-                                let newNewsItem = {};
-                                newNewsItem.title__c = newsItem.title;
-                                newNewsItem.text__c = newsItem.description;
-                                newNewsItem.source__c = newsItem.source.url;
-                                newNewsItem.image__c = newsItem.image;
-                                newNewsItem.date__c = newsItem.publishedAt;
-                                newNewsItem.type__c = 'googlenews';
-                                data.push(newNewsItem);
-                            }
+                        //Fetch the google news data (Max 10) -> set the data variable inside callout
+                        try{
+                            fetch('https://gnews.io/api/v3/search?q='+gSearch+'&image=required&token='+gToken)
+                            .then(function (response) {
+                                return response.json();
+                            })
+                            .then(function (responseData) {
+                                if(component.get('v.googleNewEnabled') === 'true' && responseData.articles !== undefined){
+                                    for(let newsItem of responseData.articles){
+                                        let newNewsItem = {};
+                                        newNewsItem.title__c = newsItem.title;
+                                        newNewsItem.text__c = newsItem.description;
+                                        newNewsItem.source__c = newsItem.source.url;
+                                        newNewsItem.image__c = newsItem.image;
+                                        newNewsItem.date__c = newsItem.publishedAt;
+                                        newNewsItem.type__c = 'googlenews';
+                                        data.push(newNewsItem);
+                                    }
+                                }
+                                document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
+                                document.getElementById("content").classList.remove("slds-hide");
+                                console.log("data = ", data);
+                                component.set("v.fil",data);
+                            });
+                        }catch(e){
+                            console.log(e);
+                            document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
+                            document.getElementById("content").classList.remove("slds-hide");
+                            console.log("data = ", data);
+                            component.set("v.fil",data);
                         }
                        
-                        document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
-                        document.getElementById("content").classList.remove("slds-hide");
-                        console.log("data = ", data);
 
-                        component.set("v.fil",data);
+
                         
+                       
+                 
                     }
                     else if (state === "INCOMPLETE") {
                         // do something
@@ -149,24 +157,35 @@
         
         //set interval to recalculate time remaining each minute
         setInterval(() => {
-            var data = component.get("v.fil");
-            for(var d of data){
-                            //add display percentage
-                            if(d.SLA_in_minutes__c){
-                                var elapsedTime = (new Date() - d.jsdate)/60000;
-                                var remainingTime = d.SLA_in_minutes__c - elapsedTime;
-                                if(elapsedTime < d.SLA_in_minutes__c){
-                                    d.sla_display_percentage = (elapsedTime/d.SLA_in_minutes__c)*360;
-                                    d.sla_assistive_text = "Please accept or reject this request within " + parseInt(remainingTime/60) + " hours and " + parseInt(remainingTime%60) + " minutes."; 
-                                } else {
-                                    d.sla_display_percentage = 360;
-                                }
-                                
-                                
+
+          
+            let data = [];
+            try{
+                data = component.get("v.fil");
+                if(Array.isArray(data)){
+                    for(var d of data){
+                        //add display percentage
+                        if(d.SLA_in_minutes__c){
+                            var elapsedTime = (new Date() - d.jsdate)/60000;
+                            var remainingTime = d.SLA_in_minutes__c - elapsedTime;
+                            if(elapsedTime < d.SLA_in_minutes__c){
+                                d.sla_display_percentage = (elapsedTime/d.SLA_in_minutes__c)*360;
+                                d.sla_assistive_text = "Please accept or reject this request within " + parseInt(remainingTime/60) + " hours and " + parseInt(remainingTime%60) + " minutes."; 
+                            } else {
+                                d.sla_display_percentage = 360;
                             }
                             
+                            
                         }
+                        
+                    }
                     component.set("v.fil",data);
+                }
+            }catch(e){
+                console.error("Error logged: ");
+                console.error(e);
+            }
+            
             
         },5000);
     
