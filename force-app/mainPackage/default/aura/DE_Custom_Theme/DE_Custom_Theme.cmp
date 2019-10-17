@@ -10,6 +10,9 @@
     <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
     <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
     <aura:attribute name="showModal" type="Boolean" default="false" />
+
+   <!-- <aura:handler event="aura:locationChange" action="{!c.clickMenuItem}"/>-->
+    <aura:handler event="forceCommunity:routeChange" action="{!c.clickMenuItem}"/>
     
     <aura:attribute name="currentSection" type="String" default="/" />
     
@@ -66,33 +69,33 @@
                 </a>
             </div>
             -->
-            <div class="navMenuItems">
-
-            </div>
-
-            <div class="searchAndProfile">
-                    <div class="slds-col slds-size_3-of-4 searchComp">
-                            {!v.search}
+            <div class="navbarContainer">
+                <div class="navMenuItems">
+                        {!v.navBar}
+                </div>
+    
+                <div class="searchAndProfile">
+                        <div class="slds-col slds-size_3-of-4 searchComp">
+                                {!v.search}
+                            </div>
+                            <div class="slds-col slds-size_1-of-4">
+                                {!v.profileMenu}
                         </div>
-                        <div class="slds-col slds-size_1-of-4">
-                            {!v.profileMenu}
-                    </div>
+                </div>
             </div>
-          
-        
             <div class="imNMYb">
                     <div class="imNMYb">
-                            <div class="bsIxH sc-hZSUBg eOckfd"></div>
-                            <div class="hokKXU">
-                               <a class="StyledPlainLink-fjvMhd bqxYDJ" href="">
-                                  <div class="dAiRow">
-                                        <c:vwSvgLogo />
-                                  </div>
-                               </a>
-                            </div>
-                            <h3 class="dealer-portal-text">Dealer Portal</h3>
-                            <div class="eOckfd"></div>
-                         </div>
+                        <div class="bsIxH sc-hZSUBg eOckfd"></div>
+                        <div class="hokKXU">
+                            <a class="StyledPlainLink-fjvMhd bqxYDJ" href="">
+                                <div class="dAiRow">
+                                    <c:vwSvgLogo />
+                                </div>
+                            </a>
+                        </div>
+                        <h3 class="dealer-portal-text">Dealer Portal</h3>
+                        <div class="eOckfd"></div>
+                    </div>
             </div>
         </div>
         <div class="mainContentArea slds-grid">

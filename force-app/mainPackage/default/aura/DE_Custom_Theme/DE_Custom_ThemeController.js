@@ -10,9 +10,16 @@
         activepage ? activepage = activepage[0] : activepage = "/";
         c.set("v.currentSection",activepage);
         console.log("theme init done, active page = ", activepage);
+
+        //window.addEventListener("hashchange",h.handleHashChange(location.hash));
+
     },
-    clickMenuItem : function(c,e,h){
-        h.navigateToUrl(c,e,h,e.currentTarget.dataset.item);
-        c.set("v.currentSection",e.currentTarget.dataset.item);
+    clickMenuItem : function(component,event){
+        let url = window.location.href;
+        if(url.includes('salesdesk')){
+            component.set("v.currentSection", '/salesdesk');
+        }else{
+            component.set("v.currentSection", '/');
+        }
     }
 })
