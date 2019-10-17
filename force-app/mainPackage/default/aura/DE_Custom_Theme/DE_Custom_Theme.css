@@ -1,4 +1,26 @@
 
+
+
+
+
+
+
+/*--------------- Volkswagen addon --------------- */
+
+/* Body styling */
+
+.THIS .mainContentArea{
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
+    margin-top: 70px;
+}
+
+
+
+/* Menu styling */
+
+
 .THIS .menu_item_container {
     z-index: 4;
     position: fixed;
@@ -12,60 +34,28 @@
 
 
 
-.THIS .slds-icon-action-user {
-    background-color: #8A8A8A ;
+.THIS .searchAndProfile{
+    display: flex;
+    flex-direction: row;
+    margin-top: -8px;
+    margin-right: 15px;
+}
+.THIS .searchComp{
+    width: 200px;
 }
 
-.THIS .menu_image {
-    padding: 6px;
+.THIS .navMenuItems{
+    margin-left: 70px;
 }
 
-.THIS .menu_image_active {
-    padding: 6px;
+.THIS .navbarContainer {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.THIS .mainContentArea{
-    width: 100%;
-    margin: 0 auto;
-    z-index: -1;
-    margin-top: 70px;
-}
-
-.THIS .menu-link {
-    color: #8a8a8a;
-}
-/*
-.THIS a:hover{
-    color: #4A90E2;
-    text-decoration: none;
-}
-
-.THIS a:hover svg{
-    fill:#4A90E2;    
-}*/
-
-
-.THIS .selfServiceProfileMenuTrigger a {
-    color:#8A8A8A;
-}
-
-.THIS .menu-link-active {
-    color: #4A90E2;
-    text-decoration: none;
-}
-
-.THIS .menu-link-active svg{
-    fill:#4A90E2;
-}
-
-
-/*--------------- Volkswagen addon --------------- */
-
-
-
-
-/* Menu styling */
-
+/* volkswagen logo and lines - menu */
 .THIS .imNMYb {
     width: 100%;
     display: flex;
@@ -118,25 +108,4 @@
     width: 400px;
     font-size: 0.8rem;
     color: rgb(0, 30, 80);
-}
-
-.THIS .searchAndProfile{
-    display: flex;
-    flex-direction: row;
-    margin-top: -8px;
-    margin-right: 15px;
-}
-.THIS .searchComp{
-    width: 200px;
-}
-
-.THIS .navMenuItems{
-    margin-left: 70px;
-}
-
-.THIS .navbarContainer {
-    width: 1440px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }

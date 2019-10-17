@@ -16,7 +16,7 @@
     },
     clickMenuItem : function(component,event){
         let url = window.location.href;
-        if(url.includes('salesdesk')){
+        if(url.includes('salesdesk') || url.includes('lead')){
             component.set("v.currentSection", '/salesdesk');
         }else{
             component.set("v.currentSection", '/');
