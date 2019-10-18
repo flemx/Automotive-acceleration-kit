@@ -1,6 +1,23 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/vwSvgLogo": [
+                "vwSvgLogo/vwSvgLogo.js"
+            ],
+            "c/feedItemRegular": [
+                "feedItemRegular/feedItemRegular.js"
+            ]
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
     }
 }

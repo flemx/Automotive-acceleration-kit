@@ -1,0 +1,26 @@
+<template>
+
+
+        <div class="feed-container">
+            <div class="img-container" style={backgroundVar}>
+                <span>{type}</span>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <h2 class="header-left">{title}</h2>
+                    <div class="header-right">
+                        <span>Posted {days} days ago</span>
+                        <span class="source">{sourceName}</span>
+                    </div>
+                </div>
+                <div class="body">
+                    <p>{description}</p>
+                </div>
+                <div class="footer">
+                    <a href={sourceUrl} target="_blank"><span>Read More</span> >  </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        </template>
