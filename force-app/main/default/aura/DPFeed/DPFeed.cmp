@@ -215,7 +215,14 @@
                                 <aura:if isTrue="{!or(or(and(fi.type__c == 'announcement',v.announcement),and(fi.type__c == 'news' || fi.type__c == 'googlenews',v.news)),and(fi.type__c == 'competitive',v.competitive))}">
 
 
-                                    <c:feedItemRegular />
+                                    <c:feedItemRegular 
+                                        image="{!fi.image__c}"
+                                        title="{!fi.title__c}"
+                                        description="{!fi.text__c}"
+                                        sourceName="{!fi.source__c}"
+                                        sourceUrl="{!fi.sourceArticle__c}"
+                                        sourceDate="{!fi.date__c}"
+                                        type="{!fi.type__c}"/>
                                     <!---
                                     <div class="feeditem regular">
                                         <div class="feeditem-background">
