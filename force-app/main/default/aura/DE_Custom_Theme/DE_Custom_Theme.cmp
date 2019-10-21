@@ -56,14 +56,52 @@
             </div>
         </div>
         <div class="mainContentArea slds-grid">
+
             <aura:if isTrue="{!v.currentSection == '/salesdesk'}">
-                <div class="slds-col slds-size_1-of-6">
-                    <c:salesdeskMenu />
+                <div class="content-wrapper">
+                    
+                    <div class="slds-text-heading_medium slds-p-vertical_medium greeting-container">
+                        <h3>Sales Desk</h3>
+                    </div>
+
+                    <div class="content-container">
+
+                        <div class="slds-col slds-size_1-of-4 sales-menu-wrapper">
+                            <div class="sales-menu-container">
+                                <c:salesdeskMenu />
+                            </div>
+                        </div>
+                    
+                        <div class="{!v.currentSection == '/salesdesk' ? 'slds-col slds-size_3-of-4 salesdeck-feed ': 'slds-col slds-size_1-of-1'}">
+                            <div class="feed-header">
+                                <h3>Quick Links</h3>
+                                <c:vwButton 
+                                    label="Selling Electric Cars"
+                                    type="primary"
+                                    font-size="0.7rem"/>
+                                <c:vwButton 
+                                    label="Events For Dealers"
+                                    type="primary"
+                                    font-size="0.7rem"/>
+                                <c:vwButton 
+                                    label="Competitive News"
+                                    type="primary"
+                                    font-size="0.7rem"/>
+                            </div>
+                            <div class="feed-body">
+                                {!v.body}
+                            </div>
+                            
+                        </div>
+                    </div>
+
                 </div>
-            </aura:if>
-            <div class="{!v.currentSection == '/salesdesk' ? 'slds-col slds-size_5-of-6' : 'slds-col slds-size_1-of-1'}">
-	            {!v.body}
-            </div>
+            <aura:set attribute="else">                    
+                  <div class="{!v.currentSection == '/salesdesk' ? 'slds-col slds-size_5-of-6' : 'slds-col slds-size_1-of-1'}">
+                        {!v.body}
+                    </div>
+            </aura:set>
+         </aura:if>
             
         </div>
     </div>

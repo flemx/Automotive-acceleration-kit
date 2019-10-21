@@ -5,26 +5,39 @@
     
     <div>
         <aura:iteration items="{!v.menuItems}" var="item">
-        	<a class="submenuitem" onclick="{!c.clickLink}" data-menuItem="{!item.id}" data-hasSubMenu="{!item.subMenu ? 'true' : 'false'}">
+        	<div class="submenuitem" onclick="{!c.clickLink}" data-menuItem="{!item.id}" data-hasSubMenu="{!item.subMenu ? 'true' : 'false'}">
                 <!-- set icon //-->
-                <aura:if isTrue="{!item.label == 'Home'}"><lightning:icon iconName="utility:home" size="x-small" class="slds-m-right_medium" /></aura:if>
+                <!-- <aura:if isTrue="{!item.label == 'Home'}"><lightning:icon iconName="utility:home" size="x-small" class="slds-m-right_medium" /></aura:if>
                 <aura:if isTrue="{!item.label == 'Sales'}"><lightning:icon iconName="utility:graph" size="x-small" class="slds-m-right_medium" /></aura:if>
                 <aura:if isTrue="{!item.label == 'Marketing'}"><lightning:icon iconName="utility:announcement" size="x-small" class="slds-m-right_medium" /></aura:if>
                 <aura:if isTrue="{!item.label == 'Parts &amp; Service'}"><lightning:icon iconName="utility:settings" size="x-small" class="slds-m-right_medium" /></aura:if>
                 <aura:if isTrue="{!item.label == 'Finance'}"><lightning:icon iconName="utility:moneybag" size="x-small" class="slds-m-right_medium" /></aura:if>
                 <aura:if isTrue="{!item.label == 'Performance'}"><lightning:icon iconName="utility:metrics" size="x-small" class="slds-m-right_medium" /></aura:if>
                 <aura:if isTrue="{!item.label == 'Community'}"><lightning:icon iconName="utility:people" size="x-small" class="slds-m-right_medium" /></aura:if>
-                <aura:if isTrue="{!item.label == 'Support'}"><lightning:icon iconName="utility:questions_and_answers" size="x-small" class="slds-m-right_medium" /></aura:if>
-            {!item.label}
-            <aura:if isTrue="{!item.subMenu}">
-                <aura:if isTrue="{!v.activeMenuItem == item.id}">
-                <lightning:icon iconName="utility:chevrondown" size="xx-small" class="slds-m-left_medium" />
-                <aura:set attribute="else">
-                    <lightning:icon iconName="utility:chevronright" size="xx-small" class="slds-m-left_medium" />
-                </aura:set>
-                </aura:if>
-            </aura:if>
-            </a>
+                    <aura:if isTrue="{!item.label == 'Support'}"><lightning:icon iconName="utility:questions_and_answers" size="x-small" class="slds-m-right_medium" /></aura:if> -->
+                <span>{!item.label}</span>
+
+                    <span class="filter-arrow">
+                        <aura:if isTrue="{!item.subMenu}">
+
+                           <aura:if isTrue="{!v.activeMenuItem == item.id}">
+                            <lightning:icon iconName="utility:down" size="x-small" class="slds-m-left_medium" />
+                            <aura:set attribute="else">
+                                <lightning:icon iconName="utility:chevronright" size="x-small"  />
+                            </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </span>
+
+                <!-- <aura:if isTrue="{!item.subMenu}">
+                    <aura:if isTrue="{!v.activeMenuItem == item.id}">
+                    <lightning:icon iconName="utility:chevrondown" size="xx-small" class="slds-m-left_medium" />
+                    <aura:set attribute="else">
+                        <lightning:icon iconName="utility:chevronright" size="xx-small" class="slds-m-left_medium" />
+                    </aura:set>
+                    </aura:if>
+                </aura:if> -->
+            </div>
             <aura:if isTrue="{!v.activeMenuItem == item.id}">
             <ul class="submenucontent" aura:id="submenu" data-submenuid="{!item.id}">    
                 <aura:iteration items="{!item.subMenu}" var="subMenuItem">
