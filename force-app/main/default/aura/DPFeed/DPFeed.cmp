@@ -81,15 +81,17 @@
 
                <!-- Start of filter menu -->
                 <div class="slds-col slds-size_1-of-4">
+                    <div class="feed-filter-container">
                         <div class="submenuitem" onclick="{!c.setFilterList}">
-                            <lightning:icon iconName="utility:filterList" size="x-small" class="slds-m-right_medium" />
-                            Feed Filter
-                            <aura:if isTrue="{!v.filter_list}">
-                                <lightning:icon iconName="utility:down" size="x-small" class="slds-m-left_medium" />
-                            <aura:set attribute="else">
-                                <lightning:icon iconName="utility:right" size="x-small" class="slds-m-left_medium" />
-                            </aura:set>
-                            </aura:if>
+                            <span>Feed Filter</span>
+                            <span class="filter-arrow">
+                                <aura:if isTrue="{!v.filter_list}">
+                                    <lightning:icon iconName="utility:down" size="x-small" class="slds-m-left_medium" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:chevronright" size="x-small"  />
+                                </aura:set>
+                                </aura:if>
+                            </span>
                             
                         </div>
                         <div class="{!'submenucontent' + (v.filter_list ? '' : ' slds-hide')}">
@@ -195,16 +197,15 @@
 
                       
 
-                        <div class="submenuitem">
-                            <lightning:icon iconName="utility:favorite" size="x-small" class="slds-m-right_medium" />
-                            Favourites
+                        <div class="submenuitem submenuitem-last">
+                            <span>Favourites</span>
                         </div>
-                        
-                    </div>
+                    </div>        
+                </div>
                     <!-- End of filter menu -->
 
 
-                    <div class="slds-col slds-size_3-of-4 slds-p-around_medium">
+                    <div class="slds-col slds-size_3-of-4">
                             <div class="container" id="spinner">
                                 <lightning:spinner alternativeText="Loading" size="medium" color="brand" />
                             </div>
