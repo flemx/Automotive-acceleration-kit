@@ -212,7 +212,7 @@
                             <!-- <div class="slds-text-heading_medium slds-p-vertical_medium">{!v.greeting + ', ' + v.username + ', here are your latest updates'}</div> -->
                             <aura:iteration items="{!v.fil}" var="fi">
                                 <!-- render feed item types of announcement, news, competitive //-->
-                                <aura:if isTrue="{!or(or(and(fi.type__c == 'announcement',v.announcement),and(fi.type__c == 'news' || fi.type__c == 'googlenews',v.news)),and(fi.type__c == 'competitive',v.competitive))}">
+                                <aura:if isTrue="{!or(or(and(fi.type__c == 'announcement',v.announcement),and(fi.type__c == 'news',v.news)),and(fi.type__c == 'competitive',v.competitive))}">
 
 
                                     <c:feedItemRegular 
@@ -307,22 +307,41 @@
                                     <div class="{!'feeditem ' + (fi.SLA_active__c ? 'action' : 'regular')}">
                                         <aura:if isTrue="{!fi.SLA_active__c}">
                                             <div class="feeditem-action-background">
-                                                    <lightning:button
+                                                <div class="feeditem-action-buttons">
+                                                      <c:vwButton 
+                                                        label="{!fi.action_no__c }"
+                                                        fontSize="0.65rem"
+                                                        buttonType="inverted"
+                                                        onclick="{!fi.action_no__c }"/>    
+                                                    
+                                                     <c:vwButton 
+                                                        label="{!fi.action_yes__c }"
+                                                        value="{!fi.Id}"
+                                                        fontSize="0.65rem"
+                                                        buttonType="secondary"
+                                                        onclick="{!c.accept}"/> 
+                                                </div>
+                                                 
+                                                    
+                                                                   
+                                                    <!--
+                                                        <lightning:button
                                                         variant="neutral"
                                                         label="{!fi.action_no__c }"
-                                                                      onclick="{!c.handleClick}" 
-                                                                      class="slds-m-right_x-small slds-m-bottom_small" />
+                                                         onclick="{!c.handleClick}" 
+                                                         class="slds-m-right_x-small slds-m-bottom_small" />
                                                     
-                                                    <lightning:button
+                                                        <lightning:button
                                                         variant="brand"
                                                         label="{!fi.action_yes__c }"
                                                         onclick="{!c.accept}" 
                                                         class="slds-m-left_x-small slds-m-bottom_small"
                                                         value="{!fi.Id}"
-                                                    />
+                                                    />-->
                                                 </div>
                                     </aura:if>
                                         
+                                    <!--
                                         <div class="feeditem-background">
                                             <div class="feeditem-icon-container">
                                                 <div class="feeditem-icon-box action-color">
@@ -340,21 +359,25 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        -->
                                         <div class="feeditem-main">
                                             <div class="feed-action-container">
-                                                <div class="slds-text-heading_small">{!fi.title__c}</div>
-                                                <div class="source-date-container">
-                                                    <div class="slds-text-color_weak"><lightning:relativeDateTime value="{! fi.jsdate }"/></div>
+                                                <div class="action-header">
+                                                    <div class="slds-text-heading_small">{!fi.title__c}</div>
+                                                    <div class="source-date-container">
+                                                        <div class="slds-text-color_weak">Posted <lightning:relativeDateTime value="{! fi.jsdate }"/></div>
+                                                    </div>
                                                 </div>
+                                               
                                                 <div class="action-text-container" >
-                                                    <span class="inlineitem">{!fi.category_1__c}</span>
-                                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_1__c}" size="xx-small" /></span>
+                                                    <span class="inlineitem action-title">{!fi.category_1__c}</span>
+                                                    <!-- <span class="inlineitem"><lightning:icon iconName="{!fi.icon_1__c}" size="xx-small" /></span> -->
                                                     <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_1__c}" data-record="{!fi.record_name_1__c}" data-fiid="{!fi.Id}" >{!fi.record_name_1__c}</a></span>
                                                     <span class="inlineitem">{!fi.message_1__c}</span>
-                                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_2__c}" size="xx-small" /></span>
+                                                    <!-- <span class="inlineitem"><lightning:icon iconName="{!fi.icon_2__c}" size="xx-small" /></span> -->
                                                     <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_2__c}" data-record="{!fi.record_name_2__c}" data-fiid="{!fi.Id}" >{!fi.record_name_2__c}</a></span>
                                                     <span class="inlineitem">{!fi.message_2__c}</span>
-                                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_3__c}" size="xx-small" /></span>
+                                                    <!-- <span class="inlineitem"><lightning:icon iconName="{!fi.icon_3__c}" size="xx-small" /></span> -->
                                                     <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_3__c}" data-record="{!fi.record_name_3__c}" data-fiid="{!fi.Id}" >{!fi.record_name_3__c}</a></span>
                                                     <span class="inlineitem">.</span>
                                                 </div>
@@ -386,6 +409,9 @@
                                                     
                                                     
                                                 </div>
+                                                 <div class="action-bluebox">
+                                                    <span>ACTION REQUIRED</span>
+                                                 </div>
                                             </div>
                                         </div>
                                 </div>

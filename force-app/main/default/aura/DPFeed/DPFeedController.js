@@ -72,11 +72,11 @@
                                         let newNewsItem = {};
                                         newNewsItem.title__c = newsItem.title;
                                         newNewsItem.text__c = newsItem.description;
-                                        newNewsItem.source__c = newsItem.source.url;
+                                        newNewsItem.source__c = newsItem.source.name;
                                         newNewsItem.sourceArticle__c = newsItem.url;
                                         newNewsItem.image__c = newsItem.image;
                                         newNewsItem.date__c = newsItem.publishedAt;
-                                        newNewsItem.type__c = 'googlenews';
+                                        newNewsItem.type__c = 'news';
                                         data.push(newNewsItem);
                                     }
                                 }

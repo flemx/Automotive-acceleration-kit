@@ -7,6 +7,9 @@
             ],
             "c/feedItemRegular": [
                 "feedItemRegular/feedItemRegular.js"
+            ],
+            "c/vwButton": [
+                "vwButton/vwButton.js"
             ]
         },
         "experimentalDecorators": true
