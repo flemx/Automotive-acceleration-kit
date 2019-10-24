@@ -155,7 +155,8 @@
 }
 
 /* Navigation */
-.THIS .sales-menu-wrapper{
+
+.THIS .sales-menu-container{
     border-radius: 4px;
     margin: 20px 15px;
     border: 1px solid #dfe4e0;
