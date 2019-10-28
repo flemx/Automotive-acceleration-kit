@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slds-row slds-p-around_small">
+                    <div class="slds-row slds-col_bump-right slds-p-around_small">
                         <div class="slds-grid_vertical">
                             <div class="slds-row">
                                 <aura:if isTrue="{!event.data.payload.category_1__c}">
@@ -129,6 +129,12 @@
                             
                         </div>
                     </div>
+                    <aura:if isTrue="{!event.data.payload.image_resource_name__c}">
+                    <div class="slds-row slds-p-around_small border-left">
+                        <img class="message-image" src="{!event.data.payload.image_resource_name__c}" />
+                    </div>
+                    </aura:if>
+                    
                 </div>
             </div>
            	</aura:if>

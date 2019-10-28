@@ -36,7 +36,10 @@
         }
         empApi.subscribe(channel, replayId, $A.getCallback(eventReceived => {
                 // Process event (this is called each time we receive an event)
-				
+            //resolve image resource
+            if(eventReceived.data.payload.image_resource_name__c){
+            	eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + eventReceived.data.payload.image_resource_name__c);
+        	}
                 let events = component.get("v.events") || [];
                 events.unshift(eventReceived);
                 component.set("v.events", events);

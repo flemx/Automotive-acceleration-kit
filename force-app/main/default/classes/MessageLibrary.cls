@@ -19,7 +19,8 @@ public with sharing class MessageLibrary {
             record_id_3__c = '',
             record_name_1__c = dealer.Name,
             record_name_2__c = '',
-            record_name_3__c = ''
+            record_name_3__c = '',
+            image_resource_name__c = 'idbuzzconfig'
         );
         EventBus.publish(message);
     }
