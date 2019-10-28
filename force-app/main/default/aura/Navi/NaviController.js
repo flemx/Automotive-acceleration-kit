@@ -1,6 +1,6 @@
 ({
 	click : function(c, e, h) {
-		c.set("v.image","/resource/1551351095000/naviJohn")
+        c.set("v.image",$A.get("$Resource.idbuzznaviklikked"));
         var action = c.get('c.startTestDrive');
         action.setCallback(this, function(response) {
             var state = response.getState();
