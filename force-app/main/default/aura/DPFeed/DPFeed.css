@@ -1,0 +1,415 @@
+.THIS.container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;  
+}
+
+.THIS.contain {
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS.text-size-adjust {
+    font-size: smaller;
+}
+.THIS .feeditem {
+    position: relative;
+    box-sizing: border-box;
+    width: 740px;
+    border-radius: 4px;
+    margin: 20px;
+    border: 1px solid #dfe4e0;
+    /*box-shadow: 0 0 8px 1px rgba(15,34,80,.05);*/
+}
+
+.THIS .regular {
+    height: 172px;
+}
+
+.THIS .action {
+    height: 250px;
+    margin-bottom: 32px;
+}
+
+.THIS .discussion {
+    height: 300px;
+}
+
+.THIS .feeditem-background {
+    width: 100%;
+    height: 172px;
+    background: #4A4A4A;
+    border-radius: 8px;
+    box-shadow: 2px 1px 7px 1px rgba(0,0,0,0.16);
+    position: absolute;
+	top: 0px;
+    left: 0px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .feeditem-action-background {
+    width: 100%;
+    height: 60px;
+    background: #f6f6f6;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    float: right;
+}
+.THIS .feeditem-action-background c-vw-button{
+    margin-right: 10px;
+}
+
+.THIS .feeditem-icon-container {
+    width: 100%;
+}
+.THIS .feeditem-icon-box {
+    width: 24px;
+    height: 24px;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-top: 1px;
+    float: right;
+}
+
+.THIS .feeditem-action-buttons{
+
+}
+
+.THIS .action-color {
+    background-color: #50E3C2;
+}
+
+.THIS .announcement-color {
+    background-color: #4A90E2;
+}
+
+.THIS .news-color {
+    background-color: #88BE51;
+}
+
+.THIS .competitive-color {
+    background-color: #D0021B;
+}
+
+.THIS .block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.4em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 5.6em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  
+  /* */
+  margin-right: -1em;
+  padding-right: 1em;
+}
+
+.THIS .block-with-text:after {
+  content: "read more";
+    font-size: 11px;
+    color: #4A90E2;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 13px;
+    width: 33%;
+    height: 1.4em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+}
+
+.THIS .regular-color {
+    background-color: #5C5C5C;
+}
+
+.THIS .feeditem-icon-container .slds-icon-text-default {
+    fill:#B0ADAB;
+}
+
+.THIS .feeditem-main {
+    width: 100%;
+    height: 190px;
+    background: #ffffff;
+    box-shadow: 0 0 8px 1px rgba(15,34,80,.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #dfe4e0;
+    border-radius: 0 4px;
+}
+
+.THIS .feed-image-container {
+    width: 258px;
+    height: 172px;
+    border-radius: 8px 0 0 8px;
+    background-size: cover;
+}
+
+.THIS .feed-text-container {
+    display:flex;
+    flex-direction:column;
+    width: 60%;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.THIS .feed-action-container {
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    padding: 16px;
+}
+
+.THIS .feed-action-container a{
+        color: #4a90e2;
+}
+
+.THIS .source-date-container {
+    padding: 8px 0;
+    display: flex;
+    color: rgba(0,0,0,.85);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.THIS .action-text-container {
+    display: block;
+    margin-bottom: 5px;
+        font-size: 13px;
+}
+
+.THIS .action-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.THIS .action-title{
+    width: 320px;
+}
+
+.THIS .action-bluebox{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: #00b0f0;
+    color: #fff;
+    padding: 6px 15px;
+}
+
+
+
+
+.THIS .action-sla-container {
+    padding: 8px;
+    display: flex;
+    font-size: 13px;
+}
+
+.THIS .inlineitem {
+    line-height: 1.6em;
+    margin-right: 4px;
+}
+
+.THIS .progress-circle{
+    position: relative;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    background-color: #DDDBDA;
+    border-radius: 50%;
+    line-height: 2em;
+	}
+
+.THIS .progress-circle:after {
+    border: none;
+    position: absolute;
+    top: 0.3em;
+    left: 0.3em;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 1.4em;
+    height: 1.4em;
+    background-color: white;
+    content: " ";
+}
+
+.THIS .value-bar {
+    position: absolute;
+    clip: rect(0, 1em, 2em, 0);
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 0.3em solid #4BCA81;
+    box-sizing: border-box;
+}
+
+.THIS .left-half-clipper {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    clip: rect(0, 2em, 2em, 1em);
+}
+
+.THIS .first50-bar {
+    position: absolute;
+    clip: rect(0, 2em, 2em, 1em);
+    background-color: #4BCA81;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+}
+
+.THIS .action-sla-assistive-text {
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.THIS .filter_element {
+    padding: 8px 0px 8px 24px;
+    z-index:0;
+}
+
+.THIS .filter_icon_label{
+    width:130px;
+    position: relative;
+}
+
+.THIS .filter_icon_label:after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 123px;
+    border-top: 1px solid #DEE1E3;
+    z-index: -1;
+}
+
+.THIS .filter-icon-text {
+    background-color:#F6F6F6;
+    padding-right: 7px;
+}
+
+.THIS .submenuitem {
+       display: flex;
+    justify-content: space-between;
+    /* padding-left: 16px; */
+    font-size: .9rem;
+    font-weight: 700;
+    align-items: center;
+    color: #212121;
+    width: 90%;
+    height: 50px;
+    border-top: solid 1px #dee1e3;
+    /* padding: 5px; */
+    margin: 5%;
+}
+.THIS .submenuitem:nth-child(1) {
+    border-top: 0;
+}
+
+.THIS .submenucontent{
+    margin: 10px;
+    padding: 10px;
+    margin-top: 0;
+    padding-top: 0;
+    /* border-bottom: solid 1px #dee1e3; */
+}
+
+.THIS .submenucontent .slds-checkbox_faux{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.THIS .submenucontent .slds-checkbox {
+    margin-bottom: 10px;
+}
+.THIS .icon-action-color .slds-icon-text-default {
+    fill: #50E3C2;
+}
+
+.THIS .icon-announcement-color .slds-icon-text-default {
+    fill: #4A90E2;
+}
+
+.THIS .icon-news-color .slds-icon-text-default {
+    fill: #88BE51;
+}
+
+.THIS .icon-competitive-color .slds-icon-text-default {
+    fill: #D0021B;
+}
+
+.THIS .icon-event-color .slds-icon-text-default {
+    fill: #F5A623;
+}
+
+.THIS .icon-conversation-color .slds-icon-text-default {
+    fill: #E07AF5;
+}
+
+.THIS .modal960 {
+    padding: 0px;
+    width: 960px;
+    height: 704px;
+    margin-top: 32px;
+}
+
+.THIS .slds-modal__footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* New addons */
+
+.THIS .feed-container{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+}
+
+.THIS .greeting-container h3{
+    font-size: 2rem;
+}
+.THIS .greeting-container p{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+.THIS .feed-filter-container{
+    border-radius: 4px;
+    margin: 20px 5px;
+    border: 1px solid #dfe4e0;
+        box-shadow: 0 0 8px 1px rgba(15,34,80,.05);
+}
+
+.THIS .filter-arrow{
+       margin-right: 15px;
+}
+

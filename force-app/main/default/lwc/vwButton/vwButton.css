@@ -1,0 +1,55 @@
+
+
+.c-button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: VWTextWeb,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    text-align: center;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    color: #001e50;
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+
+.c-button--primary {
+    padding: .75em 2.5em;
+    border-radius: 2em;
+    background: #00b0f0;
+    border: 2px solid #00b0f0;
+}
+
+.c-button--primary.is-current,.c-button--primary:focus,.c-button--primary:hover,.m-action-card-module.is-current .c-button--primary,.m-action-card-module:focus .c-button--primary,.m-action-card-module:hover .c-button--primary{
+    background:#fff;
+    color:#00b0f0
+}
+
+
+.c-button--primary-inverted{
+    text-decoration:none;
+    padding:.75em 2.5em;
+    border-radius:2em;
+    background:transparent;
+    border:2px solid #001e50
+}
+.c-button--primary-inverted.is-current,.c-button--primary-inverted:focus,.c-button--primary-inverted:hover{
+    background:#001e50;
+    color:#fff
+}
+
+
+.c-button--secondary{
+    text-decoration:none;
+    padding:.75em 2.5em;
+    border-radius:2em;
+    background:#001e50;
+    border:2px solid #001e50;
+    color:#fff
+}
+.c-button--secondary.is-current,.c-button--secondary:focus,.c-button--secondary:hover{
+    background:transparent;
+    border-color:#001e50;
+    color:#001e50
+}

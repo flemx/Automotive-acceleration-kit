@@ -1,4 +1,5 @@
-/* Navigation menu */
+/******  Navigation menu  -  Search and profile menu    ******/
+
 .cDE_Custom_Theme .searchAndProfile .profileName{
     display: none !important;
 }
@@ -20,18 +21,20 @@
 
 .cDE_Custom_Theme .searchAndProfile .contentWrapper {
     border: solid 0 !important;
-    box-shadow: 0 !important; 
+    box-shadow: 0 !important;
     background-image: url(/dealer/resource/1571226051000/vwDemoPackFiles/images/search-icon.png);
-    background-size: 23px;
+    background-size: 20px;
     background-repeat: no-repeat;
-    width: 35px;
+    width: 30px;
     transition: all .5s;
+    background-position: center;
 }
 
 .cDE_Custom_Theme .searchAndProfile .contentWrapper.focused {
     border: solid 0 !important; 
     box-shadow: 0 !important;
     width: 200px;
+    background-position: center left;
 }
 
 .cDE_Custom_Theme .searchAndProfile .inputIcon{
@@ -40,4 +43,43 @@
 
 .cDE_Custom_Theme .searchAndProfile .forceSearchInputDesktop{
     float: right;
+}
+
+
+/******  Navigation menu  -   menu items   ******/
+
+
+.cDE_Custom_Theme .navMenuItems .slds-list__item:first-child {
+    display: none;
+}
+
+.cDE_Custom_Theme .navMenuItems community_navigation-global-navigation-list {
+    background-color: white !important;
+    color: black !important;
+    color: rgb(0, 30, 80) !important;
+}
+
+
+a.slds-container_fluid.slds-truncate {
+    background-color: white !important;
+}
+/*
+.cDE_Custom_Theme .navMenuItems community_navigation-global-navigation-list a.slds-container_fluid.slds-truncate:hover {
+    background-color: white !important;
+    color: rgb(0, 176, 240)  !important;
+}
+
+
+.cDE_Custom_Theme .navMenuItems community_navigation-global-navigation-list li:hover {
+    background-color: white !important;
+  	color: rgb(0, 176, 240)  !important;
+}
+*/
+.cDE_Custom_Theme .navMenuItems a.slds-container_fluid.slds-truncate:hover {
+    background-color: white !important;
+    color: rgb(0, 176, 240) !important;
+}
+
+.cDE_Custom_Theme .navMenuItems community_navigation-global-navigation-list li {
+    margin-right: 5% !important;
 }

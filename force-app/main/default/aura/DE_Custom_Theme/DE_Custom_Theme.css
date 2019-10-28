@@ -1,0 +1,164 @@
+
+
+
+
+
+
+
+/*--------------- Volkswagen addon --------------- */
+
+/* Body styling */
+
+.THIS .mainContentArea{
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
+    margin-top: 70px;
+}
+
+
+
+/* Menu styling */
+
+
+.THIS .menu_item_container {
+    z-index: 4;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 65px;
+    background-color: #fff;
+    justify-content: space-around;
+}
+
+
+
+.THIS .searchAndProfile{
+    display: flex;
+    flex-direction: row;
+    margin-top: -8px;
+    margin-right: 15px;
+}
+.THIS .searchComp{
+    width: 200px;
+}
+
+.THIS .navMenuItems{
+    margin-left: 10px;
+}
+
+.THIS .navbarContainer {
+    width: 1240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* volkswagen logo and lines - menu */
+.THIS .imNMYb {
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 13px;
+    height: 60px;
+}
+.THIS .hokKXU {
+    flex-shrink: 0;
+    pointer-events: auto;
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+    margin: 0px 8px;
+}
+
+.THIS .hokKXU {
+    height: 48px;
+    width: 48px;
+    margin: 0px 12px;
+}
+
+.THIS .eOckfd {
+    height: 2px;
+    background-color: rgb(0, 30, 80);
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+.THIS .bsIxH {
+    flex-basis: 240%;
+}
+
+.THIS .StyledPlainLink-fjvMhd{
+    pointer-events: none;
+    cursor: default;
+}
+
+.THIS .dAiRow{
+    width: 36px;
+    margin-left: 9px;
+    margin-top: 6px;
+}
+
+.THIS .dealer-portal-text{
+    width: 400px;
+    font-size: 0.8rem;
+    color: rgb(0, 30, 80);
+}
+
+
+/* Sales Desk styling */
+
+.THIS .greeting-container h3{
+    font-size: 2rem;
+    width: 1040px;
+}
+
+
+.THIS .content-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.THIS .content-container{
+    width: 1040px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Feed container */
+
+.THIS .salesdeck-feed{
+    border-radius: 4px;
+    margin: 20px 5px;
+    border: 1px solid #dfe4e0;
+    box-shadow: 0 0 8px 1px rgba(15,34,80,.05);
+    width: 66%;
+}
+
+.THIS .feed-header{
+    height: 70px;
+    border-bottom: 1px solid #dfe4e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.THIS .feed-header{
+    font-size: 1.1rem;
+}
+
+/* Navigation */
+
+.THIS .sales-menu-container{
+    border-radius: 4px;
+    margin: 20px 15px;
+    border: 1px solid #dfe4e0;
+    box-shadow: 0 0 8px 1px rgba(15,34,80,.05);
+}
