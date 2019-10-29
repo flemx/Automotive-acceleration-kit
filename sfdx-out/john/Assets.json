@@ -33,6 +33,60 @@
       "License_Plate__c" : null,
       "AccountId" : "@AccountRef1",
       "ContactId" : "@ContactRef1"
+    },
+    {
+      "attributes" : {
+        "type" : "Asset",
+        "referenceId" : "ref10"
+      },
+      "Name" : "VW I.D. Buzz",
+      "SerialNumber" : "WVWZZZ1JZ3W44000",
+      "InstallDate" : "2019-03-31",
+      "PurchaseDate" : "2019-03-31",
+      "Status" : "Registered",
+      "Price" : "62000",
+      "Quantity" : "1",
+      "VIN__c" : "WVWZZZ1JZ3W330092",
+      "License_Plate__c" : "B VW 990",
+      "AccountId" : "AccountRef2",
+      "ContactId" : "ContactRef2",
+      "demo_key__c" : "asset_01"
+    },
+    {
+      "attributes" : {
+        "type" : "Asset",
+        "referenceId" : "ref10"
+      },
+      "Name" : "VW I.D. Buzz",
+      "SerialNumber" : "WVWZZZ1JZ3W44000",
+      "InstallDate" : "2019-03-31",
+      "PurchaseDate" : "2019-03-31",
+      "Status" : "Registered",
+      "Price" : "62000",
+      "Quantity" : "1",
+      "VIN__c" : "WVWZZZ1JZ3W330093",
+      "License_Plate__c" : "B VW 991",
+      "AccountId" : "AccountRef2",
+      "ContactId" : "ContactRef2",
+      "demo_key__c" : "asset_02"
+    },
+    {
+      "attributes" : {
+        "type" : "Asset",
+        "referenceId" : "ref10"
+      },
+      "Name" : "VW I.D. Buzz",
+      "SerialNumber" : "WVWZZZ1JZ3W44000",
+      "InstallDate" : "2019-03-31",
+      "PurchaseDate" : "2019-03-31",
+      "Status" : "Registered",
+      "Price" : "62000",
+      "Quantity" : "1",
+      "VIN__c" : "WVWZZZ1JZ3W330094",
+      "License_Plate__c" : "B VW 992",
+      "AccountId" : "AccountRef2",
+      "ContactId" : "ContactRef2",
+      "demo_key__c" : "asset_03"
     }
   ]
 }

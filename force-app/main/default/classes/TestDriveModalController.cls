@@ -19,7 +19,8 @@ public class TestDriveModalController {
     }
     
 @AuraEnabled
-    public static Test_Drive__c assignVehicle(String tdid, String vid){
+    public static Test_Drive__c assignVehicle(String tdid){
+        Id vid = [SELECT Id FROM Asset WHERE demo_key__c = 'asset_01' LIMIT 1].Id;
         Test_Drive__c td = [SELECT 
                     Date__c, 
                     Name,

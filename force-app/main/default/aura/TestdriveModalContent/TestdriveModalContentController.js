@@ -52,14 +52,10 @@
     },
     
     assign: function(c,e,h){
-        /*var tdupdate = c.get("v.testdrive");
-        tdupdate.assigned_Vehicle__r.License_Plate__c = "B DV 990E"
-        c.set("v.testdrive", tdupdate);*/
         //call db update
         var action = c.get('c.assignVehicle');
         console.log("assign testdrive id = ", c.get("v.testdrive.Id"));
-        action.setParams({"tdid": c.get("v.testdrive.Id"),
-                          "vid": "02i1t00000061AbAAI"});
+        action.setParams({"tdid": c.get("v.testdrive.Id")});
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
@@ -73,6 +69,7 @@
                     data.Date = new Date(testDriveDate);
                     data.EndDate = testDriveDate.setHours(testDriveDate.getHours()+1); 
                 }
+                data.assigned_Vehicle__r.License_Plate__c = "B DV 990E"
                 c.set("v.testdrive",data);
                 h.closeModal(c,e,h);
             }
