@@ -14,7 +14,20 @@
                         }
                         if(testDriveDate){
                             data.Date = new Date(testDriveDate);
+                            // format Date
                             data.EndDate = testDriveDate.setHours(testDriveDate.getHours()+1); 
+                            let dateString = new Date(data.Date).toUTCString();
+                            data.dateFormatted = dateString.split(' ').slice(0, 4).join(' ');
+
+                            //Format times
+                            let startTime = new Date(data.Date).toUTCString();
+                            startTime = startTime.split(' ').slice(4, 5).join(' ');
+                            startTime = startTime.split(':').slice(0,2).join(':');
+
+                            let endTime = new Date(data.EndDate).toUTCString();
+                            endTime = endTime.split(' ').slice(4, 5).join(' ');
+                            endTime = endTime.split(':').slice(0,2).join(':');
+                            data.timeframe = startTime + ' - ' + endTime;
                         }
                         c.set("v.testdrive",data);
                         
@@ -71,7 +84,20 @@
                 }
                 if(testDriveDate){
                     data.Date = new Date(testDriveDate);
+                    // format Date
                     data.EndDate = testDriveDate.setHours(testDriveDate.getHours()+1); 
+                    let dateString = new Date(data.Date).toUTCString();
+                    data.dateFormatted = dateString.split(' ').slice(0, 4).join(' ');
+
+                    //Format times
+                    let startTime = new Date(data.Date).toUTCString();
+                    startTime = startTime.split(' ').slice(4, 5).join(' ');
+                    startTime = startTime.split(':').slice(0,2).join(':');
+
+                    let endTime = new Date(data.EndDate).toUTCString();
+                    endTime = endTime.split(' ').slice(4, 5).join(' ');
+                    endTime = endTime.split(':').slice(0,2).join(':');
+                    data.timeframe = startTime + ' - ' + endTime;
                 }
                 c.set("v.testdrive",data);
                 h.closeModal(c,e,h);

@@ -10,3 +10,25 @@
     width:90%;
     margin-left: 32px;
 }
+
+.THIS .infoblock {
+    font-size: 11px;
+    margin-top: 5px;
+    color: #3E3E3C;
+}
+
+.THIS .infoblock .slds-input{
+    background-color: rgba(233, 234, 236, 0.32);
+    border-color: rgba(196, 198, 202, 0.4);
+}
+.THIS .infoblock .slds-input::placeholder {
+    color: #888888;
+}
+
+.THIS .infoblock .slds-form-element__control {
+    width: 130px;
+}
+
+.THIS .infoblock-wrapper{
+    display: flex;
+}
