@@ -33,7 +33,7 @@
     border-color: rgba(196, 198, 202, 0.4);
 }
 .THIS .infoblock .slds-input::placeholder {
-    color: #888888;
+    color:  #505050
 }
 
 .THIS .infoblock-vehicle .slds-input::placeholder{
