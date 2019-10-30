@@ -235,14 +235,14 @@
                 <div class="slds-modal__footer">
                     <div class="theBtns" style="float:right;">
                         <aura:if isTrue="{!v.progressStep != '1'}">
-                        	<lightning:button onclick="{!c.handlePrevious}" label="Previous" variant="brand"/>
+                        	<c:vwButton onclick="{!c.handlePrevious}" label="Previous"  class="slds-m-right_large"/>
                         </aura:if>
                         
-                        <lightning:button onclick="{!c.handleNext}" label="Next" variant="brand"/>
+                        <c:vwButton onclick="{!c.handleNext}" label="Next" buttonType="inverted"/>
                     </div>
                     
                     <div class="theSubmitBtn" style="float:right;display:none;">
-                        <lightning:button onclick="{!c.handleSubmit}" label="Submit" variant="brand"/>
+                        <c:vwButton onclick="{!c.handleSubmit}" label="Submit" buttonType="inverted"/>
                     </div>
                     
                 </div>

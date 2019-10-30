@@ -22,9 +22,8 @@
 }
 
 .THIS .submenuitem {
-       display: flex;
+    display: flex;
     justify-content: space-between;
-    /* padding-left: 16px; */
     font-size: .9rem;
     font-weight: 700;
     align-items: center;
@@ -32,8 +31,9 @@
     width: 90%;
     height: 50px;
     border-top: solid 1px #dee1e3;
-    /* padding: 5px; */
     margin: 5%;
+    padding-top: 5%;
+    margin-top: 2%;
 }
 
 .THIS .submenuitem:nth-child(1) {
