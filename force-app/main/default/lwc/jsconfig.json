@@ -1,7 +1,17 @@
 {
     "compilerOptions": {
         "baseUrl": ".",
-        "paths": {},
+        "paths": {
+            "c/feedItemRegular": [
+                "feedItemRegular/feedItemRegular.js"
+            ],
+            "c/vwButton": [
+                "vwButton/vwButton.js"
+            ],
+            "c/vwSvgLogo": [
+                "vwSvgLogo/vwSvgLogo.js"
+            ]
+        },
         "experimentalDecorators": true
     },
     "include": [

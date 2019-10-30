@@ -169,4 +169,23 @@ public with sharing class MessageLibrary {
         );
         EventBus.publish(message);
     }
+
+    public static void appOrder(Order o){
+            //get related contact info
+            Contact c = [SELECT Id, Name FROM Contact WHERE Id =:o.Contact__c LIMIT 1];
+            general_message__e msg = new general_message__e(
+                main_icon__c = 'standard:orders',
+                headline__c = 'Order created',
+                category_1__c = 'New Order',
+                category_2__c = 'Customer: ',
+                icon_1__c = 'standard:orders',
+                message_1__c = 'received.',
+                message_2__c = '',
+                record_id_1__c = o.Id,
+                record_id_2__c = c.Id,
+                record_name_1__c = o.Name,
+                record_name_2__c = c.Name
+            );
+            EventBus.publish(msg);
+    	}
 }
