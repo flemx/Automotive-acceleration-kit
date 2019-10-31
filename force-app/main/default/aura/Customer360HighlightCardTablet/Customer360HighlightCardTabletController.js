@@ -49,7 +49,8 @@
              component.find("recordHandler").reloadRecord();
 
         } else if(eventParams.changeType === "LOADED") {
-            // record is loaded in the cache
+            // get Avatar Image once record is loaded
+            component.set("v.customerAvatarUrl",$A.get(component.get("v.fields.Cust360_Contact_Picture_URL__c")));
         } else if(eventParams.changeType === "REMOVED") {
             // record is deleted and removed from the cache
         } else if(eventParams.changeType === "ERROR") {

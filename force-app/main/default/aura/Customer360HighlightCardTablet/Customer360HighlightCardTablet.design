@@ -1,4 +1,4 @@
-<design:component label="Customer 360 Highlight Card">
+<design:component label="Customer 360 Highlight Card - we">
 	
     <design:attribute name="backgroundImageUrl" 
                       label="Background Image URL" 

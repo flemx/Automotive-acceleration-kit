@@ -6,7 +6,7 @@
     <aura:attribute name="contactFields" type="String[]" access="global" default="Name,Cust360_CSAT__c,Cust360_Loyalty__c,Cust360_LTV__c,Cust360_ChurnRisk__c,Cust360_Contact_Picture_URL__c,MailingCity,MailingCountry"/>
     <aura:attribute name="threshold1" type="Integer" access="global" default="20"/>
     <aura:attribute name="threshold2" type="Integer" access="global" default="60"/>
- 
+    <aura:attribute name="customerAvatarUrl" type="String" access="global" />
     <aura:attribute name="record" type="Object"/>
     <aura:attribute name="fields" type="Object"/>
     <aura:attribute name="recordError" type="String"/>
@@ -26,7 +26,7 @@
     
     
     <div class="slds-card card tiny" aura:id="card" >
-        <div class="header-image" style = "{! 'background-image:url(' + (v.backgroundImageUrl ? v.backgroundImageUrl : $Resource.GolfBanner) + '); background-color:' + (v.backgroundHexColor) + ';'}">
+        <div class="header-image" style="{! 'background-image:url(' + (v.backgroundImageUrl ? v.backgroundImageUrl : $Resource.GolfBanner) + '); background-color:' + (v.backgroundHexColor) + ';'}">
         	<div class="slds-grid slds-grid_align-end slds-p-around_medium">
               	<lightning:buttonMenu iconName="utility:down" alternativeText="More" variant="bare-inverse" menuAlignment="right" onselect="{! c.openmodal }">
                     <lightning:menuItem label="Update Card Info" value="update360" />                    
@@ -37,10 +37,10 @@
         <div class="slds-media slds-m-left_x-large">
             <div class="slds-media_figure">
                 <div class="customer-image-container ">
-                    <aura:if isTrue="{!empty(v.fields.Cust360_Contact_Picture_URL__c)}">
-                            <img src="{!$Resource.JohnFisher}" class="customer-avatar"/>
+                    <aura:if isTrue="{!empty(v.customerAvatarUrl)}">
+                            <img src="/_slds/images/themes/lightning_lite/lightning_lite_profile_avatar_160.png" class="customer-avatar"/>
                         <aura:set attribute="else">
-                            <img src="{!v.fields.Cust360_Contact_Picture_URL__c}" class="customer-avatar"/>
+                            <img src="{!v.customerAvatarUrl}" class="customer-avatar"/>
                         </aura:set>   
                     </aura:if>
                     
