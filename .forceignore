@@ -5,7 +5,7 @@
 package.xml
 
 # app switcher
-AppSwitcher.appMenu
+#AppSwitcher.appMenu
 
 #ignore profiles
 #**profiles
