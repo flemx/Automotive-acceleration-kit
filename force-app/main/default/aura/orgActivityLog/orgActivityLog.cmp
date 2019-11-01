@@ -1,14 +1,31 @@
 <aura:component implements="flexipage:availableForAllPageTypes" controller="orgActivityLogController" access="global">
     <aura:attribute name="events" type="Object" />
     <aura:attribute name="eventType" type="String" />
-
+    <aura:attribute name="modal" type="Boolean" default="false" />
+    <aura:attribute name="modalImage" type="String" default="" />
     <lightning:empApi aura:id="empApi" />
     <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
 
-
     <aura:attribute name="subscription" type="Map" />
 
-
+        
+       	<aura:if isTrue="{!v.modal}">
+          	<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" onclick="{! c.closeModal }">
+                        <img class="full"  src="{!v.modalImage}" />
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Close"
+                                          title="Close"
+                                          onclick="{! c.closeModal }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            
+        </aura:if>
     <lightning:card class="slds-p-around_medium" title="Org Activity Log">
         <lightning:input aura:id="channel" label="channel" name="channel" type="text" value="/event/general_message__e" />
         <div class="slds-p-vertical_medium">
@@ -126,12 +143,16 @@
                                 {!event.data.payload.message_3__c}
                                  </aura:if>
                             </div>
-                            
+                            <aura:if isTrue="{!event.data.payload.image_resource_name__c}">
+                           	<div class="slds-row">
+                                <lightning:button label="enlarge image" variant="neutral" class="slds-m-top_large" onclick="{! c.openModal }" value="{!event.data.payload.image_resource_name__c}" />
+                            </div>
+                            </aura:if>
                         </div>
                     </div>
                     <aura:if isTrue="{!event.data.payload.image_resource_name__c}">
-                    <div class="slds-row slds-p-around_small border-left">
-                        <img class="message-image" src="{!event.data.payload.image_resource_name__c}" />
+                    <div class="slds-row slds-p-around_small border-left" onclick="{! c.openModal }" data-value="{!event.data.payload.image_resource_name__c}">
+                        <img aura:id="thumb" class="message-image" src="{!event.data.payload.image_resource_name__c}" />
                     </div>
                     </aura:if>
                     

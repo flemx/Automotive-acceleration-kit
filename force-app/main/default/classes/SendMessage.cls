@@ -16,6 +16,21 @@ global with sharing class SendMessage {
     when 'td-scheduler-request' {		
         MessageLibrary.tdSchedulerRequest(payload);
     }
+    when 'browser-interaction' {		
+        MessageLibrary.desktopInteractionPointMessage(payload);
+    }
+    when 'browser-interaction-click' {		
+        MessageLibrary.desktopInteractionPointClickMessage(payload);
+    }
+    when 'mobile-interaction' {		
+        MessageLibrary.mobileInteractionPointMessage(payload);
+    }
+    when 'contact-cookie-merge' {		
+        MessageLibrary.matchCookieMessage();
+    }
+    when 'journey-start' {		
+        MessageLibrary.journeyStart(payload);
+    }
     when else {		  // default block, optional
         MessageLibrary.plaintest();        
     }

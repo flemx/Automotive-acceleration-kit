@@ -24,3 +24,8 @@
     color:#9B9B9B;
     margin-top:2px;
 }
+
+.THIS .full {
+    max-width: 100%;
+    height: auto;
+}
