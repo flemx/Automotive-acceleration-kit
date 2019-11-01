@@ -4,29 +4,24 @@
         <componentInstances>
             <componentName>orgActivityLog</componentName>
         </componentInstances>
-        <mode>Replace</mode>
         <name>top</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <mode>Replace</mode>
-        <name>bottomLeft</name>
+        <name>left</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <mode>Replace</mode>
-        <name>bottomRight</name>
+        <name>middle</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <mode>Replace</mode>
-        <name>sidebar</name>
+        <name>right</name>
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Home Page Default</masterLabel>
-    <parentFlexiPage>home__desktopDefault</parentFlexiPage>
     <template>
-        <name>home:desktopTemplate</name>
+        <name>home:desktopTemplateHeaderThreeColumns</name>
     </template>
     <type>HomePage</type>
 </FlexiPage>

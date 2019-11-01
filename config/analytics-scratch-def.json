@@ -1,0 +1,19 @@
+{
+  "orgName": "VW Developer ",
+  "edition": "Developer",
+  "language": "en_US",
+  "hasSampleData": true,
+  "features":["Communities",
+  "MultiCurrency",
+      "AnalyticsAdminPerms",
+      "EinsteinAnalyticsPlus",
+      "DevelopmentWave",
+      "WavePlatform"
+  ],
+  "settings": {
+    "orgPreferenceSettings": {
+      "networksEnabled": true,
+      "s1DesktopEnabled": true
+    }
+  }
+}

@@ -9,7 +9,23 @@
     border-right:1px solid #F0F0F0;
 }
 
+.THIS .border-left {
+    border-left:1px solid #F0F0F0;
+}
+
+.THIS .message-image {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    height: 256px !important;
+    width: auto !important;
+    max-width: unset !important;
+}
 .THIS .date {
     color:#9B9B9B;
     margin-top:2px;
+}
+
+.THIS .full {
+    max-width: 100%;
+    height: auto;
 }

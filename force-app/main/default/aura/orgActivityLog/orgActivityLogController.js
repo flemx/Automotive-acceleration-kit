@@ -35,12 +35,40 @@
             console.log("EMP API is enabled");
         }
         empApi.subscribe(channel, replayId, $A.getCallback(eventReceived => {
-                // Process event (this is called each time we receive an event)
-				
+            console.log("hallo");
+            console.log('Received event ', JSON.stringify(eventReceived));
+            // Process event (this is called each time we receive an event)
+            //resolve image resource
+            let img = eventReceived.data.payload.image_resource_name__c;
+            if(img){
+            console.log("img = ",img);
+            if(img.includes("/")) {
+            	console.log("image is path = ", img);
+            	let path = img.split("/");
+            	console.log("path = ", path);
+            	let bundle = path.shift();
+            	console.log("bundle = ", bundle);
+            	let imgsrc = "";
+            	console.log("image path = ", imgsrc);
+            	path.forEach((item,index,p) => {
+            		if(index+1<p.length){
+            		imgsrc = imgsrc + item + "/";
+        			} else {
+                      imgsrc = imgsrc + item + ".png";                                   
+                    }
+        		});
+        		console.log("image path = ", imgsrc);
+            	eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + bundle) + "/" + imgsrc; 
+        } else {
+            	console.log("plain image reference")
+            	eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + img);                                                           
+                                                           }
+
+        	}
                 let events = component.get("v.events") || [];
                 events.unshift(eventReceived);
                 component.set("v.events", events);
-                console.log('Received event ', JSON.stringify(eventReceived));
+                
             console.log("channel: ",component.get("v.eventType"));
             }))
             .then(subscription => {
@@ -97,5 +125,25 @@
             "recordId": e.currentTarget.dataset.value
         });
         navEvt.fire();
-	}
+	},
+            closeModal: function (c,e,h){
+                console.log("close");
+                c.set("v.modal", false);
+            },
+            openModal: function (c,e,h){
+                console.log("open");
+                let value = "";
+                try {
+                      value = e.getSource().get("v.value");
+                }
+                catch(error) {
+                    value = e.currentTarget.dataset.value;
+                    //console.error(error);
+                    // expected output: ReferenceError: nonExistentFunction is not defined
+                    // Note - error messages will vary depending on browser
+                }
+                console.log("value = ", value)
+                c.set("v.modalImage",value);
+                c.set("v.modal", true);
+            },
 })
