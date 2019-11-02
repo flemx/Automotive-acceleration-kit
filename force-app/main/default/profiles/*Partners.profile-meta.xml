@@ -58,6 +58,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DealerPortalTriggerPush</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DemoUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -96,6 +100,10 @@
     <classAccesses>
         <apexClass>LightningSelfRegisterControllerTest</apexClass>
         <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>MessageLibrary</apexClass>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>MyCalendarButtonsPicklist</apexClass>
@@ -144,6 +152,10 @@
     <classAccesses>
         <apexClass>customLookUpController</apexClass>
         <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>dealerJsonObject</apexClass>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>deleteAllData</apexClass>

@@ -56,12 +56,14 @@
                     <c:TestdriveModalContent tdid="{!v.modalRecord}" />
                   
               </div>
-              <footer class="slds-modal__footer">
+              <footer class="slds-modal__footer footer-model-wrapper">
                 <aura:if isTrue="{!v.modalNoLiteral}">
-                  <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
+                <c:vwButton buttonType="inverted" label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"></c:vwButton>
+                 <!---<lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>-->
                 </aura:if>
                 <aura:if isTrue="{!v.modalYesLiteral}">
-                  <lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>
+                   <c:vwButton buttonType="inverted" abel="{!v.modalYesLiteral}" onclick="{!c.accept}"></c:vwButton>
+                  <!--<lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>-->
                 </aura:if>
               </footer>
             </div>
@@ -342,25 +344,7 @@
                                                 </div>
                                     </aura:if>
                                         
-                                    <!--
-                                        <div class="feeditem-background">
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box action-color">
-                                                    <lightning:icon iconName="utility:warning" size="xx-small" variant="inverse"></lightning:icon>
-                                                </div>
-                                            </div>
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box regular-color">
-                                                    <lightning:icon iconName="utility:down" size="xx-small" class="regular-icon-color"></lightning:icon>
-                                                </div>
-                                            </div>
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box regular-color">
-                                                    <lightning:icon iconName="utility:share_post" size="xx-small" class="regular-icon-color"></lightning:icon>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        -->
+                                   
                                         <div class="feeditem-main">
                                             <div class="feed-action-container">
                                                 <div class="action-header">

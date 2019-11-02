@@ -8,7 +8,8 @@
     <aura:attribute name="showModal" type="Boolean" default="false" />
     <aura:attribute name="modalHeader" type="String" />
     <aura:attribute name="modalYesLiteral" type="String" />
-	<aura:attribute name="modalNoLiteral" type="String" />
+    <aura:attribute name="modalNoLiteral" type="String" />
+    <aura:attribute name="timeframe" type="String" />
     
     
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
@@ -25,15 +26,17 @@
               </header>
               <div class="slds-modal__content fillHeight" id="modal-content-id-2">
                 <aura:if isTrue="{!v.modalHeader == 'Assign Vehicle'}">
-                    <c:assignVehicleModalContent tdid="{!v.tdid}" tddate="{!v.testdrive.Date}" tdenddate="{!v.testdrive.EndDate}" />
+                    <c:assignVehicleModalContent tdid="{!v.tdid}" tddate="{!v.testdrive.dateFormatted}" tdtime="{!v.testdrive.timeframe}" />
                   </aura:if>
               </div>
               <footer class="slds-modal__footer">
                 <aura:if isTrue="{!v.modalNoLiteral}">
-                  <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
+                    <c:vwButton buttonType="inverted" label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"></c:vwButton>
+                  <!--<lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>-->
                 </aura:if>
                 <aura:if isTrue="{!v.modalYesLiteral}">
-                  <lightning:button label="{!v.modalYesLiteral}" onclick="{!c.assign}" ></lightning:button>
+                        <c:vwButton buttonType="inverted" label="{!v.modalYesLiteral}" onclick="{!c.assign}"></c:vwButton>
+                  <!--<lightning:button label="{!v.modalYesLiteral}" onclick="{!c.assign}" ></lightning:button>-->
                 </aura:if>
               </footer>
             </div>
@@ -45,7 +48,24 @@
             <!-- Appointment Details //-->
         	<div class="slds-row slds-size_1-of-3 slds-p-around_medium border-right">
                 <div class="section-heading">Appointment Details</div>
+
+
                 <div class="subtitle">time and date</div>
+
+                <div class="slds-form-element infoblock">
+                    <label class="slds-form-element__label" >Date</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="{!v.testdrive.dateFormatted}" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+                <div class="slds-form-element infoblock">
+                    <label class="slds-form-element__label" >Time</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="{!v.testdrive.timeframe}" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+
+                <!--
                 <div class="infoblock">
                 	<div class="icon">
                         <lightning:icon iconName="utility:dayview" size="xx-small" />
@@ -62,6 +82,9 @@
                         <lightning:formattedDateTime value="{!v.testdrive.Date}" hour="2-digit" minute="2-digit" />&nbsp;-&nbsp;<lightning:formattedDateTime value="{!v.testdrive.EndDate}" hour="2-digit" minute="2-digit" />
                     </div>
                 </div>
+                -->
+
+
                 <div class="subtitle">Your adjacent agenda</div>
                 <div class="infoblock-calendar">
                 	<div class="icon">
@@ -79,10 +102,22 @@
                         Don Arne sales conversation
                     </div>
                 </div>
-                <div class="continuous-block">
-                	no later events
-                </div>
                 <div class="subtitle">Location and routing</div>
+
+                <div class="slds-form-element infoblock">
+                    <label class="slds-form-element__label" >Pickup Location</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="Pickup at customer's home" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+
+                <div class="slds-form-element infoblock">
+                    <label class="slds-form-element__label" >Address</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="{!v.testdrive.Driver__r.MailingStreet + v.testdrive.Driver__r.MailingCity}" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+                <!--
                 <div class="infoblock">
                 	<div class="icon">
                         <lightning:icon iconName="utility:checkin" size="xx-small" />
@@ -91,6 +126,7 @@
                         Pickup at customer's home
                     </div>
                 </div>
+                
                 <div class="infoblock">
                 	<div class="icon">
                         <lightning:icon iconName="utility:location" size="xx-small" />
@@ -102,6 +138,8 @@
                         </a>
                     </div>
                 </div>
+                -->
+
                 <div class="map">
                     <img src="{!$Resource.wayToJohn}" />
                 </div>
@@ -110,6 +148,29 @@
             <div class="slds-row slds-size_1-of-3 slds-p-around_medium border-right">
             <div class="section-heading">Test Drive Details</div>
                 <div class="subtitle">Customer selected vehicle</div>
+
+                <div class="slds-form-element infoblock infoblock-vehicle">
+                    <label class="slds-form-element__label" >Vehicle</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="{!v.testdrive.Configuration__r.model__c}" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+
+                <div class="slds-form-element infoblock">
+                    <label class="slds-form-element__label" >Type</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="{!v.testdrive.Configuration__r.edition__c}" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+
+                <div class="slds-form-element infoblock">
+                    <label class="slds-form-element__label" >Engine</label>
+                    <div class="slds-form-element__control">
+                      <input type="text" placeholder="{!v.testdrive.Configuration__r.motor__c}" disabled="true" class="slds-input" />
+                    </div>
+                </div>
+
+                <!--
                 <div class="infoblock">
                 	<div class="icon">
                         <lightning:icon iconName="utility:travel_and_places" size="xx-small" />
@@ -134,14 +195,34 @@
                         {!v.testdrive.Configuration__r.motor__c}
                     </div>
                 </div>
+                -->
+                
                 <div class="image-block">
-                    <img src="{!$Resource.idCrozzRed}" />
+                    <img src="{!$Resource.vwDemoPackFiles + '/images/van.png'}" />
                 </div>
                  <div class="subtitle">Assigned vehicle</div>
+
+                 <div class="slds-form-element infoblock assigned-vehicle">
+                    <label class="slds-form-element__label" >Vehicle</label>
+                    <div class="slds-form-element__control">
+
+                            <aura:if isTrue="{!v.testdrive.assigned_Vehicle__r.License_Plate__c}">
+                                    <input type="text" placeholder="{!v.testdrive.assigned_Vehicle__r.License_Plate__c}" disabled="false" class="slds-input" />
+                                <aura:set attribute="else">
+                                    <input type="text" placeholder="None Assigned" disabled="false" class="slds-input" /> 
+                                </aura:set>
+                            </aura:if> 
+                      
+
+
+                    </div>
+                </div>
+                <!--
                 <div class="infoblock">
                 	<div class="icon">
                         <lightning:icon iconName="utility:logout" size="xx-small" />
                     </div>
+
                     <aura:if isTrue="{!v.testdrive.assigned_Vehicle__r.License_Plate__c}">
                     <div class="icon-text">
                         {!v.testdrive.assigned_Vehicle__r.License_Plate__c}&nbsp;&nbsp;&nbsp;<a>change</a>
@@ -153,9 +234,11 @@
                     </aura:set>
                     </aura:if> 
                 </div>
+                    -->
                 <aura:if isTrue="{!not(v.testdrive.assigned_Vehicle__r)}">
                 <div class="button-block">
-                    <lightning:button label="Assign Vehicle" title="Assign Vehicle" onclick="{! c.callAssignVehicle }"/>
+                        <c:vwButton buttonType="primary"  label="Assign Vehicle"  onclick="{! c.callAssignVehicle }"></c:vwButton>
+                    <!--<lightning:button label="Assign Vehicle" title="Assign Vehicle" onclick="{! c.callAssignVehicle }"/>-->
                 </div>
                 </aura:if>
             </div>

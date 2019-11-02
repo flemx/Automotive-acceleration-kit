@@ -21,6 +21,7 @@
     width: 740px;
     border-radius: 4px;
     margin: 20px;
+    margin-bottom: 30px;
     border: 1px solid #dfe4e0;
     /*box-shadow: 0 0 8px 1px rgba(15,34,80,.05);*/
 }
@@ -373,7 +374,7 @@
 .THIS .modal960 {
     padding: 0px;
     width: 960px;
-    height: 704px;
+    height: 740px;
     margin-top: 32px;
 }
 
@@ -413,3 +414,6 @@
        margin-right: 15px;
 }
 
+.THIS .footer-model-wrapper{
+    padding: 20px;
+}
