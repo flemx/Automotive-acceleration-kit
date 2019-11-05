@@ -183,12 +183,11 @@
                     component.set("v.fil",data);
                 }
             }catch(e){
-                console.error("Error logged: ");
-                console.error(e);
+                console.error("Error logged: ",e);
             }
             
             
-        },5000);
+        },30000);
     
     },
     

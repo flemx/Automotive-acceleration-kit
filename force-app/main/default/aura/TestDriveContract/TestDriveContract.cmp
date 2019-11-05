@@ -152,7 +152,7 @@
                                     </div>
                                     
                                     <div class="slds-form-element slds-col" style="width:50%;text-align: center; margin-top: 6%;">
-                                        <img src="{!$Resource.theVehicle}"/>
+                                        <img src="{!$Resource.idbuzzconfig}"/>
                                     </div>
                                 </div>
                             </lightning:layoutItem>
@@ -193,10 +193,11 @@
                                 <div class="slds-grid" style="width:100%">
                                     <div class="slds-form-element slds-col" style="width:50%; margin-top: -9px;">
                                         <div class="slds-form-element__control">
-                                            <c:UploadImage recordId="0031t00000AEpK0AAL"/>
+                                            <c:UploadImage recordId="{!v.contact.Id}"/>
                                         </div>
                                     </div>
                                     <div class="slds-form-element slds-col" style="width:50%; margin-left: 2%; margin-top: 1%;">
+                                        
                                         <img src="{!$Resource.EinsteinValid}"/>
                                     </div>
                                 </div>

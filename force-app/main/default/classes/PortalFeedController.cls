@@ -156,7 +156,17 @@ public with sharing class PortalFeedController {
             return errorMessage;
         }
     }
-    
+    @AuraEnabled
+    public static String updatePfi(Id pfid){
+        String returnstring = 'success';
+        Portal_feed_item__c pfi = [SELECT Id, SLA_achieved_since__c, SLA_active__c FROM Portal_feed_item__c WHERE Id = :pfid LIMIT 1];
+        pfi.SLA_achieved_since__c = DateTime.now();
+        pfi.SLA_active__c = false;
+        try{update pfi;} catch (Exception e) {
+            returnstring = 'error' + e.getMessage();
+        }
+        return returnstring;
+    }
     @AuraEnabled
     public static String updateTestDriveLead(Id tid){
         //send message

@@ -59,40 +59,33 @@
                     if (state === "SUCCESS") {
         	console.log("update test drive successful = ", response.getReturnValue());
             //updateStatus(Id oid, String field, String value)
-        		//Update Feeditem
-            var action2 = c.get("c.updateStatus");
-        	action2.setParams({"oid" : c.get("v.modalFiid"),
-                          "field" : "SLA_active__c",
-                          "value" : "false"
-                         });
-        	action2.setCallback(this,(response) => {
-            		var state = response.getState();
-                    if (state === "SUCCESS") {
-        			console.log("update action feed item successful = ", response.getReturnValue());
-            
+        	//Update Feeditem
             //updateStatus SLA_achieved_since__c 
-            var action3 = c.get("c.updateStatus");
-        	action3.setParams({"oid" : c.get("v.modalFiid"),
-                          "field" : "SLA_achieved_since__c",
-                          "value" : "ACTION:setDate"
-                         });
+            var action3 = c.get("c.updatePfi");
+        	action3.setParams({"pfid" : c.get("v.modalFiid")});
         	action3.setCallback(this,(response) => {
             		var state = response.getState();
                     if (state === "SUCCESS") {
         			console.log("update action feed item successful = ", response.getReturnValue());
             
-            //updateStatus SLA_achieved_since__c 
-            
+            //updateStatus SLA_achieved_since__c in log
+                    for(var d of c.get("v.fil")){
+                        if(d.Id == c.get("v.modalFiid")){
+                            d.SLA_achieved_since__c = Date.now();
+                			d.SLA_active__c = false;
+                        }
+                    }
+                
+            }
             
         	}
             
-        });
+        );
         $A.enqueueAction(action3);
     	}
-		});
 		
-		$A.enqueueAction(action2);
-        }
+		
+        
         });
 		$A.enqueueAction(action);
         

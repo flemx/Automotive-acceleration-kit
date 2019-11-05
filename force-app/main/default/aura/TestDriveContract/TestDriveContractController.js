@@ -69,15 +69,37 @@
     },
     
     handleSubmit:function (cmp, event, helper) {
-        var toastEvent = $A.get("e.force:showToast");
-        toastEvent.setParams({
-            "type": "success",
-            "message": "Congratulations! Your test drive contract is completed!"
-        });
-        toastEvent.fire();
+        console.log("submit testdrive prep form");
+        var action3 = cmp.get("c.updatePfi");
+        	action3.setCallback(this,(response) => {
+            		var state = response.getState();
+                    if (state === "SUCCESS") {
+        			console.log("update action feed item successful = ", response.getReturnValue());
+            
+            console.log("action sent");
+			var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "type": "success",
+                    "message": "Congratulations! Your test drive contract is completed!"
+                });
+                toastEvent.fire();
         
-        $A.get('e.force:refreshView').fire();
-        $A.get("e.force:closeQuickAction").fire();
+            $A.get('e.force:refreshView').fire();
+            $A.get("e.force:closeQuickAction").fire();
+                
+            }else {
+    		// Parse custom error data & report it
+			let errorData = JSON.parse(response.error.message);
+			console.error(errorData.name +" (code "+ errorData.code +"): "+ errorData.message);
+    		console.log("error: ", response.getError)
+ 			}
+            
+			} 
+            
+        );
+        	$A.enqueueAction(action3);
+			
+        
     },
     closeModal: function(c,e,h){
         c.set("v.showModal", false);
