@@ -1,36 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>vw_demo_dashboard</fullName>
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>Assign_Trails</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
+        <members>blue_backgroundpng</members>
+        <members>linecenterpng</members>
+        <members>lineright2png1</members>
+        <members>lineright3png</members>
+        <members>vwdashboardbgbenchmarkpng1</members>
+        <members>vwdashboardbgmiddlepng</members>
+        <members>weightbalancepng</members>
+        <name>ContentAsset</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+        <members>general_message__e.image_resource_name__c</members>
+        <name>CustomField</name>
     </types>
     <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
+        <members>DF19_Demo</members>
+        <name>WaveApplication</name>
     </types>
     <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
+        <members>Overview_v3</members>
+        <name>WaveDashboard</name>
     </types>
     <types>
-        <members>*</members>
-        <name>StaticResource</name>
+        <members>DemoDataDFPreped</members>
+        <members>demo_data_df_service</members>
+        <members>demo_data_df_trails</members>
+        <name>WaveDataset</name>
     </types>
-    <version>46.0</version>
+    <types>
+        <members>Overview_v3</members>
+        <name>WaveXmd</name>
+    </types>
+    <version>47.0</version>
 </Package>

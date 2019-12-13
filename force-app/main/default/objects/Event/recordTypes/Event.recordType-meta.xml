@@ -5,17 +5,6 @@
     <description>All events.</description>
     <label>Event</label>
     <picklistValues>
-        <picklist>FSL__Event_Type__c</picklist>
-        <values>
-            <fullName>Resource Absence</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Service Appointment</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
         <picklist>Subject</picklist>
         <values>
             <fullName>Call</fullName>
@@ -54,33 +43,6 @@
         </values>
         <values>
             <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Prep</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Type__c</picklist>
-        <values>
-            <fullName>Call</fullName>
-            <default>true</default>
-        </values>
-        <values>
-            <fullName>Email</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Meeting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Other</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Prep</fullName>
             <default>false</default>
         </values>
     </picklistValues>

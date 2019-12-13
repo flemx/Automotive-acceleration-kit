@@ -1,0 +1,7 @@
+.image-container{
+    background-image: url(/resource/1573573753000/dailyBriefing);
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -53,8 +53,52 @@
     <name>Role</name>
     <members>AcmeResellersPartnerExecutive</members>
   </types>
+    <types>
+    <name>LightningComponentBundle</name>
+    <members>idBuzzIoT</members>
+  </types>
+  <types>
+    <name>CustomTab</name>
+    <members>Daily_Briefing</members>
+  </types>
+  <types>
+  <name>CorsWhitelistOrigin</name>
+  <members>https_gnews_io</members>
+  <members>https_ohana_cab</members>
+  <members>https_ohana_cab1</members>
+</types>
+<types>
+    <name>CustomField</name>
+    <members>Finance_Offer__c.Contact__c</members> 
+</types>
+<types>
+    <name>CustomObject</name>
+    <members>Finance_Offer__c</members>
+  </types>
+      <types>
+    <name>CustomTab</name>
+    <members>Daily_Briefing</members>
+  </types>
+  <types>
+    <name>StaticResource</name>
+    <members>idBuzzFilesIOT</members>
+  </types>
+    <types>
+    <name>FlexiPage</name>
+    <members>Daily_Briefing</members>
+  </types>
   //-->
   
+    <types>
+    <name>ApexClass</name>
+    <members>AssignTrailsController</members>
+  </types>
+
+
+
+  
+  
+
 
   <version>46.0</version>
 </Package>

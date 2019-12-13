@@ -2,8 +2,14 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "c/dailyBriefing": [
+                "dailyBriefing/dailyBriefing.js"
+            ],
             "c/feedItemRegular": [
                 "feedItemRegular/feedItemRegular.js"
+            ],
+            "c/idBuzzIoT": [
+                "idBuzzIoT/idBuzzIoT.js"
             ],
             "c/vwButton": [
                 "vwButton/vwButton.js"

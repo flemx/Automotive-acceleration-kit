@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <ltng:require styles="{!$Resource.noheader}"/>	
+</aura:component>

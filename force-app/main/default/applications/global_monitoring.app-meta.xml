@@ -30,5 +30,4 @@
     <tabs>Navi</tabs>
     <tabs>Sales_Dashboard</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>global_monitoring_UtilityBar2</utilityBar>
 </CustomApplication>

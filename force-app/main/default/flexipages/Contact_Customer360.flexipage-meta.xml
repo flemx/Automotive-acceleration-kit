@@ -4,62 +4,22 @@
         <componentInstances>
             <componentName>force:detailPanel</componentName>
         </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>cmpHeight</name>
-                <value>500px</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>cmpWidth</name>
-                <value>100%</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>domain</name>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>miniMapId</name>
-                <value>aAb3X000000PFjJSAW</value>
-            </componentInstanceProperties>
-            <componentName>maps:MiniMapLightningComponent</componentName>
-        </componentInstances>
         <name>detailTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
-                <name>height</name>
-                <value>300</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>label</name>
-                <value>Brand Interaction</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>pageName</name>
-                <value>ContactJourney</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showLabel</name>
+                <name>decorate</name>
                 <value>true</value>
             </componentInstanceProperties>
-            <componentName>flexipage:visualforcePage</componentName>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;font-size: 24px; color: rgb(225, 8, 8);&quot;&gt;tbd&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
         </componentInstances>
         <name>newsTabContent</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
-            <componentName>mcdm_15:QuickSend</componentName>
-        </componentInstances>
-        <name>Facet-3f261406-4a56-440c-abfa-19cdc54e533e</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
-            <componentName>runtime_sales_activities:activityPanel</componentName>
-        </componentInstances>
-        <name>Facet-3cf52523-ae32-41a5-9998-cda73bea3bbb</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -82,28 +42,6 @@
             <componentInstanceProperties>
                 <name>title</name>
                 <value>Interaction</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>body</name>
-                <value>Facet-3f261406-4a56-440c-abfa-19cdc54e533e</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Quick Message</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>body</name>
-                <value>Facet-3cf52523-ae32-41a5-9998-cda73bea3bbb</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Standard.Tab.activity</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
