@@ -36,6 +36,11 @@
                 <default>false</default>
                 <label>100 KWh</label>
             </value>
+            <value>
+                <fullName>101 KWh</fullName>
+                <default>false</default>
+                <label>101 KWh</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

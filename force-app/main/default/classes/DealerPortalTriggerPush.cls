@@ -1,6 +1,6 @@
 public class DealerPortalTriggerPush {
 
-    
+    @future(callout=true)
     public static void sendNotification(String appId, String  heading, String content){
         
         /**   EXAMPLE
@@ -22,7 +22,7 @@ public class DealerPortalTriggerPush {
         req.setMethod('POST');
        	req.setbody(JSON.serialize(dealerJsonObject.parse(jsonBody)));
         req.setHeader('Content-Type', 'application/json');
-        req.setHeader('Authorization', 'Basic YWY3NTZlMDEtMjIwYy00ODNmLTk3YjMtODRlYmZjMGFkZWI5');
+        req.setHeader('Authorization', 'Basic ZjBiODQ0YjMtYmQ3Zi00M2UzLTk2NTAtMGM3OGFkOTNjNmI3');
         Http http = new Http();
         HTTPResponse response = http.send(req); 
 		System.debug(response.getBody());

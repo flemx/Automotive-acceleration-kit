@@ -104,5 +104,10 @@
          </aura:if>
             
         </div>
+        <div class="reloadbutton">
+        	<a onclick="{!c.reloadbutton}">
+            	<lightning:icon iconName="action:refresh"></lightning:icon>
+            </a>
+        </div>
     </div>
 </aura:component>

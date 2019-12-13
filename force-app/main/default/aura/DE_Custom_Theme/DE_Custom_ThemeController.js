@@ -21,5 +21,9 @@
         }else{
             component.set("v.currentSection", '/');
         }
+    },
+    
+    reloadbutton : function(c,e,h){
+        location.reload(true);
     }
 })

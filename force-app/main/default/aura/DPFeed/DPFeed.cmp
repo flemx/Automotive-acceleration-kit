@@ -62,7 +62,7 @@
                  <!---<lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>-->
                 </aura:if>
                 <aura:if isTrue="{!v.modalYesLiteral}">
-                   <c:vwButton buttonType="inverted" abel="{!v.modalYesLiteral}" onclick="{!c.accept}"></c:vwButton>
+                   <c:vwButton buttonType="inverted" label="{!v.modalYesLiteral}" onclick="{!c.accept}"></c:vwButton>
                   <!--<lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>-->
                 </aura:if>
               </footer>
@@ -356,15 +356,25 @@
                                                
                                                 <div class="action-text-container" >
                                                     <span class="inlineitem action-title">{!fi.category_1__c}</span>
-                                                    <!-- <span class="inlineitem"><lightning:icon iconName="{!fi.icon_1__c}" size="xx-small" /></span> -->
+                                                    <aura:if isTrue="{!fi.icon_1__c}">
+                                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_1__c}" size="xx-small" /></span>
+                                                    </aura:if>
+                                                    
                                                     <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_1__c}" data-record="{!fi.record_name_1__c}" data-fiid="{!fi.Id}" >{!fi.record_name_1__c}</a></span>
                                                     <span class="inlineitem">{!fi.message_1__c}</span>
-                                                    <!-- <span class="inlineitem"><lightning:icon iconName="{!fi.icon_2__c}" size="xx-small" /></span> -->
+                                                    <aura:if isTrue="{!fi.icon_2__c}">
+                                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_2__c}" size="xx-small" /></span>
+                                                    </aura:if>
                                                     <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_2__c}" data-record="{!fi.record_name_2__c}" data-fiid="{!fi.Id}" >{!fi.record_name_2__c}</a></span>
                                                     <span class="inlineitem">{!fi.message_2__c}</span>
-                                                    <!-- <span class="inlineitem"><lightning:icon iconName="{!fi.icon_3__c}" size="xx-small" /></span> -->
+                                                    <aura:if isTrue="{!fi.icon_3__c}">
+                                                    <span class="inlineitem"><lightning:icon iconName="{!fi.icon_3__c}" size="xx-small" /></span>
+                                                    </aura:if>
                                                     <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_3__c}" data-record="{!fi.record_name_3__c}" data-fiid="{!fi.Id}" >{!fi.record_name_3__c}</a></span>
-                                                    <span class="inlineitem">.</span>
+                                                   
+                                                    <aura:if isTrue="{!fi.record_name_3__c}">
+                                                        <span class="inlineitem">.</span>
+                                                    </aura:if>
                                                 </div>
                                                 <div class="action-sla-container">
                                                     <aura:if isTrue="{!fi.SLA_active__c}">

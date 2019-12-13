@@ -20,6 +20,7 @@
     <label>global monitoring</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
+    <tabs>Daily_Briefing</tabs>
     <tabs>we_demo_management</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contact</tabs>
@@ -27,5 +28,7 @@
     <tabs>portal_feed_item__c</tabs>
     <tabs>dealer_event__c</tabs>
     <tabs>Navi</tabs>
+    <tabs>Sales_Dashboard</tabs>
     <uiType>Lightning</uiType>
+    <utilityBar>global_monitoring_UtilityBar2</utilityBar>
 </CustomApplication>

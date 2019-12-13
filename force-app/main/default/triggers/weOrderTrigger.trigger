@@ -26,6 +26,9 @@ trigger weOrderTrigger on Order (before insert, after insert) {
         //send messages
         for(Order o : Trigger.new){
             MessageLibrary.appOrder(o);
+            if(o.Name == 'I.D. Buzz'){
+                MessageLibrary.journeyStart('I.D. Buzz Purchase Journey');
+            }
         }
     }
 }

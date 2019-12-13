@@ -6,6 +6,7 @@
     <label>demo key</label>
     <length>18</length>
     <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Text</type>
     <unique>true</unique>

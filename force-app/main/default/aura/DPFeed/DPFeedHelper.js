@@ -10,12 +10,13 @@
                     fi = d;
                 }
             }
-        c.set("v.modalRecord", fi.record_id_2__c);
-        c.set("v.modalFiid", fi.Id);
+        
         //TODO: make dynamic
         console.log("label = ", e.getSource().get("v.label"));
         console.log("value = ", e.getSource().get("v.value"));
         if(e.getSource().get("v.label") == "Accept"){
+            c.set("v.modalRecord", fi.record_id_2__c);
+        	c.set("v.modalFiid", fi.Id);
 	        h.testDriveCompleted(c,e,h)   
             fi.SLA_achieved_since = new Date();
             fi.SLA_active__c = false;
@@ -23,13 +24,23 @@
         } 
         
         if(e.getSource().get("v.label") == "Start Process"){
+            c.set("v.modalRecord", fi.record_id_2__c);
+        	c.set("v.modalFiid", fi.Id);
             c.set("v.showModal", true);
             c.set("v.modalContent", fi.record_name_2__c);
             c.set("v.modalYesLiteral", fi.action_yes__c);
             c.set("v.modalNoLiteral", fi.action_no__c);
         }
         
-        
+        if(e.getSource().get("v.label") == "Launch Trail"){
+            console.log("yo launch trail");
+            var urlEvent = $A.get("e.force:navigateToURL");
+        		urlEvent.setParams({
+                    "url": 'trailhead1://' ,
+            	"isredirect":true ,
+        		});
+        	urlEvent.fire();
+        } 
         
     },
     closeModal: function(c,e,h){

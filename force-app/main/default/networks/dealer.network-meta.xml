@@ -11,6 +11,7 @@
     <enableDirectMessages>true</enableDirectMessages>
     <enableGuestChatter>false</enableGuestChatter>
     <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
     <enableInvitation>false</enableInvitation>
     <enableKnowledgeable>false</enableKnowledgeable>
     <enableMemberVisibility>true</enableMemberVisibility>
@@ -25,161 +26,9 @@
     <enableUpDownVote>false</enableUpDownVote>
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
-    <navigationLinkSet>
-        <navigationMenuItem>
-            <label>Sales</label>
-            <position>1</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <subMenu>
-                <navigationMenuItem>
-                    <label>Leads</label>
-                    <position>0</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/lead/Lead/00B1t000001c7qXEAQ</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Opportunities</label>
-                    <position>1</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/salesdesk</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Customers</label>
-                    <position>2</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Vehicles</label>
-                    <position>3</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-            </subMenu>
-            <type>MenuLabel</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Marketing</label>
-            <position>2</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <subMenu>
-                <navigationMenuItem>
-                    <label>Campaign Marketplace</label>
-                    <position>0</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/campaign-marketplace</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Collateral</label>
-                    <position>1</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Fund Requests</label>
-                    <position>2</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-            </subMenu>
-            <type>MenuLabel</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Parts &amp; Service</label>
-            <position>3</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <subMenu>
-                <navigationMenuItem>
-                    <label>Service Opportunities</label>
-                    <position>0</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>erWIN</label>
-                    <position>1</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Warranty Information</label>
-                    <position>2</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Cases</label>
-                    <position>3</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-            </subMenu>
-            <type>MenuLabel</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Finance</label>
-            <position>4</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <type>MenuLabel</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Performance</label>
-            <position>5</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <subMenu>
-                <navigationMenuItem>
-                    <label>Dealer Dashboard</label>
-                    <position>0</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Sales Performance</label>
-                    <position>1</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-                <navigationMenuItem>
-                    <label>Campaign Performance</label>
-                    <position>2</position>
-                    <publiclyAvailable>false</publiclyAvailable>
-                    <target>/error</target>
-                    <type>InternalLink</type>
-                </navigationMenuItem>
-            </subMenu>
-            <type>MenuLabel</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Community</label>
-            <position>6</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <target>/error</target>
-            <type>InternalLink</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Support</label>
-            <position>7</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <target>/error</target>
-            <type>InternalLink</type>
-        </navigationMenuItem>
-    </navigationLinkSet>
     <networkMemberGroups>
         <permissionSet>VW_demo_pack</permissionSet>
-        <profile>Admin</profile>
+        <profile>admin</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>

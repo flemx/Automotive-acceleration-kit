@@ -3,6 +3,7 @@
     <fullName>All_Assets</fullName>
     <columns>ASSET.NAME</columns>
     <columns>ASSET.SERIAL_NUMBER</columns>
+    <columns>demo_key__c</columns>
     <columns>ASSET.INSTALL_DATE</columns>
     <columns>ACCOUNT.NAME</columns>
     <columns>CONTACT.NAME</columns>

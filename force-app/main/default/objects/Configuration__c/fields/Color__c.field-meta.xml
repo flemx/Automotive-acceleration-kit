@@ -51,6 +51,11 @@
                 <default>false</default>
                 <label>Pure White</label>
             </value>
+            <value>
+                <fullName>California Blue</fullName>
+                <default>false</default>
+                <label>California Blue</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

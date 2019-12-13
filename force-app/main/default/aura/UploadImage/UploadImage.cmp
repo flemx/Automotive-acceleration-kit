@@ -2,7 +2,7 @@
     <ltng:require scripts="{!$Resource.jQueryNew}" />
 
     <!--<aura:attribute name="recordId" type="Id" default="0031t00000AEpK0AAL"/>-->
-    <aura:attribute name="prefixURL" type="String" default="https://sdodemo-main-164b67950f2.force.com/dealer/sfc/servlet.shepherd/version/"/>
+    <aura:attribute name="prefixURL" type="String" default="/dealer/sfc/servlet.shepherd/version/"/>
     
     <aura:attribute name="contentId" type="String" 
                     default="https://s3-us-west-1.amazonaws.com/sfdc-demo/image-placeholder.png"/>

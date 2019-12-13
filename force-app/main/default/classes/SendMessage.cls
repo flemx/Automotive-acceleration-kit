@@ -31,6 +31,18 @@ global with sharing class SendMessage {
     when 'journey-start' {		
         MessageLibrary.journeyStart(payload);
     }
+    when 'ar-app-checkin' {
+        MessageLibrary.workOrderStart(payload);
+        }
+    when 'ar-app-start' {
+        MessageLibrary.arAppStart();        
+            }
+   	when 'ar-app-checkout' {
+     	MessageLibrary.workOrderDoneWithId(payload);           
+            }
+    when 'register-device-to-unlock' {
+     	MessageLibrary.mobileKeyActivate();           
+            }
     when else {		  // default block, optional
         MessageLibrary.plaintest();        
     }

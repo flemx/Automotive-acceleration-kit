@@ -6,7 +6,7 @@
     <div class="slds-p-around_medium">
         <div class="section-heading">Appointment Details</div>
         
-
+		<!--
         <div class="subtitle">time and date</div>
                 <div class="infoblock-wrapper">
                         <div class="slds-form-element infoblock">
@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                 </div>
-                
+                -->
 
                 <!--
         <div class="subtitle">time and date</div>
@@ -46,28 +46,31 @@
         </div>-->
 
 
-        <div class="subtitle">Available vehicles of type <a>I.D. Crozz</a></div>
+        <div class="subtitle">Available vehicles of type <a>I.D. Buzz</a></div>
         
         <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorRed + ')'}" 
     licensePlate="B VW 990E"
     motor="225 kW (302 PS)"
     battery="101kWh"
     edition="Executive"
-    color="Crimson Metallic"
+    color="Red"
+	imgUrl="assignRed.jpg"
     id="02i1t00000061AbAAI" />
         <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorYellow + ')'}" 
     licensePlate="B VW 991E"
     motor="225 kW (302 PS)"
-    battery="83kWh"
+    battery="101kWh"
     edition="Eco"
-    color="Curcumin Yellow"
+    color="Yellow"
+	imgUrl="assignYellow.jpg"
     id="02i1t00000061AbAAI" />
         <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorSilver + ')'}" 
     licensePlate="B VW 992E"
     motor="225 kW (302 PS)"
     battery="101kWh"
     edition="Eco"
-    color="Super Silver"
+    color="Blue"
+	imgUrl="assignBlue.jpg"
     id="02i1t00000061AbAAI" />
 
         

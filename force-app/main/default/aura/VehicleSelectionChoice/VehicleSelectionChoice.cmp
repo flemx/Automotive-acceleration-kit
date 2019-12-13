@@ -5,6 +5,7 @@
     <aura:attribute name="battery" type="String" />
     <aura:attribute name="edition" type="String" />
     <aura:attribute name="color" type="String" />
+    <aura:attribute name="imgUrl" type="String" />
     <aura:attribute name="id" type="String" />
     
     
@@ -14,7 +15,7 @@
         <lightning:layout class="wide">
             <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
                 <div class="header-column">
-                    <p class="field-title" title="Field 1">License Plate</p>
+                    <p class="field-title" title="Field 1">Plate</p>
                     <p class="slds-text-heading_medium smaller slds-m-top_x-small">{!v.licensePlate}</p>
                 </div>
             </lightning:layoutItem>
@@ -30,6 +31,7 @@
                     <p class="slds-text-heading_small smaller slds-m-top_x-small">{!v.battery}</p>
                 </div>
             </lightning:layoutItem>
+            <!--
             <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
                 <div class="header-column">
                     <p class="field-title" title="Field 4">Edition</p>
@@ -38,6 +40,7 @@
                     </p>
                 </div>
             </lightning:layoutItem>
+			-->
             <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
                 <div class="header-column">
                     <p class="field-title" title="Field 5">Color</p>
@@ -46,8 +49,10 @@
                     </p>
                 </div>
             </lightning:layoutItem>
-            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
-                <div class="colorcircle" style="{!v.colorURL}"></div>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_2-of-6">
+                <img src="{!$Resource.vwDemoPackFiles + '/images/' + v.imgUrl}"/>                
+                <!--<div class="colorcircle" style="{!v.colorURL}"></div>-->
+                
             </lightning:layoutItem>
         </lightning:layout>
         

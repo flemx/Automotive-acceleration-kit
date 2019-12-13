@@ -3,11 +3,14 @@ public class weDemoController {
 @AuraEnabled
 public static Boolean resetDemo(String demoDate, Decimal CLV) {
     Boolean success = true;
-    
+    //get demo config
+    demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
     //Find demo contact
     Contact john = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
     //Find demo dealer contact
     Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
+    //Find demo dealer user
+    Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
     
     try{
         //delete all leads related to a testdrive
@@ -32,7 +35,7 @@ public static Boolean resetDemo(String demoDate, Decimal CLV) {
     } catch(DmlException e) {
         success = false;
     }
-    
+    /*
     try{
         //delete all cases from John
         List<Case> cases = [SELECT Id FROM Case WHERE ContactId = :john.Id];
@@ -40,7 +43,7 @@ public static Boolean resetDemo(String demoDate, Decimal CLV) {
     } catch(DmlException e) {
         success = false;
     }
-    
+    */
     try{
         //set John Customer Lifetimevalue
         Contact c = [SELECT Id, Cust360_LTV__c FROM Contact WHERE Id = :john.Id]; 
@@ -52,7 +55,7 @@ public static Boolean resetDemo(String demoDate, Decimal CLV) {
     
     try{
         //delete all portal feed item actions from Daniel
-        List<portal_feed_item__c> pfis = [SELECT Id FROM portal_feed_item__c WHERE Contact__c = :dealer.Id AND type__c = 'action required']; 
+        List<portal_feed_item__c> pfis = [SELECT Id FROM portal_feed_item__c WHERE User__c = :dealerUser_id AND type__c = 'action required']; 
         delete pfis;
     } catch(DmlException e) {
         success = false;
@@ -72,6 +75,18 @@ public static Boolean resetDemo(String demoDate, Decimal CLV) {
     } catch(DmlException e) {
         success = false;
     }
+    
+        try{
+        //delete campaign members for DM campaign
+        Id campaign_id = [SELECT Id FROM Campaign WHERE demo_key__c = 'campaign_2' LIMIT 1].Id;
+        List<CampaignMember> cm = [SELECT id FROM CampaignMember WHERE CampaignId = :campaign_id]; 
+        
+        delete cm;
+    } catch(DmlException e) {
+        success = false;
+    }
+    
+    
     
     return success;
 }

@@ -242,7 +242,11 @@ public with sharing class MessageLibrary {
     }
 
     //when user triggers interaction point from mobile
+    ////get related contact info
+            
     public static void mobileInteractionPointMessage(String source){
+        Contact c = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+            
         general_message__e msg = new general_message__e(
             headline__c = 'Interaction',
             main_icon__c = 'custom:custom28',
@@ -251,16 +255,42 @@ public with sharing class MessageLibrary {
             icon_1__c = 'custom:custom28',
             record_name_1__c = 'iPhone XS',
             record_id_1__c = '123456789012345678',
-            message_1__c = 'for unknown user with',
-            category_2__c = 'cookie Id',
+            message_1__c = 'for User ' + c.Name + ' with',
+            category_2__c = 'device Id',
             icon_2__c = 'custom:custom111',
-            record_name_2__c = '81db4322-810a-dc9b-19b5-7cc045674746',
+            record_name_2__c = 'RE04WA474G',
             record_id_2__c = '',
             message_2__c = '',
             category_3__c = 'Interaction Point',
             icon_3__c = 'standard:actions_and_buttons',
             record_name_3__c = source,
             record_id_3__c = '123456789012345678',
+            message_3__c = ''
+        );
+        EventBus.publish(msg);
+    }
+    
+        
+   
+    //when user activates mobile key
+    public static void mobileKeyActivate(){
+         ////get related contact info
+        Contact c = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+            
+        general_message__e msg = new general_message__e(
+            headline__c = 'Key registration',
+            main_icon__c = 'custom:custom76',
+            image_resource_name__c = '',
+            category_1__c = 'Key registration recorded for',
+            icon_1__c = 'custom:custom28',
+            record_name_1__c = 'iPhone XS',
+            record_id_1__c = '123456789012345678',
+            message_1__c = 'for User ' + c.Name + ' with',
+            category_2__c = 'device Id',
+            icon_2__c = 'custom:custom111',
+            record_name_2__c = 'RE04WA474G',
+            record_id_2__c = '',
+            message_2__c = '',
             message_3__c = ''
         );
         EventBus.publish(msg);
@@ -293,13 +323,27 @@ public with sharing class MessageLibrary {
     }
     
    	//when user is added to a journey
-    public static void journeyStart(String JourneyName){
+    public static void journeyStart(String journeyName){
+        //define journey image
+        String journeyImage = '';
+        switch on journeyName {
+            when 'Testdrive journey' {		
+                journeyImage = 'journeyStart';
+            }	
+            when 'I.D. Buzz Purchase Journey' {		
+                journeyImage = 'journeyPurchase';
+            }
+            when else {		  // default block, optional
+                journeyImage = '';  
+            }
+		}
+        
         //get customer contact
         Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
         general_message__e msg = new general_message__e(
             headline__c = 'Journey start',
             main_icon__c = 'custom:custom106',
-            image_resource_name__c = 'journeyStart',
+            image_resource_name__c = journeyImage,
             category_1__c = 'Contact',
             icon_1__c = 'standard:contact',
             record_name_1__c = customer.Name,
@@ -307,7 +351,7 @@ public with sharing class MessageLibrary {
             message_1__c = 'has been added to a',
             category_2__c = 'Journey',
             icon_2__c = 'custom:custom106',
-            record_name_2__c = JourneyName,
+            record_name_2__c = journeyName,
             record_id_2__c = '',
             message_2__c = '',
             category_3__c = '',
@@ -315,6 +359,233 @@ public with sharing class MessageLibrary {
             record_name_3__c = '',
             record_id_3__c = '',
             message_3__c = ''
+        );
+        EventBus.publish(msg);
+    }
+        
+   	//when customer gets push notification that about issue
+    public static void customerPushNotification(String message){
+       //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Message to customer',
+            main_icon__c = 'standard:messaging_conversation',
+            category_1__c = 'Message sent to Customer',
+            icon_1__c = 'standard:contact',
+            record_name_1__c = customer.Name,
+            record_id_1__c = customer.Id,
+            message_1__c = '',
+            category_2__c = 'Message',
+            message_2__c = '"Your tire pressure is low, you should check this as soon as possible"'           
+        );
+        EventBus.publish(msg);
+    }
+    
+    //when we detect the issue
+    public static void issueDetected(){
+       //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        //get his vehicle
+        Asset a = [SELECT Name FROM Asset WHERE demo_key__c = 'asset_01' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Issue detected',
+            main_icon__c = 'standard:custom_notification',
+            category_1__c = 'Vehicle',
+            icon_1__c = 'custom:custom31',
+            record_name_1__c = a.Name,
+            record_id_1__c = a.Id,
+            message_1__c = '',
+            category_2__c = 'Issue',
+            message_2__c = 'Flat tire (front left) detected',
+			category_3__c = 'Customer:',
+            icon_3__c = 'standard:contact',
+            record_name_3__c = customer.Name,
+            record_id_3__c = customer.Id,
+            message_3__c = '.'            
+        );
+        EventBus.publish(msg);
+    }
+    
+    //when we solve the issue
+    public static void issueSolved(){
+       //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Solution',
+            main_icon__c = 'standard:solution',
+            category_1__c = 'Always mobile',
+            icon_1__c = 'action:check',
+            message_1__c = 'valid subscription.',
+            category_2__c = 'Resolution:',
+            message_2__c = 'found we share in 2min radius. Blocked car. Sent message to customer.'         
+        );
+        EventBus.publish(msg);
+    }
+    
+    //Case created
+    public static void caseCreated(String cid){
+       //get case
+       Case c = [SELECT CaseNumber, Subject, Description FROM Case WHERE Id = :cid LIMIT 1];
+       //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Case Created',
+            main_icon__c = 'standard:case',
+            category_1__c = 'Case',
+            icon_1__c = 'standard:case',
+            record_name_1__c = c.CaseNumber,
+            record_id_1__c = c.Id,
+            message_1__c = 'with subject "' + c.Subject + '"',
+            category_2__c = 'has been created.',
+           
+			category_3__c = 'Description:',
+            message_3__c = '"' + c.Description + '"'            
+        );
+        EventBus.publish(msg);
+    }
+    //when Field Service Technician opens the app
+    public static void arAppStart(){
+        general_message__e msg = new general_message__e(
+            headline__c = 'AR App Interaction',
+            main_icon__c = 'custom:custom28',
+            category_1__c = 'Field Service Technician',
+            icon_1__c = 'standard:service_resource',
+            record_name_1__c = 'Jerome Castan',
+            record_id_1__c = '0Hn3X000000gSHlSAM',
+            message_1__c = 'has opened AR APP on',
+            category_2__c = 'Mobile device',
+            icon_2__c = 'custom:custom28',
+            record_name_2__c = 'KS232AKJQ',
+            record_id_2__c = 'customer.Id'
+        );
+        EventBus.publish(msg);
+    }
+    
+    //when Field Service Technician begins the job
+    public static void workOrderStart(String woId){
+        //get Work Order
+        WorkOrder wo = [SELECT WorkOrderNumber,Asset.Name FROM WorkOrder WHERE Id = :woId ORDER BY WorkOrderNumber DESC NULLS FIRST];
+        //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Repair start',
+            main_icon__c = 'standard:work_order_item',
+            category_1__c = 'Work Order',
+            icon_1__c = 'standard:work_order',
+            record_name_1__c = wo.WorkOrderNumber,
+            record_id_1__c = wo.Id,
+            message_1__c = 'has been started for',
+            category_2__c = 'Customer',
+            icon_2__c = 'standard:contact',
+            record_name_2__c = customer.Name,
+            record_id_2__c = customer.Id,
+            message_2__c = 'on',
+            category_3__c = 'vehicle',
+            icon_3__c = 'custom:custom31',
+            record_name_3__c = wo.Asset.Name,
+            record_id_3__c = wo.Asset.Id,
+            message_3__c = '.'
+        );
+        EventBus.publish(msg);
+    }
+    
+   	//when Field Service Technician finishes the job
+    public static void workOrderDone(String woNumber){
+        //get Work Order
+        WorkOrder wo = [SELECT WorkOrderNumber,Asset.Name FROM WorkOrder WHERE WorkOrderNumber = :woNumber ORDER BY WorkOrderNumber DESC NULLS FIRST];
+        //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Repair done',
+            main_icon__c = 'standard:work_order_item',
+            category_1__c = 'Work Order',
+            icon_1__c = 'standard:work_order',
+            record_name_1__c = woNumber,
+            record_id_1__c = wo.Id,
+            message_1__c = 'has been completed for',
+            category_2__c = 'Customer',
+            icon_2__c = 'standard:contact',
+            record_name_2__c = customer.Name,
+            record_id_2__c = customer.Id,
+            message_2__c = 'on',
+            category_3__c = 'vehicle',
+            icon_3__c = 'custom:custom31',
+            record_name_3__c = wo.Asset.Name,
+            record_id_3__c = wo.Asset.Id,
+            message_3__c = '.'
+        );
+        EventBus.publish(msg);
+    }
+    
+    //when Field Service Technician finishes the job
+    public static void workOrderDoneWithId(String woNumber){
+        //get Work Order
+        WorkOrder wo = [SELECT WorkOrderNumber,Asset.Name, Status FROM WorkOrder WHERE Id = :woNumber ORDER BY WorkOrderNumber DESC NULLS FIRST];
+        //try to set the work order to completed
+        wo.Status = 'Completed';
+        update wo;
+        //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        general_message__e msg = new general_message__e(
+            headline__c = 'Repair done',
+            main_icon__c = 'standard:work_order_item',
+            category_1__c = 'Work Order',
+            icon_1__c = 'standard:work_order',
+            record_name_1__c = wo.WorkOrderNumber,
+            record_id_1__c = wo.Id,
+            message_1__c = 'has been completed for',
+            category_2__c = 'Customer',
+            icon_2__c = 'standard:contact',
+            record_name_2__c = customer.Name,
+            record_id_2__c = customer.Id,
+            message_2__c = 'on',
+            category_3__c = 'vehicle',
+            icon_3__c = 'custom:custom31',
+            record_name_3__c = wo.Asset.Name,
+            record_id_3__c = wo.Asset.Id,
+            message_3__c = '.'
+        );
+        EventBus.publish(msg);
+    }
+    
+    //when Dealers get Trails assigned
+    public static void assignTrails(Integer DealerCount){
+        general_message__e msg = new general_message__e(
+            headline__c = 'Trail assigned',
+            main_icon__c = 'standard:trailhead',
+            
+            category_1__c = DealerCount + ' Dealers have received mandatory trail assignment for',
+            category_2__c = 'Trail',
+            icon_2__c = 'standard:trailhead',
+            record_name_2__c = 'T-00005',
+            record_id_2__c = 'none',
+            message_2__c = ' - "Become a Functions on Demand Rockstar"'
+        );
+        EventBus.publish(msg);
+    }
+    
+    //when Roadside assistant checks in and sends image for analysis
+    public static void triggerEinsteinAnalysis(String imgurl){
+        //get customer contact
+        Contact customer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        //get his vehicle
+        Asset a = [SELECT Name FROM Asset WHERE demo_key__c = 'asset_01' LIMIT 1];
+        
+        general_message__e msg = new general_message__e(
+            headline__c = 'Image Analysis',
+            main_icon__c = 'utility:einstein',
+            image_resource_name__c = imgurl,
+            category_1__c = 'Image has been received for Analysis for',
+            category_2__c = 'Vehicle',
+            icon_2__c = 'custom:custom31',
+            record_name_2__c = a.Name,
+            record_id_2__c = a.Id,
+            message_2__c = 'of',
+            icon_3__c = 'standard:contact',
+            category_3__c = 'customer',
+            record_name_3__c = customer.Name,
+            record_id_3__c = customer.Id,
+            message_3__c = '.'
         );
         EventBus.publish(msg);
     }

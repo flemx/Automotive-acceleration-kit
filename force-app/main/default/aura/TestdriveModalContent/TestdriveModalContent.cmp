@@ -11,6 +11,9 @@
     <aura:attribute name="modalNoLiteral" type="String" />
     <aura:attribute name="timeframe" type="String" />
     
+    <aura:attribute name="mapMarkers" type="Object"/>
+    <aura:attribute name="zoomLevel" type="Integer" />
+    
     
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
     <aura:handler name="change" value="{!v.tdid}" action="{!c.init}"/>
@@ -114,7 +117,7 @@
                 <div class="slds-form-element infoblock">
                     <label class="slds-form-element__label" >Address</label>
                     <div class="slds-form-element__control">
-                      <input type="text" placeholder="{!v.testdrive.Driver__r.MailingStreet + v.testdrive.Driver__r.MailingCity}" disabled="true" class="slds-input" />
+                      <input type="text" placeholder="{!v.testdrive.Driver__r.MailingStreet + ', ' + v.testdrive.Driver__r.MailingCity}" disabled="true" class="slds-input" />
                     </div>
                 </div>
                 <!--
@@ -140,7 +143,10 @@
                 </div>
                 -->
 
-                <div class="map">
+                <div class="map vw-map-comp">
+                    <!--<lightning:map 
+                        mapMarkers="{! v.mapMarkers }" 
+                        zoomLevel="{!v.zoomLevel}" />-->
                     <img src="{!$Resource.wayToJohn}" />
                 </div>
             </div>
@@ -235,12 +241,12 @@
                     </aura:if> 
                 </div>
                     -->
-                <aura:if isTrue="{!not(v.testdrive.assigned_Vehicle__r)}">
+                <!--<aura:if isTrue="{!not(v.testdrive.assigned_Vehicle__r)}">-->
                 <div class="button-block">
                         <c:vwButton buttonType="primary"  label="Assign Vehicle"  onclick="{! c.callAssignVehicle }"></c:vwButton>
                     <!--<lightning:button label="Assign Vehicle" title="Assign Vehicle" onclick="{! c.callAssignVehicle }"/>-->
                 </div>
-                </aura:if>
+                <!--</aura:if>-->
             </div>
             
             <!-- Contact Details //-->

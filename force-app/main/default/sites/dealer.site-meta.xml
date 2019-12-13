@@ -23,7 +23,8 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
+    <siteAdmin>tbirke@df19.vw</siteAdmin>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>app-business-8395-dev-ed-16dbb07a7a2</subdomain>
+    <subdomain>sdodemo-main-166ce2cf6b6-16e1cef86a6</subdomain>
     <urlPathPrefix>dealer</urlPathPrefix>
 </CustomSite>

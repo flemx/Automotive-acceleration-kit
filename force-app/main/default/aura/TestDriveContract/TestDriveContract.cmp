@@ -1,6 +1,6 @@
 <aura:component controller="TestDriveController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
     <ltng:require scripts="{!$Resource.jQueryNew}" afterScriptsLoaded="{!c.doInit}"/>
-    
+    <ltng:require scripts="{!$Resource.vwJsForce}"/> 
     <aura:attribute name="contact" type="Contact" />
     <aura:attribute name="testDrive" type="Test_Drive__c" />
     
@@ -48,10 +48,8 @@
                     
                     <lightning:progressIndicator currentStep="{!v.progressStep}" type="base" variant="base">
                         <lightning:progressStep label="Customer Data" value="1"/>
-                        <lightning:progressStep label="Test Drive Data" value="2"/>
-                        <lightning:progressStep label="Insurance" value="3"/>
-                        <lightning:progressStep label="Driver's License Scan" value="4"/>
-                        <lightning:progressStep label="Customer Signature" value="5"/>
+                        <lightning:progressStep label="Driver's License Scan" value="2"/>
+                        <lightning:progressStep label="Customer Signature" value="3"/>
                     </lightning:progressIndicator>
                     <br/><br/>
                     
@@ -127,68 +125,9 @@
                         </lightning:accordionSection>
                         
                         
-                        <lightning:accordionSection name="2" label="Test Drive Data">
-                            <div id="timeSlots">
-                                <lightning:layoutItem size="12" padding="around-small">  
-                                    <label class="slds-form-element__label" for="myDate">Date/Time</label>
-                                    <ui:inputDateTime aura:id="myDate" class="field" value="{!v.testDrive.Date__c}" displayDatePicker="true"/>
-                                </lightning:layoutItem>
-                            </div>
-                            <lightning:layoutItem size="12" padding="around-small">  
-                                <div class="slds-grid" style="width:100%">
-                                    <div class="slds-form-element slds-col" style="width:50%; margin-right: 2%;  margin-top: 1%;">
-                                        <div class="slds-form-element slds-form-element_horizontal">
-                                            <label class="slds-form-element__label" for="vehicle">Vehicle</label>
-                                            <div class="slds-form-element__control">
-                                                <ui:inputText aura:id="vehicle" value="{!v.testDrive.Vehicle__c}" class="slds-input" />
-                                            </div>
-                                        </div>
-                                        <div class="slds-form-element slds-form-element_horizontal">
-                                            <label class="slds-form-element__label" for="vinNo">VIN</label>
-                                            <div class="slds-form-element__control">
-                                                <ui:inputText aura:id="vinNo" value="{!v.testDrive.Vehicles__r.VIN__c}" class="slds-input" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="slds-form-element slds-col" style="width:50%;text-align: center; margin-top: 6%;">
-                                        <img src="{!$Resource.idbuzzconfig}"/>
-                                    </div>
-                                </div>
-                            </lightning:layoutItem>
-                        </lightning:accordionSection>
+                      
                         
-                        
-                        <lightning:accordionSection name="3" label="Insurance">
-                            <lightning:layoutItem size="12" padding="around-small">  
-                                <div class="slds-grid" style="width:100%">
-                                    <div class="slds-form-element slds-col">
-                                        <div class="slds-form-element__control">
-                                            <label class="slds-form-element__label" for="">The test driver insures:</label>
-                                            <lightning:checkboxGroup name=""
-                                                                     label=""
-                                                                     options="{!v.options2}"
-                                                                     value="{!v.value2}"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </lightning:layoutItem>
-                            <lightning:layoutItem size="12" padding="around-small">  
-                                <div class="slds-grid" style="width:100%">
-                                    <div class="slds-form-element slds-col">
-                                        <label class="slds-form-element__label" for="">Insurance Type</label>
-                                        <lightning:dualListbox name="types"  
-                                                               label= "" 
-                                                               sourceLabel="Available" 
-                                                               selectedLabel="Selected" 
-                                                               fieldLevelHelp="" 
-                                                               options="{!v.options3}"/>
-                                    </div>
-                                </div></lightning:layoutItem>
-                        </lightning:accordionSection>
-                        
-                        
-                        <lightning:accordionSection name="4" label="Driver's License Scan">
+                        <lightning:accordionSection name="2" label="Driver's License Scan">
                             <lightning:layoutItem size="12" padding="around-small">  
                                 <div class="slds-grid" style="width:100%">
                                     <div class="slds-form-element slds-col" style="width:50%; margin-top: -9px;">
@@ -205,7 +144,7 @@
                         </lightning:accordionSection>
                         
                         
-                        <lightning:accordionSection name="5" label="Customer Signature">
+                        <lightning:accordionSection name="3" label="Customer Signature">
                             <lightning:layoutItem size="12" padding="around-small">  
                                 <lightning:checkboxGroup id="mygroup" 
                                                          name=""
@@ -221,10 +160,6 @@
                                             <label class="slds-form-element__label" for="">Signature Test Driver</label>
                                             <c:DE_SignatureCapture/>
                                         </div>
-                                    </div>
-                                    <div class="slds-form-element slds-col" style="width:50%; margin-left: 2%; margin-top: 1%;">
-                                        <label class="slds-form-element__label" for="">Signature Car Dealer</label>
-                                        <c:SI_signaturePad/>
                                     </div>
                                 </div>
                             </lightning:layoutItem>

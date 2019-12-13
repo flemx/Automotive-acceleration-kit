@@ -35,34 +35,46 @@
             console.log("EMP API is enabled");
         }
         empApi.subscribe(channel, replayId, $A.getCallback(eventReceived => {
-            console.log("hallo");
+         
             console.log('Received event ', JSON.stringify(eventReceived));
             // Process event (this is called each time we receive an event)
             //resolve image resource
             let img = eventReceived.data.payload.image_resource_name__c;
             if(img){
             console.log("img = ",img);
-            if(img.includes("/")) {
+            if(img.includes("/") && !img.includes("/sfc")) {
             	console.log("image is path = ", img);
             	let path = img.split("/");
             	console.log("path = ", path);
-            	let bundle = path.shift();
-            	console.log("bundle = ", bundle);
-            	let imgsrc = "";
-            	console.log("image path = ", imgsrc);
-            	path.forEach((item,index,p) => {
-            		if(index+1<p.length){
-            		imgsrc = imgsrc + item + "/";
-        			} else {
-                      imgsrc = imgsrc + item + ".png";                                   
-                    }
-        		});
-        		console.log("image path = ", imgsrc);
-            	eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + bundle) + "/" + imgsrc; 
+            	//check if we have a resource url or a real url
+           
+                let bundle = path.shift();
+                    console.log("bundle = ", bundle);
+                    let imgsrc = "";
+                    console.log("image path = ", imgsrc);
+                    path.forEach((item,index,p) => {
+                        if(index+1<p.length){
+                        imgsrc = imgsrc + item + "/";
+                        } else {
+                          imgsrc = imgsrc + item + ".png";                                   
+                        }
+                    });
+                    console.log("image path = ", imgsrc);
+                    eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + bundle) + "/" + imgsrc; 
+            
+            	
         } else {
-            	console.log("plain image reference")
-            	eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + img);                                                           
-                                                           }
+            	
+            if(img.includes("/sfc")){
+                console.log("real image path, so no changes");
+            } else {
+                console.log("plain image resource reference")
+                eventReceived.data.payload.image_resource_name__c = $A.get('$Resource.' + img);                                                           
+                    
+        }
+            	
+            
+            	                                           }
 
         	}
                 let events = component.get("v.events") || [];
@@ -146,4 +158,7 @@
                 c.set("v.modalImage",value);
                 c.set("v.modal", true);
             },
+            toggleVehicleInspector: function (c,e,h){
+                c.get("v.showVehicleInspector") ? (c.set("v.showVehicleInspector", false)) : (c.set("v.showVehicleInspector", true));
+            }
 })

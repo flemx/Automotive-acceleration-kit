@@ -23,16 +23,17 @@
         "referenceId" : "ref9"
       },
       "Name" : "VW I.D. Crozz",
-      "SerialNumber" : "WVWZZZ1JZ3W44000",
+      "SerialNumber" : "WVWZZZ1JZ3W140003",
       "InstallDate" : "2019-03-31",
       "PurchaseDate" : "2019-03-31",
       "Status" : "Registered",
       "Price" : "42000",
       "Quantity" : "1",
-      "VIN__c" : "WVWZZZ1JZ3W44000",
+      "VIN__c" : "WVWZZZ1JZ3W140003",
       "License_Plate__c" : null,
       "AccountId" : "@AccountRef1",
-      "ContactId" : "@ContactRef1"
+      "ContactId" : "@ContactRef1",
+      "demo_key__c" : "asset_01"
     },
     {
       "attributes" : {
@@ -40,7 +41,7 @@
         "referenceId" : "ref10"
       },
       "Name" : "VW I.D. Buzz",
-      "SerialNumber" : "WVWZZZ1JZ3W44000",
+      "SerialNumber" : "WVWZZZ1JZ3W330092",
       "InstallDate" : "2019-03-31",
       "PurchaseDate" : "2019-03-31",
       "Status" : "Registered",
@@ -50,7 +51,7 @@
       "License_Plate__c" : "B VW 990",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_01"
+      "demo_key__c" : "asset_02"
     },
     {
       "attributes" : {
@@ -68,7 +69,7 @@
       "License_Plate__c" : "B VW 991",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_02"
+      "demo_key__c" : "asset_03"
     },
     {
       "attributes" : {
@@ -86,7 +87,7 @@
       "License_Plate__c" : "B VW 992",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_03"
+      "demo_key__c" : "asset_04"
     }
   ]
 }

@@ -16,9 +16,8 @@
 } */
 
 .THIS .filter_element {
-    padding: 8px 0 8px 64px;
+    padding: 8px 0 8px 32px;
     z-index: 0;
-    font-size: 80%;
 }
 
 .THIS .submenuitem {
