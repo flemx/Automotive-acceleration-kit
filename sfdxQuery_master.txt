@@ -1,7 +1,0 @@
-sfdx force:data:tree:export -q "SELECT Id,Name, \
-(SELECT FirstName, LastName, Id, \
-(SELECT Name,days_ago__c, icon__c, message__c,order__c, time__c FROM Custom_Activities__r) FROM Contacts),\
-(SELECT Name, SerialNumber,InstallDate,PurchaseDate, \
-Status, Price, Quantity, VIN__c, ContactId FROM Assets) \
-from Account where Name = 'Fisher'"\
- -u oc -d sfdx-out -p --json

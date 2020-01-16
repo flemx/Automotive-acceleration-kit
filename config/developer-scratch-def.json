@@ -1,0 +1,12 @@
+{
+    "orgName": "VW Developer ",
+    "edition": "Developer",
+    "features": ["Communities","SalesWave","ServiceWave"],
+    "language": "en_US",
+    "settings": {
+      "orgPreferenceSettings": {
+        "networksEnabled": true,
+        "s1DesktopEnabled": true
+      }
+    }
+  }

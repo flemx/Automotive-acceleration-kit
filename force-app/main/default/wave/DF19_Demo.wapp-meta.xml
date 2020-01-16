@@ -8,9 +8,4 @@
         <sharedTo>AllInternalUsers</sharedTo>
         <sharedToType>Organization</sharedToType>
     </shares>
-    <shares>
-        <accessLevel>Manage</accessLevel>
-        <sharedTo>rmichalik@df2019.vw</sharedTo>
-        <sharedToType>User</sharedToType>
-    </shares>
 </WaveApplication>

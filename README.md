@@ -1,26 +1,29 @@
 # Volkswagen Demo Pack
 
+### Original package:
+- https://git.soma.salesforce.com/dfleminks/volkswagen-demo-pack
+
 ## Setting up project with Basic Data
 
 1. push source
 ```
 sfdx force:source:push -u <targetusername>
 ```
-1. assign permset to user
+2. assign permset to user
 ```
 sfdx force:user:permset:assign -n VW_demo_pack -u <targetusername>
 ```
-1. Set the username of the dealer account in the setting json
+3. Run the following command:
 ```
-sfdx-out > john > demo_setting__cs.json
+sfdx force:apex:execute -f data/scripts/setDemosetting.txt -u <targetusername>
 ```
-1. Run the following command:
+4. Run the following command to import data:
 ```
-sfdx force:data:tree:import -p sfdx-out/john/John-Plan.json -u <targetusername>
+sfdx force:data:tree:import -p data/sfdx-out/John-Plan.json -u <targetusername>
 ```
-1. Run the following command to create the Dealer Portal User:
+5. Run the following command to create the Dealer Portal User:
 ```
-sfdx force:apex:execute -f setRoleCall.txt -u <targetusername>
+sfdx force:apex:execute -f data/scripts/setRoleCall.txt -u <targetusername>
 ```
 1. Publish Dealer Community
 2. Reset Daniel Password
@@ -28,5 +31,5 @@ sfdx force:apex:execute -f setRoleCall.txt -u <targetusername>
 
 In case you run into an error, you can delete all data that has been accidentally created by calling
 ```
-sfdx force:apex:execute -f deleteAllDataCall.txt -u <targetOrg>
+sfdx force:apex:execute -f  data/scripts/deleteAllDataCall.txt -u <targetOrg>
 ```
