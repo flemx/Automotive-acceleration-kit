@@ -58,12 +58,12 @@
               </div>
               <footer class="slds-modal__footer footer-model-wrapper">
                 <aura:if isTrue="{!v.modalNoLiteral}">
-                <c:vwButton buttonType="inverted" label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"></c:vwButton>
-                 <!---<lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>-->
+                <!-- <c:vwButton buttonType="inverted" label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"></c:vwButton> -->
+                 <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
                 </aura:if>
                 <aura:if isTrue="{!v.modalYesLiteral}">
-                   <c:vwButton buttonType="inverted" label="{!v.modalYesLiteral}" onclick="{!c.accept}"></c:vwButton>
-                  <!--<lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>-->
+                   <!-- <c:vwButton buttonType="inverted" label="{!v.modalYesLiteral}" onclick="{!c.accept}"></c:vwButton> -->
+                  <lightning:button label="{!v.modalYesLiteral}" onclick="{!c.accept}" ></lightning:button>
                 </aura:if>
               </footer>
             </div>

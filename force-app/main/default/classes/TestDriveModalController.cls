@@ -2,7 +2,7 @@ public class TestDriveModalController {
     
 @AuraEnabled
     public static Test_Drive__c getTestdriveData(String tdid) {
-        return [SELECT 
+        Test_Drive__c testDrive = [SELECT 
                     Date__c, 
                 	Driver__r.MailingStreet,
                 	Driver__r.MailingPostalCode,
@@ -16,6 +16,7 @@ public class TestDriveModalController {
                 FROM Test_Drive__c 
                 WHERE Id = :tdid 
                 LIMIT 1];
+        return testDrive;
     }
     
 @AuraEnabled
