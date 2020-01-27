@@ -1,4 +1,15 @@
 public class DemoUtils {
+    
+    public static void createDemoSetting(){
+        User u = [select Id, username, Email from User where Id = :UserInfo.getUserId()][0];
+        demo_setting__c setting = new demo_setting__c(
+        	dealer_name__c = 'daniel-' + u.username,
+            dealer_email__c = u.Email,
+            Name = 'Initial Demo Setting',
+            demo_key__c = 'masterSetting'
+        );
+ 		insert setting;
+    }
 
     public static void createRole() {
         //assign role to running user
@@ -67,6 +78,29 @@ public class DemoUtils {
         createAdditionalUserData(cid, u.Id);
 
     }
+    
+    
+    public static void triggerTestdrive(Contact con, String testDay){
+        Lead testDrive = new Lead(
+        	Salutation = con.Salutation,
+            FirstName = con.FirstName,
+            LastName = con.LastName,
+            Email = con.Email,
+            Company = con.LastName + ' household',
+            Phone = con.Phone,
+            Street = con.MailingStreet,
+            PostalCode = con.MailingPostalCode,
+            City = con.MailingCity,
+            Leadsource = 'Website',
+            td_date_requested__c = Datetime.valueOf(testDay),
+            test_drive__c = true
+        );
+        
+        insert testDrive;
+    }
+    
+    
+    
     @future
     public static void createAdditionalUserData(String cid, String uid){
         

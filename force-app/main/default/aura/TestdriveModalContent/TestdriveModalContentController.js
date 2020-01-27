@@ -30,22 +30,6 @@
                             data.timeframe = startTime + ' - ' + endTime;
                         }
                         c.set("v.testdrive",data);
-                        /*
-                        cmp.set('v.mapMarkers', [
-                        {
-                            location: {
-                                Street: data.MailingStreet,
-                                City: date.MailingCity,
-                                Country : date.MailingCountry,
-                                PostalCode : date.MailingPostalCode
-                            },
-            
-                            title: 'Location of appointment',
-                            description:data.MailingStreet
-                        }
-                    ]);
-                    cmp.set('v.zoomLevel', 16);
-                      */
                     }
                     else if (state === "INCOMPLETE") {
                         // do something

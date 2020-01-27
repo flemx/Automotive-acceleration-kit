@@ -17,12 +17,12 @@ export default class VwButton extends LightningElement {
         return this.btnClass;
     }
     set buttonType(value){
-        if(value === 'primary') this.btnClass = 'c-button c-button--primary';
-        if(value === 'inverted')  this.btnClass = 'c-button c-button--primary-inverted';
-        if(value === 'secondary')  this.btnClass = 'c-button c-button--secondary';
+        if(value === 'primary') this.btnClass = 'slds-button slds-button_brand';
+        if(value === 'inverted')  this.btnClass = 'slds-button slds-button_outline-brand';
+        if(value === 'secondary')  this.btnClass = 'slds-button slds-button_neutral';
     }
     
-    @track btnClass = 'c-button c-button--primary';
+    @track btnClass = 'slds-button slds-button_brand';
     @track inlineStyle = 'font-size:0.75rem';
 
 }

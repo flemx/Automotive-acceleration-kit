@@ -1,4 +1,4 @@
-import { LightningElement, track, api } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 /**
  * @author Damien Fleminks
@@ -6,9 +6,9 @@ import { LightningElement, track, api } from 'lwc';
  */
 export default class FeedItemRegular extends LightningElement {
     
-    @track sourceName;
-    @track days;
-    @track backgroundVar;
+    name;
+    days;
+    backgroundVar;
 
     @api title;
     @api description;
@@ -25,10 +25,10 @@ export default class FeedItemRegular extends LightningElement {
 
     
     @api get sourceName(){
-        return this.sourceName;
+        return this.name;
     }
     set sourceName(value){
-        this.sourceName = value.replace(/(^\w+:|^)\/\//, '');
+        this.name = value.replace(/(^\w+:|^)\/\//, '');
     }
 
     @api get sourceDate(){

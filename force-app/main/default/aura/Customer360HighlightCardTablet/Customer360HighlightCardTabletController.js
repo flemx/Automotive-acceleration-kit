@@ -34,28 +34,33 @@
         $A.util.addClass(cmpBack, 'slds-backdrop--open'); 
     },
     handleRecordUpdated: function(component, event, helper) {
-        var eventParams = event.getParams();
-        if(eventParams.changeType === "CHANGED") {
-            // get the fields that changed for this record
-            var changedFields = eventParams.changedFields;
-            console.log('Fields that are changed: ' + JSON.stringify(changedFields));            
-            // record is changed, so refresh the component (or other component logic)
-            // var resultsToast = $A.get("e.force:showToast");
-            // resultsToast.setParams({
-            //    "title": "Saved",
-            //    "message": "The record was updated."
-            // });
-            // resultsToast.fire();
-             component.find("recordHandler").reloadRecord();
+        try{
+            var eventParams = event.getParams();
+            if(eventParams.changeType === "CHANGED") {
+                // get the fields that changed for this record
+                var changedFields = eventParams.changedFields;
+                console.log('Fields that are changed: ' + JSON.stringify(changedFields));            
+                // record is changed, so refresh the component (or other component logic)
+                // var resultsToast = $A.get("e.force:showToast");
+                // resultsToast.setParams({
+                //    "title": "Saved",
+                //    "message": "The record was updated."
+                // });
+                // resultsToast.fire();
+                component.find("recordHandler").reloadRecord();
 
-        } else if(eventParams.changeType === "LOADED") {
-            // get Avatar Image once record is loaded
-            component.set("v.customerAvatarUrl",$A.get(component.get("v.fields.Cust360_Contact_Picture_URL__c")));
-        } else if(eventParams.changeType === "REMOVED") {
-            // record is deleted and removed from the cache
-        } else if(eventParams.changeType === "ERROR") {
-            // there’s an error while loading, saving or deleting the record
+            } else if(eventParams.changeType === "LOADED") {
+                // get Avatar Image once record is loaded
+                component.set("v.customerAvatarUrl",$A.get(component.get("v.fields.Cust360_Contact_Picture_URL__c")));
+            } else if(eventParams.changeType === "REMOVED") {
+                // record is deleted and removed from the cache
+            } else if(eventParams.changeType === "ERROR") {
+                // there’s an error while loading, saving or deleting the record
+            }
+        }catch(e){
+            console.error(e);
         }
+        
     },
     handleSaveRecord: function(component, event, helper) {                
         component.find("recordHandler").saveRecord($A.getCallback(function(saveResult) {

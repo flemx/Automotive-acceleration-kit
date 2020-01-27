@@ -103,98 +103,6 @@
                                     options="{! v.feedOptions }"
                                     value="{! v.feedFilterValue }"
                                     onchange="{! c.filter }"/>
-
-                            <!--
-                            <div class="slds-form-element filter_element">
-                                <label class="slds-checkbox_toggle slds-grid slds-grid_vertical-align-center filter_label">
-                                    <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-action-color"/>
-                                    <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
-                                        <span class="filter-icon-text">Action Required</span> 
-                                        
-                                    </div>
-                                    <input name="action_required" type="checkbox" aria-describedby="action_required" value="action_required" checked="checked" onchange="{!c.filter}"  />
-                                    <div id="action_required" class="slds-checkbox_faux_container" aria-live="assertive">
-                                        <span class="slds-checkbox_faux"></span>
-                                        <span class="slds-checkbox_on"></span>
-                                        <span class="slds-checkbox_off"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="slds-form-element filter_element">
-                                <label class="slds-checkbox_toggle slds-grid filter_label">
-                                    <lightning:icon iconName="utility:announcement" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-announcement-color"/> 
-                                    <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
-                                        <span class="filter-icon-text">Announcements</span>
-                                    </div>
-                                    <input name="announcement" type="checkbox" aria-describedby="announcement" value="announcement" checked="checked" onchange="{!c.filter}"  />
-                                    <div id="announcement" class="slds-checkbox_faux_container" aria-live="assertive">
-                                        <span class="slds-checkbox_faux"></span>
-                                        <span class="slds-checkbox_on"></span>
-                                        <span class="slds-checkbox_off"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            
-                            <div class="slds-form-element filter_element">
-                                <label class="slds-checkbox_toggle slds-grid filter_label">
-                                    <lightning:icon iconName="utility:news" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-news-color"/> 
-                                        <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
-                                            <span class="filter-icon-text">News</span>
-                                    </div>
-                                    <input name="news" type="checkbox" aria-describedby="news" value="news" checked="checked" onchange="{!c.filter}"  />
-                                    <div id="news" class="slds-checkbox_faux_container" aria-live="assertive">
-                                        <span class="slds-checkbox_faux"></span>
-                                        <span class="slds-checkbox_on"></span>
-                                        <span class="slds-checkbox_off"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            
-                            <div class="slds-form-element filter_element">
-                                <label class="slds-checkbox_toggle slds-grid filter_label">
-                                    <lightning:icon iconName="utility:event" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-event-color"/> 
-                                        <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
-                                            <span class="filter-icon-text">Events</span>
-                                    </div>
-                                    <input name="events" type="checkbox" aria-describedby="events" value="events" checked="checked" onchange="{!c.filter}" />
-                                    <div id="events" class="slds-checkbox_faux_container" aria-live="assertive">
-                                        <span class="slds-checkbox_faux"></span>
-                                        <span class="slds-checkbox_on"></span>
-                                        <span class="slds-checkbox_off"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            
-                            <div class="slds-form-element filter_element">
-                                <label class="slds-checkbox_toggle slds-grid filter_label">
-                                    <lightning:icon iconName="utility:chat" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-conversation-color"/> 
-                                        <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
-                                            <span class="filter-icon-text">Conversations</span>
-                                    </div>
-                                    <input name="conversation" type="checkbox" aria-describedby="conversation" value="conversation" checked="checked" onchange="{!c.filter}" />
-                                    <div id="conversation" class="slds-checkbox_faux_container" aria-live="assertive">
-                                        <span class="slds-checkbox_faux"></span>
-                                        <span class="slds-checkbox_on"></span>
-                                        <span class="slds-checkbox_off"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            
-                            <div class="slds-form-element filter_element">
-                                <label class="slds-checkbox_toggle slds-grid filter_label">
-                                    <lightning:icon iconName="utility:broadcast" size="x-small" class="slds-m-right_small slds-m-top_xx-small icon-competitive-color"/> 
-                                        <div class="slds-form-element__label slds-m-bottom_none filter_icon_label"> 
-                                            <span class="filter-icon-text">Competetive</span>
-                                    </div>
-                                    <input name="competitive" type="checkbox" aria-describedby="competitive" value="competitive" checked="checked" onchange="{!c.filter}" />
-                                    <div id="competitive" class="slds-checkbox_faux_container" aria-live="assertive">
-                                        <span class="slds-checkbox_faux"></span>
-                                        <span class="slds-checkbox_on"></span>
-                                        <span class="slds-checkbox_off"></span>
-                                    </div>
-                                </label>
-                            </div>
-                          -->
                         </div>
 
                       
@@ -226,83 +134,6 @@
                                         sourceUrl="{!fi.sourceArticle__c}"
                                         sourceDate="{!fi.date__c}"
                                         type="{!fi.type__c}"/>
-                                    <!---
-                                    <div class="feeditem regular">
-                                        <div class="feeditem-background">
-                                            <div class="feeditem-icon-container">
-                                                <div class="{!'feeditem-icon-box' +
-                                                            (fi.type__c eq 'announcement' ? ' announcement-color' : 
-                                                            fi.type__c eq 'news' ? ' news-color' :
-                                                            fi.type__c eq 'competitive' ? ' competitive-color' :'')}">
-                                                    <lightning:icon iconName="{!fi.type__c eq 'announcement' ? 'utility:announcement' : 
-                                                            fi.type__c eq 'news' ? 'utility:news' :
-                                                            fi.type__c eq 'competitive' ? 'utility:broadcast' :''}" size="xx-small" variant="inverse"></lightning:icon>
-                                                </div>
-                                            </div>
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box regular-color">
-                                                    <lightning:icon iconName="utility:down" size="xx-small" class="regular-icon-color"></lightning:icon>
-                                                </div>
-                                            </div>
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box regular-color">
-                                                    <lightning:icon iconName="utility:favorite" size="xx-small" class="regular-icon-color"></lightning:icon>
-                                                </div>
-                                            </div>
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box regular-color">
-                                                    <lightning:icon iconName="utility:socialshare" size="xx-small" class="regular-icon-color"></lightning:icon>
-                                                </div>
-                                            </div>
-                                            <div class="feeditem-icon-container">
-                                                <div class="feeditem-icon-box regular-color">
-                                                    <lightning:icon iconName="utility:share_post" size="xx-small" class="regular-icon-color"></lightning:icon>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="feeditem-main">
-                
-                                                <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
-                                                <div class="feed-text-container">
-                                                    <div class="slds-text-heading_small">{!fi.title__c}</div>
-                                                    <div class="source-date-container">
-                                                        <div class="slds-text-color_weak">{!fi.source__c}</div>
-                                                        <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
-                                                    </div>
-                                                    <p class="block-with-text">{!fi.text__c}</p>
-                                                </div>
-                                            -->
-                                                <!--
-                                                <aura:if isTrue="{!fi.type__c eq 'news'}">
-                
-                                                        <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
-                                                        <div class="feed-text-container">
-                                                            <div class="slds-text-heading_small">{!v.googleNewsList.articles[fi.News_List_Index__c}].title}</div>
-                                                            <div class="source-date-container">
-                                                                <div class="slds-text-color_weak">{!v.googleNewsList.articles[fi.News_List_Index__c].source.url}</div>
-                                                                <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
-                                                            </div>
-                                                            <p class="block-with-text">{!v.googleNewsList.articles[fi.News_List_Index__c].description}</p>
-                                                        </div>
-                    
-                                                    <aura:set attribute="else">
-                                                        <div class="feed-image-container" style="{!'background-image:url(' + fi.image__c + ')'}"></div>
-                                                        <div class="feed-text-container">
-                                                            <div class="slds-text-heading_small">{!fi.title__c}</div>
-                                                            <div class="source-date-container">
-                                                                <div class="slds-text-color_weak">{!fi.source__c}</div>
-                                                                <div class="slds-text-color_weak slds-m-left_small">|<lightning:relativeDateTime class="slds-m-left_small" value="{! fi.jsdate }"/></div>
-                                                            </div>
-                                                            <p class="block-with-text">{!fi.text__c}</p>
-                                                        </div>
-                                                    </aura:set>
-                                                </aura:if>
-                                               
-                                        </div>
-                                         
-                                    </div>
-                                    -->
-
                                 </aura:if>
                                 <!-- render feed item type of action required //-->
                                 <aura:if isTrue="{!and(fi.type__c == 'action required',v.action_required)}">
@@ -325,22 +156,6 @@
                                                         onclick="{!c.accept}"/> 
                                                 </div>
                                                  
-                                                    
-                                                                   
-                                                    <!--
-                                                        <lightning:button
-                                                        variant="neutral"
-                                                        label="{!fi.action_no__c }"
-                                                         onclick="{!c.handleClick}" 
-                                                         class="slds-m-right_x-small slds-m-bottom_small" />
-                                                    
-                                                        <lightning:button
-                                                        variant="brand"
-                                                        label="{!fi.action_yes__c }"
-                                                        onclick="{!c.accept}" 
-                                                        class="slds-m-left_x-small slds-m-bottom_small"
-                                                        value="{!fi.Id}"
-                                                    />-->
                                                 </div>
                                     </aura:if>
                                         
