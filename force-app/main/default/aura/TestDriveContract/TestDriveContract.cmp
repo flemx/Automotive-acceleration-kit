@@ -108,16 +108,16 @@
                                                 <div class="slds-form-element__control">
                                                     <label class="slds-form-element__label" for="">Address</label>
                                                     <lightning:formattedAddress
-                                                                                street="Zachertstraße 15"
-                                                                                city="10315 Berlin"
-                                                                                country="Germany"
+                                                                                street="{!v.contact.MailingStreet}"
+                                                                                city="{!v.contact.MailingCity}"
+                                                                                country="{!v.contact.MailingCountry}"
                                                                                 />
                                                 </div>
                                             </div>
                                             
-                                            <div class="slds-form-element slds-col" style="width:50%; margin-left: 2%; margin-top: 1%;">
+                                            <!-- <div class="slds-form-element slds-col" style="width:50%; margin-left: 2%; margin-top: 1%;">
                                                 <img src="{!$Resource.theAddress}"/>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </lightning:layoutItem>

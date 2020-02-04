@@ -8,16 +8,29 @@ public class TestDriveModalController {
                 	Driver__r.MailingPostalCode,
                     Driver__r.MailingCity,
                 	Driver__r.MailingCountry,
-                    Status__c, 
+                    Status__c,
                     Configuration__r.motor__c, 
                     Configuration__r.edition__c, 
                     Configuration__r.model__c, 
-                    assigned_Vehicle__r.License_Plate__c 
+                    assigned_Vehicle__r.License_Plate__c,
+                    assigned_Vehicle__r.Vehicle_Version__c
                 FROM Test_Drive__c 
                 WHERE Id = :tdid 
                 LIMIT 1];
         return testDrive;
     }
+
+
+    // @AuraEnabled
+    // public static List<Vehicle_Type__c> getVehicleTypes(String AssetId) {
+    //     List<Vehicle_Type__c> vehicleType = [SELECT 
+    //                  Id, battery__c, color__c, edition__c, imgUrl__c, licensePlate__c, motor__c, Vehicle__c
+    //             FROM Vehicle_Type__c 
+    //             WHERE Id = :AssetId 
+    //             LIMIT 1];
+    //     return vehicleType;
+    // }
+    
     
 @AuraEnabled
     public static Test_Drive__c assignVehicle(String tdid){

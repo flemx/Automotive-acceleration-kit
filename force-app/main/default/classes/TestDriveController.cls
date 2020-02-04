@@ -1,11 +1,10 @@
 public without sharing class TestDriveController {
 	@AuraEnabled
     public static Contact getContact() {
-        Contact theContact =[SELECT Id, Email,FirstName,LastName,Phone FROM Contact WHERE LastName = 'Fisher'];
-
+        Contact theContact =[SELECT Id, Email,FirstName,LastName,Phone FROM Contact WHERE DemoContact__c = true LIMIT 1];
         return theContact;
     }
-   
+ 
     @AuraEnabled
     public static Test_Drive__c getTestDrive() {
         //get Test Drive Driver
@@ -14,7 +13,7 @@ public without sharing class TestDriveController {
 
         return theTest;
     }
-    
+ 
     
     @AuraEnabled
     public static String getDocumentId(String cId) {

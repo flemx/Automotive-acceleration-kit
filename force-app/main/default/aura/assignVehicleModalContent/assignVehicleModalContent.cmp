@@ -1,79 +1,36 @@
 <aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="TestDriveModalController" access="global" >
     <aura:attribute name="tdid" type="String" />
     <aura:attribute name="tddate" type="DateTime" />
-    <aura:attribute name="tdtime" type="DateTime" />
-    
+    <aura:attribute name="tdtime" type="DateTime" />  
+    <aura:attribute name="vehicleType" type="String" />
     <div class="slds-p-around_medium">
         <div class="section-heading">Appointment Details</div>
+        <div class="subtitle">Available vehicles of type <a>{!v.vehicleType}</a></div>
         
-		<!--
-        <div class="subtitle">time and date</div>
-                <div class="infoblock-wrapper">
-                        <div class="slds-form-element infoblock">
-                                <label class="slds-form-element__label" >Date</label>
-                                <div class="slds-form-element__control">
-                                  <input type="text" placeholder="{!v.tddate}" disabled="true" class="slds-input" />
-                                </div>
-                            </div>
-                            <div class="slds-form-element infoblock">
-                                <label class="slds-form-element__label" >Time</label>
-                                <div class="slds-form-element__control">
-                                  <input type="text" placeholder="{!v.tdtime}" disabled="true" class="slds-input" />
-                                </div>
-                            </div>
-                </div>
-                -->
-
-                <!--
-        <div class="subtitle">time and date</div>
-
-
-        <div class="infoblock">
-            <div class="icon">
-                <lightning:icon iconName="utility:dayview" size="xx-small" />
-            </div>
-            <div class="icon-text">
-                <lightning:formattedDateTime value="{!v.tddate}" year="numeric" month="2-digit" day="2-digit" weekday="long" />
-            </div>
-        </div>
-        <div class="infoblock">
-            <div class="icon">
-                <lightning:icon iconName="utility:clock" size="xx-small" />
-            </div>
-            <div class="icon-text">
-                <lightning:formattedDateTime value="{!v.tddate}" hour="2-digit" minute="2-digit" />&nbsp;-&nbsp;<lightning:formattedDateTime value="{!v.tdenddate}" hour="2-digit" minute="2-digit" />
-            </div>
-        </div>-->
-
-
-        <div class="subtitle">Available vehicles of type <a>I.D. Buzz</a></div>
-        
-        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorRed + ')'}" 
-    licensePlate="B VW 990E"
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.vwDemoPackFiles + ')'}" 
+    licensePlate="BER699"
     motor="225 kW (302 PS)"
     battery="101kWh"
     edition="Executive"
     color="Red"
-	imgUrl="assignRed.jpg"
-    id="02i1t00000061AbAAI" />
-        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorYellow + ')'}" 
-    licensePlate="B VW 991E"
+	imgUrl="cherry.png"
+    id="null" />
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.vwDemoPackFiles + ')'}" 
+    licensePlate="BER999"
     motor="225 kW (302 PS)"
     battery="101kWh"
     edition="Eco"
-    color="Yellow"
-	imgUrl="assignYellow.jpg"
-    id="02i1t00000061AbAAI" />
-        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.colorSilver + ')'}" 
-    licensePlate="B VW 992E"
+    color="Black"
+	imgUrl="black.png"
+    id="null" />
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.vwDemoPackFiles + ')'}" 
+    licensePlate="BER996"
     motor="225 kW (302 PS)"
     battery="101kWh"
     edition="Eco"
     color="Blue"
-	imgUrl="assignBlue.jpg"
-    id="02i1t00000061AbAAI" />
+	imgUrl="blue.png"
+    id="null" />
 
-        
-        
     </div>
 </aura:component>

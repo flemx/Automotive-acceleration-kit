@@ -218,6 +218,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Asset.Vehicle_Version__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Asset.demo_key__c</field>
         <readable>false</readable>
@@ -296,6 +301,11 @@
         <editable>false</editable>
         <field>Contact.Cust360_Loyalty__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.DemoContact__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -450,6 +460,36 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Test_Drive__c.assigned_Vehicle__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Vehicle_Type__c.battery__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Vehicle_Type__c.color__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Vehicle_Type__c.edition__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Vehicle_Type__c.imgUrl__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Vehicle_Type__c.licensePlate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Vehicle_Type__c.motor__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -678,6 +718,9 @@
         <readable>false</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Asset-Asset Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Configuration__c-Configuration Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -688,6 +731,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Test_Drive__c-Test Drive Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Vehicle_Type__c-Vehicle Type Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>portal_feed_item__c-feed item Layout</layout>
@@ -827,6 +873,10 @@
     <tabVisibilities>
         <tab>Test_Drive__c</tab>
         <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Vehicle_Type__c</tab>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>dealer_event__c</tab>

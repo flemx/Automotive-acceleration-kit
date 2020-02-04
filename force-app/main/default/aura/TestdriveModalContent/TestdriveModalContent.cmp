@@ -29,7 +29,7 @@
               </header>
               <div class="slds-modal__content fillHeight" id="modal-content-id-2">
                 <aura:if isTrue="{!v.modalHeader == 'Assign Vehicle'}">
-                    <c:assignVehicleModalContent tdid="{!v.tdid}" tddate="{!v.testdrive.dateFormatted}" tdtime="{!v.testdrive.timeframe}" />
+                    <c:assignVehicleModalContent tdid="{!v.tdid}" tddate="{!v.testdrive.dateFormatted}" tdtime="{!v.testdrive.timeframe}" vehicleType="{!v.testdrive.assigned_Vehicle__r.Name}" />
                   </aura:if>
               </div>
               <footer class="slds-modal__footer">

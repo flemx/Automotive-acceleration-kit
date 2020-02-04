@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>WaveApplication</name>
+    <members>DF19_Demo</members>
+  </types>
+  <types>
+    <name>WaveDataset</name>
+    <members>DemoDataDFPreped</members>
+    <members>demo_data_df_service</members>
+    <members>demo_data_df_trails</members>
+  </types>
+  <types>
+    <name>WaveDashboard</name>
+    <members>Overview_v3</members>
+  </types>
+  <types>
+    <name>WaveXmd</name>
+    <members>Overview_v3</members>
+  </types>
+  <version>47.0</version>
+</Package>

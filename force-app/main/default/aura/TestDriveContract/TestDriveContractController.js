@@ -1,20 +1,21 @@
 ({
     doInit : function(component, event, helper) {
-        var action = component.get("c.getContact");
+        var action = component.get("c. ");
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                console.log('Contact is:', response.getReturnValue());
                 component.set("v.contact", response.getReturnValue());
-                 let url = 'https://polar-peak-30148.herokuapp.com/';
-                fetch(url, {mode: "no-cors"}) // Call the fetch function passing the url of the API as a parameter
-                    .then(function(res) {
-                        console.log(res);                    
-                    })
-                    .catch(function(err) {
-                        console.error(err);
-                    });
-                    }
-            
+                //  let url = 'https://polar-peak-30148.herokuapp.com/';
+                // fetch(url, {mode: "no-cors"}) // Call the fetch function passing the url of the API as a parameter
+                //     .then(function(res) {
+                //         console.log(res);                    
+                //     })
+                //     .catch(function(err) {
+                //         console.error(err);
+                //     });
+                //     }
+            }
             else {
                 console.log("error");
             }
@@ -78,27 +79,37 @@
     
     handleSubmit:function (cmp, event, helper) {
         console.log("submit testdrive prep form");
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "type": "success",
+            "message": "Congratulations! Your test drive contract is completed!"
+        });
+        toastEvent.fire();
+
+        $A.get('e.force:refreshView').fire();
+        $A.get("e.force:closeQuickAction").fire();
+    
         
-        let tesDriveId= cmp.get('v.testDrive.Id');
-        console.log("tesDriveId: " + tesDriveId);
-        let url = 'https://polar-peak-30148.herokuapp.com/update/' + tesDriveId;
-        fetch(url, {mode: "no-cors"}) // Call the fetch function passing the url of the API as a parameter
-            .then(function(res) {
-                console.log(res);                    
-                    console.log("action sent");
-                    var toastEvent = $A.get("e.force:showToast");
-                        toastEvent.setParams({
-                            "type": "success",
-                            "message": "Congratulations! Your test drive contract is completed!"
-                        });
-                        toastEvent.fire();
+        // let tesDriveId= cmp.get('v.testDrive.Id');
+        // console.log("tesDriveId: " + tesDriveId);
+        // let url = 'https://polar-peak-30148.herokuapp.com/update/' + tesDriveId;
+        // fetch(url, {mode: "no-cors"}) // Call the fetch function passing the url of the API as a parameter
+        //     .then(function(res) {
+        //         console.log(res);                    
+        //             console.log("action sent");
+        //             var toastEvent = $A.get("e.force:showToast");
+        //                 toastEvent.setParams({
+        //                     "type": "success",
+        //                     "message": "Congratulations! Your test drive contract is completed!"
+        //                 });
+        //                 toastEvent.fire();
                 
-                    $A.get('e.force:refreshView').fire();
-                    $A.get("e.force:closeQuickAction").fire();
-            })
-            .catch(function(err) {
-                console.error(err);
-            });
+        //             $A.get('e.force:refreshView').fire();
+        //             $A.get("e.force:closeQuickAction").fire();
+        //     })
+        //     .catch(function(err) {
+        //         console.error(err);
+        //     });
         
         /*
         var action3 = cmp.get("c.updatePfi");
@@ -136,5 +147,5 @@
     },
     closeModal: function(c,e,h){
         c.set("v.showModal", false);
-    },
+    }
 })
