@@ -1,11 +1,12 @@
 import { LightningElement, track } from 'lwc';
+import VEHICLE_IMAGES from '@salesforce/resourceUrl/vwDemoPackFiles';
 
 export default class amfVehicleChoice extends LightningElement {
 
 
-    img1Url = 'https://www.maseratifl.com/wp-content/uploads/2019/08/ghibli_side.png.png.png';
-    img2Url = 'https://www.ufodrive.com/images/articles/ufo_car-tesla-model1.png';
-    img3Url = 'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/p-3d-psd3d2-car-jj-0040.png?auto=&bg=transparent&con=3&cs=srgb&dpr=1&fm=png&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1400&s=6d115a550dbef6728b64fac539c3eb4e';
+    img1Url = VEHICLE_IMAGES + '/images/vehicles/model1.jpg';
+    img2Url = VEHICLE_IMAGES + '/images/vehicles/model2.jpg';
+    img3Url = VEHICLE_IMAGES + '/images/vehicles/model3.jpg';
     img1 = `background-image:url(${this.img1Url})`;
     img2 = `background-image:url(${this.img2Url})`;
     img3 = `background-image:url(${this.img3Url})`;

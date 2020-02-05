@@ -33,13 +33,33 @@
                 <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
                 </svg>
-                <span class="slds-truncate" title="Section Title">Test drive choice</span>
+                <span class="slds-truncate" title="Section Title">Test drive location</span>
                 </button>
             </h3>
             <div aria-hidden="true" class="slds-section__content">
                 <div class="sectionContent">
                         <c-amf-test-drive-location>
                         </c-amf-test-drive-location>
+                        <div class="btnContainer">
+                            <button class="slds-button slds-button_brand nextButton" onclick={clickNext}>Next</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-section">
+            <h3 class="slds-section__title" onclick={toggleSection}>
+                <button aria-controls="expando-unique-id" aria-expanded="false" class="slds-button slds-section__title-action ">
+                <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                </svg>
+                <span class="slds-truncate" title="Section Title">Contact details</span>
+                </button>
+            </h3>
+            <div aria-hidden="true" class="slds-section__content">
+                <div class="sectionContent">
+                        <c-amf-contact-details>
+                        </c-amf-contact-details
+                        >
                         <div class="btnContainer">
                             <button class="slds-button slds-button_brand nextButton" onclick={clickNext}>Next</button>
                         </div>

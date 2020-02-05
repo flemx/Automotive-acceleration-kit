@@ -28,6 +28,9 @@
             ],
             "c/amfTestDriveLocation": [
                 "amfTestDriveLocation/amfTestDriveLocation.js"
+            ],
+            "c/amfContactDetails": [
+                "amfContactDetails/amfContactDetails.js"
             ]
         },
         "experimentalDecorators": true
