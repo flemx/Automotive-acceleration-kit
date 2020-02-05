@@ -1,0 +1,34 @@
+<template>
+
+    <div class="container">
+        
+        <div class="choiceCon">
+            <img src={currentChoice}/>
+        </div>
+
+      <div class="choiceSet slds-grid slds-gutters">
+        <div class="slds-col">
+         <div class="choiceCol selectedChoice" data-id="img1" onclick={handleChoice}>
+             <div class="imgCon" style={img1}></div> 
+             <h3>Model 1</h3>
+           </div>
+        </div>
+         <div class="slds-col">
+           <div class="choiceCol drinkcard-cc" data-id="img2" onclick={handleChoice}>
+             <div class="imgCon" style={img2}></div> 
+             <h3>Model 2</h3>
+           </div>
+          
+           
+        </div>
+         <div class="slds-col">
+         <div class="choiceCol drinkcard-cc" data-id="img3" onclick={handleChoice}>
+             <div class="imgCon " style={img3}></div> 
+             <h3>Model 3</h3>
+           </div>
+        </div>
+      </div>
+
+
+    </div>
+</template>

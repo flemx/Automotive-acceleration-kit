@@ -1,0 +1,36 @@
+.container{
+    background-color: white;
+    min-width: 800px;
+}
+
+.titleCon{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nextButton {
+    margin-top: 5%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    
+}
+
+.slds-section__title-action{
+    height: 50px;
+}
+
+
+.sectionContent{
+    width: 94%;
+    margin-left: 3%; 
+    margin-bottom: 2%;
+}
+
+.btnContainer{
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

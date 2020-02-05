@@ -1,0 +1,19 @@
+/* .mainWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+   max-width: 1000px;
+}
+
+.choiceCon{
+    width: 300px;
+}

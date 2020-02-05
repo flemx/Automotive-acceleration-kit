@@ -1,0 +1,75 @@
+.container{
+    margin: 2%;
+}
+.choiceCon{
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choiceCon img{
+    height: 300px;
+}
+
+.choiceSet{
+    width: 90%;
+    margin-left:5%;
+}
+
+.choiceCol{
+    width: 100%;
+}
+
+.choiceSet .slds-col{
+    margin-top: 3%;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCon{
+    background-position: center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100%;height:70px;
+}
+.choiceCol h3{
+   text-align: center;
+}
+ 
+.selectedChoice{
+    -webkit-filter: brightness(1.2) grayscale(.1) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.1) opacity(.9);
+            filter: brightness(1.2) grayscale(.1) opacity(.9);
+} 
+.drinkcard-cc{
+    cursor:pointer;
+    
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.1) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.1) opacity(.9);
+            filter: brightness(1.2) grayscale(.1) opacity(.9);
+}
+
+.modelType{
+    position: absolute;
+    bottom: -8%;
+    left: 0%;
+}
+.modelTypeNone{
+    position: absolute;
+    bottom: -2%;
+    left: 0%;
+}
