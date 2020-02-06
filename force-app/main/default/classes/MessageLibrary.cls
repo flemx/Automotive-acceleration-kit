@@ -330,7 +330,7 @@ public with sharing class MessageLibrary {
             when 'Testdrive journey' {		
                 journeyImage = 'journeyStart';
             }	
-            when 'I.D. Buzz Purchase Journey' {		
+            when 'Purchase Journey' {		
                 journeyImage = 'journeyPurchase';
             }
             when else {		  // default block, optional

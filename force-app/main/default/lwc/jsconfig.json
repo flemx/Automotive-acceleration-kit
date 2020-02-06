@@ -2,8 +2,17 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "c/amfContactDetails": [
+                "amfContactDetails/amfContactDetails.js"
+            ],
             "c/amfTestDriveForm": [
                 "amfTestDriveForm/amfTestDriveForm.js"
+            ],
+            "c/amfTestDriveLocation": [
+                "amfTestDriveLocation/amfTestDriveLocation.js"
+            ],
+            "c/amfVehicleChoice": [
+                "amfVehicleChoice/amfVehicleChoice.js"
             ],
             "c/dailyBriefing": [
                 "dailyBriefing/dailyBriefing.js"
@@ -14,23 +23,11 @@
             "c/idBuzzIoT": [
                 "idBuzzIoT/idBuzzIoT.js"
             ],
-            "c/testDriveForm": [
-                "testDriveForm/testDriveForm.js"
-            ],
             "c/vwButton": [
                 "vwButton/vwButton.js"
             ],
             "c/vwSvgLogo": [
                 "vwSvgLogo/vwSvgLogo.js"
-            ],
-            "c/amfVehicleChoice": [
-                "amfVehicleChoice/amfVehicleChoice.js"
-            ],
-            "c/amfTestDriveLocation": [
-                "amfTestDriveLocation/amfTestDriveLocation.js"
-            ],
-            "c/amfContactDetails": [
-                "amfContactDetails/amfContactDetails.js"
             ]
         },
         "experimentalDecorators": true

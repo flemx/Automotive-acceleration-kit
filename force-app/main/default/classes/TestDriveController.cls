@@ -1,7 +1,7 @@
 public without sharing class TestDriveController {
 	@AuraEnabled
     public static Contact getContact() {
-        Contact theContact =[SELECT Id, Email,FirstName,LastName,Phone FROM Contact WHERE DemoContact__c = true LIMIT 1];
+        Contact theContact =[SELECT Id, Email,Phone,MailingStreet,MailingCity,MailingCountry,MailingPostalCode,FirstName,LastName FROM Contact WHERE DemoContact__c = true LIMIT 1];
         return theContact;
     }
  

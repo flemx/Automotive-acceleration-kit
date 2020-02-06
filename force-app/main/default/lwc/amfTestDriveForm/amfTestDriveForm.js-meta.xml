@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>47.0</apiVersion>
-    <isExposed>false</isExposed>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage,lightningCommunity__Default">
+            <property name="useDemoContact" type="Boolean" default="true" label="Use the demo contact?"/>
+            <property name="model1" type="String" default="Model 1" label="Vehicle 1 name"/>
+            <property name="model2" type="String" default="Model 2" label="Vehicle 2 name"/>
+            <property name="model3" type="String" default="Model 3" label="Vehicle 3 name"/>
+            <property name="redirectPage" type="String" default="thankyou" label="Redirect Page Name"/>
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>

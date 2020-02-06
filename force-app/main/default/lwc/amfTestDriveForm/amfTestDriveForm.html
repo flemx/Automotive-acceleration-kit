@@ -1,27 +1,30 @@
 <template>
     <div class="container">
 
-   
-    <div class="titleCon">
-        <h1>Request a Test Drive</h1>
-    </div>
+
         <div class="slds-section slds-is-open vehicleChoice">
             <h3 class="slds-section__title" onclick={toggleSection}>
                 <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action ">
                 <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                    <use xlink:href={iconSwitch}></use>
                 </svg>
                 <span class="slds-truncate" title="Section Title">Select a car</span>
                 </button>
             </h3>
             <div aria-hidden="false" class="slds-section__content" >
                 <div class="sectionContent">
-                    <c-amf-vehicle-choice>
-                    </c-amf-vehicle-choice>
-                    <!-- <hr> -->
+                    <c-amf-vehicle-choice
+                    class="this.template.querySelector('.testDriveTime').value"
+                    model1={model1}
+                    model2={model2}
+                    model3={model3}>
+                    </c-amf-vehicle-choice
+                    >
+                    
                     <div class="btnContainer">
                         <button class="slds-button slds-button_brand nextButton" onclick={clickNext}>Next</button>
                     </div>
+                    <hr>
                 </div>
                 
                 
@@ -31,7 +34,7 @@
             <h3 class="slds-section__title" onclick={toggleSection}>
                 <button aria-controls="expando-unique-id" aria-expanded="false" class="slds-button slds-section__title-action ">
                 <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                    <use xlink:href={iconSwitch}></use>
                 </svg>
                 <span class="slds-truncate" title="Section Title">Test drive location</span>
                 </button>
@@ -43,6 +46,7 @@
                         <div class="btnContainer">
                             <button class="slds-button slds-button_brand nextButton" onclick={clickNext}>Next</button>
                         </div>
+                        <hr>
                 </div>
             </div>
         </div>
@@ -50,21 +54,56 @@
             <h3 class="slds-section__title" onclick={toggleSection}>
                 <button aria-controls="expando-unique-id" aria-expanded="false" class="slds-button slds-section__title-action ">
                 <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
-                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                    <use xlink:href={iconSwitch}></use>
                 </svg>
                 <span class="slds-truncate" title="Section Title">Contact details</span>
                 </button>
             </h3>
             <div aria-hidden="true" class="slds-section__content">
                 <div class="sectionContent">
-                        <c-amf-contact-details>
-                        </c-amf-contact-details
-                        >
+                    <template if:true={useDemoContact}>
+                        <c-amf-contact-details 
+                            class="contactInfo"
+                            first-name={demoContact.FirstName}
+                            last-name={demoContact.LastName}
+                            street={demoContact.MailingStreet}
+                            postal={demoContact.MailingPostalCode}
+                            city={demoContact.MailingCity}
+                            country={demoContact.MailingCountry}
+                            email={demoContact.Email}
+                            phone={demoContact.Phone}>
+                        </c-amf-contact-details>
+                    </template>
+                    <template if:false={useDemoContact}>
+                        <c-amf-contact-details class="contactInfo">
+                        </c-amf-contact-details>
+                    </template>
                         <div class="btnContainer">
                             <button class="slds-button slds-button_brand nextButton" onclick={clickNext}>Next</button>
                         </div>
+                        <hr>
+                </div>
+            </div>
+        </div>
+        <div class="slds-section">
+            <h3 class="slds-section__title" onclick={toggleSection}>
+                <button aria-controls="expando-unique-id" aria-expanded="false" class="slds-button slds-section__title-action ">
+                <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                    <use xlink:href={iconSwitch}></use>
+                </svg>
+                <span class="slds-truncate" title="Section Title">Schedule a time</span>
+                </button>
+            </h3>
+            <div aria-hidden="true" class="slds-section__content">
+                <div class="sectionContent">
+                    <lightning-input type="datetime" name="input1" label="" class="testDriveTime"></lightning-input>
+                        <div class="btnContainer">
+                            <button class="slds-button slds-button_brand nextButton" onclick={submit}>Submit</button>
+                        </div>
+                        <hr>
                 </div>
             </div>
         </div>
  </div>
+
 </template>

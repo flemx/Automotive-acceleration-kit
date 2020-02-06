@@ -378,6 +378,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Vehicle_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Lead.td_date_requested__c</field>
         <readable>false</readable>
@@ -728,6 +733,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Custom_Activity__c-Custom Activity Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Lead-Lead Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Test_Drive__c-Test Drive Layout</layout>
