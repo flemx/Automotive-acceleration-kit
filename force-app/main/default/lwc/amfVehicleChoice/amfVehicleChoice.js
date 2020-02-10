@@ -1,3 +1,9 @@
+/**
+ *  Used in amfTestDriveForm component to choose vehicle
+ *  10-02-2010
+ *  @ Damien Fleminks
+ */
+
 /* eslint-disable no-unused-expressions */
 import { LightningElement, track, api } from 'lwc';
 import VEHICLE_IMAGES from '@salesforce/resourceUrl/vwDemoPackFiles';
@@ -22,8 +28,8 @@ export default class amfVehicleChoice extends LightningElement {
         let el = event.target.closest(".drinkcard-cc"); 
         el.style.filter = 'none';
         this.template.querySelector('.modelType').className = 'modelTypeNone';
-        console.log(el);
-        console.log(el.previousElementSibling);
+        // console.log(el);
+        // console.log(el.previousElementSibling);
     }
 
     handleChoice(event){
@@ -52,9 +58,5 @@ export default class amfVehicleChoice extends LightningElement {
             console.log(this.currentModel);
           }
       }
-    }
-
-    setChoice(choice){
-      // choice ===
     }
 }

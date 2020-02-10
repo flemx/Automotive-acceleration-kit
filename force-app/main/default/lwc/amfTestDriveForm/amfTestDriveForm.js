@@ -1,3 +1,9 @@
+/**
+ *  Automotive Test drive form component
+ *  02-02-2020
+ * @ Damien Fleminks
+ */
+
 import { LightningElement, track, api } from 'lwc';
 import VEHICLE_ASSETS from '@salesforce/resourceUrl/vwDemoPackFiles';
 import { NavigationMixin } from 'lightning/navigation';
@@ -23,6 +29,8 @@ import CARTYPE from '@salesforce/schema/Lead.Vehicle_Type__c';
 export default class amfTestDriveForm extends NavigationMixin(LightningElement) {
     
     iconSwitch = VEHICLE_ASSETS + '/icons/symbols.svg#switch';
+
+    // JSON Object to hold contact object
     @track demoContact = {
         FirstName : '',
         LastName : '',
@@ -55,6 +63,10 @@ export default class amfTestDriveForm extends NavigationMixin(LightningElement) 
             });
     }
 
+    /**
+     *  Toggle expansion element open/close
+     * @param {*} event 
+     */
     toggleSection(event){
         let el = event.target.closest(".slds-section");
         console.log(el);
@@ -65,15 +77,22 @@ export default class amfTestDriveForm extends NavigationMixin(LightningElement) 
         }
     }
 
+    /**
+     *  Nxt button -> close current expansion and opens next one
+     * @param { } event 
+     */
     clickNext(event){
         let el = event.target.closest(".slds-section");
         event.target.closest(".nextButton").style.display = 'none';
          el.classList.remove('slds-is-open');
         //  console.log(el.nextElementSibling);
          el.nextElementSibling.classList.add('slds-is-open');
-        // console.log(this.template.querySelector('.testDriveTime').value);
+        // console.log(this.template.querySelector('.vehicleChoiceCmp').currentModel);
     }
 
+    /**
+     *  Upon submit create leead and redirect to chosen page
+     */
     submit(){
         const con = this.template.querySelector('.contactInfo');
         const fields = {};
@@ -88,7 +107,7 @@ export default class amfTestDriveForm extends NavigationMixin(LightningElement) 
         fields[SOURCE.fieldApiName] = 'Website';
         fields[TESTDRIVE.fieldApiName] = true;
         fields[TESTDATE.fieldApiName] = this.template.querySelector('.testDriveTime').value;
-        fields[CARTYPE.fieldApiName] = this.template.querySelector('.testDriveTime').currentModel;
+        fields[CARTYPE.fieldApiName] = this.template.querySelector('.vehicleChoiceCmp').currentModel;
 
         const recordInput = { apiName: LEAD_OBJECT.objectApiName, fields };
         createRecord(recordInput)

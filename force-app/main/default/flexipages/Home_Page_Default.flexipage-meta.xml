@@ -4,29 +4,6 @@
         <componentInstances>
             <componentName>orgActivityLog</componentName>
         </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>model1</name>
-                <value>Model 1</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>model2</name>
-                <value>Model 2</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>model3</name>
-                <value>Model 3</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>redirectPage</name>
-                <value>thankyou</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>useDemoContact</name>
-                <value>true</value>
-            </componentInstanceProperties>
-            <componentName>amfTestDriveForm</componentName>
-        </componentInstances>
         <name>top</name>
         <type>Region</type>
     </flexiPageRegions>
