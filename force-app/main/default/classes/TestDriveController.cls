@@ -32,10 +32,10 @@ public without sharing class TestDriveController {
             returnstring = 'error' + e.getMessage();
         }
         //set testdrive status to completed
-        /*Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
         Test_Drive__c td =[SELECT Date__c,Status__c FROM Test_Drive__c WHERE Driver__c = :driver.Id LIMIT 1];
 		td.Status__c = 'Completed';
-        update td;*/
+        update td;
         
         return returnstring;
     }
