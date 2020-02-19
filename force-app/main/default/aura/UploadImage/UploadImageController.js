@@ -1,6 +1,11 @@
 ({
     handleUploadFinished: function (component, event) {
-        console.log("hallo");
+        var baseURL = $(location).attr('pathname');
+        baseURL.indexOf(1);
+        baseURL.toLowerCase();
+        baseURL = baseURL.split("/")[1];
+        component.set("v.prefixURL", '/' + baseURL + '/sfc/servlet.shepherd/version/');
+        console.log('prefix url is: ');
         var uploadedFiles = event.getParam("files");
         console.log("upload files",uploadedFiles );
         

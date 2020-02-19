@@ -17,6 +17,7 @@ public without sharing class TestDriveController {
     
     @AuraEnabled
     public static String getDocumentId(String cId) {
+        System.debug('cId is: ' + cId);
         String theContent = [SELECT Id FROM ContentVersion WHERE ContentDocumentId =: cId].Id;
         return theContent;
     }

@@ -4,8 +4,9 @@
     <!--<aura:attribute name="recordId" type="Id" default="0031t00000AEpK0AAL"/>-->
     <aura:attribute name="prefixURL" type="String" default="/dealer/sfc/servlet.shepherd/version/"/>
     
-    <aura:attribute name="contentId" type="String" 
-                    default="https://s3-us-west-1.amazonaws.com/sfdc-demo/image-placeholder.png"/>
+    <aura:attribute name="contentId" type="String"/>
+    <aura:attribute name="placholderImg" type="String" 
+                    default="{!$Resource.vwDemoPackFiles + '/images/testdrive/image-placeholder.png'}"/>         
     <lightning:fileUpload label="Scan License"
         name="fileUploader" 
         class="correctamundo"
@@ -16,7 +17,7 @@
     <br/><br/>
     
     <div class="theContainer">
-        <img src="{!v.contentId}" width="200" height="150"/>
+        <img src="{!v.placholderImg}" width="200" height="150"/>
     </div>
     
     <div class="theUploadedImage" style="display:none;">
