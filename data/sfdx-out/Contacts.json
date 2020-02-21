@@ -20,7 +20,7 @@
             "DemoContact__c" : true,
             "Cust360_CSAT__c" : 80.0,
             "Cust360_ChurnRisk__c" : 12.0,
-            "Cust360_Contact_Picture_URL__c" : "$Resource.JohnFisher",
+            "Cust360_Contact_Picture_URL__c" : "$Resource.vwDemoPackFiles + '/images/background/JohnFisher.png'",
             "Cust360_LTV__c" : 128610.0,
             "Cust360_Loyalty__c" : "Gold",
             "SocialMediaTwitterHandle__c" : "@google",

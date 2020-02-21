@@ -166,7 +166,7 @@
             <div class="slds-row slds-size_1-of-3 slds-p-around_medium">
                 <div class="section-heading">Contact details</div>
                 <aura:if isTrue="{!v.testdrive}">
-                <c:Customer360HighlightCardTablet recordId="{!v.testdrive.Driver__c}" backgroundImageUrl="{!$Resource.GolfBanner}" />
+                <c:Customer360HighlightCardTablet recordId="{!v.testdrive.Driver__c}" backgroundImageUrl="{!$Resource.vwDemoPackFiles + '/images/background/C360.jpg'}" />
                 
                     <c:CustomActivityFeedTablet recordId="{!v.testdrive.Driver__c}" />
                 </aura:if>

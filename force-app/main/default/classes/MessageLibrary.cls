@@ -13,14 +13,14 @@ public with sharing class MessageLibrary {
             icon_3__c = '',
             message_1__c = 'matched to test drive scheduling request',
             message_2__c = 'Zip code proximity match',
-            message_3__c = 'Test Drive Request Form on https://www.volkswagen.de/app/formulare/vw-de/probefahrt',
+            message_3__c = 'Test Drive Request Form',
             record_id_1__c = dealer.Id,
             record_id_2__c = '',
             record_id_3__c = '',
             record_name_1__c = dealer.Name,
             record_name_2__c = '',
             record_name_3__c = '',
-            image_resource_name__c = 'idbuzzconfig'
+            image_resource_name__c = ''
         );
         EventBus.publish(message);
     }
@@ -35,8 +35,8 @@ public with sharing class MessageLibrary {
                 category_3__c = 'Assigned to:',
                 icon_1__c = 'standard:lead',
                 icon_3__c = 'standard:person_account',
-                message_1__c = 'captured. Test drive with home pickup request. Vehicle I.D. Buzz.',
-                message_2__c = 'Test Drive Request Form on https://www.volkswagen.de/app/formulare/vw-de/probefahrt',
+                message_1__c = 'captured. Test drive with home pickup request..',
+                message_2__c = 'Test Drive Request Form',
                 message_3__c = '(this lead needs to be accepted within 8 hours)',
                 record_id_1__c = l.id,
                 record_id_3__c = dealer.Id,
@@ -95,8 +95,8 @@ public with sharing class MessageLibrary {
                 category_2__c = 'Context:',
                 icon_1__c = 'standard:contact',
                 icon_2__c = 'standard:contact',
-                message_1__c = 'logged in via VW ID',
-                message_2__c = 'Test Drive Request Form on https://www.volkswagen.de/app/formulare/vw-de/probefahrt',
+                message_1__c = 'logged in via W ID',
+                message_2__c = 'Test Drive Request Form ',
                 record_id_1__c = driver.Id,
                 record_id_2__c = '',
                 record_name_1__c = driver.Name,
@@ -117,7 +117,7 @@ public with sharing class MessageLibrary {
                 icon_2__c = 'standard:contact',
                 message_1__c = 'matched to test drive scheduling request',
                 message_2__c = 'Zip code proximity match',
-                message_3__c = 'Test Drive Request Form on https://www.volkswagen.de/app/formulare/vw-de/probefahrt',
+                message_3__c = 'Test Drive Request Form ',
                 record_id_1__c = dealer.Id,
                 record_id_2__c = '',
                 record_name_1__c = dealer.Name,
@@ -136,7 +136,7 @@ public with sharing class MessageLibrary {
                 category_2__c = 'Context:',
                 icon_1__c = 'standard:person_account',
                 message_1__c = '- schedule request for ' + appointment + ' -  return free slots for activity \"test drive\"',
-                message_2__c = 'Test Drive Request Form on https://www.volkswagen.de/app/formulare/vw-de/probefahrt',
+                message_2__c = 'Test Drive Request Form',
                 record_id_1__c = dealer.Id,
                 record_id_2__c = '',
                 record_name_1__c = dealer.Name,
@@ -158,14 +158,14 @@ public with sharing class MessageLibrary {
             icon_3__c = '',
             message_1__c = 'matched to test drive scheduling request',
             message_2__c = 'Zip code proximity match',
-            message_3__c = 'Test Drive Request Form on https://www.volkswagen.de/app/formulare/vw-de/probefahrt',
+            message_3__c = 'Test Drive Request Form',
             record_id_1__c = '',
             record_id_2__c = '',
             record_id_3__c = '',
             record_name_1__c = 'dealer.Name',
             record_name_2__c = '',
             record_name_3__c = '',
-            image_resource_name__c = 'idbuzzconfig'
+            image_resource_name__c = ''
         );
         EventBus.publish(message);
     }

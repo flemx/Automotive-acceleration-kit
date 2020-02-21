@@ -1,6 +1,6 @@
 ({
 	click : function(c, e, h) {
-        c.set("v.image",$A.get("$Resource.idbuzznaviklikked"));
+        c.set("v.image",$A.get("$Resource.vwDemoPackFiles + '/images/background/naviklikked.jpeg'"));
         var action = c.get('c.startTestDrive');
         action.setCallback(this, function(response) {
             var state = response.getState();

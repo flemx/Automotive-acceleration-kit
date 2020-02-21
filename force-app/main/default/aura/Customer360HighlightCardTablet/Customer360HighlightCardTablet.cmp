@@ -26,7 +26,7 @@
     
     
     <div class="slds-card card tiny" aura:id="card" >
-        <div class="header-image" style="{! 'background-image:url(' + (v.backgroundImageUrl ? v.backgroundImageUrl : $Resource.GolfBanner) + '); background-color:' + (v.backgroundHexColor) + ';'}">
+        <div class="header-image" style="{! 'background-image:url(' + (v.backgroundImageUrl ? v.backgroundImageUrl : $Resource.vwDemoPackFiles + '/images/background/C360.jpg') + '); background-color:' + (v.backgroundHexColor) + ';'}">
         	<div class="slds-grid slds-grid_align-end slds-p-around_medium">
               	<lightning:buttonMenu iconName="utility:down" alternativeText="More" variant="bare-inverse" menuAlignment="right" onselect="{! c.openmodal }">
                     <lightning:menuItem label="Update Card Info" value="update360" />                    
