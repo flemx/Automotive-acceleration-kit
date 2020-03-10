@@ -1,0 +1,10 @@
+website,Service,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Revenue_Split_raw,Factor_Split,Latitude,Profit_raw,Longitude,Revenue_total,Profit,Revenue,DealerFactor
+http:/www.amore-automobile.de,New Cars,Berlin,Amore Automobile Moresco e.K.,Mariannenstraße 9-10,1,10,+49 30 6167040,10999,10311379,0.52,52.499662,0.06,13.42247,19829575,309341,5155689.5,0.5
+http:/www.vw-autohausberlinpankow.de,New Cars,Berlin,ASB Autohaus Berlin GmbH Berliner Str.,Berliner Straße 100,2,13,+49 30 479950,13189,9421993,0.54,52.368868,0.06,13.470358,17448136,570973,9516212.93,1.01
+http:/www.vw.volkswagen-automobile-berlin.de,New Cars,Berlin,Volkswagen Automobile Berlin GmbH Franklinstr.,Franklinstr. 5,3,10,+49 30 89081200,10587,6664732,0.55,52.464207,0.08,13.404865,12117695,783772,9797156.04,1.47
+,New Cars,Berlin,Andreas Witt GmbH,Strausberger Straße 1 u. 2,4,13,+49 30 9710790,13055,10018923,0.51,52.541452,0.07,13.488173,19644948,455861,6512299.95,0.65
+http:/www.vw.volkswagen-automobile-berlin.de,New Cars,Berlin,Volkswagen Automobile Berlin GmbH Oberlandstr.,Oberlandstr. 40-41,5,12,+49 30 89081000,12099,13895412,0.52,52.52045,0.05,13.40732,26721946,847620,16952402.64,1.22
+http:/www.volkswagen-service-autohaus-europa.de,New Cars,Berlin,J.H. Auto(h)aus Europa GmbH,Siegfriedstraße 150,6,10,+49 30 5779930,10365,7434417,0.52,52.528827,0.04,13.499454,14296955,478776,11969411.37,1.61
+http:/www.autohaus-thomas-kapinsky.de,New Cars,Berlin,Autohaus Thomas Kapinsky GmbH & Co. KG,Blankenburger Straße 95,7,13,+49 30 4789960,13089,9231270,0.53,52.573267,0.08,13.443985,17417490,1107752,13846905,1.5
+,New Cars,Berlin,Willi Britsch GmbH,Grenzallee 100,8,12,+49 30 689850,12057,8473987,0.53,52.464327,0.05,13.446074,15988655,521150,10423004.01,1.23
+http:/www.volkswagen-moebus.de,New Cars,Berlin,Autohaus Möbus GmbH,Hansastraße 202,9,13,+49 30 9627620,13088,8521568,0.54,52.557932,0.04,13.492706,15780682,402218,10055450.24,1.18

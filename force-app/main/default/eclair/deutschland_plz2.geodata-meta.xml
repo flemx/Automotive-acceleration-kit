@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EclairGeoData xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <maps>
+        <mapLabel>DE: PLZ2</mapLabel>
+        <mapName>map_1572464915586</mapName>
+        <projection>Mercator</projection>
+    </maps>
+    <maps>
+        <boundingBoxBottom>47.2705192565918</boundingBoxBottom>
+        <boundingBoxLeft>11.745841979980469</boundingBoxLeft>
+        <boundingBoxRight>15.044623374938965</boundingBoxRight>
+        <boundingBoxTop>54.98873519897461</boundingBoxTop>
+        <mapLabel>PLZ2 Berlin</mapLabel>
+        <mapName>map_1573050921610</mapName>
+        <projection>Mercator</projection>
+    </maps>
+    <masterLabel>deutschland_plz2</masterLabel>
+</EclairGeoData>

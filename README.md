@@ -25,6 +25,17 @@ sfdx force:data:tree:import -p data/sfdx-out/John-Plan.json -u <targetusername>
 ```
 sfdx force:apex:execute -f data/scripts/setRoleCall.txt -u <targetusername>
 ```
+6. Setup the Analytics dashboard
+```
+sfdx shane:analytics:dataset:upload -n demo_data_df_raw -f data/analytics/demo_data_df_raw.csv
+sfdx shane:analytics:dataflow:start -n DF_Data_Prep
+sfdx shane:analytics:dataset:upload -n Demo_Data_DF_Preped -f data/analytics/DemoDataDFPreped.csv -m export/DemoDataDFPreped.xmd.json
+sfdx shane:analytics:dataset:upload -n demo_data_df_service -f data/analytics/demo_data_df_service.csv
+sfdx shane:analytics:dataset:upload -n demo_data_df_trails -f data/analytics/demo_data_df_trails.csv
+
+```
+
+
 1. Publish Dealer Community
 2. Reset Daniel Password
 

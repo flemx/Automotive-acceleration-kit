@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EclairGeoData xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <maps>
+        <mapLabel>DE: BDL</mapLabel>
+        <mapName>map_1572466803650</mapName>
+        <projection>Mercator</projection>
+    </maps>
+    <masterLabel>deutschland_bundesl_nder</masterLabel>
+</EclairGeoData>
