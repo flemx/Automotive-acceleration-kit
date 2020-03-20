@@ -4,6 +4,37 @@
         <componentInstances>
             <componentName>hideHeader</componentName>
         </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>dashboardId</name>
+                <value>Overview_v3</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>height</name>
+                <value>300</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideOnError</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>openLinksInNewWindow</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showHeader</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showSharing</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showTitle</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>wave:waveDashboard</componentName>
+        </componentInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
