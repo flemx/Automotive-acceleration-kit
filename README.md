@@ -7,6 +7,8 @@
 
 1. push source
 ```
+// Change mdapi:deploy to source:deploy with api version override to prevent async 
+sfdx force:mdapi:deploy -d mdapi/autoDashboard -w 1 -u <targetusername>
 sfdx force:source:push -u <targetusername>
 ```
 2. assign permset to user
