@@ -28,6 +28,5 @@
     <tabs>portal_feed_item__c</tabs>
     <tabs>dealer_event__c</tabs>
     <tabs>Navi</tabs>
-    <tabs>Sales_Dashboard</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

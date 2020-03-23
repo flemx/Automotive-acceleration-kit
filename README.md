@@ -3,12 +3,29 @@
 ### Original package:
 - https://git.soma.salesforce.com/dfleminks/volkswagen-demo-pack
 
-## Setting up project with Basic Data
 
-1. push source
+## Setup Dashboard
+
+1. Push metadata
 ```
 // Change mdapi:deploy to source:deploy with api version override to prevent async 
 sfdx force:mdapi:deploy -d mdapi/autoDashboard -w 1 -u <targetusername>
+```
+
+2. setup datasets 
+
+```
+sfdx shane:analytics:dataset:upload -n demo_data_df_raw -f data/analytics/demo_data_df_raw.csv
+sfdx shane:analytics:dataflow:start -n DF_Data_Prep
+sfdx shane:analytics:dataset:upload -n Demo_Data_DF_Preped -f data/analytics/DemoDataDFPreped.csv
+sfdx shane:analytics:dataset:upload -n demo_data_df_service -f data/analytics/demo_data_df_service.csv
+sfdx shane:analytics:dataset:upload -n demo_data_df_trails -f data/analytics/demo_data_df_trails.csv
+
+```
+
+## Setting up project with Basic Data
+1. push source
+```
 sfdx force:source:push -u <targetusername>
 ```
 2. assign permset to user
@@ -27,15 +44,7 @@ sfdx force:data:tree:import -p data/sfdx-out/John-Plan.json -u <targetusername>
 ```
 sfdx force:apex:execute -f data/scripts/setRoleCall.txt -u <targetusername>
 ```
-6. Setup the Analytics dashboard
-```
-sfdx shane:analytics:dataset:upload -n demo_data_df_raw -f data/analytics/demo_data_df_raw.csv
-sfdx shane:analytics:dataflow:start -n DF_Data_Prep
-sfdx shane:analytics:dataset:upload -n Demo_Data_DF_Preped -f data/analytics/DemoDataDFPreped.csv -m export/DemoDataDFPreped.xmd.json
-sfdx shane:analytics:dataset:upload -n demo_data_df_service -f data/analytics/demo_data_df_service.csv
-sfdx shane:analytics:dataset:upload -n demo_data_df_trails -f data/analytics/demo_data_df_trails.csv
 
-```
 
 
 1. Publish Dealer Community
