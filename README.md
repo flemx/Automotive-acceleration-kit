@@ -45,8 +45,6 @@ sfdx force:data:tree:import -p data/sfdx-out/John-Plan.json -u <targetusername>
 sfdx force:apex:execute -f data/scripts/setRoleCall.txt -u <targetusername>
 ```
 
-
-
 1. Publish Dealer Community
 2. Reset Daniel Password
 
