@@ -27,7 +27,7 @@
     <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
     <networkMemberGroups>
-        <permissionSet>VW_demo_pack</permissionSet>
+        <permissionSet>autoforce_demo_pack</permissionSet>
         <profile>admin</profile>
     </networkMemberGroups>
     <networkPageOverrides>

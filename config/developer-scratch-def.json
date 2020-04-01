@@ -1,9 +1,10 @@
 {
-    "orgName": "VW Developer ",
+    "orgName": "AutoForce Developer",
     "edition": "Developer",
-    "features": ["Communities","SalesWave","ServiceWave"],
+    "features": ["Communities","SalesWave","ServiceWave","FieldService"],
     "language": "en_US",
     "settings": {
+      "fieldServiceSettings": { "fieldServiceOrgPref": true },
       "orgPreferenceSettings": {
         "networksEnabled": true,
         "s1DesktopEnabled": true

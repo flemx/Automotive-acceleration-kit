@@ -26,7 +26,7 @@ public class DemoUtils {
     
     public static void createDealerPortalUser(){
         //if dealer account has been inserted, create related user and objects
-        Contact c = [SELECT Id, FirstName, LastName, AccountId FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
+        Contact c = [SELECT Id, FirstName, LastName, AccountId, Email FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
         //get ProfileId
         Id pid = [SELECT Id FROM Profile WHERE Name='*Partners' LIMIT 1].Id;
 		//set ContactId
@@ -67,7 +67,7 @@ public class DemoUtils {
         
         //assign Permissionset
         //get Permset ID
-        Id psid = [SELECT Id FROM PermissionSet WHERE Name='VW_demo_pack' LIMIT 1].Id;
+        Id psid = [SELECT Id FROM PermissionSet WHERE Name='autoforce_demo_pack' LIMIT 1].Id;
         PermissionSetAssignment psa = new PermissionSetAssignment(
         	AssigneeId=u.Id,
         	PermissionSetId=psid);
@@ -76,9 +76,10 @@ public class DemoUtils {
         
         
         createAdditionalUserData(cid, u.Id);
-
+        
     }
-    
+
+
     
     public static void triggerTestdrive(Contact con, String testDay){
         Lead testDrive = new Lead(
@@ -110,31 +111,31 @@ public class DemoUtils {
         	pfis.add(new portal_feed_item__c(
                 Contact__c = cid,
                 type__c = 'announcement',
-                title__c = 'Volkswagen presents the Dealer of Tomorrow',
-                source__c = 'https://www.volklswagen-newsroom.com',
-                text__c = 'Volkswagen is making its sales organization fit for the future. The brand is to fundementally realign its sales model together with its dealers. The new sales model is to be launched in Europe in April 2020. Today in Berlin, Volkswagen and the Eurpoean dealer Council presented their vision for the future world of...',
-                image__c = 'https://427dp63llx7zmfivh1tezitj-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/VW-dealer.jpg',
-                date__c = Datetime.newInstance(2019, 2, 20, 7, 30, 2),
+                title__c = 'Automotive Minute: electron motors redesigns the locomotive',
+                source__c = 'https://www.salesforce.com',
+                text__c = 'electron motors is taking the notion of being a comfortable commuter car a step further with a bold redesign that borrows from the recent refresh of the Sonata.',
+                image__c = '/dealer/resource//vwDemoPackFiles/images/GoogleNews/news1.png',
+                date__c = Datetime.Now(),
                 User__c = uid,
                 SLA_active__c = false));
 			pfis.add(new portal_feed_item__c(
                 Contact__c = cid,
                 type__c = 'news',
-                title__c = 'Volkswagen ID electric hatchback 2020 prices, specs and release date',
+                title__c = 'Motors b.v ID electric hatchback prices, specs and release date',
                 source__c = 'https=//www.theweek.co.uk',
-                text__c = 'Volkswagen has released images of its upcoming all-electric hatchback. The new vehicle is undergoing testing in South Africa ahead of its world debut next year. The hatchback, which is often referred to as the ID Neo, will become the German car giant’s … first EV to be built on its new MEB platform. It has been designed from the ground up for the firm’s upcoming range of electric models.',
-                image__c = 'https=//www.theweek.co.uk/sites/theweek/files/styles/gallery_adv/public/2018/12/db2018au00936_large.jpg',
-                date__c = Datetime.newInstance(2019, 2, 20, 9, 30, 2),
+                text__c = 'Motors b.v has released images of its upcoming all-electric hatchback. The new vehicle is undergoing testing in South Africa ahead of its world debut next year. The hatchback, which is often referred to as the ID Neo, will become the German car giant’s … first EV to be built on its new MEB platform. It has been designed from the ground up for the firm’s upcoming range of electric models.',
+                image__c = '/dealer/resource//vwDemoPackFiles/images/GoogleNews/news2.png',
+                date__c = Datetime.Now(),
                 User__c = uid,
                 SLA_active__c = false));
         	pfis.add(new portal_feed_item__c(
             Contact__c = cid,
               type__c = 'competitive',
-              title__c = 'Waymo launches self-driving car service Waymo One',
+              title__c = 'Yowamo launches self-driving car service Yowamo One',
               source__c = 'techcrunch.com',
-              text__c = 'Waymo,  the former Google self-driving project owned by parent company Alphabet, is launching a commercial robotaxi service in the Phoenix area. Dubbed Waymo One, this milestone for the company and nascent self-driving technology industry comes with caveats. The Waymo One self-driving car service, and … accompanying app, won’t be available to just anyone.',
-              image__c = 'https=//waymo.com/static/images/waymo_banner.jpg',
-              date__c = Datetime.newInstance(2019, 2, 18, 9, 30, 2),
+              text__c = 'Yowamo,  the former Google self-driving project owned by parent company Alphabet, is launching a commercial robotaxi service in the Phoenix area. Dubbed Yowamo One, this milestone for the company and nascent self-driving technology industry comes with caveats. The Yowamo One self-driving car service, and … accompanying app, won’t be available to just anyone.',
+              image__c = '/dealer/resource//vwDemoPackFiles/images/GoogleNews/news3.png',
+              date__c = Datetime.Now(),
               User__c = uid,
               SLA_active__c = false));
         insert pfis;

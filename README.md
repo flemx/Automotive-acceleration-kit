@@ -30,7 +30,7 @@ sfdx force:source:push -u <targetusername>
 ```
 2. assign permset to user
 ```
-sfdx force:user:permset:assign -n VW_demo_pack -u <targetusername>
+sfdx force:user:permset:assign -n autoforce_demo_pack -u <targetusername>
 ```
 3. Run the following command:
 ```
@@ -50,6 +50,7 @@ sfdx force:apex:execute -f data/scripts/setRoleCall.txt -u <targetusername>
 
 
 In case you run into an error, you can delete all data that has been accidentally created by calling
+WARNING, this will delete most data in the ORG
 ```
 sfdx force:apex:execute -f  data/scripts/deleteAllDataCall.txt -u <targetOrg>
 ```

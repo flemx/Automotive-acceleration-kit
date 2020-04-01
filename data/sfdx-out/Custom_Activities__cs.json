@@ -8,7 +8,7 @@
         "Name" : "Car Purchase",
         "days_ago__c" : 520.0,
         "icon__c" : "utility:travel_and_places",
-        "message__c" : "Golf VII 2.0 7-DSG GTI",
+        "message__c" : "Max Pro 1",
         "order__c" : 3.0,
         "time__c" : "11:15",
         "Contact__c" : "@ContactRef1"
@@ -47,7 +47,7 @@
         "Name" : "Test Drive Request",
         "days_ago__c" : 1.0,
         "icon__c" : "standard:lead",
-        "message__c" : "Customer requested ID Crozz test drive at home",
+        "message__c" : "Customer requestedtest drive at home",
         "order__c" : 0.0,
         "time__c" : "19:21",
         "Contact__c" : "@ContactRef1"

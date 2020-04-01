@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
-        <application>global_monitoring</application>
+        <application>Auto_Force</application>
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
@@ -796,7 +796,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>VW_demo_pack</label>
+    <label>autoforce_demo_pack</label>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>false</allowDelete>
