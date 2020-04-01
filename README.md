@@ -1,4 +1,4 @@
-# Volkswagen Demo Pack
+# Automotive Demo Pack
 
 ### Original package:
 - https://git.soma.salesforce.com/dfleminks/volkswagen-demo-pack
