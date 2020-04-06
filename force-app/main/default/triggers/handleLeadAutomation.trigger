@@ -34,7 +34,7 @@ trigger handleLeadAutomation on Lead (after insert) {
                     Driver__c = driver.Id,
                     Configuration__c = config_id,
                     Status__c = 'Requested',
-                    Vehicle__c = 'I.D. Buzz',
+                    Vehicle__c = 'Vehicle',
                     Lead_Source__c = l.Id,
                     OwnerId = dealerUser_id
                 );
@@ -62,7 +62,7 @@ trigger handleLeadAutomation on Lead (after insert) {
                     icon_2__c = 'custom:custom31',
                     icon_3__c = 'standard:custom',
                     message_1__c = 'has requested a',
-                    message_2__c = 'on ' + d.format() + ' with home pickup in an I.D. Crozz with the following',
+                    message_2__c = 'on ' + d.format() + ' with home pickup in a vehicle with the following',
                     record_id_1__c = driver.Id,
                     record_id_2__c = td2.Id,
                     record_id_3__c = config_id,
@@ -78,14 +78,14 @@ trigger handleLeadAutomation on Lead (after insert) {
                 insert pfi;
                 
                 //send message to Daniel
-                String appId = '9e39deb3-2e1e-4d2f-968e-ed4640292a9a';
-                String  heading = 'New Test Drive Request';
-                String  content = 'Contact ' + driver.Name + ' has requested a test drive with home pickup. You have 8hrs to respond.' ;
-                //TODO make asynchronous
-                //DealerPortalTriggerPush.sendNotification(appId, heading, content);
+                // String appId = '9e39deb3-2e1e-4d2f-968e-ed4640292a9a';
+                // String  heading = 'New Test Drive Request';
+                // String  content = 'Contact ' + driver.Name + ' has requested a test drive with home pickup. You have 8hrs to respond.' ;
+                // //TODO make asynchronous
+                // //DealerPortalTriggerPush.sendNotification(appId, heading, content);
                 
-                //send message journey start
-                MessageLibrary.journeyStart('Testdrive journey');
+                // //send message journey start
+                // MessageLibrary.journeyStart('Testdrive journey');
                 
                 //set lead score
                 SetLeadScore.setScore('84', ''+l.Id);

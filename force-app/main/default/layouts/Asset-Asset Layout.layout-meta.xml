@@ -44,6 +44,10 @@
                 <behavior>Edit</behavior>
                 <field>Vehicle_Version__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>af_IoT_status__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

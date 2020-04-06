@@ -112,9 +112,9 @@ public class DemoUtils {
                 Contact__c = cid,
                 type__c = 'announcement',
                 title__c = 'Automotive Minute: electron motors redesigns the locomotive',
-                source__c = 'https://www.salesforce.com',
+                source__c = 'salesforce.com',
                 text__c = 'electron motors is taking the notion of being a comfortable commuter car a step further with a bold redesign that borrows from the recent refresh of the Sonata.',
-                image__c = '/dealer/resource//vwDemoPackFiles/images/GoogleNews/news1.png',
+                image__c = 'https://i.imgur.com/xYQsjNE.png',
                 date__c = Datetime.Now(),
                 User__c = uid,
                 SLA_active__c = false));
@@ -122,9 +122,9 @@ public class DemoUtils {
                 Contact__c = cid,
                 type__c = 'news',
                 title__c = 'Motors b.v ID electric hatchback prices, specs and release date',
-                source__c = 'https=//www.theweek.co.uk',
+                source__c = 'theweek.co.uk',
                 text__c = 'Motors b.v has released images of its upcoming all-electric hatchback. The new vehicle is undergoing testing in South Africa ahead of its world debut next year. The hatchback, which is often referred to as the ID Neo, will become the German car giant’s … first EV to be built on its new MEB platform. It has been designed from the ground up for the firm’s upcoming range of electric models.',
-                image__c = '/dealer/resource//vwDemoPackFiles/images/GoogleNews/news2.png',
+                image__c = 'https://i.imgur.com/OCey8bv.jpg',
                 date__c = Datetime.Now(),
                 User__c = uid,
                 SLA_active__c = false));
@@ -134,7 +134,7 @@ public class DemoUtils {
               title__c = 'Yowamo launches self-driving car service Yowamo One',
               source__c = 'techcrunch.com',
               text__c = 'Yowamo,  the former Google self-driving project owned by parent company Alphabet, is launching a commercial robotaxi service in the Phoenix area. Dubbed Yowamo One, this milestone for the company and nascent self-driving technology industry comes with caveats. The Yowamo One self-driving car service, and … accompanying app, won’t be available to just anyone.',
-              image__c = '/dealer/resource//vwDemoPackFiles/images/GoogleNews/news3.png',
+              image__c = 'https://i.imgur.com/fchs8D8.jpg',
               date__c = Datetime.Now(),
               User__c = uid,
               SLA_active__c = false));

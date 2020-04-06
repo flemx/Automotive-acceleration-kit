@@ -14,7 +14,7 @@ public class TireBlowHandler {
                 Map<String, Object> params = new Map<String, Object>();
                 params.put('strWTName', 'Tire Change');
                 params.put('objContactIN', c);
-                Flow.Interview.Rider_Create_SA saFlow = new Flow.Interview.Rider_Create_SA(params);
+                Flow.Interview.AF_Rider_Create_SA saFlow = new Flow.Interview.AF_Rider_Create_SA(params);
                 saFlow.start();
                 //get Service Technician (TODO remove hard coded name reference)
                 ServiceResource sr = [SELECT Id, Name FROM ServiceResource WHERE Name = 'Jerome Castan' LIMIT 1];

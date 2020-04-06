@@ -28,9 +28,12 @@
             ],
             "c/vwSvgLogo": [
                 "vwSvgLogo/vwSvgLogo.js"
+            ],
+            "c/afdeviceIOT": [
+                "afDeviceIOT/afDeviceIOT.js"
             ]
         },
-        "experimentalDecorators": true
+        "experimeafDeviceIOT/afDeviceIOT.js
     },
     "include": [
         "**/*",

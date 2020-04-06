@@ -19,6 +19,22 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Auto Force</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Asset_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>*Partners</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Asset_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Asset</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>Daily_Briefing</tabs>
     <tabs>standard-Lead</tabs>
@@ -27,5 +43,6 @@
     <tabs>portal_feed_item__c</tabs>
     <tabs>dealer_event__c</tabs>
     <tabs>Navi</tabs>
+    <tabs>standard-Asset</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

@@ -21,6 +21,7 @@
             var state = response.getState();
             if (state === "SUCCESS") {
                component.set("v.contentId", "renditionDownload?rendition=ORIGINAL_Jpeg&versionId=" + response.getReturnValue() + "&operationContext=CHATTER&contentId=" + event.getParam("files")[0].documentId);
+               console.log('contentId is: ' + component.get("v.contentId"));
             }
             
             else {
