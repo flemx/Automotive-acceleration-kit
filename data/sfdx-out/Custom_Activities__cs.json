@@ -19,7 +19,7 @@
           "referenceId" : "caRef2"
         },
         "Name" : "Service Case",
-        "days_ago__c" : 1.0,
+        "days_ago__c" : 3.0,
         "icon__c" : "standard:case_email",
         "message__c" : "I have a problem with my ignition",
         "order__c" : 2.0,
@@ -32,7 +32,7 @@
           "referenceId" : "caRef3"
         },
         "Name" : "Survey Response",
-        "days_ago__c" : 1.0,
+        "days_ago__c" : 3.0,
         "icon__c" : "standard:survey",
         "message__c" : "Service Case Closed Response",
         "order__c" : 1.0,

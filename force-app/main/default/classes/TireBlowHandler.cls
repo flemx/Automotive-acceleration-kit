@@ -1,9 +1,9 @@
 public class TireBlowHandler {
 
-
-    public static void triggerService(String assetId){
-        Asset a = [SELECT Id, ContactId, operational__c FROM Asset WHERE Id = :assetId LIMIT 1];
-
+	@InvocableMethod
+    public static void triggerService(List<String> assetIds){
+        List<Asset> assets = [SELECT Id, ContactId, operational__c FROM Asset WHERE Id in :assetIds ];
+        for(Asset a : assets){
             //check if the vehicle was operational. If it was, go ahead
             if(a.operational__c){
                 //set operational trigger to false, so that multiple events will still create only one service appointment
@@ -33,11 +33,14 @@ public class TireBlowHandler {
                 Insert ar;
                 //create case
                 BusinessHours bh = [select id from businesshours where IsDefault=true];
-                Case newCase = new Case( Subject = 'Tire Issue detected',
-                                       Description = 'IOT Sensor detected a flat tire. Tire needs to be changed. Initiating WorkOrder for field service technician.',
-                                       ContactId = c.Id,
-                                       BusinessHoursId = bh.Id);
-                insert newCase;
+                // Case newCase = new Case( Subject = 'Tire Issue detected',
+                //                        Description = 'IOT Sensor detected a flat tire. Tire needs to be changed. Initiating WorkOrder for field service technician.',
+                //                        ContactId = c.Id,
+
+                //                        BusinessHoursId = bh.Id);
+                // insert newCase;
+
+                
                 //send messages
                 // MessageLibrary.issueDetected();
                 // MessageLibrary.customerPushNotification('We have detected an issue with your vehicle: flat tire front left.');
@@ -45,6 +48,8 @@ public class TireBlowHandler {
                 // MessageLibrary.issueSolved();
                 // MessageLibrary.customerPushNotification('Always Mobile Solution: we have reserved a we share 2 minutes away. Start navigation now.');            
             }
+        }
+       
 
     }
 }

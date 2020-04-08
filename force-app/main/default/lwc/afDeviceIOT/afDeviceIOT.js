@@ -5,7 +5,7 @@ import { getRecord, } from 'lightning/uiRecordApi';
 import { refreshApex } from '@salesforce/apex';
 
 const FIELDS = [
-    'Asset.af_IoT_status__c'
+    'Asset.operational__c'
   ];
 
 export default class afDeviceIOT extends LightningElement {
@@ -59,7 +59,7 @@ export default class afDeviceIOT extends LightningElement {
         this.wiredAssetResult  = result;
         if(result.data){
             // console.log(result.data);
-            let iotStatus = result.data.fields.af_IoT_status__c.value;
+            let iotStatus = !result.data.fields.operational__c.value;
         
             // this.startDiagnose(0);
             iotStatus ?  this.selectedImg = this.vehicleImages.bad : this.selectedImg = this.vehicleImages.good;
@@ -93,13 +93,8 @@ export default class afDeviceIOT extends LightningElement {
      refreshApex(this.wiredAssetResult);
      this.startDiagnose(num);
      
-   }, 3000);
+   }, 1500);
   }
  
-  handleClick(){
-    this.startDiagnose(0);
-    //refreshApex(this.isRendered);
-  }
-
 
 }

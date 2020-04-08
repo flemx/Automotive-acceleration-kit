@@ -1,7 +1,11 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/afDeviceIOT": [
+                "afDeviceIOT/afDeviceIOT.js"
+            ],
             "c/amfContactDetails": [
                 "amfContactDetails/amfContactDetails.js"
             ],
@@ -28,12 +32,8 @@
             ],
             "c/vwSvgLogo": [
                 "vwSvgLogo/vwSvgLogo.js"
-            ],
-            "c/afdeviceIOT": [
-                "afDeviceIOT/afDeviceIOT.js"
             ]
-        },
-        "experimeafDeviceIOT/afDeviceIOT.js
+        }
     },
     "include": [
         "**/*",
