@@ -23,7 +23,6 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-igtbtbzcwidd@example.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
     <subdomain>agility-force-8356-dev-ed-16fae48af96</subdomain>
     <urlPathPrefix>testdrive</urlPathPrefix>
