@@ -7,9 +7,9 @@
         var action = component.get('c.getUserData');
         
         // Variables for google news api
-        let googleList = [];
-        const gToken = component.get('v.googleNewsToken');
-        const gSearch = component.get('v.googleNewSearchKey');
+        // let googleList = [];
+        // const gToken = component.get('v.googleNewsToken');
+        // const gSearch = component.get('v.googleNewSearchKey');
         
 
         
@@ -59,39 +59,45 @@
                             }
                             
                         }
-                        // If Google news api is enabled add newsitems for all returnes articles
-                        //Fetch the google news data (Max 10) -> set the data variable inside callout
-                        try{
-                            fetch('https://gnews.io/api/v3/search?q='+gSearch+'&image=required&token='+gToken)
-                            .then(function (response) {
-                                return response.json();
-                            })
-                            .then(function (responseData) {
-                                if(component.get('v.googleNewEnabled') === 'true' && responseData.articles !== undefined){
-                                    for(let newsItem of responseData.articles){
-                                        let newNewsItem = {};
-                                        newNewsItem.title__c = newsItem.title;
-                                        newNewsItem.text__c = newsItem.description;
-                                        newNewsItem.source__c = newsItem.source.name;
-                                        newNewsItem.sourceArticle__c = newsItem.url;
-                                        newNewsItem.image__c = newsItem.image;
-                                        newNewsItem.date__c = newsItem.publishedAt;
-                                        newNewsItem.type__c = 'news';
-                                        data.push(newNewsItem);
-                                    }
-                                }
-                                document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
-                                document.getElementById("content").classList.remove("slds-hide");
-                                console.log("data = ", data);
-                                component.set("v.fil",data);
-                            });
-                        }catch(e){
-                            console.log(e);
+
                             document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
                             document.getElementById("content").classList.remove("slds-hide");
                             console.log("data = ", data);
                             component.set("v.fil",data);
-                        }
+
+                        // If Google news api is enabled add newsitems for all returnes articles
+                        //Fetch the google news data (Max 10) -> set the data variable inside callout
+                        // try{
+                        //     fetch('https://gnews.io/api/v3/search?q='+gSearch+'&image=required&token='+gToken)
+                        //     .then(function (response) {
+                        //         return response.json();
+                        //     })
+                        //     .then(function (responseData) {
+                        //         if(component.get('v.googleNewEnabled') === 'true' && responseData.articles !== undefined){
+                        //             for(let newsItem of responseData.articles){
+                        //                 let newNewsItem = {};
+                        //                 newNewsItem.title__c = newsItem.title;
+                        //                 newNewsItem.text__c = newsItem.description;
+                        //                 newNewsItem.source__c = newsItem.source.name;
+                        //                 newNewsItem.sourceArticle__c = newsItem.url;
+                        //                 newNewsItem.image__c = newsItem.image;
+                        //                 newNewsItem.date__c = newsItem.publishedAt;
+                        //                 newNewsItem.type__c = 'news';
+                        //                 data.push(newNewsItem);
+                        //             }
+                        //         }
+                        //         document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
+                        //         document.getElementById("content").classList.remove("slds-hide");
+                        //         console.log("data = ", data);
+                        //         component.set("v.fil",data);
+                        //     });
+                        // }catch(e){
+                        //     console.log(e);
+                        //     document.getElementById("spinner").parentNode.removeChild(document.getElementById("spinner"));
+                        //     document.getElementById("content").classList.remove("slds-hide");
+                        //     console.log("data = ", data);
+                        //     component.set("v.fil",data);
+                        // }
                        
 
 

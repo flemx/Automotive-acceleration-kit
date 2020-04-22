@@ -795,6 +795,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>portal_feed_item__c.Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>portal_feed_item__c.News_List_Index__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -896,6 +901,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>portal_feed_item__c.record_name_3__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>portal_feed_item__c.sourceArticle__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

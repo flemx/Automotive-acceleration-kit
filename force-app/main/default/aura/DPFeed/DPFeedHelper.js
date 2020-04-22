@@ -107,7 +107,7 @@
             		var state = response.getState();
                     if (state === "SUCCESS") {
         			console.log("Lead updated successful (", response.getReturnValue());
-            
+                    $A.get('e.force:refreshView').fire();
             //updateStatus SLA_achieved_since__c 
             
             

@@ -1,5 +1,5 @@
 <design:component>
-    <design:attribute name="googleNewsToken" label="gnews.io Token" default="add-api-key-here"/>
+    <!-- <design:attribute name="googleNewsToken" label="gnews.io Token" default="add-api-key-here"/>
     <design:attribute name="googleNewSearchKey" label="Google new Search key" default="Automotive"/>
-    <design:attribute name="googleNewEnabled" label="Google news enabled" datasource="true,false" default="true"/>
+    <design:attribute name="googleNewEnabled" label="Google news enabled" datasource="true,false" default="true"/> -->
 </design:component>

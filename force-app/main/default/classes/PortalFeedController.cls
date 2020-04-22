@@ -28,6 +28,7 @@ public with sharing class PortalFeedController {
 	                                          SLA_active__c,
                                           	  SLA_achieved_since__c,
                                               source__c,
+                                              sourceArticle__c,
                                               text__c,
                                               title__c,
                                               type__c,
@@ -172,7 +173,7 @@ public with sharing class PortalFeedController {
         //send message
             
         try {
-            Test_Drive__c td = [SELECT Id,Lead_Source__c FROM Test_Drive__c WHERE Id = :tid LIMIT 1];
+            Test_Drive__c td = [SELECT Id,Lead_Source__c, Name FROM Test_Drive__c WHERE Id = :tid LIMIT 1];
             Lead l = [SELECT Id,Status,Name FROM Lead WHERE Id = :td.Lead_Source__c LIMIT 1];
             general_message__e msg = new general_message__e(
                     main_icon__c = 'standard:lead',
@@ -187,6 +188,7 @@ public with sharing class PortalFeedController {
                 );
             pushEventMessage(msg);
             
+            naviController.startTestDrive(td);
             
             l.Status = 'Working';
             

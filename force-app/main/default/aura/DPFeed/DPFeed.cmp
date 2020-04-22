@@ -21,9 +21,9 @@
     <aura:attribute name="modalFiid" type="String" />
 
     <!-- Google news feeds  -->
-    <aura:attribute name="googleNewsToken" type="String" />
+    <!-- <aura:attribute name="googleNewsToken" type="String" />
     <aura:attribute name="googleNewSearchKey" type="String" />
-    <aura:attribute name="googleNewEnabled" type="String" />
+    <aura:attribute name="googleNewEnabled" type="String" /> -->
 
 
     <!-- feed filter checkbox group -->
