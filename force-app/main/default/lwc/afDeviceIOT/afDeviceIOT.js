@@ -1,5 +1,5 @@
 import { LightningElement, api, track, wire } from 'lwc';
-import VEHICLE_ASSETS from '@salesforce/resourceUrl/vwDemoPackFiles';
+import VEHICLE_ASSETS from '@salesforce/resourceUrl/autoforceFiles';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent'
 import { getRecord, } from 'lightning/uiRecordApi';
 import { refreshApex } from '@salesforce/apex';

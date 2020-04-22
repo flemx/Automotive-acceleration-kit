@@ -6,7 +6,7 @@
     
     <aura:attribute name="contentId" type="String"/>
     <aura:attribute name="placholderImg" type="String" 
-                    default="{!$Resource.vwDemoPackFiles + '/images/testdrive/image-placeholder.png'}"/>         
+                    default="{!$Resource.autoforceFiles + '/images/testdrive/image-placeholder.png'}"/>         
     <lightning:fileUpload label="Scan License"
         name="fileUploader" 
         class="correctamundo"

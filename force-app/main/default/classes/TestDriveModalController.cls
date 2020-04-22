@@ -11,7 +11,8 @@ public class TestDriveModalController {
                     Status__c,
                     Configuration__r.motor__c, 
                     Configuration__r.edition__c, 
-                    Configuration__r.model__c, 
+                    Configuration__r.model__c,
+                    Configuration__r.Image_url__c,
                     assigned_Vehicle__r.License_Plate__c,
                     assigned_Vehicle__r.Vehicle_Version__c
                 FROM Test_Drive__c 

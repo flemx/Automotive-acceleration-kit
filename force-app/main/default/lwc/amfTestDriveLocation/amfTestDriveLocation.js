@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import VEHICLE_ASSETS from '@salesforce/resourceUrl/vwDemoPackFiles';
+import VEHICLE_ASSETS from '@salesforce/resourceUrl/autoforceFiles';
 
 export default class amfTestDriveLocation extends LightningElement {
     

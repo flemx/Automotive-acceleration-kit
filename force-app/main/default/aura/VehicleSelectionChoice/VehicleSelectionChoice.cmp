@@ -50,7 +50,7 @@
                 </div>
             </lightning:layoutItem>
             <lightning:layoutItem padding="around-xx-small" class="slds-size_2-of-6">
-                <img src="{!$Resource.vwDemoPackFiles + '/images/vehicles/' + v.imgUrl}" class="car-image"/>                
+                <img src="{!$Resource.autoforceFiles + '/images/vehicles/' + v.imgUrl}" class="car-image"/>                
                 <!--<div class="colorcircle" style="{!v.colorURL}"></div>-->
                 
             </lightning:layoutItem>

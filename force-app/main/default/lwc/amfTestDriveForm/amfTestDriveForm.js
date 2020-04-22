@@ -5,7 +5,7 @@
  */
 
 import { LightningElement, track, api } from 'lwc';
-import VEHICLE_ASSETS from '@salesforce/resourceUrl/vwDemoPackFiles';
+import VEHICLE_ASSETS from '@salesforce/resourceUrl/autoforceFiles';
 import { NavigationMixin } from 'lightning/navigation';
 import { createRecord } from 'lightning/uiRecordApi';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';

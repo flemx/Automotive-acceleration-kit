@@ -1,5 +1,5 @@
 <aura:component controller="naviController" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
-    <aura:attribute name="image" type="String" default="{!$Resource.vwDemoPackFiles + '/images/background/navi.jpeg'}" />
+    <aura:attribute name="image" type="String" default="{!$Resource.autoforceFiles + '/images/background/navi.jpeg'}" />
 	<a onclick="{!c.click}">
     	<img class="fill" src="{!v.image}"></img>
     </a>

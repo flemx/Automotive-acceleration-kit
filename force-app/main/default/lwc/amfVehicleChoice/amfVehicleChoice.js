@@ -6,7 +6,7 @@
 
 /* eslint-disable no-unused-expressions */
 import { LightningElement, track, api } from 'lwc';
-import VEHICLE_IMAGES from '@salesforce/resourceUrl/vwDemoPackFiles';
+import VEHICLE_IMAGES from '@salesforce/resourceUrl/autoforceFiles';
 
 export default class amfVehicleChoice extends LightningElement {
 

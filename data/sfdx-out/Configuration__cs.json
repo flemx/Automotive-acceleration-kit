@@ -9,10 +9,11 @@
             "Battery__c" : "100 KWh",
             "Seats__c" : "Premium Seats",
             "Option__c" : "Performance Package",
-            "Color__c" : "California Blue",
+            "Color__c" : "Tornado Red",
             "motor__c" : "225 kW (302 PS) - 83kWh",
             "edition__c" : "Eco Edition",
             "model__c" : "Max Pro S3",
+            "Image_url__c" : "/dealer/resource/autoforceFiles/images/vehicles/model1.jpg",
             "demo_key__c" : "Config_1"
         }
     ]

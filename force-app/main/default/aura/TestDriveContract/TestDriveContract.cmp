@@ -1,6 +1,6 @@
 <aura:component controller="TestDriveController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
     <ltng:require scripts="{!$Resource.jQueryNew}" afterScriptsLoaded="{!c.doInit}"/>
-    <ltng:require scripts="{!$Resource.vwJsForce}"/> 
+    <ltng:require scripts="{!$Resource.autoforceJsForce}"/> 
     <aura:attribute name="contact" type="Contact" />
     <aura:attribute name="testDrive" type="Test_Drive__c" />
     

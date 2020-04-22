@@ -38,26 +38,7 @@ public with sharing class PortalFeedController {
                                           ORDER BY date__c DESC
                                          ];
             
-            /*
-            new List<portal_feed_item__c>();
-        portal_feed_item__c pfi = new portal_feed_item__c(
-            title__c = 'Volkswagen presents the Dealer of Tomorrow',
-            text__c = 'Volkswagen is making its sales organization fit for the future. The brand is to fundementally realign its sales model together with its dealers. The new sales model is to be launched in Europe in April 2020. Today in Berlin, Volkswagen and the Eurpoean dealer Council presented their vision for the future world of',
-            source__c = 'https://www.volklswagen-newsroom.com',
-            date__c = system.now().addHours(-1),
-            image__c = 'https://427dp63llx7zmfivh1tezitj-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/VW-dealer.jpg',
-            type__c = 'announcement'
-            /*
-             * 	action required
-             *  announcement
-             *  news
-             *  event
-             *  conversation
-             *  competitive
-            
-        );
-        pfil.add(pfi);
-			*/
+       
         return pfil;
     }
 

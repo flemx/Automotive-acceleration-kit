@@ -131,10 +131,10 @@
                     </div>
                 </div>
 
-        
+                
                 
                 <div class="image-block">
-                    <img src="{!$Resource.vwDemoPackFiles + '/images/van.png'}" />
+                    <img src="{!v.testdrive.Configuration__r.Image_url__c}" />
                 </div>
                  <div class="subtitle">Assigned vehicle</div>
 
@@ -165,7 +165,7 @@
             <div class="slds-row slds-size_1-of-3 slds-p-around_medium">
                 <div class="section-heading">Contact details</div>
                 <aura:if isTrue="{!v.testdrive}">
-                <c:Customer360HighlightCardTablet recordId="{!v.testdrive.Driver__c}" backgroundImageUrl="{!$Resource.vwDemoPackFiles + '/images/background/C360.jpg'}" />
+                <c:Customer360HighlightCardTablet recordId="{!v.testdrive.Driver__c}" backgroundImageUrl="{!$Resource.autoforceFiles + '/images/background/C360.jpg'}" />
                 
                     <c:CustomActivityFeedTablet recordId="{!v.testdrive.Driver__c}" />
                 </aura:if>

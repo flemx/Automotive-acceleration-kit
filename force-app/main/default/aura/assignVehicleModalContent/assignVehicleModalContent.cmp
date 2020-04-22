@@ -7,7 +7,7 @@
         <div class="section-heading">Appointment Details</div>
         <div class="subtitle">Available vehicles of type <a>{!v.vehicleType}</a></div>
         
-        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.vwDemoPackFiles + ')'}" 
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.autoforceFiles + ')'}" 
     licensePlate="BER699"
     motor="225 kW (302 PS)"
     battery="101kWh"
@@ -15,7 +15,7 @@
     color="Red"
 	imgUrl="cherry.png"
     id="null" />
-        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.vwDemoPackFiles + ')'}" 
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.autoforceFiles + ')'}" 
     licensePlate="BER999"
     motor="225 kW (302 PS)"
     battery="101kWh"
@@ -23,7 +23,7 @@
     color="Black"
 	imgUrl="black.png"
     id="null" />
-        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.vwDemoPackFiles + ')'}" 
+        <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.autoforceFiles + ')'}" 
     licensePlate="BER996"
     motor="225 kW (302 PS)"
     battery="101kWh"
