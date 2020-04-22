@@ -1,66 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
-        <application>Auto_Force</application>
-        <default>false</default>
-        <visible>false</visible>
-    </applicationVisibilities>
-    <classAccesses>
-        <apexClass>DemoUtils</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TireBlowHandler</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
     <custom>true</custom>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Asset.VIN__c</field>
+        <field>Lead.test_drive__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Test_Drive__c.Vehicle__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Asset.af_IoT_status__c</field>
+        <field>portal_feed_item__c.Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Asset.operational__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Autoforce_vehicle__e.air_pressure__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Autoforce_vehicle__e.deviceId__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Autoforce_vehicle__e.door__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Autoforce_vehicle__e.humidity__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Autoforce_vehicle__e.temperature__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Autoforce_vehicle__e.ts__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
     <layoutAssignments>
-        <layout>Asset-Asset Layout</layout>
+        <layout>Lead-AutoForce</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>portal_feed_item__c-feed item Layout</layout>
     </layoutAssignments>
     <userLicense>Partner Community</userLicense>
     <userPermissions>

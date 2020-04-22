@@ -35,7 +35,7 @@
             <lightning:button label="Subscribe" onclick="{! c.subscribe }" />
             <lightning:button label="Unsubscribe" onclick="{! c.unsubscribe }" disabled="{!empty(v.subscription)}" />
             <lightning:button label="fire test event" variant="success" onclick="{! c.firetestevent }" />
-            <lightning:button label="vehicle inspector" variant="brand" onclick="{! c.toggleVehicleInspector }" />
+            <!-- <lightning:button label="vehicle inspector" variant="brand" onclick="{! c.toggleVehicleInspector }" /> -->
 		</div>
         <aura:iteration items="{!v.events}" var="event">
             <aura:if isTrue="{!v.eventType == '/event/general_message__e'}">
@@ -177,16 +177,12 @@
 
     </lightning:card>
         </lightning:layoutItem>
-        <aura:if isTrue="{!v.showVehicleInspector}">
+        <!-- <aura:if isTrue="{!v.showVehicleInspector}">
         	<lightning:layoutItem size="4" class="slds-m-left_medium">
                 <c:idBuzzIoT tirePressureEvent="/event/vehicle_event__e" eventParameter="tire_pressure__c" minPressure="1050"/>
-                <!--
-            <lightning:card class="slds-p-around_medium" title="Vehicle Inspector">
-                yo
-            </lightning:card>
-				-->
+    
         </lightning:layoutItem>
-        </aura:if>
+        </aura:if> -->
         
     </lightning:layout>
     

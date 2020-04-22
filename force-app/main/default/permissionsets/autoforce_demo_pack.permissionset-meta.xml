@@ -9,11 +9,19 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>AssignTrailsController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomActivityController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>DE_SignatureCaptureCont</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DealerPortalTriggerPush</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -25,6 +33,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MessageLibrary</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MyCalendarButtonsPicklist</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -33,7 +45,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SendMessage</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SetLeadScore</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestDriveController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -41,7 +61,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>TireBlowHandler</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>customLookUpController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>dealerJsonObject</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
