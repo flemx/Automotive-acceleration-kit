@@ -158,8 +158,8 @@
                 c.set("v.modalImage",value);
                 c.set("v.modal", true);
             }
-            // ,
-            // toggleVehicleInspector: function (c,e,h){
-            //     c.get("v.showVehicleInspector") ? (c.set("v.showVehicleInspector", false)) : (c.set("v.showVehicleInspector", true));
-            // }
+            ,
+            toggleVehicleInspector: function (c,e,h){
+                c.get("v.showVehicleInspector") ? (c.set("v.showVehicleInspector", false)) : (c.set("v.showVehicleInspector", true));
+            }
 })

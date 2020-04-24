@@ -23,19 +23,45 @@ export default class afDeviceIOT extends LightningElement {
 
     toastMessages = {
         good : {
-            title : 'Tire pressure returned to normal',
+            title : '',
             message : '',
             variant : 'success'
         },
         bad : {
-            title : 'Low Tire pressure detected',
-            message : 'Case created, please contact customer',
+            title : '',
+            message : '',
             variant : 'warning'
         }
     }
 
+    /**
+     *  Set recordId to assetId value if value is set in design attribute
+     */
+    @api get assetId(){
+        return this.recordId;
+    }
+    set assetId(value){
+        !value === 'Set Record ID'? this.recordId = value : null;
+    }
+
     @api recordId;
+
     @api title = 'Vehicle tire status';
+    @api showToast;
+
+    /** Set Toast messages from design attributes */
+    @api get toastGood(){
+        return this.toastMessages.good.title;
+    }
+    set toastGood(value){
+        this.toastMessages.good.title = value;
+    }
+    @api get toastBad(){
+        return this.toastMessages.bad.title;
+    }
+    set toastBad(value){
+        this.toastMessages.bad.title = value;
+    }
 
     //Current selected image
     @track selectedImg = this.vehicleImages.good;
@@ -63,11 +89,11 @@ export default class afDeviceIOT extends LightningElement {
         
             // this.startDiagnose(0);
             iotStatus ?  this.selectedImg = this.vehicleImages.bad : this.selectedImg = this.vehicleImages.good;
-            console.log(`Typeof: ${typeof iotStatus} , value: ${iotStatus}`);
+            console.log(`Typeof: ${typeof this.showToast} , value: ${this.showToast}`);
 
             //Check toast
                 //Run toast
-                if(!iotStatus === this.lastIoTStatus){
+                if(!iotStatus === this.lastIoTStatus && this.showToast){
                     let toastVar = {}
                     if(iotStatus){
                         toastVar = this.toastMessages.bad;

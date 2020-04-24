@@ -375,6 +375,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Configuration__c.Image_url__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Configuration__c.Option__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1056,6 +1061,10 @@
         <object>portal_feed_item__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>Configuration__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
     <tabSettings>
         <tab>Navi</tab>
         <visibility>Visible</visibility>

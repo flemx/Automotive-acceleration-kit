@@ -2,7 +2,8 @@ public class TireBlowHandler {
 
 	@InvocableMethod
     public static void triggerService(List<String> assetIds){
-        List<Asset> assets = [SELECT Id, ContactId, operational__c FROM Asset WHERE Id in :assetIds ];
+        List<Asset> assets = [SELECT Id, ContactId, operational__c FROM Asset WHERE VIN__c in :assetIds ];
+
         for(Asset a : assets){
             //check if the vehicle was operational. If it was, go ahead
             if(a.operational__c){
@@ -20,7 +21,7 @@ public class TireBlowHandler {
                 ServiceResource sr = [SELECT Id, Name FROM ServiceResource WHERE Name = 'Jerome Castan' LIMIT 1];
                 //get Service Appointment
                 ServiceAppointment saSource = (ServiceAppointment)saFlow.getVariableValue('objSA');
-                ServiceAppointment sa = [SELECT Id, Duration FROM ServiceAppointment WHERE Id = :saSource.Id LIMIT 1];
+                ServiceAppointment sa = [SELECT Id, Duration, SchedStartTime, SchedEndTime FROM ServiceAppointment WHERE Id = :saSource.Id LIMIT 1];
                 sa.SchedStartTime = DateTime.now().addMinutes(120);
                 sa.SchedEndTime = sa.SchedStartTime.addMinutes((Integer)sa.Duration);
                 System.debug('SA.ID = ' + sa.Id);
@@ -33,20 +34,17 @@ public class TireBlowHandler {
                 Insert ar;
                 //create case
                 BusinessHours bh = [select id from businesshours where IsDefault=true];
-                // Case newCase = new Case( Subject = 'Tire Issue detected',
-                //                        Description = 'IOT Sensor detected a flat tire. Tire needs to be changed. Initiating WorkOrder for field service technician.',
-                //                        ContactId = c.Id,
+                Case newCase = new Case( Subject = 'Tire Issue detected',
+                                       Description = 'IOT Sensor detected a flat tire. Tire needs to be changed. Initiating WorkOrder for field service technician.',
+                                       ContactId = c.Id,
 
-                //                        BusinessHoursId = bh.Id);
-                // insert newCase;
-
+                                       BusinessHoursId = bh.Id);
+                insert newCase;
                 
                 //send messages
-                // MessageLibrary.issueDetected();
-                // MessageLibrary.customerPushNotification('We have detected an issue with your vehicle: flat tire front left.');
-                // MessageLibrary.caseCreated(newCase.Id);
-                // MessageLibrary.issueSolved();
-                // MessageLibrary.customerPushNotification('Always Mobile Solution: we have reserved a we share 2 minutes away. Start navigation now.');            
+                MessageLibrary.issueDetected();
+                MessageLibrary.customerPushNotification('We have detected an issue with your vehicle: flat tire front left.');
+                MessageLibrary.caseCreated(newCase.Id);
             }
         }
        

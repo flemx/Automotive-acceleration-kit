@@ -16,11 +16,7 @@ trigger handleLeadAutomation on Lead (after insert) {
                 
                 //get Dealer Contact
                 Contact dealer = [SELECT Id, Name, Account.Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
-                //get Dealer User  
-                System.debug('TEST2');
-                System.debug([SELECT Id FROM User WHERE UserName = 'daniel-test-igtbtbzcwidd@example.com' LIMIT 1]);
-                System.debug('UserId');
-                System.debug(UserInfo.getUserId());
+    
 
                 Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
                 //get Driver Contact

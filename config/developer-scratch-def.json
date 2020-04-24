@@ -7,7 +7,8 @@
       "fieldServiceSettings": { "fieldServiceOrgPref": true },
       "orgPreferenceSettings": {
         "networksEnabled": true,
-        "s1DesktopEnabled": true
+        "s1DesktopEnabled": true,
+        "fieldServiceOrgPref": true
       }
     }
   }

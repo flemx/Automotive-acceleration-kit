@@ -9,4 +9,32 @@
             <target>lightningCommunity__Page</target>
             <target>lightningCommunity__Default</target>
         </targets>
+        <targetConfigs>
+            <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+                <property
+                    name="showToast"
+                    type="Boolean"
+                    label="Show Toast messages"
+                    description="Show Toast warning upon change on operational__c checkbox"
+                    default="true" />
+                <property
+                    name="toastGood"
+                    type="String"
+                    label="Toast message success"
+                    description="Set Toast message to show after operational__c checkbox is set back to true"
+                    default="Tire pressure returned to normal" />
+                <property
+                    name="toastBad"
+                    type="String"
+                    label="Toast message warning"
+                    description="Set Toast message to show after operational__c checkbox is set to false"
+                    default="Low Tire pressure detected" />
+                <property
+                    name="assetId"
+                    type="String"
+                    label="Record Id"
+                    description="Automatically bind the page's record by default or set a different Asset ID here"
+                    default="Set Record ID" />
+            </targetConfig>
+        </targetConfigs>
 </LightningComponentBundle>

@@ -1,4 +1,6 @@
-public with sharing class MessageLibrary {
+public class MessageLibrary {
+
+
 
     //just a test message
     public static void test(Account dealer) {

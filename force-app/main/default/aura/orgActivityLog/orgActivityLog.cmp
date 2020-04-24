@@ -1,6 +1,7 @@
 <aura:component implements="flexipage:availableForAllPageTypes" controller="orgActivityLogController" access="global">
     <aura:attribute name="events" type="Object" />
     <aura:attribute name="eventType" type="String" />
+    <aura:attribute name="assetId" type="String"/>
     <aura:attribute name="modal" type="Boolean" default="false" />
     <aura:attribute name="modalImage" type="String" default="" />
     <aura:attribute name="showVehicleInspector" type="Boolean" default="false" />
@@ -35,7 +36,7 @@
             <lightning:button label="Subscribe" onclick="{! c.subscribe }" />
             <lightning:button label="Unsubscribe" onclick="{! c.unsubscribe }" disabled="{!empty(v.subscription)}" />
             <lightning:button label="fire test event" variant="success" onclick="{! c.firetestevent }" />
-            <!-- <lightning:button label="vehicle inspector" variant="brand" onclick="{! c.toggleVehicleInspector }" /> -->
+            <lightning:button label="vehicle inspector" variant="brand" onclick="{! c.toggleVehicleInspector }" />
 		</div>
         <aura:iteration items="{!v.events}" var="event">
             <aura:if isTrue="{!v.eventType == '/event/general_message__e'}">
@@ -177,12 +178,11 @@
 
     </lightning:card>
         </lightning:layoutItem>
-        <!-- <aura:if isTrue="{!v.showVehicleInspector}">
+        <aura:if isTrue="{!v.showVehicleInspector}">
         	<lightning:layoutItem size="4" class="slds-m-left_medium">
-                <c:idBuzzIoT tirePressureEvent="/event/vehicle_event__e" eventParameter="tire_pressure__c" minPressure="1050"/>
-    
+                <c:afDeviceIOT recordId="{!v.assetId}" showToast="true" toastGood="Tire pressure returned to normal" toastBad="Low Tire pressure detected"/>
         </lightning:layoutItem>
-        </aura:if> -->
+        </aura:if>
         
     </lightning:layout>
     

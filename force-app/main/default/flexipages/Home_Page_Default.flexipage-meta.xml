@@ -2,6 +2,10 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>assetId</name>
+                <value>02i3N000002m4i5QAA</value>
+            </componentInstanceProperties>
             <componentName>orgActivityLog</componentName>
         </componentInstances>
         <name>top</name>

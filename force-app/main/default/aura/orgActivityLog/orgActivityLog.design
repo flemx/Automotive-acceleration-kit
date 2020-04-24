@@ -1,0 +1,3 @@
+<design:component>
+    <design:attribute name="assetId" label="Asset Record Id"  default="Enter Record Id"/>
+</design:component>

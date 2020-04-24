@@ -121,6 +121,22 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>assetId</name>
+                <value>Set Record ID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showToast</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>toastBad</name>
+                <value>Low Tire pressure detected</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>toastGood</name>
+                <value>Tire pressure returned to normal</value>
+            </componentInstanceProperties>
             <componentName>afDeviceIOT</componentName>
         </componentInstances>
         <componentInstances>
