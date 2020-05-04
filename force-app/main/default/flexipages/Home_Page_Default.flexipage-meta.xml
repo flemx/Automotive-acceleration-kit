@@ -4,7 +4,11 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>assetId</name>
-                <value>02i3N000002ovnNQAQ</value>
+                <value>DEPRECIATED</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>vinId</name>
+                <value>WVWZZZ1JZ3W140003</value>
             </componentInstanceProperties>
             <componentName>orgActivityLog</componentName>
         </componentInstances>

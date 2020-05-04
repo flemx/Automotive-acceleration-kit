@@ -1,7 +1,8 @@
 <template>
 
     <dib class="container">
-        <lightning-button class="slds-align_absolute-center" label="Trigger IoT" onclick={triggerEvent}></lightning-button>
+        <lightning-button class="slds-align_absolute-center" label="Trigger good IoT" onclick={triggerGood} variant="success" disabled={iotGoodDisabled}></lightning-button>
+        <lightning-button class="slds-align_absolute-center slds-m-top_x-large" label="Trigger bad IoT" onclick={triggerBad} variant="destructive" disabled={iotBadDisabled}></lightning-button>
     </dib>
     
 </template>

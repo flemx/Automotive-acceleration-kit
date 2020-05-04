@@ -6,4 +6,11 @@ public static Boolean fireTestEvent() {
     MessageLibrary.test(dealer);
     return true;
 }
+
+@AuraEnabled
+public static String getVehicle(String vinId) {
+    //get Dealer Account
+    Asset dealer = [SELECT Id FROM Asset WHERE VIN__c = :vinId LIMIT 1];
+    return dealer.Id;
+}
 }

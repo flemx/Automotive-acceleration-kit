@@ -9,4 +9,26 @@
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
     </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+            <property
+                name="vinValue"
+                type="String"
+                label="VIN value"
+                description="VIN value of vehicle to identify the asset, field name: VIN__c on Asset(Vehicle)"
+                default="WVWZZZ1JZ3W140003" />
+            <property
+                name="iotValueBad"
+                type="Integer"
+                label="Platform Event value bad"
+                description="The platform event value that will trigger the vehicle un-operational"
+                default="1080" />
+            <property
+            name="iotValue"
+            type="Integer"
+            label="Platform Event value good"
+            description="The platform event value that will trigger the vehicle operational "
+            default="1020" />
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>

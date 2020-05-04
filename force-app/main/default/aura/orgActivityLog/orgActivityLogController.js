@@ -1,6 +1,34 @@
 ({
     // Sets an empApi error handler on component initialization
     onInit: function (component, event, helper) {
+        /**
+         * Set vehicle ID by VIN 
+         */
+        var action = component.get("c.getVehicle");
+        action.setParams({ vinId : component.get("v.vinId") });
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                console.log('getVehicle response is: ', response.getReturnValue());
+                component.set('v.assetId', response.getReturnValue());
+            }
+            else if (state === "INCOMPLETE") {
+                // do something
+                console.log('getVehicle response is: INCOMPLETE');
+            }
+            else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        console.log("getVehicle Error message: " +
+                                 errors[0].message);
+                    }
+                } else {
+                    console.log(" getVehicle Unknown error");
+                }
+            }
+        });
+        $A.enqueueAction(action);
         // Get the empApi component
         const empApi = component.find('empApi');
 
@@ -13,6 +41,7 @@
             console.error('EMP API error: ', error);
             console.error('message: ', error.message);
         }));
+
     },
 
     // Invokes the subscribe method on the empApi component

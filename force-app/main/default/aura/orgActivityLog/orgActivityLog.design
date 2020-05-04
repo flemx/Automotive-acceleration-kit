@@ -1,3 +1,4 @@
 <design:component>
-    <design:attribute name="assetId" label="Asset Record Id"  default="Enter Record Id"/>
+    <design:attribute name="assetId" label="DEPRECIATED"  default="DEPRECIATED"/>
+    <design:attribute name="vinId" label="VIN ID"  default="WVWZZZ1JZ3W140003" description="Enter VIN__c of asset(vehicle) you want to target"/>
 </design:component>

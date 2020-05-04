@@ -1,7 +1,8 @@
-<aura:component implements="flexipage:availableForAllPageTypes" controller="orgActivityLogController" access="global">
+<aura:component implements="flexipage:availableForAllPageTypes"  controller="orgActivityLogController" access="global">
     <aura:attribute name="events" type="Object" />
     <aura:attribute name="eventType" type="String" />
     <aura:attribute name="assetId" type="String"/>
+    <aura:attribute name="vinId" type="String"/>
     <aura:attribute name="modal" type="Boolean" default="false" />
     <aura:attribute name="modalImage" type="String" default="" />
     <aura:attribute name="showVehicleInspector" type="Boolean" default="false" />
