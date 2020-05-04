@@ -1078,6 +1078,10 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
+        <tab>demo_setting__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>portal_feed_item__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>

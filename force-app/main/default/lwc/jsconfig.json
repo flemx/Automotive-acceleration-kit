@@ -29,6 +29,9 @@
             ],
             "c/vwSvgLogo": [
                 "vwSvgLogo/vwSvgLogo.js"
+            ],
+            "c/afDemoManager": [
+                "afDemoManager/afDemoManager.js"
             ]
         }
     },

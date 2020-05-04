@@ -8,6 +8,7 @@
                     if (state === "SUCCESS") {
                         var data = response.getReturnValue();
                         console.log("test drive data = ", data);
+                        console.log("Address = ", data.Driver__r.MailingStreet);
                         var testDriveDate = null;
                         if(data.Date__c){
                             testDriveDate = new Date(data.Date__c)

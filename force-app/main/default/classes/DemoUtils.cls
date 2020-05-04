@@ -23,6 +23,11 @@ public class DemoUtils {
         runningUser.UserRoleId = ceoRole.Id;
         update runningUser;
     }
+
+    public static void createServiceUser(){
+        
+    }
+
     
     public static void createDealerPortalUser(){
         //if dealer account has been inserted, create related user and objects
@@ -74,7 +79,9 @@ public class DemoUtils {
         try{insert psa;} catch(Exception e){System.debug('Error assigning Permset to new Portal user. ');
                                          System.debug('Error Details > ' + e.getMessage());}
         
-        
+        c.OwnerId = u.Id;
+        update c;
+
         createAdditionalUserData(cid, u.Id);
         
     }

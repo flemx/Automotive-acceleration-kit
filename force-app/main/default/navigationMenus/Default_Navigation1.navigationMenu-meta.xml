@@ -10,4 +10,12 @@
         <target>ShowMoreTopics</target>
         <type>NavigationalTopic</type>
     </navigationMenuItem>
+    <navigationMenuItem>
+        <defaultListViewId>all_leads</defaultListViewId>
+        <label>Sales Desk</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>Lead</target>
+        <type>SalesforceObject</type>
+    </navigationMenuItem>
 </NavigationMenu>

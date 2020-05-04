@@ -47,7 +47,7 @@ sfdx force:apex:execute -f data/scripts/setRoleCall.txt -u <targetusername>
 
 1. Publish Dealer Community
 2. Reset Daniel Password
-3. Set External haring settings to public for: Account, Contact, Asset, Car Configuration,  demo setting, portal feed item & Test Drive
+3. Set External haring settings to public for: Account, Contact, Asset
 
 
 In case you run into an error, you can delete all data that has been accidentally created by calling

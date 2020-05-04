@@ -4,8 +4,8 @@
         <accessLevel>Edit</accessLevel>
         <object>Account</object>
         <objectField>Id</objectField>
-        <userField>Account</userField>
+        <userField>Contact.Account</userField>
     </accessMappings>
     <name>Autoforce Sharing</name>
-    <profiles>*Partners</profiles>
+    <profiles>*partners</profiles>
 </SharingSet>

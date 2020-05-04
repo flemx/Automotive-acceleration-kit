@@ -18,6 +18,7 @@ public class TestDriveModalController {
                 FROM Test_Drive__c 
                 WHERE Id = :tdid 
                 LIMIT 1];
+        System.debug(testDrive);
         return testDrive;
     }
 
