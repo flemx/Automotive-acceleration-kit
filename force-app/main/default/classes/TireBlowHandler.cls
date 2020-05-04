@@ -39,7 +39,7 @@ public class TireBlowHandler {
                 Case newCase = new Case( Subject = 'Tire Issue detected',
                                        Description = 'IOT Sensor detected a flat tire. Tire needs to be changed. Initiating WorkOrder for field service technician.',
                                        ContactId = a.ContactId,
-
+                                       AssetId = a.Id,
                                        BusinessHoursId = bh.Id);
                 insert newCase;
                 
