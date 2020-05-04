@@ -6,13 +6,13 @@
 
 ## Setup Dashboard
 
-1. Push metadata
+1. upload datasets 
+
 ```
 // Change mdapi:deploy to source:deploy with api version override to prevent async 
-sfdx force:mdapi:deploy -d mdapi/autoDashboard -w 1 -u <targetusername>
+sfdx force:mdapi:deploy -d mdapi/autoDashboard -u <targetusername>
 ```
 
-2. setup datasets 
 
 ```
 sfdx shane:analytics:dataset:upload -n demo_data_df_raw -f data/analytics/demo_data_df_raw.csv
@@ -22,6 +22,10 @@ sfdx shane:analytics:dataset:upload -n demo_data_df_service -f data/analytics/de
 sfdx shane:analytics:dataset:upload -n demo_data_df_trails -f data/analytics/demo_data_df_trails.csv
 
 ```
+
+2. Push metadata
+
+
 
 ## Setting up project with Basic Data
 1. push source
@@ -55,4 +59,8 @@ WARNING, this will delete most data in the ORG
 ```
 sfdx force:apex:execute -f  data/scripts/deleteAllDataCall.txt -u <targetOrg>
 ```
+
+
+
+## Setup Dashboard (Continue)
 
