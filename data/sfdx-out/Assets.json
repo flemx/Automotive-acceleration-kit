@@ -3,23 +3,6 @@
     {
       "attributes" : {
         "type" : "Asset",
-        "referenceId" : "ref8"
-      },
-      "Name" : "Max Comfort S2",
-      "SerialNumber" : "WVGHJSGH86752",
-      "InstallDate" : "2017-07-21",
-      "PurchaseDate" : "2017-07-21",
-      "Status" : "Registered",
-      "Price" : "37890",
-      "Quantity" : "1",
-      "VIN__c" : "WVGHJSGH86752",
-      "License_Plate__c" : null,
-      "AccountId" : "@AccountRef1",
-      "ContactId" : "@ContactRef1"
-    },
-    {
-      "attributes" : {
-        "type" : "Asset",
         "referenceId" : "ref9"
       },
       "Name" : "Max Pro 3",

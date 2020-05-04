@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Autoforce</fullName>
+    <columns>ASSET.NAME</columns>
+    <columns>ASSET.INSTALL_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.NAME</columns>
+    <columns>demo_key__c</columns>
+    <columns>af_IoT_status__c</columns>
+    <columns>VIN__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>demo_key__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Autoforce</label>
+</ListView>
