@@ -6,13 +6,14 @@
 
 ## Setup Dashboard
 
-1. upload datasets 
+1. Deploy metadata
+
 
 ```
 sfdx force:mdapi:deploy -w 5 -d mdapi/autoDashboard
 ```
 
-
+2. upload datasets 
 ```
 sfdx shane:analytics:dataset:upload -n demo_data_df_testdrives --async -f data/analytics/demo_data_df_testdrives.csv -a DF19_Demo -m data/analytics/demo_data_df_testdrives.json
 sfdx shane:analytics:dataset:upload -n demo_data_df_preped --async -f data/analytics/DemoDataDFPreped.csv -a DF19_Demo -m data/analytics/DemoDataDFPreped.json
@@ -21,7 +22,7 @@ sfdx shane:analytics:dataset:upload -n demo_data_df_trails --async -f data/analy
 
 ```
 
-2. Push metadata
+
 
 
 
