@@ -16,7 +16,8 @@
       "License_Plate__c" : "BER699",
       "AccountId" : "@AccountRef1",
       "ContactId" : "@ContactRef1",
-      "demo_key__c" : "asset_01"
+      "demo_key__c" : "asset_01",
+      "Tyre_Model__c" : "TH01-FUO0045"
     },
     {
       "attributes" : {
@@ -34,7 +35,8 @@
       "License_Plate__c" : "BER999",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_02"
+      "demo_key__c" : "asset_02",
+      "Tyre_Model__c" : "TH04-FUO0032"
     },
     {
       "attributes" : {
@@ -52,7 +54,8 @@
       "License_Plate__c" : "BER996",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_03"
+      "demo_key__c" : "asset_03",
+      "Tyre_Model__c" : "TH11-FUO0122"
     },
     {
       "attributes" : {
@@ -70,7 +73,8 @@
       "License_Plate__c" : "BER992",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_04"
+      "demo_key__c" : "asset_04",
+      "Tyre_Model__c" : "TH09-FUO0092"
     }
   ]
 }

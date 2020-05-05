@@ -32,6 +32,9 @@
             ],
             "c/afDemoManager": [
                 "afDemoManager/afDemoManager.js"
+            ],
+            "c/afHomeButton": [
+                "afHomeButton/afHomeButton.js"
             ]
         }
     },
