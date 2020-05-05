@@ -63,20 +63,6 @@ website,City,Name,Str,DealerNr,PLZ2,Trail,Phone,Plz,Latitude,Longitude,Completed
 0,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,How Autoforce becomes Carbon Neutral until 2050,0,12355,52.415723,13.497994,42,1.16
 0,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,How Autoforce becomes Carbon Neutral until 2050,0,12557,52.429732,13.583759,17,1.75
 0,München,Handler München,0,25,80,How Autoforce becomes Carbon Neutral until 2050,0,80,48.135125,11.581981,22,154
-0,Stuttgart,Händler Stuttgart,0,26,70,How Autoforce becomes Carbon Neutral until 2050,0,70,48.775846,9.182932,20,104
-0,Frankfurt,Händler Frankfurt,0,27,60,How Autoforce becomes Carbon Neutral until 2050,0,60,50.110922,8.682127,22,77
-0,Düsseldorf,Händler Düsseldorf,0,28,40,How Autoforce becomes Carbon Neutral until 2050,0,40,51.227741,6.773456,19,169
-0,Hamburg,Händler Hamburg,0,29,20,How Autoforce becomes Carbon Neutral until 2050,0,20,53.551085,9.993682,23,51
-0,Hannover,Händler Hannover,0,30,30,How Autoforce becomes Carbon Neutral until 2050,0,30,52.375892,9.73201,18,259
-0,Erfurt,Händler Erfurt,0,31,99,How Autoforce becomes Carbon Neutral until 2050,0,99,50.984768,11.02988,20,17
-0,Schwerin,Händler Schwerin,0,32,19,How Autoforce becomes Carbon Neutral until 2050,0,19,53.635502,11.40125,18,11
-0,Kiel,Händler Kiel,0,33,24,How Autoforce becomes Carbon Neutral until 2050,0,24,54.323292,10.122765,22,26
-0,Potsdam,Händler Potsdam,0,34,14,How Autoforce becomes Carbon Neutral until 2050,0,14,52.396149,13.05854,18,15
-0,Leipzig,Händler Leipzig,0,35,4,How Autoforce becomes Carbon Neutral until 2050,0,4,51.339695,12.373075,23,31
-0,Saarbrücken,Händler Saarbrücken,0,36,66,How Autoforce becomes Carbon Neutral until 2050,0,66,49.234779,6.9944,23,4
-0,Wiesbaden,Händler Wiesbaden,0,37,65,How Autoforce becomes Carbon Neutral until 2050,0,65,50.078217,8.239761,20,31
-0,Bremen,Händler Bremen,0,38,28,How Autoforce becomes Carbon Neutral until 2050,0,28,53.079296,8.801694,18,5
-0,Magdeburg,Händler Magdeburg,0,39,39,How Autoforce becomes Carbon Neutral until 2050,0,39,52.131672,11.64032,22,17
 0,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,Meet the new AR Service App,0,10999,52.499662,13.42247,37,1.88
 0,Berlin,Autohoo Berlin Berliner Str.,Berliner Straße 100,2,13,Meet the new AR Service App,0,13189,52.368868,13.470358,36,1.54
 0,Berlin,Atoforce Automobile Berlin GmbH Franklinstr.,Franklinstr. 5,3,10,Meet the new AR Service App,0,10587,52.464207,13.404865,38,1.58
@@ -102,20 +88,6 @@ website,City,Name,Str,DealerNr,PLZ2,Trail,Phone,Plz,Latitude,Longitude,Completed
 0,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,Meet the new AR Service App,0,12355,52.415723,13.497994,34,1.16
 0,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,Meet the new AR Service App,0,12557,52.429732,13.583759,34,1.75
 0,München,Handler München,0,25,80,Meet the new AR Service App,0,80,48.135125,11.581981,36,154
-0,Stuttgart,Händler Stuttgart,0,26,70,Meet the new AR Service App,0,70,48.775846,9.182932,37,104
-0,Frankfurt,Händler Frankfurt,0,27,60,Meet the new AR Service App,0,60,50.110922,8.682127,36,77
-0,Düsseldorf,Händler Düsseldorf,0,28,40,Meet the new AR Service App,0,40,51.227741,6.773456,30,169
-0,Hamburg,Händler Hamburg,0,29,20,Meet the new AR Service App,0,20,53.551085,9.993682,33,51
-0,Hannover,Händler Hannover,0,30,30,Meet the new AR Service App,0,30,52.375892,9.73201,29,259
-0,Erfurt,Händler Erfurt,0,31,99,Meet the new AR Service App,0,99,50.984768,11.02988,38,17
-0,Schwerin,Händler Schwerin,0,32,19,Meet the new AR Service App,0,19,53.635502,11.40125,33,11
-0,Kiel,Händler Kiel,0,33,24,Meet the new AR Service App,0,24,54.323292,10.122765,39,26
-0,Potsdam,Händler Potsdam,0,34,14,Meet the new AR Service App,0,14,52.396149,13.05854,33,15
-0,Leipzig,Händler Leipzig,0,35,4,Meet the new AR Service App,0,4,51.339695,12.373075,33,31
-0,Saarbrücken,Händler Saarbrücken,0,36,66,Meet the new AR Service App,0,66,49.234779,6.9944,39,4
-0,Wiesbaden,Händler Wiesbaden,0,37,65,Meet the new AR Service App,0,65,50.078217,8.239761,32,31
-0,Bremen,Händler Bremen,0,38,28,Meet the new AR Service App,0,28,53.079296,8.801694,32,5
-0,Magdeburg,Händler Magdeburg,0,39,39,Meet the new AR Service App,0,39,52.131672,11.64032,35,17
 0,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,Become a Functions on Demand Rockstar,0,10999,52.499662,13.42247,9,1.88
 0,Berlin,Autohoo Berlin Berliner Str.,Berliner Straße 100,2,13,Become a Functions on Demand Rockstar,0,13189,52.368868,13.470358,55,1.54
 0,Berlin,Atoforce Automobile Berlin GmbH Franklinstr.,Franklinstr. 5,3,10,Become a Functions on Demand Rockstar,0,10587,52.464207,13.404865,20,1.58
@@ -141,20 +113,6 @@ website,City,Name,Str,DealerNr,PLZ2,Trail,Phone,Plz,Latitude,Longitude,Completed
 0,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,Become a Functions on Demand Rockstar,0,12355,52.415723,13.497994,67,1.16
 0,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,Become a Functions on Demand Rockstar,0,12557,52.429732,13.583759,9,1.75
 0,München,Handler München,0,25,80,Become a Functions on Demand Rockstar,0,80,48.135125,11.581981,16,154
-0,Stuttgart,Händler Stuttgart,0,26,70,Become a Functions on Demand Rockstar,0,70,48.775846,9.182932,63,104
-0,Frankfurt,Händler Frankfurt,0,27,60,Become a Functions on Demand Rockstar,0,60,50.110922,8.682127,45,77
-0,Düsseldorf,Händler Düsseldorf,0,28,40,Become a Functions on Demand Rockstar,0,40,51.227741,6.773456,89,169
-0,Hamburg,Händler Hamburg,0,29,20,Become a Functions on Demand Rockstar,0,20,53.551085,9.993682,38,51
-0,Hannover,Händler Hannover,0,30,30,Become a Functions on Demand Rockstar,0,30,52.375892,9.73201,18,259
-0,Erfurt,Händler Erfurt,0,31,99,Become a Functions on Demand Rockstar,0,99,50.984768,11.02988,14,17
-0,Schwerin,Händler Schwerin,0,32,19,Become a Functions on Demand Rockstar,0,19,53.635502,11.40125,89,11
-0,Kiel,Händler Kiel,0,33,24,Become a Functions on Demand Rockstar,0,24,54.323292,10.122765,77,26
-0,Potsdam,Händler Potsdam,0,34,14,Become a Functions on Demand Rockstar,0,14,52.396149,13.05854,88,15
-0,Leipzig,Händler Leipzig,0,35,4,Become a Functions on Demand Rockstar,0,4,51.339695,12.373075,90,31
-0,Saarbrücken,Händler Saarbrücken,0,36,66,Become a Functions on Demand Rockstar,0,66,49.234779,6.9944,7,4
-0,Wiesbaden,Händler Wiesbaden,0,37,65,Become a Functions on Demand Rockstar,0,65,50.078217,8.239761,15,31
-0,Bremen,Händler Bremen,0,38,28,Become a Functions on Demand Rockstar,0,28,53.079296,8.801694,12,5
-0,Magdeburg,Händler Magdeburg,0,39,39,Become a Functions on Demand Rockstar,0,39,52.131672,11.64032,99,17
 0,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,Everything about Service Leads,0,10999,52.499662,13.42247,86,1.88
 0,Berlin,Autohoo Berlin Berliner Str.,Berliner Straße 100,2,13,Everything about Service Leads,0,13189,52.368868,13.470358,86,1.54
 0,Berlin,Atoforce Automobile Berlin GmbH Franklinstr.,Franklinstr. 5,3,10,Everything about Service Leads,0,10587,52.464207,13.404865,73,1.58
@@ -180,17 +138,3 @@ website,City,Name,Str,DealerNr,PLZ2,Trail,Phone,Plz,Latitude,Longitude,Completed
 0,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,Everything about Service Leads,0,12355,52.415723,13.497994,88,1.16
 0,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,Everything about Service Leads,0,12557,52.429732,13.583759,72,1.75
 0,München,Handler München,0,25,80,Everything about Service Leads,0,80,48.135125,11.581981,86,154
-0,Stuttgart,Händler Stuttgart,0,26,70,Everything about Service Leads,0,70,48.775846,9.182932,85,104
-0,Frankfurt,Händler Frankfurt,0,27,60,Everything about Service Leads,0,60,50.110922,8.682127,82,77
-0,Düsseldorf,Händler Düsseldorf,0,28,40,Everything about Service Leads,0,40,51.227741,6.773456,76,169
-0,Hamburg,Händler Hamburg,0,29,20,Everything about Service Leads,0,20,53.551085,9.993682,68,51
-0,Hannover,Händler Hannover,0,30,30,Everything about Service Leads,0,30,52.375892,9.73201,70,259
-0,Erfurt,Händler Erfurt,0,31,99,Everything about Service Leads,0,99,50.984768,11.02988,83,17
-0,Schwerin,Händler Schwerin,0,32,19,Everything about Service Leads,0,19,53.635502,11.40125,83,11
-0,Kiel,Händler Kiel,0,33,24,Everything about Service Leads,0,24,54.323292,10.122765,78,26
-0,Potsdam,Händler Potsdam,0,34,14,Everything about Service Leads,0,14,52.396149,13.05854,80,15
-0,Leipzig,Händler Leipzig,0,35,4,Everything about Service Leads,0,4,51.339695,12.373075,69,31
-0,Saarbrücken,Händler Saarbrücken,0,36,66,Everything about Service Leads,0,66,49.234779,6.9944,80,4
-0,Wiesbaden,Händler Wiesbaden,0,37,65,Everything about Service Leads,0,65,50.078217,8.239761,84,31
-0,Bremen,Händler Bremen,0,38,28,Everything about Service Leads,0,28,53.079296,8.801694,80,5
-0,Magdeburg,Händler Magdeburg,0,39,39,Everything about Service Leads,0,39,52.131672,11.64032,75,17

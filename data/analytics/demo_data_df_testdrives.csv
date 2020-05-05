@@ -24,12 +24,6 @@ website,Typ,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Latitude,Conversion,Longitude,
 0,1-Test Drives,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,46,13.497994,1
 0,1-Test Drives,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,35,13.583759,1
 0,1-Test Drives,München,Handler München,,25,80,0,80,48.135125,43,11.581981,21
-0,1-Test Drives,Stuttgart,Händler Stuttgart,,26,70,0,70,48.775846,29,9.182932,12
-0,1-Test Drives,Frankfurt,Händler Frankfurt,,27,60,0,60,50.110922,50,8.682127,11
-0,1-Test Drives,Düsseldorf,Händler Düsseldorf,,28,40,0,40,51.227741,54,6.773456,15
-0,1-Test Drives,Hamburg,Händler Hamburg,,29,20,0,20,53.551085,38,9.993682,10
-0,1-Test Drives,Hannover,Händler Hannover,,30,30,0,30,52.375892,41,9.73201,35
-0,1-Test Drives,Erfurt,Händler Erfurt,,31,99,0,99,50.984768,52,11.02988,7
 0,2-New Vehicle,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,24,13.42247,1
 0,2-New Vehicle,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,24,13.470358,1
 0,2-New Vehicle,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,16,13.404865,1
@@ -55,12 +49,6 @@ website,Typ,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Latitude,Conversion,Longitude,
 0,2-New Vehicle,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,24,13.497994,1
 0,2-New Vehicle,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,25,13.583759,1
 0,2-New Vehicle,München,Handler München,0,25,80,0,80,48.135125,17,11.581981,21
-0,2-New Vehicle,Stuttgart,Händler Stuttgart,0,26,70,0,70,48.775846,18,9.182932,12
-0,2-New Vehicle,Frankfurt,Händler Frankfurt,0,27,60,0,60,50.110922,24,8.682127,11
-0,2-New Vehicle,Düsseldorf,Händler Düsseldorf,0,28,40,0,40,51.227741,18,6.773456,15
-0,2-New Vehicle,Hamburg,Händler Hamburg,0,29,20,0,20,53.551085,15,9.993682,10
-0,2-New Vehicle,Hannover,Händler Hannover,0,30,30,0,30,52.375892,23,9.73201,35
-0,2-New Vehicle,Erfurt,Händler Erfurt,0,31,99,0,99,50.984768,17,11.02988,7
 0,3-Used Vehicle,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,22,13.42247,1
 0,3-Used Vehicle,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,38,13.470358,1
 0,3-Used Vehicle,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,24,13.404865,1
@@ -86,12 +74,6 @@ website,Typ,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Latitude,Conversion,Longitude,
 0,3-Used Vehicle,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,31,13.497994,1
 0,3-Used Vehicle,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,22,13.583759,1
 0,3-Used Vehicle,München,Handler München,0,25,80,0,80,48.135125,37,11.581981,21
-0,3-Used Vehicle,Stuttgart,Händler Stuttgart,0,26,70,0,70,48.775846,24,9.182932,12
-0,3-Used Vehicle,Frankfurt,Händler Frankfurt,0,27,60,0,60,50.110922,29,8.682127,11
-0,3-Used Vehicle,Düsseldorf,Händler Düsseldorf,0,28,40,0,40,51.227741,32,6.773456,15
-0,3-Used Vehicle,Hamburg,Händler Hamburg,0,29,20,0,20,53.551085,23,9.993682,10
-0,3-Used Vehicle,Hannover,Händler Hannover,0,30,30,0,30,52.375892,25,9.73201,35
-0,3-Used Vehicle,Erfurt,Händler Erfurt,0,31,99,0,99,50.984768,22,11.02988,7
 0,4-Service,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,26,13.42247,1
 0,4-Service,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,50,13.470358,1
 0,4-Service,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,31,13.404865,1
@@ -117,9 +99,3 @@ website,Typ,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Latitude,Conversion,Longitude,
 0,4-Service,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,36,13.497994,1
 0,4-Service,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,24,13.583759,1
 0,4-Service,München,Handler München,0,25,80,0,80,48.135125,45,11.581981,21
-0,4-Service,Stuttgart,Händler Stuttgart,0,26,70,0,70,48.775846,26,9.182932,12
-0,4-Service,Frankfurt,Händler Frankfurt,0,27,60,0,60,50.110922,41,8.682127,11
-0,4-Service,Düsseldorf,Händler Düsseldorf,0,28,40,0,40,51.227741,44,6.773456,15
-0,4-Service,Hamburg,Händler Hamburg,0,29,20,0,20,53.551085,42,9.993682,10
-0,4-Service,Hannover,Händler Hannover,0,30,30,0,30,52.375892,50,9.73201,35
-0,4-Service,Erfurt,Händler Erfurt,0,31,99,0,99,50.984768,25,11.02988,7
