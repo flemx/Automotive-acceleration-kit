@@ -17,7 +17,7 @@ sfdx force:mdapi:deploy -d mdapi/autoDashboard -u <targetusername>
 ```
 sfdx shane:analytics:dataset:upload -n demo_data_df_raw -f data/analytics/demo_data_df_raw.csv
 sfdx shane:analytics:dataflow:start -n DF_Data_Prep
-sfdx shane:analytics:dataset:upload -n Demo_Data_DF_Preped -f data/analytics/DemoDataDFPreped.csv
+sfdx shane:analytics:dataset:upload -n demo_data_df_preped -f data/analytics/demo_data_df_preped.csv
 sfdx shane:analytics:dataset:upload -n demo_data_df_service -f data/analytics/demo_data_df_service.csv
 sfdx shane:analytics:dataset:upload -n demo_data_df_trails -f data/analytics/demo_data_df_trails.csv
 

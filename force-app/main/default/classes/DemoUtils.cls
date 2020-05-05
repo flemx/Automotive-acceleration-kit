@@ -79,11 +79,21 @@ public class DemoUtils {
         try{insert psa;} catch(Exception e){System.debug('Error assigning Permset to new Portal user. ');
                                          System.debug('Error Details > ' + e.getMessage());}
         
-        c.OwnerId = u.Id;
-        update c;
+        // c.OwnerId = u.Id;
+        // update c;
 
         createAdditionalUserData(cid, u.Id);
         
+    }
+
+    public static void setContactOwner(){
+        Contact c = [SELECT Id, FirstName, LastName, AccountId, Email FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
+        demo_setting__c config = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c='masterSetting' LIMIT 1];
+        System.debug(config.dealer_name__c);
+        System.debug([SELECT Id FROM User where Username = :config.dealer_name__c LIMIT 1]);
+        User dealer = [SELECT Id FROM User where Username = :config.dealer_name__c LIMIT 1];
+        c.OwnerId = dealer.Id;
+        update c;
     }
 
 

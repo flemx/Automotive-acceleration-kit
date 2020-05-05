@@ -4,6 +4,10 @@
         <application>Auto_Force</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <applicationVisibilities>
+        <application>Auto_Force_Service</application>
+        <visible>true</visible>
+    </applicationVisibilities>
     <classAccesses>
         <apexClass>AnyEventCalCtrl</apexClass>
         <enabled>true</enabled>
@@ -316,6 +320,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Asset.Test_Drive__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Asset.Tyre_Model__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

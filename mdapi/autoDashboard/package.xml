@@ -36,13 +36,8 @@
     <members>DF19_Demo</members>
   </types>
   <types>
-    <name>WaveDataflow</name>
-    <members>DF_Data_Prep</members>
-  </types>
-  <types>
     <name>WaveDataset</name>
-    <members>DemoDataDFPreped</members>
-    <members>demo_data_df_raw</members>
+    <members>demo_data_df_preped</members>
     <members>demo_data_df_service</members>
     <members>demo_data_df_testdrives</members>
     <members>demo_data_df_trails</members>

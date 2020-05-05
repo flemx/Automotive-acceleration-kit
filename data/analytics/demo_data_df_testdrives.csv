@@ -1,0 +1,125 @@
+website,Typ,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Latitude,Conversion,Longitude,DealerFactor
+0,1-Test Drives,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,35,13.42247,1
+0,1-Test Drives,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,49,13.470358,1
+0,1-Test Drives,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,45,13.404865,1
+0,1-Test Drives,Berlin,Andrea Noir,Strausberger Straße 1 u. 2,4,13,0,13055,52.541452,36,13.488173,1
+0,1-Test Drives,Berlin,Autoforce Automobile Berlin GmbH 12,Oberlandstr. 40-41,5,12,0,12099,52.52045,36,13.40732,1
+0,1-Test Drives,Berlin,G.A. Autoaus Europa GmbH,Siegfriedstraße 150,6,10,0,10365,52.528827,47,13.499454,1
+0,1-Test Drives,Berlin,Autohaus Henk Koutmann GmbH,Blankenburger Straße 95,7,13,0,13089,52.573267,43,13.443985,1
+0,1-Test Drives,Berlin,Gerta Britsch GmbH,Grenzallee 100,8,12,0,12057,52.464327,49,13.446074,1
+0,1-Test Drives,Berlin,Autohaus Kobo GmbH,Hansastraße 202,9,13,0,13088,52.557932,36,13.492706,1
+0,1-Test Drives,Berlin,Wilhelm Zakkoro GmbH & Co.,Mecklenburgische Straße 23,10,14,0,14197,52.479611,37,13.310888,1
+0,1-Test Drives,Berlin,Autohaus Berolina GmbH 10,Cicerostraße 34,11,10,0,10709,52.490626,46,13.301218,1
+0,1-Test Drives,Berlin,Friereich olson OHG,Sophie-Charlotten-Straße 7,12,14,0,14059,52.521685,29,13.284828,1
+0,1-Test Drives,Berlin,ASB Autohaus Berlin GmbH 12,Marzahner Chaussee 234,13,12,0,12681,52.53081,32,13.531643,1
+0,1-Test Drives,Berlin,Autohaus Berolina GmbH 12,Ringstraße 50,14,12,0,12105,52.442463,32,13.377478,1
+0,1-Test Drives,Berlin,Auto Barthamo GmbH,Friedrichshaller Straße 39-40,15,14,0,14199,52.475381,37,13.294983,1
+0,1-Test Drives,Berlin,Klaus mans Automobile GmbH,Eichhorster Weg 91,16,13,0,13435,52.602944,52,13.334898,1
+0,1-Test Drives,Berlin,Autoforce Automobile Berlin GmbH 13a,Berliner Straße 68,17,13,0,13507,52.582073,49,13.290807,1
+0,1-Test Drives,Berlin,Automobile Lieftwieren,Säntisstr. 51 - 57,18,12,0,12277,52.52045,48,13.40732,1
+0,1-Test Drives,Berlin,Autoforce Automobile Berlin GmbH 13b,Am Juliusturm 10,19,13,0,13599,52.538438,47,13.229127,1
+0,1-Test Drives,Berlin,Auto-bart GmbH,Rudower Straße 25 - 29,20,12,0,12524,52.433998,39,13.469765,1
+0,1-Test Drives,Berlin,Autoforce Automobile Berlin GmbH 14,Goerzallee 251,21,14,0,14167,52.415247,29,13.283711,1
+0,1-Test Drives,Berlin,Autoforce Zentrum Berlin GmbH,Brunsbütteler Damm 40-50,22,13,0,13581,52.533099,45,13.156191,1
+0,1-Test Drives,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,46,13.497994,1
+0,1-Test Drives,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,35,13.583759,1
+0,1-Test Drives,München,Handler München,,25,80,0,80,48.135125,43,11.581981,21
+0,1-Test Drives,Stuttgart,Händler Stuttgart,,26,70,0,70,48.775846,29,9.182932,12
+0,1-Test Drives,Frankfurt,Händler Frankfurt,,27,60,0,60,50.110922,50,8.682127,11
+0,1-Test Drives,Düsseldorf,Händler Düsseldorf,,28,40,0,40,51.227741,54,6.773456,15
+0,1-Test Drives,Hamburg,Händler Hamburg,,29,20,0,20,53.551085,38,9.993682,10
+0,1-Test Drives,Hannover,Händler Hannover,,30,30,0,30,52.375892,41,9.73201,35
+0,1-Test Drives,Erfurt,Händler Erfurt,,31,99,0,99,50.984768,52,11.02988,7
+0,2-New Vehicle,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,24,13.42247,1
+0,2-New Vehicle,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,24,13.470358,1
+0,2-New Vehicle,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,16,13.404865,1
+0,2-New Vehicle,Berlin,Andrea Noir,Strausberger Straße 1 u. 2,4,13,0,13055,52.541452,21,13.488173,1
+0,2-New Vehicle,Berlin,Autoforce Automobile Berlin GmbH 12,Oberlandstr. 40-41,5,12,0,12099,52.52045,21,13.40732,1
+0,2-New Vehicle,Berlin,G.A. Autoaus Europa GmbH,Siegfriedstraße 150,6,10,0,10365,52.528827,15,13.499454,1
+0,2-New Vehicle,Berlin,Autohaus Henk Koutmann GmbH,Blankenburger Straße 95,7,13,0,13089,52.573267,19,13.443985,1
+0,2-New Vehicle,Berlin,Gerta Britsch GmbH,Grenzallee 100,8,12,0,12057,52.464327,15,13.446074,1
+0,2-New Vehicle,Berlin,Autohaus Kobo GmbH,Hansastraße 202,9,13,0,13088,52.557932,19,13.492706,1
+0,2-New Vehicle,Berlin,Wilhelm Zakkoro GmbH & Co.,Mecklenburgische Straße 23,10,14,0,14197,52.479611,17,13.310888,1
+0,2-New Vehicle,Berlin,Autohaus Berolina GmbH 10,Cicerostraße 34,11,10,0,10709,52.490626,18,13.301218,1
+0,2-New Vehicle,Berlin,Friereich olson OHG,Sophie-Charlotten-Straße 7,12,14,0,14059,52.521685,22,13.284828,1
+0,2-New Vehicle,Berlin,ASB Autohaus Berlin GmbH 12,Marzahner Chaussee 234,13,12,0,12681,52.53081,23,13.531643,1
+0,2-New Vehicle,Berlin,Autohaus Berolina GmbH 12,Ringstraße 50,14,12,0,12105,52.442463,22,13.377478,1
+0,2-New Vehicle,Berlin,Auto Barthamo GmbH,Friedrichshaller Straße 39-40,15,14,0,14199,52.475381,16,13.294983,1
+0,2-New Vehicle,Berlin,Klaus mans Automobile GmbH,Eichhorster Weg 91,16,13,0,13435,52.602944,18,13.334898,1
+0,2-New Vehicle,Berlin,Autoforce Automobile Berlin GmbH 13a,Berliner Straße 68,17,13,0,13507,52.582073,24,13.290807,1
+0,2-New Vehicle,Berlin,Automobile Lieftwieren,Säntisstr. 51 - 57,18,12,0,12277,52.52045,23,13.40732,1
+0,2-New Vehicle,Berlin,Autoforce Automobile Berlin GmbH 13b,Am Juliusturm 10,19,13,0,13599,52.538438,19,13.229127,1
+0,2-New Vehicle,Berlin,Auto-bart GmbH,Rudower Straße 25 - 29,20,12,0,12524,52.433998,17,13.469765,1
+0,2-New Vehicle,Berlin,Autoforce Automobile Berlin GmbH 14,Goerzallee 251,21,14,0,14167,52.415247,22,13.283711,1
+0,2-New Vehicle,Berlin,Autoforce Zentrum Berlin GmbH,Brunsbütteler Damm 40-50,22,13,0,13581,52.533099,25,13.156191,1
+0,2-New Vehicle,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,24,13.497994,1
+0,2-New Vehicle,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,25,13.583759,1
+0,2-New Vehicle,München,Handler München,0,25,80,0,80,48.135125,17,11.581981,21
+0,2-New Vehicle,Stuttgart,Händler Stuttgart,0,26,70,0,70,48.775846,18,9.182932,12
+0,2-New Vehicle,Frankfurt,Händler Frankfurt,0,27,60,0,60,50.110922,24,8.682127,11
+0,2-New Vehicle,Düsseldorf,Händler Düsseldorf,0,28,40,0,40,51.227741,18,6.773456,15
+0,2-New Vehicle,Hamburg,Händler Hamburg,0,29,20,0,20,53.551085,15,9.993682,10
+0,2-New Vehicle,Hannover,Händler Hannover,0,30,30,0,30,52.375892,23,9.73201,35
+0,2-New Vehicle,Erfurt,Händler Erfurt,0,31,99,0,99,50.984768,17,11.02988,7
+0,3-Used Vehicle,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,22,13.42247,1
+0,3-Used Vehicle,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,38,13.470358,1
+0,3-Used Vehicle,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,24,13.404865,1
+0,3-Used Vehicle,Berlin,Andrea Noir,Strausberger Straße 1 u. 2,4,13,0,13055,52.541452,33,13.488173,1
+0,3-Used Vehicle,Berlin,Autoforce Automobile Berlin GmbH 12,Oberlandstr. 40-41,5,12,0,12099,52.52045,27,13.40732,1
+0,3-Used Vehicle,Berlin,G.A. Autoaus Europa GmbH,Siegfriedstraße 150,6,10,0,10365,52.528827,22,13.499454,1
+0,3-Used Vehicle,Berlin,Autohaus Henk Koutmann GmbH,Blankenburger Straße 95,7,13,0,13089,52.573267,32,13.443985,1
+0,3-Used Vehicle,Berlin,Gerta Britsch GmbH,Grenzallee 100,8,12,0,12057,52.464327,25,13.446074,1
+0,3-Used Vehicle,Berlin,Autohaus Kobo GmbH,Hansastraße 202,9,13,0,13088,52.557932,35,13.492706,1
+0,3-Used Vehicle,Berlin,Wilhelm Zakkoro GmbH & Co.,Mecklenburgische Straße 23,10,14,0,14197,52.479611,29,13.310888,1
+0,3-Used Vehicle,Berlin,Autohaus Berolina GmbH 10,Cicerostraße 34,11,10,0,10709,52.490626,22,13.301218,1
+0,3-Used Vehicle,Berlin,Friereich olson OHG,Sophie-Charlotten-Straße 7,12,14,0,14059,52.521685,35,13.284828,1
+0,3-Used Vehicle,Berlin,ASB Autohaus Berlin GmbH 12,Marzahner Chaussee 234,13,12,0,12681,52.53081,31,13.531643,1
+0,3-Used Vehicle,Berlin,Autohaus Berolina GmbH 12,Ringstraße 50,14,12,0,12105,52.442463,34,13.377478,1
+0,3-Used Vehicle,Berlin,Auto Barthamo GmbH,Friedrichshaller Straße 39-40,15,14,0,14199,52.475381,31,13.294983,1
+0,3-Used Vehicle,Berlin,Klaus mans Automobile GmbH,Eichhorster Weg 91,16,13,0,13435,52.602944,23,13.334898,1
+0,3-Used Vehicle,Berlin,Autoforce Automobile Berlin GmbH 13a,Berliner Straße 68,17,13,0,13507,52.582073,33,13.290807,1
+0,3-Used Vehicle,Berlin,Automobile Lieftwieren,Säntisstr. 51 - 57,18,12,0,12277,52.52045,34,13.40732,1
+0,3-Used Vehicle,Berlin,Autoforce Automobile Berlin GmbH 13b,Am Juliusturm 10,19,13,0,13599,52.538438,38,13.229127,1
+0,3-Used Vehicle,Berlin,Auto-bart GmbH,Rudower Straße 25 - 29,20,12,0,12524,52.433998,20,13.469765,1
+0,3-Used Vehicle,Berlin,Autoforce Automobile Berlin GmbH 14,Goerzallee 251,21,14,0,14167,52.415247,34,13.283711,1
+0,3-Used Vehicle,Berlin,Autoforce Zentrum Berlin GmbH,Brunsbütteler Damm 40-50,22,13,0,13581,52.533099,37,13.156191,1
+0,3-Used Vehicle,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,31,13.497994,1
+0,3-Used Vehicle,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,22,13.583759,1
+0,3-Used Vehicle,München,Handler München,0,25,80,0,80,48.135125,37,11.581981,21
+0,3-Used Vehicle,Stuttgart,Händler Stuttgart,0,26,70,0,70,48.775846,24,9.182932,12
+0,3-Used Vehicle,Frankfurt,Händler Frankfurt,0,27,60,0,60,50.110922,29,8.682127,11
+0,3-Used Vehicle,Düsseldorf,Händler Düsseldorf,0,28,40,0,40,51.227741,32,6.773456,15
+0,3-Used Vehicle,Hamburg,Händler Hamburg,0,29,20,0,20,53.551085,23,9.993682,10
+0,3-Used Vehicle,Hannover,Händler Hannover,0,30,30,0,30,52.375892,25,9.73201,35
+0,3-Used Vehicle,Erfurt,Händler Erfurt,0,31,99,0,99,50.984768,22,11.02988,7
+0,4-Service,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,52.499662,26,13.42247,1
+0,4-Service,Berlin,ASB Autohaus Berlin GmbH 13,Berliner Straße 100,2,13,0,13189,52.368868,50,13.470358,1
+0,4-Service,Berlin,Autoforce Automobile Berlin GmbH 10,Franklinstr. 5,3,10,0,10587,52.464207,31,13.404865,1
+0,4-Service,Berlin,Andrea Noir,Strausberger Straße 1 u. 2,4,13,0,13055,52.541452,40,13.488173,1
+0,4-Service,Berlin,Autoforce Automobile Berlin GmbH 12,Oberlandstr. 40-41,5,12,0,12099,52.52045,30,13.40732,1
+0,4-Service,Berlin,G.A. Autoaus Europa GmbH,Siegfriedstraße 150,6,10,0,10365,52.528827,48,13.499454,1
+0,4-Service,Berlin,Autohaus Henk Koutmann GmbH,Blankenburger Straße 95,7,13,0,13089,52.573267,34,13.443985,1
+0,4-Service,Berlin,Gerta Britsch GmbH,Grenzallee 100,8,12,0,12057,52.464327,26,13.446074,1
+0,4-Service,Berlin,Autohaus Kobo GmbH,Hansastraße 202,9,13,0,13088,52.557932,44,13.492706,1
+0,4-Service,Berlin,Wilhelm Zakkoro GmbH & Co.,Mecklenburgische Straße 23,10,14,0,14197,52.479611,47,13.310888,1
+0,4-Service,Berlin,Autohaus Berolina GmbH 10,Cicerostraße 34,11,10,0,10709,52.490626,20,13.301218,1
+0,4-Service,Berlin,Friereich olson OHG,Sophie-Charlotten-Straße 7,12,14,0,14059,52.521685,25,13.284828,1
+0,4-Service,Berlin,ASB Autohaus Berlin GmbH 12,Marzahner Chaussee 234,13,12,0,12681,52.53081,31,13.531643,1
+0,4-Service,Berlin,Autohaus Berolina GmbH 12,Ringstraße 50,14,12,0,12105,52.442463,25,13.377478,1
+0,4-Service,Berlin,Auto Barthamo GmbH,Friedrichshaller Straße 39-40,15,14,0,14199,52.475381,47,13.294983,1
+0,4-Service,Berlin,Klaus mans Automobile GmbH,Eichhorster Weg 91,16,13,0,13435,52.602944,42,13.334898,1
+0,4-Service,Berlin,Autoforce Automobile Berlin GmbH 13a,Berliner Straße 68,17,13,0,13507,52.582073,35,13.290807,1
+0,4-Service,Berlin,Automobile Lieftwieren,Säntisstr. 51 - 57,18,12,0,12277,52.52045,46,13.40732,1
+0,4-Service,Berlin,Autoforce Automobile Berlin GmbH 13b,Am Juliusturm 10,19,13,0,13599,52.538438,41,13.229127,1
+0,4-Service,Berlin,Auto-bart GmbH,Rudower Straße 25 - 29,20,12,0,12524,52.433998,42,13.469765,1
+0,4-Service,Berlin,Autoforce Automobile Berlin GmbH 14,Goerzallee 251,21,14,0,14167,52.415247,21,13.283711,1
+0,4-Service,Berlin,Autoforce Zentrum Berlin GmbH,Brunsbütteler Damm 40-50,22,13,0,13581,52.533099,24,13.156191,1
+0,4-Service,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,52.415723,36,13.497994,1
+0,4-Service,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,52.429732,24,13.583759,1
+0,4-Service,München,Handler München,0,25,80,0,80,48.135125,45,11.581981,21
+0,4-Service,Stuttgart,Händler Stuttgart,0,26,70,0,70,48.775846,26,9.182932,12
+0,4-Service,Frankfurt,Händler Frankfurt,0,27,60,0,60,50.110922,41,8.682127,11
+0,4-Service,Düsseldorf,Händler Düsseldorf,0,28,40,0,40,51.227741,44,6.773456,15
+0,4-Service,Hamburg,Händler Hamburg,0,29,20,0,20,53.551085,42,9.993682,10
+0,4-Service,Hannover,Händler Hannover,0,30,30,0,30,52.375892,50,9.73201,35
+0,4-Service,Erfurt,Händler Erfurt,0,31,99,0,99,50.984768,25,11.02988,7

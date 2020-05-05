@@ -3,7 +3,7 @@
        {
           "fields":[
              {
-                "dataSourceName":"DemoDataDFPreped",
+                "dataSourceName":"demo_data_df_preped",
                 "dataSourceType":"saql",
                 "fieldName":"Name"
              },
@@ -29,7 +29,7 @@
        {
           "fields":[
              {
-                "dataSourceName":"DemoDataDFPreped",
+                "dataSourceName":"demo_data_df_preped",
                 "dataSourceType":"saql",
                 "fieldName":"City"
              },
@@ -203,7 +203,7 @@
           "broadcastFacet":true,
           "datasets":[
              {
-                "name":"DemoDataDFPreped"
+                "name":"demo_data_df_preped"
              }
           ],
           "isGlobal":false,
@@ -829,7 +829,7 @@
           "broadcastFacet":true,
           "datasets":[
              {
-                "name":"DemoDataDFPreped"
+                "name":"demo_data_df_preped"
              }
           ],
           "isGlobal":false,
@@ -849,7 +849,7 @@
           "broadcastFacet":true,
           "datasets":[
              {
-                "name":"DemoDataDFPreped"
+                "name":"demo_data_df_preped"
              }
           ],
           "isGlobal":false,
