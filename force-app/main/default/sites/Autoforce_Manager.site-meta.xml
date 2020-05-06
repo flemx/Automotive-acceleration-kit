@@ -23,7 +23,6 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteGuestRecordDefaultOwner>test-0oll5rmtz7dq@example.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <subdomain>app-efficiency-283-dev-ed-171ae12d906</subdomain>
     <urlPathPrefix>autoforcemanager</urlPathPrefix>
