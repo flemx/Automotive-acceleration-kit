@@ -74,7 +74,7 @@ website,Service,City,Name,Str,DealerNr,PLZ2,Phone,Plz,Revenue_Split_raw,Factor_S
 0,Services,Berlin,Mart Piontek GmbH,Waltersdorfer Chaussee 18-20,23,12,0,12355,1518950,0.07,52.415723,0.28,13.497994,21699282,561404,2005014,1.32
 0,Services,Berlin,AUTO-waardler GmbH,Wendenschloßstraße 290,24,12,0,12557,1587876,0.07,52.429732,0.32,13.583759,22683941,477633,1492603.44,0.94
 0,Services,München,Handler München,0,25,80,0,80,1970714,0.07,48.135125,0.36,11.581981,28153057,109256384,303489956,154
-Original Parts,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,1784662,0.09,52.499662,0.31,13.42247,19829575,276623,892331,0.5
+0,Original Parts,Berlin,Amo Automobile go.,Mariannenstraße 9-10,1,10,0,10999,1784662,0.09,52.499662,0.31,13.42247,19829575,276623,892331,0.5
 0,Original Parts,Berlin,Autohoo Berlin Berliner Str.,Berliner Straße 100,2,13,0,13189,1744814,0.1,52.368868,0.3,13.470358,17448136,528679,1762262.14,1.01
 0,Original Parts,Berlin,Atoforce Automobile Berlin GmbH Franklinstr.,Franklinstr. 5,3,10,0,10587,1211770,0.1,52.464207,0.3,13.404865,12117695,534391,1781301.9,1.47
 0,Original Parts,Berlin,Andrea Noir,Strausberger Straße 1 u. 2,4,13,0,13055,1768045,0.09,52.541452,0.35,13.488173,19644948,402230,1149229.25,0.65
