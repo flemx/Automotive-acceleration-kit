@@ -35,6 +35,9 @@
             ],
             "c/afHomeButton": [
                 "afHomeButton/afHomeButton.js"
+            ],
+            "c/afVehicleImage": [
+                "afVehicleImage/afVehicleImage.js"
             ]
         }
     },

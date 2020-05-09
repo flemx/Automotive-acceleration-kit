@@ -8,29 +8,32 @@ trigger handleLeadAutomation on Lead (after insert) {
                 CampaignMember cm = new CampaignMember (campaignId=campaign_id, leadid=l.id);
                 insert cm;
                 //get Config
-                demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
+                // demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
                 
-                System.debug('TEST1');
-                System.debug([SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1]);
-                System.debug([SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1].dealer_name__c);
+                // System.debug('TEST1');
+                // System.debug([SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1]);
+                // System.debug([SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1].dealer_name__c);
                 
                 //get Dealer Contact
                 Contact dealer = [SELECT Id, Name, Account.Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
     
 
-                Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
+                // Id dealerUser_id = [SELECT Id FROM User WHERE Id = :demoSetting.dealer_name__c LIMIT 1].Id;
+                Id dealerUser_id = UserInfo.getUserId();
                 //get Driver Contact
                 Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
                 //get Configuration
                 Id config_id = [SELECT Id FROM Configuration__c WHERE demo_key__c = 'Config_1' LIMIT 1].Id;
+
+                Asset vehicle = [SELECT Id FROM Asset where Id = :l.Vehicle__c];
                 //create test drive record if testdrive date is set
                 Test_Drive__c td = new Test_Drive__c(
                     Date__c = l.td_date_requested__c,
                     Dealer__c = dealer.Id,
                     Driver__c = driver.Id,
-                    Configuration__c = config_id,
+                    assigned_Vehicle__c = vehicle.Id,
                     Status__c = 'Requested',
-                    Vehicle__c = 'Vehicle',
+                    Vehicle__c = vehicle.Name,
                     Lead_Source__c = l.Id,
                     OwnerId = dealerUser_id
                 );
@@ -61,10 +64,10 @@ trigger handleLeadAutomation on Lead (after insert) {
                     message_2__c = 'on ' + d.format() + ' with home pickup in a vehicle with the following',
                     record_id_1__c = driver.Id,
                     record_id_2__c = td2.Id,
-                    record_id_3__c = config_id,
+                    // record_id_3__c = config_id,
                     record_name_1__c = driver.Name,
                     record_name_2__c = 'Testdrive',
-                    record_name_3__c = 'configuration',
+                    // record_name_3__c = 'configuration',
                     SLA_active__c = true,
                     SLA_in_minutes__c = 480,
                     title__c = 'New Test Drive Request',

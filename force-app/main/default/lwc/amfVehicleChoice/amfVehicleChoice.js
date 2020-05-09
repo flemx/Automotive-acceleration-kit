@@ -7,21 +7,49 @@
 /* eslint-disable no-unused-expressions */
 import { LightningElement, track, api } from 'lwc';
 import VEHICLE_IMAGES from '@salesforce/resourceUrl/autoforceFiles';
+import getVehicles from '@salesforce/apex/TestDriveController.getTestDriveVehicles';
 
 export default class amfVehicleChoice extends LightningElement {
 
+    @track vehicles = {
+      v1 : {},
+      v2 : {},
+      v3 : {}
+    };
+    @track dataLoaded = false;
+    @api currentChoice;
 
-    img1Url = VEHICLE_IMAGES + '/images/vehicles/model1.jpg';
-    img2Url = VEHICLE_IMAGES + '/images/vehicles/model2.jpg';
-    img3Url = VEHICLE_IMAGES + '/images/vehicles/model3.jpg';
-    img1 = `background-image:url(${this.img1Url})`;
-    img2 = `background-image:url(${this.img2Url})`;
-    img3 = `background-image:url(${this.img3Url})`;
-    @track currentChoice = this.img1Url;
-    @api model1;
-    @api model2;
-    @api model3;
-    @api currentModel = this.model1;
+
+    constructor(){
+      super();
+      getVehicles()
+          .then(result => {
+            let comName = window.location.href.split("/")[3];
+            console.log('getVehicles: ', result);
+            for(let key in result){
+
+              let newVehicle = {};
+              newVehicle.image = 'background-image:url(/'+comName+result[key].Image_url__c+')';
+              newVehicle.sourceImage = '/'+comName+result[key].Image_url__c;
+              newVehicle.Name = result[key].Name;
+              newVehicle.Id = result[key].Id;
+              console.log('typeof key: '+typeof key+'Value: '+key);
+              key === '0'? this.vehicles.v1 = newVehicle : null;
+              key === '1'? this.vehicles.v2 = newVehicle : null;
+              key === '2'? this.vehicles.v3 = newVehicle : null;
+          
+              console.log('Vehicle:', result[key]);
+               
+            }
+            console.log(this.vehicles);
+            this.currentChoice = this.vehicles.v1;
+            console.log('this.currentChoice.image: ' + this.currentChoice.image);
+            this.dataLoaded = true;
+          })
+          .catch(error => {
+              console.error(error);
+          });
+  }
 
     radioCheck(event){
         //event.target.style.filter = 'none';
@@ -33,10 +61,10 @@ export default class amfVehicleChoice extends LightningElement {
     }
 
     handleChoice(event){
+
       let el = event.target.closest(".choiceCol"); 
       
       if(el.classList.contains('drinkcard-cc')){
-          console.log(el);
           let selected = this.template.querySelector('.selectedChoice');
          console.log(selected);
           selected.classList.remove('selectedChoice');
@@ -44,18 +72,14 @@ export default class amfVehicleChoice extends LightningElement {
           el.classList.remove('drinkcard-cc');
           el.classList.add('selectedChoice');
           //Set selected image
-          if(el.getAttribute('data-id') === 'img1'){
-            this.currentChoice = this.img1Url;
-            this.currentModel = this.model1;
+          if(el.getAttribute('data-id') === this.vehicles.v1.Id){
+            this.currentChoice = this.vehicles.v1;
           }
-          if(el.getAttribute('data-id') === 'img2'){
-            this.currentChoice = this.img2Url;
-            this.currentModel = this.model2;
+          if(el.getAttribute('data-id') === this.vehicles.v2.Id){
+            this.currentChoice = this.vehicles.v2;
           }
-          if(el.getAttribute('data-id') === 'img3'){
-            this.currentChoice = this.img3Url;
-            this.currentModel = this.model3;
-            console.log(this.currentModel);
+          if(el.getAttribute('data-id') === this.vehicles.v3.Id){
+            this.currentChoice = this.vehicles.v3;
           }
       }
     }

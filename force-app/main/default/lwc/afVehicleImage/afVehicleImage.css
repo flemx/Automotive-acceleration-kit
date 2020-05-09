@@ -1,0 +1,9 @@
+.app-wrapper img{
+    width: 65%;
+}
+
+.app-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

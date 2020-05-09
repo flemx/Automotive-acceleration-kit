@@ -1,33 +1,47 @@
 <template>
 
     <div class="container">
-        
-        <div class="choiceCon">
-            <img src={currentChoice}/>
-        </div>
+    
+     
 
-      <div class="choiceSet slds-grid slds-gutters">
-        <div class="slds-col">
-         <div class="choiceCol selectedChoice" data-id="img1" onclick={handleChoice}>
-             <div class="imgCon" style={img1}></div> 
-             <h3>{model1}</h3>
+      <!-- <div class="choiceSet slds-grid slds-gutters">
+        <template for:each={vehicles} for:item="vehicle">
+          <div class="slds-col" key={vehicle.Id}>
+            <div class="choiceCol selectedChoice" data-id={vehicle.Id}  onclick={handleChoice}>
+                <div class="imgCon" style={vehicle.image}></div> 
+                <h3>{vehicle.Name}</h3>
+              </div>
            </div>
+        </template>
+      </div>  -->
+     <template if:true={dataLoaded}>
+      <div class="choiceCon">
+        <img src={currentChoice.sourceImage}/>
+    </div>
+        <div class="choiceSet slds-grid slds-gutters">
+          <div class="slds-col">
+           <div class="choiceCol selectedChoice" data-id={vehicles.v1.Id} onclick={handleChoice}>
+               <div class="imgCon" style={vehicles.v1.image}></div> 
+               <h3>{vehicles.v1.Name}</h3>
+             </div>
+          </div>
+           <div class="slds-col">
+             <div class="choiceCol drinkcard-cc" data-id={vehicles.v2.Id} onclick={handleChoice}>
+               <div class="imgCon" style={vehicles.v2.image}></div> 
+               <h3>{vehicles.v2.Name}</h3>
+             </div>
+            
+             
+          </div>
+           <div class="slds-col">
+           <div class="choiceCol drinkcard-cc" data-id={vehicles.v3.Id} onclick={handleChoice}>
+               <div class="imgCon" style={vehicles.v3.image}></div> 
+               <h3>{vehicles.v3.Name}</h3>
+             </div>
+          </div>
         </div>
-         <div class="slds-col">
-           <div class="choiceCol drinkcard-cc" data-id="img2" onclick={handleChoice}>
-             <div class="imgCon" style={img2}></div> 
-             <h3>{model2}</h3>
-           </div>
-          
-           
-        </div>
-         <div class="slds-col">
-         <div class="choiceCol drinkcard-cc" data-id="img3" onclick={handleChoice}>
-             <div class="imgCon " style={img3}></div> 
-             <h3>{model3}</h3>
-           </div>
-        </div>
-      </div>
+      </template>
+ 
 
 
     </div>

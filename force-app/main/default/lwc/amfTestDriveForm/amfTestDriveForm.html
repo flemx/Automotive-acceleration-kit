@@ -13,13 +13,7 @@
             </h3>
             <div aria-hidden="false" class="slds-section__content" >
                 <div class="sectionContent">
-                    <c-amf-vehicle-choice
-                    class="vehicleChoiceCmp"
-                    model1={model1}
-                    model2={model2}
-                    model3={model3}>
-                    </c-amf-vehicle-choice
-                    >
+                    <c-amf-vehicle-choice class="vehicleChoiceCmp"></c-amf-vehicle-choice>
                     
                     <div class="btnContainer">
                         <button class="slds-button slds-button_brand nextButton" onclick={clickNext}>Next</button>
@@ -96,10 +90,25 @@
             </h3>
             <div aria-hidden="true" class="slds-section__content">
                 <div class="sectionContent">
+                
+                 
                     <lightning-input type="datetime" name="input1" label="" class="testDriveTime"></lightning-input>
+                    <template if:true={isLoading}>
+                        <div class="slds-align_absolute-center" style="height:4rem">
+                            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_inline">
+                              <span class="slds-assistive-text">Loading</span>
+                              <div class="slds-spinner__dot-a"></div>
+                              <div class="slds-spinner__dot-b"></div>
+                            </div>
+                          </div>
+                    </template>
+                   
+                    <template if:false={isLoading}>
                         <div class="btnContainer">
-                            <button class="slds-button slds-button_brand nextButton" onclick={submit}>Submit</button>
+                            <button class="slds-button slds-button_brand nextButton" onclick={submit} >Submit</button>
                         </div>
+                    </template>
+                
                         <hr>
                 </div>
             </div>

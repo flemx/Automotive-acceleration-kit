@@ -1,7 +1,7 @@
 public without sharing class TestDriveController {
 	@AuraEnabled
     public static Contact getContact() {
-        Contact theContact =[SELECT Id, Email,Phone,MailingStreet,MailingCity,MailingCountry,MailingPostalCode,FirstName,LastName FROM Contact WHERE DemoContact__c = true LIMIT 1];
+        Contact theContact =[SELECT Id, Email,Phone,MailingStreet,MailingCity,MailingCountry,MailingPostalCode,FirstName,LastName FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
         return theContact;
     }
  
@@ -39,5 +39,11 @@ public without sharing class TestDriveController {
         update td;
         
         return returnstring;
+    }
+
+    @AuraEnabled
+    public static List<Asset> getTestDriveVehicles(){
+        List<String> keys = new List<String>{'asset_01','asset_02','asset_03'};
+        return [SELECT Id, Name, Image_url__c FROM Asset where demo_key__c in :keys];
     }
 }
