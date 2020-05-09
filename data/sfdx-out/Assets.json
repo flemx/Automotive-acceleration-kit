@@ -22,25 +22,6 @@
     {
       "attributes" : {
         "type" : "Asset",
-        "referenceId" : "ref10"
-      },
-      "Name" : "Max Pro S3",
-      "SerialNumber" : "WVWZZZ1JZ3W330092",
-      "InstallDate" : "2019-03-31",
-      "PurchaseDate" : "2019-03-31",
-      "Status" : "Registered",
-      "Price" : "62000",
-      "Quantity" : "1",
-      "VIN__c" : "WVWZZZ1dsdsdsew92",
-      "License_Plate__c" : "BER999",
-      "AccountId" : "@AccountRef2",
-      "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_02",
-      "Tyre_Model__c" : "TH04-FUO0032"
-    },
-    {
-      "attributes" : {
-        "type" : "Asset",
         "referenceId" : "ref11"
       },
       "Name" : "Model 5",
@@ -54,7 +35,7 @@
       "License_Plate__c" : "BER996",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_03",
+      "demo_key__c" : "asset_02",
       "Tyre_Model__c" : "TH11-FUO0122"
     },
     {
@@ -73,7 +54,7 @@
       "License_Plate__c" : "BER992",
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
-      "demo_key__c" : "asset_04",
+      "demo_key__c" : "asset_03",
       "Tyre_Model__c" : "TH09-FUO0092"
     }
   ]
