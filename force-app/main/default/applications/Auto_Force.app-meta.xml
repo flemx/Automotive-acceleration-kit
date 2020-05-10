@@ -45,14 +45,10 @@
         <profile>Admin</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
-    <tabs>Daily_Briefing</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Test_Drive__c</tabs>
     <tabs>portal_feed_item__c</tabs>
-    <tabs>dealer_event__c</tabs>
     <tabs>standard-Asset</tabs>
-    <tabs>Configuration__c</tabs>
-    <tabs>demo_setting__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

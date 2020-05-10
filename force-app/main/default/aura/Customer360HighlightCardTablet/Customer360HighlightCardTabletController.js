@@ -50,8 +50,12 @@
                 component.find("recordHandler").reloadRecord();
 
             } else if(eventParams.changeType === "LOADED") {
+                console.log('Setting PIC');
+                console.log(component.get("v.fields.Cust360_Contact_Picture_URL__c"));
                 // get Avatar Image once record is loaded
-                component.set("v.customerAvatarUrl",$A.get(component.get("v.fields.Cust360_Contact_Picture_URL__c")));
+                component.set("v.customerAvatarUrl",component.get("v.fields.Cust360_Contact_Picture_URL__c"));
+                console.log(component.get("v.customerAvatarUrl"));
+                
             } else if(eventParams.changeType === "REMOVED") {
                 // record is deleted and removed from the cache
             } else if(eventParams.changeType === "ERROR") {
