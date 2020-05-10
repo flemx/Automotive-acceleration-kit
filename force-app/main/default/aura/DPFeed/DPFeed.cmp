@@ -183,11 +183,7 @@
                                                     <aura:if isTrue="{!fi.icon_3__c}">
                                                     <span class="inlineitem"><lightning:icon iconName="{!fi.icon_3__c}" size="xx-small" /></span>
                                                     </aura:if>
-                                                    <!-- <span class="inlineitem"><a onclick="{!c.viewDetails}" data-id="{!fi.record_id_3__c}" data-record="{!fi.record_name_3__c}" data-fiid="{!fi.Id}" >{!fi.record_name_3__c}</a></span>
-                                                   
-                                                    <aura:if isTrue="{!fi.record_name_3__c}">
-                                                        <span class="inlineitem">.</span>
-                                                    </aura:if> -->
+                                        
                                                 </div>
                                                 <div class="action-sla-container">
                                                     <aura:if isTrue="{!fi.SLA_active__c}">

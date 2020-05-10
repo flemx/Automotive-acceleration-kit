@@ -32,3 +32,23 @@
 .THIS .infoblock-wrapper{
     display: flex;
 }
+
+.THIS .myBoxy{
+    cursor: pointer;
+}
+
+.THIS .boxSelect{
+    border-color: rgb(53, 152, 224);
+    border-width: 1px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgb(53, 152, 224);
+    -moz-box-shadow: 0px 0px 2px 2px rgb(53, 152, 224);
+    box-shadow: 0px 0px 2px 2px rgb(53, 152, 224);
+}
+
+.THIS .myBoxy:hover{
+    border-color: rgb(53, 152, 224);
+    border-width: 1px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgb(53, 152, 224);
+    -moz-box-shadow: 0px 0px 2px 2px rgb(53, 152, 224);
+    box-shadow: 0px 0px 2px 2px rgb(53, 152, 224);
+}

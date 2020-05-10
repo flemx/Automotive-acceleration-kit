@@ -4,7 +4,7 @@
     
     <aura:attribute name="tdid" type="String" />
     <aura:attribute name="testdrive" type="Object" />
-    
+    <aura:attribute name="comName" type="String" />
     <aura:attribute name="showModal" type="Boolean" default="false" />
     <aura:attribute name="modalHeader" type="String" />
     <aura:attribute name="modalYesLiteral" type="String" />
@@ -29,18 +29,12 @@
               </header>
               <div class="slds-modal__content fillHeight" id="modal-content-id-2">
                 <aura:if isTrue="{!v.modalHeader == 'Assign Vehicle'}">
-                    <c:assignVehicleModalContent tdid="{!v.tdid}" tddate="{!v.testdrive.dateFormatted}" tdtime="{!v.testdrive.timeframe}" vehicleType="{!v.testdrive.assigned_Vehicle__r.Name}" />
+                    <c:assignVehicleModalContent selectedVehicle="{!v.testdrive.assigned_Vehicle__r}" testDriveId="{!v.testdrive.Id}"/>
                   </aura:if>
               </div>
               <footer class="slds-modal__footer">
-                <aura:if isTrue="{!v.modalNoLiteral}">
-                    <c:vwButton buttonType="inverted" label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"></c:vwButton>
-                  <!--<lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>-->
-                </aura:if>
-                <aura:if isTrue="{!v.modalYesLiteral}">
-                        <c:vwButton buttonType="inverted" label="{!v.modalYesLiteral}" onclick="{!c.assign}"></c:vwButton>
-                  <!--<lightning:button label="{!v.modalYesLiteral}" onclick="{!c.assign}" ></lightning:button>-->
-                </aura:if>
+                <lightning:button  variant="brand-outline" label="Back" onclick="{!c.closeModal}"></lightning:button >
+         
               </footer>
             </div>
           </section>
@@ -113,28 +107,28 @@
                 <div class="slds-form-element infoblock infoblock-vehicle">
                     <label class="slds-form-element__label" >Vehicle</label>
                     <div class="slds-form-element__control">
-                      <input type="text" placeholder="{!v.testdrive.Configuration__r.model__c}" disabled="true" class="slds-input" />
+                      <input type="text" placeholder="{!v.testdrive.assigned_Vehicle__r.Name}" disabled="true" class="slds-input" />
                     </div>
                 </div>
 
                 <div class="slds-form-element infoblock">
                     <label class="slds-form-element__label" >Type</label>
                     <div class="slds-form-element__control">
-                      <input type="text" placeholder="{!v.testdrive.Configuration__r.edition__c}" disabled="true" class="slds-input" />
+                      <input type="text" placeholder="{!v.testdrive.assigned_Vehicle__r.Edition__c}" disabled="true" class="slds-input" />
                     </div>
                 </div>
 
                 <div class="slds-form-element infoblock">
                     <label class="slds-form-element__label" >Engine</label>
                     <div class="slds-form-element__control">
-                      <input type="text" placeholder="{!v.testdrive.Configuration__r.motor__c}" disabled="true" class="slds-input" />
+                      <input type="text" placeholder="{!v.testdrive.assigned_Vehicle__r.Motor__c}" disabled="true" class="slds-input" />
                     </div>
                 </div>
 
                 
                 
                 <div class="image-block">
-                    <img src="{!v.testdrive.Configuration__r.Image_url__c}" />
+                    <img src="{!'/'+ v.comName +  v.testdrive.assigned_Vehicle__r.Image_url__c}" />
                 </div>
                  <div class="subtitle">Assigned vehicle</div>
 

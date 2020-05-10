@@ -115,3 +115,11 @@
 .THIS .fillHeight {
     height: 480px;
 }
+
+.THIS .smaller {
+    font-size: 80%;
+}
+
+.THIS .car-image{
+    height: 60px;
+}

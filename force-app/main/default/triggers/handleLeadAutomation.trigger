@@ -25,7 +25,7 @@ trigger handleLeadAutomation on Lead (after insert) {
                 //get Configuration
                 Id config_id = [SELECT Id FROM Configuration__c WHERE demo_key__c = 'Config_1' LIMIT 1].Id;
 
-                Asset vehicle = [SELECT Id FROM Asset where Id = :l.Vehicle__c];
+                Asset vehicle = [SELECT Id, Name FROM Asset where Id = :l.Vehicle__c];
                 //create test drive record if testdrive date is set
                 Test_Drive__c td = new Test_Drive__c(
                     Date__c = l.td_date_requested__c,

@@ -9,16 +9,16 @@ public class TestDriveModalController {
                     Driver__r.MailingCity,
                 	Driver__r.MailingCountry,
                     Status__c,
-                    Configuration__r.motor__c, 
-                    Configuration__r.edition__c, 
-                    Configuration__r.model__c,
-                    Configuration__r.Image_url__c,
+                    assigned_Vehicle__r.Motor__c,
+                    assigned_Vehicle__r.Edition__c,
+                    assigned_Vehicle__r.Name,
+                    assigned_Vehicle__r.Image_url__c,
                     assigned_Vehicle__r.License_Plate__c,
                     assigned_Vehicle__r.Vehicle_Version__c
                 FROM Test_Drive__c 
                 WHERE Id = :tdid 
                 LIMIT 1];
-        System.debug(testDrive);
+        System.debug(testDrive.assigned_Vehicle__r.Image_url__c);
         return testDrive;
     }
 
@@ -35,24 +35,25 @@ public class TestDriveModalController {
     
     
 @AuraEnabled
-    public static Test_Drive__c assignVehicle(String tdid){
-        Id vid = [SELECT Id FROM Asset WHERE demo_key__c = 'asset_01' LIMIT 1].Id;
-        Test_Drive__c td = [SELECT 
+    public static Test_Drive__c assignVehicle(String tdid, String assetId){
+        // Id vid = [SELECT Id FROM Asset WHERE Id = 'assignedId' LIMIT 1].Id;
+                    Test_Drive__c td = [SELECT 
                     Date__c, 
-                    Name,
-                	Driver__r.MailingStreet,
-                	Driver__r.MailingPostalCode,
+                    Driver__r.MailingStreet,
+                    Driver__r.MailingPostalCode,
                     Driver__r.MailingCity,
-                	Driver__r.MailingCountry,
-                    Status__c, 
-                    Configuration__r.motor__c, 
-                    Configuration__r.edition__c, 
-                    Configuration__r.model__c, 
-                    assigned_Vehicle__r.License_Plate__c 
+                    Driver__r.MailingCountry,
+                    Status__c,
+                    assigned_Vehicle__r.Motor__c,
+                    assigned_Vehicle__r.Edition__c,
+                    assigned_Vehicle__r.Name,
+                    assigned_Vehicle__r.Image_url__c,
+                    assigned_Vehicle__r.License_Plate__c,
+                    assigned_Vehicle__r.Vehicle_Version__c
                 FROM Test_Drive__c 
                 WHERE Id = :tdid 
                 LIMIT 1];
-        td.assigned_Vehicle__c = vid;
+        td.assigned_Vehicle__c = assetId;
         update td;
         
         //push message
@@ -73,5 +74,6 @@ public class TestDriveModalController {
     }
 
 
+    
 
 }

@@ -1,12 +1,79 @@
-<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="TestDriveModalController" access="global" >
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="TestDriveController" access="global" >
     <aura:attribute name="tdid" type="String" />
     <aura:attribute name="tddate" type="DateTime" />
     <aura:attribute name="tdtime" type="DateTime" />  
     <aura:attribute name="vehicleType" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="selectedVehicle" type="Object" />
+    <aura:attribute name="vehicles" type="List" />
+    <aura:attribute name="comName" type="String" />
+    <aura:attribute name="testDriveId" type="String" />
+
+    <aura:attribute name="nonSelect" type="String" default="myBoxy slds-box slds-p-around_medium slds-grid slds-grid_vertical-align-center slds-m-top_medium"/>
+    <aura:attribute name="selected" type="String" default="myBoxy slds-box slds-p-around_medium slds-grid slds-grid_vertical-align-center slds-m-top_medium boxSelect"/>
+    
+
     <div class="slds-p-around_medium">
         <div class="section-heading">Appointment Details</div>
         <div class="subtitle">Available vehicles of type <a>{!v.vehicleType}</a></div>
         
+
+        <!-- <fieldset class="slds-form-element"> -->
+	 <aura:iteration items="{!v.vehicles}" var="vehicle">
+  
+                <div class="{!vehicle.checked == true? v.selected : v.nonSelect }" onclick="{!c.setSelected}" data-id="{!vehicle.Id}">
+
+
+        
+
+        <!-- <lightning:input class="myRadios" type="radio" label="" name="{!vehicle.Name}" aura:id="myRadios" checked="{!vehicle.checked}" onclick="{!c.setSelected}"/> -->
+            <!-- <lightning:button label="Assign" value="{!vehicle.Id}" onclick="{!c.setSelected}"/> -->
+
+        <lightning:layout class="wide">
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 3">Model</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">{!vehicle.Name}</p>
+                </div>
+            </lightning:layoutItem>
+        <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 1">Plate</p>
+                    <p class="slds-text-heading_medium smaller slds-m-top_x-small">{!vehicle.License_Plate__c}</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field2">Motor</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">{!vehicle.Motor__c}</p>
+                </div>
+            </lightning:layoutItem>
+
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_1-of-6">
+                <div class="header-column">
+                    <p class="field-title" title="Field 5">Color</p>
+                    <p class="slds-text-heading_small smaller slds-m-top_x-small">
+                        <span title="">{!vehicle.Color__c}</span>
+                    </p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-xx-small" class="slds-size_2-of-6">
+                <img src="{!'/'+v.comName + vehicle.Image_url__c}" class="car-image"/>                
+
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+    </div>
+
+
+    </aura:iteration>
+
+<!-- </fieldset> -->
+
+   
+
+<!-- 
         <c:VehicleSelectionChoice colorURL="{!'background-image:url(' + $Resource.autoforceFiles + ')'}" 
     licensePlate="BER699"
     motor="225 kW (302 PS)"
@@ -30,7 +97,7 @@
     edition="Eco"
     color="Blue"
 	imgUrl="blue.png"
-    id="null" />
+    id="null" /> -->
 
     </div>
 </aura:component>

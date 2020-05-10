@@ -17,7 +17,14 @@
       "AccountId" : "@AccountRef1",
       "ContactId" : "@ContactRef1",
       "demo_key__c" : "asset_01",
-      "Tyre_Model__c" : "TH01-FUO0045"
+      "Tyre_Model__c" : "TH01-FUO0045",
+      "Image_url__c" : "/resource/autoforceFiles/images/vehicles/model1.jpg",
+      "Edition__c" : "Performance",
+      "Color__c" : "Red",
+      "Motor__c" : "225 kW (302 PS)",
+      "battery__c" : "100 KWh",
+      "Vehicle_Version__c" : "Max Pro 3"
+
     },
     {
       "attributes" : {
@@ -36,7 +43,13 @@
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
       "demo_key__c" : "asset_02",
-      "Tyre_Model__c" : "TH11-FUO0122"
+      "Tyre_Model__c" : "TH11-FUO0122",
+      "Image_url__c" : "/resource/autoforceFiles/images/vehicles/model2.jpg",
+      "Edition__c" : "Performance",
+      "Color__c" : "Blue",
+      "Motor__c" : "199 kW (282 PS)",
+      "battery__c" : "90 KWh",
+      "Vehicle_Version__c" : "Model 5"
     },
     {
       "attributes" : {
@@ -55,7 +68,13 @@
       "AccountId" : "@AccountRef2",
       "ContactId" : "@ContactRef2",
       "demo_key__c" : "asset_03",
-      "Tyre_Model__c" : "TH09-FUO0092"
+      "Tyre_Model__c" : "TH09-FUO0092",
+      "Image_url__c" : "/resource/autoforceFiles/images/vehicles/model3.jpg",
+      "Edition__c" : "Eco",
+      "Color__c" : "Yellow",
+      "Motor__c" : "180 kW (252 PS)",
+      "battery__c" : "80 KWh",
+      "Vehicle_Version__c" : "Model 3"
     }
   ]
 }
