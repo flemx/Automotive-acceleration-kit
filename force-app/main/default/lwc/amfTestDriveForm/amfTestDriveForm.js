@@ -46,9 +46,9 @@ export default class amfTestDriveForm extends NavigationMixin(LightningElement) 
     @api useDemoContact;
 
     // API choices for vehicle names
-    @api model1;
-    @api model2;
-    @api model3;
+    // @api model1;
+    // @api model2;
+    // @api model3;
 
     //Page redirect name - thankyou
     @api redirectPage;

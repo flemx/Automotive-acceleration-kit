@@ -11,12 +11,12 @@ public with sharing class AssignTrailsController {
         Boolean rv = false;
         MessageLibrary.assignTrails(ListSize);
         //get Config
-        // demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
+        demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
         //get Dealer Contact
         Contact dealer = [SELECT Id, Name, Account.Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
         //get Dealer User
-        // Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
-        Id dealerUser_id = UserInfo.getUserId();        
+        Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
+        // Id dealerUser_id = UserInfo.getUserId();        
         //create Dealer Trail Assignment message
         Datetime d = DateTime.now();
                 //create dealer message (portal feed item)

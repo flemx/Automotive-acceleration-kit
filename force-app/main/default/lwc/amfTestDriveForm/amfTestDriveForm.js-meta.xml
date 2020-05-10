@@ -12,9 +12,6 @@
     <targetConfigs>
         <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage,lightningCommunity__Default">
             <property name="useDemoContact" type="Boolean" default="true" label="Use the demo contact?"/>
-            <property name="model1" type="String" default="Model 1" label="Vehicle 1 VIN"/>
-            <property name="model2" type="String" default="Model 2" label="Vehicle 2 VIN"/>
-            <property name="model3" type="String" default="Model 3" label="Vehicle 3 VIN"/>
             <property name="redirectPage" type="String" default="thankyou" label="Redirect Page Name"/>
         </targetConfig>
     </targetConfigs>
