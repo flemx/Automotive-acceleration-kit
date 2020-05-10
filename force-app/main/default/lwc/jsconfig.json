@@ -38,6 +38,9 @@
             ],
             "c/afVehicleImage": [
                 "afVehicleImage/afVehicleImage.js"
+            ],
+            "c/afRefreshButton": [
+                "afRefreshButton/afRefreshButton.js"
             ]
         }
     },

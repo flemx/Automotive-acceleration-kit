@@ -40,7 +40,8 @@
                     <aura:if isTrue="{!empty(v.customerAvatarUrl)}">
                             <img src="/_slds/images/themes/lightning_lite/lightning_lite_profile_avatar_160.png" class="customer-avatar"/>
                         <aura:set attribute="else">
-                            <img src="{!v.customerAvatarUrl}" class="customer-avatar"/>
+                            <!--<img src="{!v.customerAvatarUrl}" class="customer-avatar"/>-->
+                            <img src="{!$Resource.autoforceFiles + '/images/background/JohnFisher.png'}" class="customer-avatar"/>
                         </aura:set>   
                     </aura:if>
                     
