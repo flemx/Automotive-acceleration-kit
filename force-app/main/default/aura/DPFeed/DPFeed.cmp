@@ -57,7 +57,7 @@
                   
               </div>
               <footer class="slds-modal__footer footer-model-wrapper">
-                <lightning:button label="Save" onclick="{!c.closeModal}"  ></lightning:button>
+                <lightning:button label="Back" onclick="{!c.closeModal}"  ></lightning:button>
                 <!-- <aura:if isTrue="{!v.modalNoLiteral}">
                  <lightning:button label="{!v.modalNoLiteral}" onclick="{!c.closeModal}"  ></lightning:button>
                 </aura:if>

@@ -127,7 +127,7 @@ export default class amfTestDriveForm extends NavigationMixin(LightningElement) 
                 });
             })
             .catch(error => {
-                this.isDisabled = false;
+                this.isLoading = false;
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Error creating Lead',
