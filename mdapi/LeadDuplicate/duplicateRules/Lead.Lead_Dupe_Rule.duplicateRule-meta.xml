@@ -8,7 +8,7 @@
         <booleanFilter xsi:nil="true"/>
         <duplicateRuleFilterItems>
             <field>test_drive__c</field>
-            <operation>equals</operation>
+            <operation>notEqual</operation>
             <value>true</value>
             <sortOrder>1</sortOrder>
             <table>Lead</table>
