@@ -33,7 +33,7 @@
                   </aura:if>
               </div>
               <footer class="slds-modal__footer">
-                <lightning:button  variant="brand-outline" label="Back" onclick="{!c.closeModal}"></lightning:button >
+                <lightning:button  variant="brand-outline" label="Ok" onclick="{!c.closeModal}"></lightning:button >
          
               </footer>
             </div>
