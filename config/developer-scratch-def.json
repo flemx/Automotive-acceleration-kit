@@ -1,7 +1,7 @@
 {
     "orgName": "AutoForce Developer",
     "edition": "Developer",
-    "features": ["Communities","SalesWave","ServiceWave","FieldService","Knowledge","LightningServiceConsole","ServiceCloud","ServiceUser","EinsteinArticleRecommendations"],
+    "features": ["Communities","SalesWave","ServiceWave","FieldService","Knowledge","LightningServiceConsole","ServiceCloud","ServiceUser"],
     "language": "en_US",
     "settings": {
       "fieldServiceSettings": { "fieldServiceOrgPref": true },
