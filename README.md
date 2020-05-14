@@ -1,13 +1,9 @@
 # Automotive Demo Pack
 
-### Original package:
-- https://git.soma.salesforce.com/dfleminks/volkswagen-demo-pack
-
 
 ## Setup Dashboard
 
 1. Deploy metadata
-
 
 ```
 sfdx force:mdapi:deploy -w 5 -d mdapi/autoDashboard
@@ -22,8 +18,13 @@ sfdx shane:analytics:dataset:upload -n demo_data_df_trails --async -f data/analy
 
 ```
 
+## Add exception for Lead Duplication rule (Only for Demo Org)
 
+1. Deploy metadata
 
+````
+sfdx force:mdapi:deploy -w 5 -d mdapi/LeadDuplicate
+````
 
 
 ## Setting up project with Basic Data
@@ -61,5 +62,4 @@ sfdx force:apex:execute -f  data/scripts/deleteAllDataCall.txt -u <targetOrg>
 
 
 
-## Setup Dashboard (Continue)
 
