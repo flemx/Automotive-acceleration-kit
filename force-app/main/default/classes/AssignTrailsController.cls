@@ -15,7 +15,7 @@ public with sharing class AssignTrailsController {
         //get Dealer Contact
         Contact dealer = [SELECT Id, Name, Account.Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
         //get Dealer User
-        Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
+        Id dealerUser_id = [SELECT Id FROM User WHERE ContactId = :dealer.Id LIMIT 1].Id;
         // Id dealerUser_id = UserInfo.getUserId();        
         //create Dealer Trail Assignment message
         Datetime d = DateTime.now();
