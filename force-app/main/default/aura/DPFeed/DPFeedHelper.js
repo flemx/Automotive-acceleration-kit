@@ -36,7 +36,7 @@
             console.log("yo launch trail");
             var urlEvent = $A.get("e.force:navigateToURL");
         		urlEvent.setParams({
-                    "url": 'trailhead1://' ,
+                    "url": 'trailhead://trailhead.salesforce.com/' ,
             	"isredirect":true ,
         		});
         	urlEvent.fire();
