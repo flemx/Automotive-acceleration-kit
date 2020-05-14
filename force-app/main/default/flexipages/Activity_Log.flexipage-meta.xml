@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>assetId</name>
+                <value>DEPRECIATED</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>vinId</name>
+                <value>WVWZZZ1JZ3W140003</value>
+            </componentInstanceProperties>
+            <componentName>orgActivityLog</componentName>
+        </componentInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Activity Log</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

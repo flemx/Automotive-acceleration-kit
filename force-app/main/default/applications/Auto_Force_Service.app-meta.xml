@@ -18,6 +18,24 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Asset</pageOrSobjectType>
     </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
         <logo>autoforcelogo3</logo>
@@ -30,6 +48,7 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Auto Force Service</label>
     <navType>Console</navType>
+    <tabs>Activity_Log</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Case</tabs>
     <tabs>standard-Contact</tabs>
@@ -38,6 +57,9 @@
     <uiType>Lightning</uiType>
     <utilityBar>Auto_Force_Service_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Activity_Log</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>
