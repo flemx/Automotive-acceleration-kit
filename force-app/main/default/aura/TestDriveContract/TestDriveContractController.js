@@ -76,6 +76,14 @@
             cmp.set("v.progressStep", (theProgress2+1).toString());
         }
     },
+    checkSecButton: function(cmp){
+        var theAcc = cmp.get("v.accordion");
+        var theAcc2 = parseInt(theAcc);
+        if(theAcc2 == 3){
+            $(".theBtns").hide();
+            $(".theSubmitBtn").show();
+        }
+    },
     
     handleSubmit:function (cmp, event, helper) {
         // console.log("submit testdrive prep form");

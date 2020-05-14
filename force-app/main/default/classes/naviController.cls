@@ -7,14 +7,13 @@ public class naviController {
         // Test_Drive__c td = [SELECT Id, Name FROM Test_Drive__c where Id = :tid];
         System.debug(td);
         //get Config
-                demo_setting__c demoSetting = [SELECT dealer_name__c, dealer_email__c FROM demo_setting__c WHERE demo_key__c = 'masterSetting' LIMIT 1];
                 
         //get Driver Contact
                 Contact driver = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_02' LIMIT 1];
                  //get Dealer Contact
                 Contact dealer = [SELECT Id, Name FROM Contact WHERE demo_key__c = 'Contact_01' LIMIT 1];
                 //get Dealer User
-                Id dealerUser_id = [SELECT Id FROM User WHERE UserName = :demoSetting.dealer_name__c LIMIT 1].Id;
+                Id dealerUser_id = [SELECT Id FROM User WHERE ContactId = :dealer.Id LIMIT 1].Id;
 
                 //create dealer message (portal feed item)
                 portal_feed_item__c pfi = new portal_feed_item__c(

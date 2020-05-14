@@ -53,7 +53,7 @@
                     </lightning:progressIndicator>
                     <br/><br/>
                     
-                    <lightning:accordion aura:id="accordion" activeSectionName="{!v.accordion}">
+                    <lightning:accordion aura:id="accordion" activeSectionName="{!v.accordion}" onsectiontoggle="{!c.checkSecButton}">
                         
                         <lightning:accordionSection name="1" label="Customer Data">
                             <aura:set attribute="body">
