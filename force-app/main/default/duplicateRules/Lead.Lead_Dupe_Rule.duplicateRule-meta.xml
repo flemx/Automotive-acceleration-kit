@@ -2,8 +2,8 @@
 <DuplicateRule xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <actionOnInsert>Allow</actionOnInsert>
     <actionOnUpdate>Allow</actionOnUpdate>
-    <alertText>Duplicate Alert</alertText>
-    <description>Duplicate rule for lead records.</description>
+    <alertText>You&#39;re creating a duplicate record. We recommend you use an existing record instead.</alertText>
+    <description>Set up to detect duplicates on leads when they are created.</description>
     <duplicateRuleFilter>
         <booleanFilter xsi:nil="true"/>
         <duplicateRuleFilterItems>
@@ -20,10 +20,9 @@
         <objectMapping xsi:nil="true"/>
     </duplicateRuleMatchRules>
     <isActive>true</isActive>
-    <masterLabel>Standard Lead Duplicate Rule</masterLabel>
+    <masterLabel>Duplicate Lead Rule - Custom</masterLabel>
     <operationsOnInsert>Alert</operationsOnInsert>
     <operationsOnInsert>Report</operationsOnInsert>
-    <operationsOnUpdate>Report</operationsOnUpdate>
     <securityOption>EnforceSharingRules</securityOption>
-    <sortOrder>1</sortOrder>
+    <sortOrder>2</sortOrder>
 </DuplicateRule>
