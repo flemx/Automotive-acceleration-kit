@@ -6,7 +6,7 @@
     <columns>ACCOUNT.NAME</columns>
     <columns>CONTACT.NAME</columns>
     <columns>demo_key__c</columns>
-    <columns>af_IoT_status__c</columns>
+    <columns>operational__c</columns>
     <columns>VIN__c</columns>
     <filterScope>Mine</filterScope>
     <filters>
