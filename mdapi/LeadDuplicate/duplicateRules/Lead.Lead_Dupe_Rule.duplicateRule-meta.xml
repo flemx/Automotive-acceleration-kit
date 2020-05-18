@@ -6,20 +6,20 @@
     <description>Set up to detect duplicates on leads when they are created.</description>
     <duplicateRuleFilter>
         <booleanFilter xsi:nil="true"/>
-        <duplicateRuleFilterItems>
+        <!-- <duplicateRuleFilterItems>
             <field>test_drive__c</field>
             <operation>notEqual</operation>
             <value>true</value>
             <sortOrder>1</sortOrder>
             <table>Lead</table>
-        </duplicateRuleFilterItems>
+        </duplicateRuleFilterItems> -->
     </duplicateRuleFilter>
     <duplicateRuleMatchRules>
         <matchRuleSObjectType>Lead</matchRuleSObjectType>
         <matchingRule>Standard_Lead_Match_Rule_v1_0</matchingRule>
         <objectMapping xsi:nil="true"/>
     </duplicateRuleMatchRules>
-    <isActive>true</isActive>
+    <isActive>false</isActive>
     <masterLabel>Duplicate Lead Rule - Custom</masterLabel>
     <operationsOnInsert>Alert</operationsOnInsert>
     <operationsOnInsert>Report</operationsOnInsert>
