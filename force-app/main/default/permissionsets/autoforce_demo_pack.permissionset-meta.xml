@@ -1110,6 +1110,10 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <tabSettings>
+        <tab>Activity_Log</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>Configuration__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
