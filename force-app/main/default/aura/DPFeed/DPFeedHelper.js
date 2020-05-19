@@ -36,7 +36,7 @@
             console.log("yo launch trail");
             var urlEvent = $A.get("e.force:navigateToURL");
         		urlEvent.setParams({
-                    "url": 'trailhead://trailhead.salesforce.com/' ,
+                    "url": 'trailhead://trailhead.salesforce.com/content/learn/trails/accelerate-your-sales-team-with-high-velocity-sales' ,
             	"isredirect":true ,
         		});
         	urlEvent.fire();
