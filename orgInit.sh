@@ -14,3 +14,5 @@ sfdx force:apex:execute -f data/scripts/setRoleCall.txt
 sfdx force:apex:execute -f data/scripts/setContactOwner.txt
 
 sfdx force:mdapi:deploy -w 5 -d mdapi/LeadDuplicate
+
+sfdx force:apex:execute -f data/scripts/sendEmail.txt

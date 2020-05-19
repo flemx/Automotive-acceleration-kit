@@ -50,15 +50,20 @@ sfdx force:apex:execute -f data/scripts/setRoleCall.txt
 sfdx force:apex:execute -f data/scripts/setContactOwner.txt
 ```
 
+6. Disable the Lead duplication rule  (Only for Demo Org)
+```
+sfdx force:mdapi:deploy -w 5 -d mdapi/LeadDuplicate
+```
+
+# Org setup after installation
+
 1. Publish Dealer, Test Drive Form & Autoforce Manager Community
 2. Reset Daniel Password
+3. Assign  “Autoforce” page-layout on following objects to your Admin profile (plus *Partners profile for Lead) : 
+- Contact → Record Type:Customer
+- Vehicle(Asset)
+- Lead  →  RecordType:Deal Registration
 
-
-In case you run into an error, you can delete all data that has been accidentally created by calling
-WARNING, this will delete most data in the ORG
-```
-sfdx force:apex:execute -f  data/scripts/deleteAllDataCall.txt -u <targetOrg>
-```
 
 
 

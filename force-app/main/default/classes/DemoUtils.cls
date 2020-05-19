@@ -116,6 +116,32 @@ public class DemoUtils {
         
         insert testDrive;
     }
+
+
+    /**
+     * Send email with installation statistics
+     */
+    public static void sendInstallationEmail(){
+        String orgId = UserInfo.getOrganizationId();
+        String userName = UserInfo.getUserName();
+        //DateTime getDate = Date.Now();
+        String installDate = DateTime.Now().format('YYYY-MM-dd');
+        Messaging.reserveSingleEmailCapacity(2);
+        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+        String[] toAddresses = new String[] {'dfleminks@salesforce.com'}; 
+        // Assign the addresses for the To and CC lists to the mail object.
+        mail.setToAddresses(toAddresses);
+        mail.setReplyTo('autoforce@fleminks.com');
+        // Specify the name used as the display name.
+        mail.setSenderDisplayName('autoforce analytics');
+        // Specify the subject line for your email address.
+        mail.setSubject('New autoforce installation; ' + userName + ',' + orgId + ',' +  installDate);
+        mail.setBccSender(false);
+        // Specify the text content of the email.
+        mail.setPlainTextBody('');
+        // Send the email you have created.
+        Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+    }
     
     
     
