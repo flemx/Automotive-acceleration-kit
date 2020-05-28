@@ -8,7 +8,7 @@
     <columns>demo_key__c</columns>
     <columns>operational__c</columns>
     <columns>VIN__c</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
     <filters>
         <field>demo_key__c</field>
         <operation>notEqual</operation>
