@@ -39,7 +39,7 @@
     
 	<!-- generic modal - will show upon event //-->
         <aura:if isTrue="{!v.showModal}">
-        <aura:if isTrue="{!v.modalContent == 'John Fisher'}">
+        <aura:if isTrue="{!v.modalContent == 'Contract'}">
            <c:TestDriveContract />
         </aura:if>
         <aura:if isTrue="{!v.modalContent == 'Testdrive'}">

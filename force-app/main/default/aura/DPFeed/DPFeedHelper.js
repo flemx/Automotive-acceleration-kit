@@ -122,6 +122,9 @@
       	c.set("v.modalContent", e.target.dataset.record);
         c.set("v.modalRecord", e.target.dataset.id);
         c.set("v.modalFiid", e.target.dataset.fiid);
+        if(e.target.dataset.record !== 'Testdrive'){
+            c.set("v.modalContent", 'Contract');
+        }
         //get some information from the feeditem
         var YesLiteral = null;
         var NoLiteral = "Close";
