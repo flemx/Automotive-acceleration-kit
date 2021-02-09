@@ -11,6 +11,17 @@ public class DemoUtils {
  		insert setting;
     }
 
+
+
+    public static void setPermSet(){
+        PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'autoforce_demo_pack'];
+        List<PermissionSetAssignment> psas = new List<PermissionSetAssignment>();
+        for (Id uid: new List<Id>{UserInfo.getUserId()}) {
+            psas.add(new PermissionSetAssignment(AssigneeId = uid, PermissionSetId = ps.Id));
+        }
+        insert psas;
+    }
+
     public static void createRole() {
         //assign role to running user
         UserRole ceoRole = new UserRole(Name = 'Demo');
